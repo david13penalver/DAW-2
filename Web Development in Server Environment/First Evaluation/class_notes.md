@@ -2,25 +2,25 @@ Table of contents
 =================
 
 - [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-  - [Introduction](#introduction-1)
-  - [Statis and Dynamic Web Pages](#statis-and-dynamic-web-pages)
-  - [Web Server Components](#web-server-components)
-    - [HTTP Server](#http-server)
-    - [Programming Languages](#programming-languages)
-    - [DB Manager Systems](#db-manager-systems)
-  - [Local Development Environment](#local-development-environment)
-    - [Integrated Web Apps](#integrated-web-apps)
-    - [Development Environments](#development-environments)
-- [Web Java Ecosystem](#web-java-ecosystem)
-- [Spring Boot](#spring-boot)
-- [Layer Architecture](#layer-architecture)
-- [API REST](#api-rest)
-- [API REST - Response](#api-rest---response)
-- [API REST - Data Manipulation](#api-rest---data-manipulation)
-- [Transport Data Between Layers](#transport-data-between-layers)
+- [Introduction (Up)](#introduction-up)
+  - [Introduction](#introduction)
+  - [Statis and Dynamic Web Pages (Up)](#statis-and-dynamic-web-pages-up)
+  - [Web Server Components (Up)](#web-server-components-up)
+    - [HTTP Server (Up)](#http-server-up)
+    - [Programming Languages (Up)](#programming-languages-up)
+    - [DB Manager Systems (Up)](#db-manager-systems-up)
+  - [Local Development Environment (Up)](#local-development-environment-up)
+    - [Integrated Web Apps (Up)](#integrated-web-apps-up)
+    - [Development Environments (Up)](#development-environments-up)
+- [Web Java Ecosystem (Up)](#web-java-ecosystem-up)
+- [Spring Boot (Up)](#spring-boot-up)
+- [Layer Architecture (Up)](#layer-architecture-up)
+- [API REST (Up)](#api-rest-up)
+- [API REST - Response (Up)](#api-rest---response-up)
+- [API REST - Data Manipulation (Up)](#api-rest---data-manipulation-up)
+- [Transport Data Between Layers (Up)](#transport-data-between-layers-up)
 
-# Introduction
+# Introduction [(Up)](#table-of-contents)
 
 ## Introduction 
 The server is dedicated only to:
@@ -29,7 +29,7 @@ The server is dedicated only to:
 - Return the data to the client
   - The client is responsible of mounting the data in the view
 
-## Statis and Dynamic Web Pages
+## Statis and Dynamic Web Pages [(Up)](#table-of-contents)
 
 - Statics: the content is always the same
 - Dynamic: the content is generated in real time
@@ -37,34 +37,34 @@ The server is dedicated only to:
   - We need an interpreter of the language used to generate the content
   - We need a DBMS (DataBase Manager System)
 
-## Web Server Components
+## Web Server Components [(Up)](#table-of-contents)
 
-### HTTP Server
-
-*Notes here*
-
-### Programming Languages
+### HTTP Server [(Up)](#table-of-contents)
 
 *Notes here*
 
-### DB Manager Systems
+### Programming Languages [(Up)](#table-of-contents)
 
 *Notes here*
 
-## Local Development Environment
-
-### Integrated Web Apps
+### DB Manager Systems [(Up)](#table-of-contents)
 
 *Notes here*
 
-### Development Environments
+## Local Development Environment [(Up)](#table-of-contents)
+
+### Integrated Web Apps [(Up)](#table-of-contents)
 
 *Notes here*
 
-# Web Java Ecosystem
-# Spring Boot
-# Layer Architecture
-# API REST
-# API REST - Response 
-# API REST - Data Manipulation
-# Transport Data Between Layers
+### Development Environments [(Up)](#table-of-contents)
+
+*Notes here*
+
+# Web Java Ecosystem [(Up)](#table-of-contents)
+# Spring Boot [(Up)](#table-of-contents)
+# Layer Architecture [(Up)](#table-of-contents)
+# API REST [(Up)](#table-of-contents)
+# API REST - Response [(Up)](#table-of-contents)
+# API REST - Data Manipulation [(Up)](#table-of-contents)
+# Transport Data Between Layers [(Up)](#table-of-contents)
