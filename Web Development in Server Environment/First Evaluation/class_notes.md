@@ -4,7 +4,7 @@ Table of contents
 - [Table of contents](#table-of-contents)
 - [Introduction (Up)](#introduction-up)
   - [Introduction (Up)](#introduction-up-1)
-  - [Statis and Dynamic Web Pages (Up)](#statis-and-dynamic-web-pages-up)
+  - [Static and Dynamic Web Pages (Up)](#static-and-dynamic-web-pages-up)
   - [Web Server Components (Up)](#web-server-components-up)
     - [HTTP Server (Up)](#http-server-up)
     - [Programming Languages (Up)](#programming-languages-up)
@@ -30,7 +30,7 @@ The server is dedicated only to:
 - Return the data to the client
   - The client is responsible of mounting the data in the view
 
-## Statis and Dynamic Web Pages [(Up)](#table-of-contents)
+## Static and Dynamic Web Pages [(Up)](#table-of-contents)
 
 - Statics: the content is always the same
 - Dynamic: the content is generated in real time
@@ -63,7 +63,35 @@ Most used HTTP servers:
 
 ### Programming Languages [(Up)](#table-of-contents)
 
-*Notes here*
+Client: HTML, CSS, JavaScript
+
+Server:
+- PHP
+  - Open Source
+  - It can be embedded in HTML
+  - Most used in the world, mainly because of Wordpress
+- ASP.NET
+  - By Microsoft
+  - Successor of ASP
+  - The language can be written in C#, Visual Basic, JScript, .NET and N#
+- Java
+  - Its syntax is similar to C++
+  - It can be executed in any platform
+- JSP (Java Server Pages)
+  - A technology created for building dynamic web pages based on HTML and XML
+  - Similar to PHP, but uses Java
+  - Its main advantage is that Java can be used in other contexts apart of web development
+- Python
+  - Basic syntax
+  - Easy to learn
+- Node.js
+  - Execution environment for JavaScript
+  - Lightweight and efficient
+- Go
+  - Google
+  - Open Source project
+- Ruby
+  - Open Source
 
 ### DB Manager Systems [(Up)](#table-of-contents)
 
