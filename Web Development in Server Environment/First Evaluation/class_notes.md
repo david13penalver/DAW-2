@@ -3,7 +3,7 @@ Table of contents
 
 - [Table of contents](#table-of-contents)
 - [Introduction (Up)](#introduction-up)
-  - [Introduction](#introduction)
+  - [Introduction (Up)](#introduction-up-1)
   - [Statis and Dynamic Web Pages (Up)](#statis-and-dynamic-web-pages-up)
   - [Web Server Components (Up)](#web-server-components-up)
     - [HTTP Server (Up)](#http-server-up)
@@ -22,7 +22,8 @@ Table of contents
 
 # Introduction [(Up)](#table-of-contents)
 
-## Introduction 
+## Introduction [(Up)](#table-of-contents)
+
 The server is dedicated only to:
 - Receive customer requests
 - Access to the DB
@@ -41,7 +42,24 @@ The server is dedicated only to:
 
 ### HTTP Server [(Up)](#table-of-contents)
 
-*Notes here*
+TIC programm that processes clients requests. 
+
+Most used HTTP servers:
+- Apache
+  - Open Source
+  - Supervised by the Apache Software Foundation
+  - Most used in the world
+- Nginx
+  - Web/proxy in reverse server
+  - Proxy for IMAP/POP3 email protocols
+  - Open Source
+- IIS (Internet Information Services)
+  - Web server and set of services for Microsoft Windows
+  - Converts a PC into a server for internet or intranet
+- Tomcat
+  - Web container for Java Servlets and JSP
+  - It can work as a web server by itself
+  - Written in Java
 
 ### Programming Languages [(Up)](#table-of-contents)
 
