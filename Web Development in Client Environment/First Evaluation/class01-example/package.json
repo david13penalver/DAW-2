@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "David",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server --browser=  Chrome"
+  },
+  "author": "David Peñalver Navarro",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "live-server": "^1.2.2"
+  }
+}
