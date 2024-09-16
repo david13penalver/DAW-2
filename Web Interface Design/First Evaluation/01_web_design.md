@@ -6,7 +6,7 @@
 - Highlight what is important.
 - Repel attention from what is not important (smaller, more spacious, lower contrast).
 - Avoid using labels or captions. If you see “ventas@persianas.com” you already know it is an email, there is no need to indicate that it is the email. But if you use a label that is part of a sentence. “3 in stock” instead of ‘Stock:3’. And even then, if you use them, make them de-emphasized.
-- Titles `<h1>` don't have to stand out because sometimes they are not important since the title is obvious. `<h1>` is so that the search engine knows that it is important.
+- Titles `<h1>` don't have to stand out because sometimes they are not important since the title is obvious. `<h1>`  is so that the search engine knows that it is important.
 - Square corners indicate seriousness. Very rounded corners are very informal (border-radious).
 - For emphasis instead of larger font size, use bold. But to de-emphasize, use a gray font color instead of black text.
 - Never use a carousel.
