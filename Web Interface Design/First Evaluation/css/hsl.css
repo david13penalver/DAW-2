@@ -1,0 +1,80 @@
+div {
+    width: 90px;
+    height: 90px;
+}
+
+.col {
+    display: inline-block;
+}
+
+.uno {
+    background-color: hsl(257, 100%, 10%);
+}
+
+.dos {
+    background-color: hsl(257, 100%, 20%);
+}
+
+.tres {
+    background-color: hsl(257, 100%, 30%);
+}
+
+.cuatro {
+    background-color: hsl(257, 100%, 40%);
+}
+
+.cinco {
+    background-color: hsl(257, 100%, 50%);
+}
+
+.seis {
+    background-color: hsl(257, 100%, 60%);
+}
+
+.siete {
+    background-color: hsl(257, 100%, 70%);
+}
+
+.ocho {
+    background-color: hsl(257, 100%, 80%);
+}
+
+.nueve {
+    background-color: hsl(257, 100%, 90%);
+}
+
+.auno {
+    background-color: hsl(400, 100%, 10%);
+}
+
+.ados {
+    background-color: hsl(400, 100%, 20%);
+}
+
+.atres {
+    background-color: hsl(400, 100%, 30%);
+}
+
+.acuatro {
+    background-color: hsl(400, 100%, 40%);
+}
+
+.acinco {
+    background-color: hsl(400, 100%, 50%);
+}
+
+.aseis {
+    background-color: hsl(400, 100%, 60%);
+}
+
+.asiete {
+    background-color: hsl(400, 100%, 70%);
+}
+
+.aocho {
+    background-color: hsl(400, 100%, 80%);
+}
+
+.anueve {
+    background-color: hsl(400, 100%, 90%);
+}
