@@ -3,6 +3,50 @@ import java.util.Optional;
 
 public class ProgramacionFuncional {
 
+    public Integer ejercicio1(List<Integer> ejercicioNumber) {
+        return ejercicioNumber.stream().reduce(0, Integer::sum);
+    }
+
+    public List<Integer> ejercicio2(List<Integer> ejercicioNumber) {
+        return ejercicioNumber.stream().filter(n -> n % 2 == 0).toList();
+    }
+
+    public List<String> ejercicio3(List<String> ejercicioNumber) {
+        return ejercicioNumber.stream().map(String::toUpperCase).toList();
+    }
+
+    public Optional<Integer> ejercicio4(List<Integer> ejercicioNumber) {
+        return ejercicioNumber.stream().reduce(Integer::max);
+    }
+
+    public long ejercicio5(List<Integer> ejercicioNumber) {
+        return ejercicioNumber.stream().filter(n -> n > 7).count();
+    }
+
+    public String ejercicio6(List<String> ejercicioNumber) {
+        return ejercicioNumber.stream().reduce("", String::concat);
+    }
+
+    public List<Integer> ejercicio7(List<Integer> ejercicioNumber) {
+        return ejercicioNumber.stream().map(n -> n * n).toList();
+    }
+
+    public List<String> ejercicio8(List<String> ejercicioNumber) {
+        return ejercicioNumber.stream().distinct().toList();
+    }
+
+    public Optional<Integer> ejercicio9(List<Integer> ejercicioNumber, Integer number) {
+        return ejercicioNumber.stream().filter(n -> n > number).findFirst();
+    }
+
+    public long ejercicio10String(List<String> ejercicioNumber, String letter) {
+        return ejercicioNumber.stream().filter(n -> n.startsWith(letter)).count();
+    }
+
+    public long ejercicio10Char(List<String> ejercicioNumber, char letter) {
+        return ejercicioNumber.stream().filter(n -> n.charAt(0) == letter).count();
+    }
+
     public static void main(String[] args) {
         List<Integer> ejercicio1 = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
