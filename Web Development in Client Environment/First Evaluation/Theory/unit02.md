@@ -1,5 +1,5 @@
 # Table of Contents
-- [Table of Contents] (#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Adding Scripts to a Web Page](#adding-scripts-to-a-web-page)
 - [External Scripts](#external-scripts)
   - [Modules](#modules)
@@ -18,7 +18,15 @@
 - [Casting](#casting)
 - [Operators](#operators)
 - [Conditionals](#conditionals)
+  - [if-else statement](#if-else-statement)
+  - [Ternary operator](#ternary-operator)
+  - [Switch statement](#switch-statement)
 - [Loops](#loops)
+  - [for loop](#for-loop)
+  - [while loop](#while-loop)
+  - [do-while loop](#do-while-loop)
+  - [for-in loop](#for-in-loop)
+  - [for-of loop](#for-of-loop)
 
 # Adding Scripts to a Web Page
 [(Up)](#table-of-contents)
@@ -436,9 +444,146 @@ let mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
 # Conditionals
 [(Up)](#table-of-contents)
 
-*Continue here*
+Flow structures that allows executing different code sections according to a `boolean`.
+
+They are essential ir order to take actions and control the behaviour of the app.
+
+## if-else statement
+
+Most basic conditional structure. It evaluates a condition and executes a block of code if the condition is true or an alternative block if the condition is false.
+
+```javascript
+let edad = 18;
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+}
+```
+
+## Ternary operator
+
+It is a simplified version of the if-else statement.
+
+```javascript
+let edad = 18;
+let mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+```
+
+## Switch statement
+
+It is used to select one of many code blocks to be executed.
+
+```javascript
+let dia = 3;
+let nombreDia;
+
+switch (dia) {
+    case 1:
+        nombreDia = "Lunes";
+        break;
+    case 2:
+        nombreDia = "Martes";
+        break;
+    case 3:
+        nombreDia = "Miércoles";
+        break;
+    default:
+        nombreDia = "Día no válido";
+        break;
+}
+
+console.log(nombreDia);
+```
 
 # Loops
 [(Up)](#table-of-contents)
 
-*Notes here*
+## for loop
+
+It is used to execute a block of code a number of times.
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+```
+
+## while loop
+
+It is used to execute a block of code as long as a condition is true.
+
+The condition is evaluated before each iteration.
+
+```javascript
+let i = 0;
+
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+```
+
+## do-while loop
+
+It is used to execute a block of code as long as a condition is true.
+
+The condition is evaluated after each iteration.
+
+It is guaranteed that the block of code will be executed at least once.
+
+```javascript
+let i = 0;
+
+do {
+    console.log(i);
+    i++;
+} while (i < 5);
+```
+
+## for-in loop
+
+It is used to iterate over the properties of an object.
+
+```javascript
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid"
+};
+
+for (let propiedad in persona) {
+    console.log(propiedad + ": " + persona[propiedad]);
+}
+```
+
+```javascript
+let persona = { nombre: "Juan", edad: 30, profesion: "Desarrollador" };
+for (let propiedad in persona) {
+console.log(`${propiedad}: ${persona[propiedad]}`);
+}
+```
+
+The difference between the two examples is the use of the template string. It is a way to concatenate strings in a more readable way.
+
+## for-of loop
+
+It is used to iterate over the values of an iterable object.
+
+Generally used with arrays.
+
+```javascript
+let colores = ["rojo", "verde", "azul"];
+
+for (let color of colores) {
+    console.log(color);
+}
+```
+
+```javascript
+let numeros = [10, 20, 30];
+for (let numero of numeros) {
+console.log(numero);
+}
+```
