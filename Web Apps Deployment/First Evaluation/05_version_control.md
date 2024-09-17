@@ -10,4 +10,4 @@
   - If you want to delete it permanently from the command line, you can use `git rm <file> -f`.
 - `git stash` is used to save the current state of the working directory and the staging area. It is useful when you want to switch branches without committing your changes.
   - `git stash push` is the same as `git stash`.
-  - `git stash push --all` stashes all changes, including untracked files.
+  - `git stash push --all` stashes all changes, including untracked files.   

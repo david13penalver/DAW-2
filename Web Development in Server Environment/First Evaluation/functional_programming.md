@@ -1,21 +1,22 @@
 # Table of Contents
 - [Table of Contents](#table-of-contents)
-- [Introduction (Up)](#introduction-up)
-- [Fundamental Principles (Up)](#fundamental-principles-up)
-- [Lambda Functions (Up)](#lambda-functions-up)
-  - [Syntax (Up)](#syntax-up)
-- [Functional Interfaces (Up)](#functional-interfaces-up)
-  - [Common Functional Interfaces (Up)](#common-functional-interfaces-up)
-- [Streams (Up)](#streams-up)
-  - [Creation and Collection (Up)](#creation-and-collection-up)
-  - [Common methods (Up)](#common-methods-up)
-    - [Intermediate Operations (Up)](#intermediate-operations-up)
-    - [Terminal Operations (Up)](#terminal-operations-up)
-- [Optional (Up)](#optional-up)
-  - [Creation (Up)](#creation-up)
-  - [Most Common Methods (Up)](#most-common-methods-up)
+- [Introduction](#introduction)
+- [Fundamental Principles](#fundamental-principles)
+- [Lambda Functions](#lambda-functions)
+  - [Syntax](#syntax)
+- [Functional Interfaces](#functional-interfaces)
+  - [Common Functional Interfaces](#common-functional-interfaces)
+- [Streams](#streams)
+  - [Creation and Collection](#creation-and-collection)
+  - [Common methods](#common-methods)
+    - [Intermediate Operations](#intermediate-operations)
+    - [Terminal Operations](#terminal-operations)
+- [Optional](#optional)
+  - [Creation](#creation)
+  - [Most Common Methods](#most-common-methods)
 
-# Introduction [(Up)](#table-of-contents)
+# Introduction 
+[(Up)](#table-of-contents)
 
 Functional programming is a programming paradigm where functions are treated as first-class citizens. It is a declarative programming paradigm where the logic of the program is expressed without explicitly describing the flow control.
 
@@ -29,20 +30,23 @@ Advantages of functional programming:
 - Encourages code reusability
 - Encourages modularity
 
-# Fundamental Principles [(Up)](#table-of-contents)
+# Fundamental Principles 
+[(Up)](#table-of-contents)
 
 - Functions as First Class Citizens: can be treated like any other type of data.
 - Immutability: once an object (such as a variable or a data structure) has been created, its state cannot be changed
 - Purity of functions: always produce the same results and have no observable side effects outside of the function. A pure function neither modifies the state of external variables nor performs operations that depend on mutable external data
 - Recursion and Higher Order Funcionts: encourages the use of recursion and higher-order functions. Recursion is used to perform iterations instead of loops, which can lead to clearer and more concise implementation of algorithms. Higher-order functions are those that can accept other functions as arguments or return functions as results, allowing function composition and the construction of more powerful abstractions.
 
-# Lambda Functions [(Up)](#table-of-contents)
+# Lambda Functions 
+[(Up)](#table-of-contents)
 
 Lambda functions are anonymous functions. They do not have a name, return type, or access modifier. They are used to provide the implementation of functional interfaces.
 
 These functions can be passed as arguments to other functions, returned as results of other functions and stored in variables. Their concise syntax and flexibility make them especially useful for high-level operations, such as manipulating collections of data and implementing functional design patterns.
 
-## Syntax [(Up)](#table-of-contents)
+## Syntax 
+[(Up)](#table-of-contents)
 
 ```java
 (parameters) -> expression
@@ -72,7 +76,8 @@ AddOperation addOperationFunctional = (a, b) -> a + b;
 
 Lambda functions are commonly used in combination with functional interfaces, which are interfaces containing a single abstract method.
 
-# Functional Interfaces [(Up)](#table-of-contents)
+# Functional Interfaces 
+[(Up)](#table-of-contents)
 
 Functional interfaces are interfaces that have only one abstract method. These interfaces are the basis of functional programming in Java and are mainly used to define the type of a lambda function.
 
@@ -117,7 +122,8 @@ void testAdd() {
 }
 ```
 
-## Common Functional Interfaces [(Up)](#table-of-contents)
+## Common Functional Interfaces 
+[(Up)](#table-of-contents)
 
 Since Java 8, the JDK has included a package called `java.util.function` that contains several functional interfaces that can be used to define lambda functions for common operations.
 
@@ -151,7 +157,8 @@ There are also specialized interfaces for primitive types, such as IntConsumer, 
 
 These additional interfaces allow for greater flexibility and efficiency in functional programming in Java.
 
-# Streams [(Up)](#table-of-contents)
+# Streams 
+[(Up)](#table-of-contents)
 
 A `Stream` is a sequence of elements that can be processed in a sequential or parallel manner. Streams are a key feature of functional programming in Java, as they allow for the manipulation of collections of data in a declarative and functional style.
 
@@ -160,7 +167,8 @@ Characteristics of Streams:
 - Intermediate and Terminal Operations: intermediate operations are used to transform the data in the stream, while terminal operations produce a result or side effect.
 - Lazy Evaluation: which means that intermediate operations are not executed until a terminal operation is called. This allows for more efficient processing of data.
 
-## Creation and Collection [(Up)](#table-of-contents)
+## Creation and Collection 
+[(Up)](#table-of-contents)
 
 They can be created from collections, arrays, or other sources. Streams can be used to perform operations such as filtering, mapping, reducing, and sorting on the elements of the stream.
 
@@ -179,11 +187,13 @@ Stream<Integer> numberStream = Arrays.stream(numberArray);
 Stream<Integer> numberStream = Stream.of(1, 2, 3, 4, 5);
 ```
 
-## Common methods [(Up)](#table-of-contents)
+## Common methods 
+[(Up)](#table-of-contents)
 
 Streams provide a wide range of methods to perform operations on the elements of the stream. Some of the most common methods are:
 
-### Intermediate Operations [(Up)](#table-of-contents)
+### Intermediate Operations 
+[(Up)](#table-of-contents)
 
 - `filter`: filters the elements of a `Stream`using a `Predicate` function:
 ```java
@@ -218,7 +228,8 @@ List<Integer> distinctNumbers = numbers.stream()
                                        .toList();
 ```
 
-### Terminal Operations [(Up)](#table-of-contents)
+### Terminal Operations 
+[(Up)](#table-of-contents)
 
 - 'toList': collects the elements of a `Stream` into a `List`:
 ```java
@@ -269,7 +280,8 @@ Optional<String> anyName = names.stream()
                                 .findAny();
 ```
 
-# Optional [(Up)](#table-of-contents)
+# Optional 
+[(Up)](#table-of-contents)
 
 The `Optional` class is a container object that may or may not contain a non-null value. It is used to represent the absence of a value, instead of using `null`.
 
@@ -281,7 +293,8 @@ Its main usefulness lies in:
 - Better Design: by encouraging the use of methods that return `Optional` instead of `null`.
 - More expressive API: It provides useful methods for working with optional values, such as `orElse`, `orElseGet`, `orElseThrow`, `ifPresent`, etc.; which make it easier to handle cases of `null` values in a more elegant way.
 
-## Creation [(Up)](#table-of-contents)
+## Creation 
+[(Up)](#table-of-contents)
 
 - `Optional.of(value)`: creates an `Optional` object that contains a non-null value. If the value is `null`, a `NullPointerException` is thrown.
 ```java
@@ -301,7 +314,8 @@ While `null` indicates the total absence of value and may cause NullPointerExcep
 
 It is good practice to use `Optional` only as a return type for methods that may or may not return a value, but it should not be used as an input parameter type for methods.
 
-## Most Common Methods [(Up)](#table-of-contents)
+## Most Common Methods 
+[(Up)](#table-of-contents)
 
 - `isPresent()`: verifies if the `Optional` contains a value.
 ```java
