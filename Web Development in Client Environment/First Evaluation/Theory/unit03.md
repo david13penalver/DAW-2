@@ -5,7 +5,12 @@
   - [Important properties](#important-properties)
   - [Important methods](#important-methods)
 - [String](#string)
+  - [Creation of strings](#creation-of-strings)
+  - [Properties](#properties)
+  - [Important Methods](#important-methods-1)
 - [Date](#date)
+  - [Creation of a Date Object](#creation-of-a-date-object)
+  - [Methods](#methods)
 - [Number \& Math](#number--math)
 - [Local Storage](#local-storage)
   - [Cookies](#cookies)
@@ -134,10 +139,155 @@ let saludo = `Hola, ${nombre}`;
 console.log(saludo); // Imprime "Hola, Juan"
 ```
 
+## Creation of strings
+
+  - String literals: single or double quotation marks
+```javascript
+let saludo = "Hola";
+```
+- String() constructor:
+```javascript
+let nombre = new String("Juan");
+```
+
+## Properties
+
+- `.length`: returns de length of the chain.
+
+## Important Methods
+
+- `charAt(T)`: returns the character at the speified position at the index.
+```javascript
+let texto = "ABCDEFGHIJKLMN";
+// Prints "F" (character at position 5)
+console.log(texto.charAt(5));
+```
+- `charCodeAt(T)`: returns de Unicode code at the specified position at the index.
+```javascript
+let letra = "ñ";
+// Imprime "165" (código Unicode de la letra "ñ")
+console.log(letra.charCodeAt(0));
+```
+- `indexOf(substring, beginning)`: searches the first aparition of a substring inside a chain, returning the beginning position.
+```javascript
+let frase = "Esta frase contiene la palabra programación";
+let indice = frase.indexOf("programación");
+if (indice !== -1) {
+console.log(`programación esta en la posición: ${indice}`);
+} else {
+console.log("programación no se encuentra en la frase");
+}
+```
+- `lastIndexOf(substring, beginning)`: searches the last aparition of a substring inside a chain, returning the beginning position.
+```javascript
+let frase = "Esta frase contiene la palabra programación";
+let indice = frase.lastIndexOf("programación");
+if (indice !== -1) {
+console.log(`programación esta en la posición: ${indice}`);
+} else {
+console.log("programación no se encuentra en la frase");
+}
+```
+- `replace(old, new)`: replaces the first aparition of a substring with another substring.
+```javascript
+let texto = "Hola a todos, soy un robot";
+let textoReemplazado = texto.replace("robot", "humano");
+// Imprime "Hola a todos, soy un humano"
+console.log(textoReemplazado);
+```
+- `toUpperCase()`: converts all the characters of a string to uppercase.
+```javascript
+let texto = "Hola, mundo";
+// Imprime "HOLA, MUNDO"
+console.log(texto.toUpperCase());
+```
+- `toLowerCase()`: converts all the characters of a string to lowercase.
+```javascript
+let texto = "Hola, mundo";
+// Imprime "hola, mundo"
+console.log(texto.toLowerCase());
+```
+- `trim()`: removes the white spaces at the beginning and end of a string.
+```javascript
+let texto = "   Hola Mundo   ";
+console.log(texto.trim()); // Imprime "Hola Mundo"
+```
+- `startTrim()`: removes the white spaces at the beginning of a string.
+```javascript
+let texto = "   Hola Mundo   ";
+console.log(texto.startTrim()); // Imprime "Hola Mundo   "
+```
+- `endTrim()`: removes the white spaces at the end of a string.
+```javascript
+let texto = "   Hola Mundo   ";
+console.log(texto.endTrim()); // Imprime "   Hola Mundo"
+```
+- `concat(string1, string2, ...)`: concatenates two or more strings.
+```javascript
+let texto1 = "Hola";
+let texto2 = "Mundo";
+let textoConcatenado = texto1.concat(", ", texto2);
+// Imprime "Hola, Mundo"
+console.log(textoConcatenado);
+```
+- `slice(start, end)`: extracts a part of a string and returns it as a new string.
+```javascript
+let frase = "JavaScript es un lenguaje de programación";
+// Extrae la subcadena "es un lenguaje"
+let subcadena = frase.slice(10, 25);
+console.log(subcadena);
+```
+- `split(separator, limit)`: divides a string into an array of substrings.
+  - `separator`: specifies the character, or the regular expression, to use for dividing the string. By default, it is a comma.
+  - `limit`: specifies the number of splits. Without it, the string is divided completely.
+```javascript
+let frase = "Esta frase se divide por espacios";
+let palabras = frase.split(" ");
+console.log(palabras); // Imprime un array con las palabras: ["Esta", "frase", "se", "divide", "por", "espacios"]
+
+let lista = "rojo,verde,azul,amarillo";
+let colores = lista.split(",");
+console.log(colores); 
+// Imprime un array con los colores: ["rojo", "verde", "azul", "amarillo"]
+
+let cadenaLarga = "Lorem ipsum dolor sit amet, consectetur
+adipiscing elit.
+let partes = cadenaLarga.split(" ", 5); // Límite de 5 subcadenas
+console.log(partes); // Imprime las primeras 5 palabras de la cadena
+
+let texto = "Hola, mundo!";
+let caracteres = texto.split("");
+console.log(caracteres); // Imprime un array con cada caracter
+```
+
+[Every method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+
 # Date
 [Up] (#table-of-contents)
 
-*Notes here*
+It represents a date and time in JavaScript. It is used to work with dates and times (past, present or future).
+
+## Creation of a Date Object
+
+- Without arguments: it creates a Date object with the current date and time.
+```javascript
+let fechaActual = new Date();
+```
+- With numeric arguments: it creates a Date object with the specified date and time.
+```javascript
+let fecha = new Date(2024, 5, 12, 10, 30, 15, 500);
+```
+- With a string argument: it creates a Date object with the specified date and time.
+```javascript
+let fechaCadena = "2024-06-12T10:30:15.500+02:00";
+let fechaObjeto = new Date(fechaCadena);
+console.log(fechaObjeto);
+```
+
+## Methods
+
+- `getFullYear`: 
 
 # Number & Math
 [Up] (#table-of-contents)
