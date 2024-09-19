@@ -1,0 +1,13 @@
+package com.besport24.exercise;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DavidApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DavidApplication.class, args);
+	}
+
+}
