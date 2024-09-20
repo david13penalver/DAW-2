@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: #0055B7;
+    --secondary-color: #ED8836;
+    --tertiary-color: #C43030;
+    --background-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;   
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    border-radius: 5px;
+    height: 2em;
+}
+
+.normalprimario {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border:var(--primary-color) 1px solid;
+}
+
+.normalsecundario {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: var(--primary-color) 1px solid;
+}
+
+.normalterciario {
+    color: var(--primary-color);
+}
+
+.alternativoprimario {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border:var(--secondary-color) 1px solid;
+}
+
+.alternativosecundario {
+    background-color: var(--white);
+    color: var(--secondary-color);
+    border: var(--secondary-color) 1px solid;
+}
+
+.alternativoterciario {
+    color: var(--secondary-color);
+}
+
+.peligrosoprimario {
+    background-color: var(--tertiary-color);
+    color: var(--white);
+    border:var(--tertiary-color) 1px solid;
+}
+
+.peligrososecundario {
+    background-color: var(--white);
+    color: var(--tertiary-color);
+    border: var(--tertiary-color) 1px solid;
+}
+
+.peligrosoterciario {
+    color: var(--tertiary-color);
+}
+
+.c-boton {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    border-radius: 5px;
+    height: 2em;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border:var(--primary-color) 1px solid;
+}
+
+.c-boton--funcion-alternativa{
+    --primary-color: #ED8836;
+}
+
+.c-boton--funcion-peligrosa{
+    --primary-color: #C43030;
+
+}
+
+.c-boton--importancia-secundaria {
+    --background-color: #ED8836;
+
+}
+
+.c-boton--importancia-terciaria{
+    --background-color: #C43030;
+}
+
