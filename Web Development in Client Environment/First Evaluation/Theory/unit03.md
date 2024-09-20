@@ -14,6 +14,7 @@
 - [Number \& Math](#number--math)
 - [Local Storage](#local-storage)
   - [Cookies](#cookies)
+  - [Cookies Creation](#cookies-creation)
   - [Web Storage API](#web-storage-api)
   - [IndexedDB](#indexeddb)
 
@@ -297,12 +298,63 @@ console.log(fechaObjeto);
 # Local Storage
 [Up] (#table-of-contents)
 
-*Notes here*
+To storage data in local.
+
+We have the tab `Application` in the browser's developer tools, where we can see the local storage.
+
+```javascript
+localStorage.setItem("nombre", "Juan");
+let nombre = localStorage.getItem("nombre");
+console.log(nombre); // Imprime "Juan"
+```
 
 ## Cookies
 [Up] (#table-of-contents)
 
-*Notes here*
+They are a small piece of data stored in the user's computer by the web browser while browsing a website. Cookies are used to store user-specific information to improve the user experience.
+
+Generally used to tell the server that two petitions come from the same user. For example, to keep open the session.
+
+They use the HTTP protocol.
+
+They are saved as key-value pairs.
+
+It is recommended to put a lifetime and a path.
+
+They need a live server to work.
+
+Uses:
+- Session management: login, shopping carts, game scores, or anything else the server should remember.
+- Personalization: user preferences, themes, and other settings.
+- Tracking: recording and analyzing user behavior.
+
+## Cookies Creation
+
+- `document.cookie`: contains the cookies of the current document.
+```javascript
+document.cookie = "nombre=Pepe";
+document.cookie = "edad=30";
+document.cookie = "ciudad=Valencia";
+alert("Cookies guardadas correctamente.");
+console.log(document.cookie)
+```
+![Cookies](./Assets/05_cookies.png)
+
+- `path`: specifies the path of the cookie.
+  - Usually, it is the root path `/`.
+```javascript
+document.cookie = "nombre=Pepe; path=/";
+```
+- `expires` and `max-age`: specifies the expiration date of the cookie.
+  - `expires`: specifies the expiration date of the cookie.
+  - `max-age`: specifies the maximum age of the cookie in seconds.
+```javascript
+// +1 día desde ahora
+let date = new Date(Date.now() + 86400e3);
+date = date.toUTCString();
+document.cookie = "ciuda=Valencia" + date;
+```
+- By default, the cookie is deleted when the browser is closed. 
 
 ## Web Storage API
 [Up] (#table-of-contents)
