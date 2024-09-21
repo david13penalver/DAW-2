@@ -4,7 +4,9 @@
     --primary-color: #0055B7;
     --secondary-color: #ED8836;
     --tertiary-color: #C43030;
-    --background-color: #FFFFFF;
+    --white: #FFFFFF;
+    --bem-principal: #0055B7;
+    --bem-fondo: #FFFFFF;
 }
 
 * {
@@ -18,7 +20,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
+    height: 10vh;
     flex-wrap: wrap;
 }
 
@@ -78,32 +80,36 @@
     color: var(--tertiary-color);
 }
 
+/* Colors correctly applied */
+
 .c-boton {
     display: flex;
     align-items: center;
     padding: 1.5em 1.5em;
     border-radius: 5px;
     height: 2em;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border:var(--primary-color) 1px solid;
+    background-color: var(--bem-principal);
+    color: var(--bem-fondo);
+    border: var(--bem-fondo) 1px solid;
 }
 
 .c-boton--funcion-alternativa{
-    --primary-color: #ED8836;
+    --bem-principal: #ED8836;
+    --bem-fondo: #FFFFFF;
 }
 
 .c-boton--funcion-peligrosa{
-    --primary-color: #C43030;
-
+    --bem-principal: #C43030;
+    --bem-fondo: #FFFFFF;
 }
 
 .c-boton--importancia-secundaria {
-    --background-color: #ED8836;
-
+    background-color: var(--bem-fondo);
+    color: var(--bem-principal);
+    border: var(--bem-principal) 1px solid;
 }
 
 .c-boton--importancia-terciaria{
-    --background-color: #C43030;
+    background-color: var(--bem-fondo);
+    color: var(--bem-principal);
 }
-
