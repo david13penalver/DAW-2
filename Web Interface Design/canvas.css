@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+
+    /* COLORS */
+
+    --color-main-1: #011119;
+    --color-main-2: #032E49;
+    --color-main-3: #084C7D;
+    --color-main-4: #0C61AC;
+    --color-main-5: #1075DA;
+    --color-main-6: #2D85F0;
+    --color-main-7: #619FF5;
+    --color-main-8: #8FB6FA;
+    --color-main-9: #BED3FD;
+    --color-alternative-1: #774703;
+    --color-alternative-2: #AB6D03;
+    --color-alternative-3: #DA9201;
+    --color-alternative-4: #FFBB0F;
+    --color-alternative-5: #FFCF3D;
+    --color-alternative-6: #FFE270;
+    --color-alternative-7: #FFEF9F;
+    --color-alternative-8: #FEF9D2;
+    --color-alternative-9: #FEFCE1;
+    --color-red-1: #811D1D;
+    --color-red-2: #981B1B;
+    --color-red-3: #BA1C1C;
+    --color-red-4: #DC2828;
+    --color-red-5: #EF4343;
+    --color-red-6: #F87272;
+    --color-red-7: #FCA6A6;
+    --color-red-8: #FEC8C8;
+    --color-red-9: #FEE1E1;
+    --color-orange-1: #ffedd5;
+    --color-orange-2: #fed7aa;
+    --color-orange-3: #fdba74;
+    --color-orange-4: #fb923c;
+    --color-orange-5: #f97316;
+    --color-orange-6: #ea580c;
+    --color-orange-7: #c2410c;
+    --color-orange-8: #7c2d12;
+    --color-orange-9: #FEEBCD;
+    --color-yellow-1: #76350F;
+    --color-yellow-2: #91400D;
+    --color-yellow-3: #B35309;
+    --color-yellow-4: #DB7706;
+    --color-yellow-5: #F59F0A;
+    --color-yellow-6: #FBBD23;
+    --color-yellow-7: #FCD44F;
+    --color-yellow-8: #FDE68B;
+    --color-yellow-9: #FEF3C8;
+    --color-lime-1: #ecfccb;
+    --color-lime-2: #d9f99d;
+    --color-lime-3: #bef264;
+    --color-lime-4: #a3e635;
+    --color-lime-5: #84cc16;
+    --color-lime-6: #65a30d;
+    --color-lime-7: #4d7c0f;
+    --color-lime-8: #3f6212;
+    --color-lime-9: #365314;
+    --color-green-1: #064C39;
+    --color-green-2: #066046;
+    --color-green-3: #047756;
+    --color-green-4: #059467;
+    --color-green-5: #10B77F;
+    --color-green-6: #36D399;
+    --color-green-7: #6EE7B7;
+    --color-green-8: #A5F3CF;
+    --color-green-9: #D1FAE5;
+    --color-cyan-1: #cffafe;
+    --color-cyan-2: #a5f3fc;
+    --color-cyan-3: #67e8f9;
+    --color-cyan-4: #22d3ee;
+    --color-cyan-5: #06b6d4;
+    --color-cyan-6: #0891b2;
+    --color-cyan-7: #0e7490;
+    --color-cyan-8: #155e75;
+    --color-cyan-9: #164e63;
+    --color-blue-1: #1E3B8A;
+    --color-blue-2: #1E3FAE;
+    --color-blue-3: #1D4FD7;
+    --color-blue-4: #2463EB;
+    --color-blue-5: #3C83F6;
+    --color-blue-6: #61A6FA;
+    --color-blue-7: #91C3FD;
+    --color-blue-8: #BEDBFE;
+    --color-blue-9: #DCEBFE;
+    --color-purple-1: #4D1D95;
+    --color-purple-2: #5A21B5;
+    --color-purple-3: #6B26D9;
+    --color-purple-4: #7C3BED;
+    --color-purple-5: #895AF6;
+    --color-purple-6: #A689FA;
+    --color-purple-7: #C3B4FD;
+    --color-purple-8: #DED7FE;
+    --color-purple-9: #EBE7FE;
+    --color-pink-1: #811842;
+    --color-pink-2: #9B174C;
+    --color-pink-3: #BF185D;
+    --color-pink-4: #DB2979;
+    --color-pink-5: #EC4699;
+    --color-pink-6: #F471B5;
+    --color-pink-7: #F9A9D5;
+    --color-pink-8: #FBD0E8;
+    --color-pink-9: #FCE8F4;
+    --color-white-1: #FFFFFF;
+    --color-white-2: #F9F9F9;
+    --color-white-3: #F4F4F4;
+    --color-white-4: #EFEFEF;
+    --color-white-5: #E5E5E5;
+    --color-white-6: #D9D9D9;
+    --color-white-7: #C9C9C9;
+    --color-white-8: #B5B5B5;
+    --color-white-9: #9E9E9E;
+    --color-black-1: #000000;
+    --color-black-2: #0A0A0A;
+    --color-black-3: #141414;
+    --color-black-4: #1E1E1E;
+    --color-black-5: #282828;
+    --color-black-6: #333333;
+    --color-black-7: #3D3D3D;
+    --color-black-8: #484848;
+    --color-black-9: #525252;
+    --color-gray-1: #1A1A1A;
+    --color-gray-2: #2B2B2B;
+    --color-gray-3: #3C3C3C;
+    --color-gray-4: #4D4D4D;
+    --color-gray-5: #5E5E5E;
+    --color-gray-6: #6F6F6F;
+    --color-gray-7: #808080;
+    --color-gray-8: #919191;
+    --color-gray-9: #A2A2A2;
+}
+
+* {
+
+    /* NORMALIZE */
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;   
+}
+
+/* BUTTONS (9) - Function & Importance */
+
+.c-boton {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    border-radius: 5px;
+    height: 2em;
+    background-color: var(--color-main-5);
+    color: var(--color-white-1);
+    border: var(--color-main-5) 1px solid;
+}
+
+.c-boton--funcion-alternativa{
+    --color-main-5: #FFCF3D;
+    --color-white-1: #FFFFFF;
+    border: var(--color-main-5) 1px solid;
+}
+
+.c-boton--funcion-peligrosa{
+    --color-main-5: #C43030;
+    ----color-white-1: #FFFFFF;
+    border: var(--color-main-5) 1px solid;
+}
+
+.c-boton--importancia-secundaria {
+    background-color: var(--color-white-1);
+    color: var(--color-main-5);
+    border: var(--bem-principal) 1px solid;
+}
+
+.c-boton--importancia-terciaria{
+    background-color: transparent;
+    color: var(--color-main-5);
+    border: none;
+}
