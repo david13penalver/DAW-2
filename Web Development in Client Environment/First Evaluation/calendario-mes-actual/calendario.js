@@ -25,15 +25,15 @@ document.getElementById("table-head").innerHTML += `
 
 let inicio = 1 - (currentDay - 1)
 
-let cal = `<table border=1>`;
-n = 0
+let calendar = `<table border=1>`;
+let nextWeek = 0
     for (i = inicio; i <= daysCurrentMonth; i++) {
-        if (n % 7 == 0) cal += "<tr>"
-        let texto = (i <= 0) ? " " : i
-        cal += "<td>" + texto
-        n++
+        if (nextWeek % 7 == 0) calendar += "<tr>"
+        let day = (i <= 0) ? " " : i
+        calendar += "<td>" + day
+        nextWeek++
     }
 
-cal += "</table>"
+calendar += "</table>"
 
-document.getElementById("table-head").innerHTML += cal;
+document.getElementById("table-head").innerHTML += calendar;
