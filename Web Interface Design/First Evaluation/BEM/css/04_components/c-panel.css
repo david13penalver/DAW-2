@@ -1,0 +1,51 @@
+.c-panel {
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.c-panel--global {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px;
+    border-radius: 60px;
+}
+
+.c-panel__title {
+    background-color: aliceblue;
+    border-radius: 50px 50px 0 0;
+    padding: 1em;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-panel__title--xl {
+    font-size: 16px;
+}
+
+.c-panel__body {    
+    padding: 1em;
+}
+
+.c-panel__footer {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 1em;
+}
+
+.c-panel__footer--xl {
+    font-size: 13px;
+}
+
+.c-panel--danger {
+    background-color: red;
+}

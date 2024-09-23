@@ -1,0 +1,4 @@
+.l-horizontal {
+    display: flex;
+    flex-direction: column;
+}
