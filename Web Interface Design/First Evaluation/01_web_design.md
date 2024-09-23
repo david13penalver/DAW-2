@@ -1,4 +1,15 @@
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Design Standars](#design-standars)
+- [Colors](#colors)
+  - [Doing a Basic Color Palette](#doing-a-basic-color-palette)
+- [Light](#light)
+- [Color Contrast](#color-contrast)
+- [Buttons](#buttons)
+- [Size System](#size-system)
+
 # Design Standars
+[Up](#table-of-contents)
 
 - Make things that are not related be far apart from each other. That is to say that there is a lot of white space. And then we will see if you put them together a little bit.
 - The design does not have to occupy 100% of the screen because in very big screens it looks bad.
@@ -13,6 +24,7 @@
 - Don't write everything in upper-case. It's difficult to read. Use `<em>`, styles or similar.
 
 # Colors
+[Up](#table-of-contents)
 
 - We need a big color palette.
 - Main color.
@@ -36,7 +48,13 @@ Not like this:
 Like this:
 ![Good Color](./Assets/01_color_good.png)
 
+- The white and gray scale is used for the background, making things clearer or darker.
+- The main color scale is used for almost everything.
+- The alternative color scale is used for buttons, links, and other things that need to stand out.
+- The rest of colors are used for specific things (i.e.: red for something dangerous).
+
 ## Doing a Basic Color Palette
+[Up](#table-of-contents)
 
 - We choose the color (for main color, alternate color, red, blue, green...).
 - This one is in the middle of the palette (color 5 or 50%).
@@ -69,12 +87,14 @@ Like this:
   - To be more specific, by hand (for pros).
 
 # Light
+[Up](#table-of-contents)
 
 Things that are above must be lighter than things that are below.
 
 ![Light](./Assets/01_light.png)
 
 # Color Contrast
+[Up](#table-of-contents)
 
 When doing a user interface, we should use two colors that contrast with each other. 
 
@@ -93,20 +113,47 @@ One simple option is using a warm color and a cold color. For easy use, the one 
 ![Contrast](./Assets/01_contrast.jpg)   
 
 # Buttons
+[Up](#table-of-contents)
 
 2 characteristics of a button:
 - Importance: if we want that the client clicks on it, we should make it stand out.
 - Function: if we want that the client knows what the button does, we should make it look like a button.
 ![Button](./Assets/01_buttons.png)
 
+- Examples: 
+
+| Action             | Priority    | Type   | Description                                        |
+|--------------------|-------------|--------|----------------------------------------------------|
+| **Pay cart**        | Primary     | Normal | We want the user to click here; it is a normal action. |
+| **Cancel payment**  | Tertiary    | Normal | We don't want the user to click here; it is a normal action. |
+
+
+| Action            | Priority   | Type      | Description                                                  |
+|-------------------|------------|-----------|--------------------------------------------------------------|
+| **Pay cart**       | Primary    | Normal    | We want the user to click here; it is a normal action.        |
+| **Empty cart**     | Tertiary   | Dangerous | We don't want the user to click here; it's dangerous because the cart will be emptied. |
+
 # Size System
+[Up](#table-of-contents)
 
-*Notes here*
+- Padding and Margin
 
-# User Experience
+```
+0px, 4px, 6x, 8px, 10px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px, 80px, 96px, 128px, 160px, 192px, 224px, 256px, 320px, 480px, 640px
+```
 
-*Notes here*
+- Font size
 
-# AI and Design
+```
+12px, 14px, 16px, 18px, 20px, 24px, 30px, 36px, 48px, 64px
+```
 
-*Notes here*
+- Border radius
+
+```
+0px, 2px, 4px, 6px, 8px, 16px
+```
+
+Obviously you can choose the sizes you want but you have to keep in mind that the larger the size.
+
+The more the increment between one and the other should be.
