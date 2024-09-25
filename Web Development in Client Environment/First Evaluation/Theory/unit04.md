@@ -9,6 +9,12 @@
   - [Arrays](#arrays)
     - [Declaration and access to the elements](#declaration-and-access-to-the-elements)
     - [Properties and methods](#properties-and-methods)
+      - [Add, delite and extract elements:](#add-delite-and-extract-elements)
+      - [Iterate each element](#iterate-each-element)
+      - [Search elements](#search-elements)
+      - [Transform an array](#transform-an-array)
+    - [Declaration and access to the elements](#declaration-and-access-to-the-elements-1)
+    - [Properties and methods](#properties-and-methods-1)
     - [Callbacks](#callbacks)
     - [Array Type](#array-type)
   - [Sets](#sets)
@@ -148,11 +154,162 @@ const resultado = sumar(5, 3); // Se llama a la función
 console.log('La suma es:', resultado); // Imprime: La suma es: 8
 ```
 
-# Iterables
+# Iterables 
 [Up](#table-of-contents)
+
+- Objects that can be iterated using a loop.
+- They allow as access to their elements in a sequential way.
+
+More important iterables:
+- Arrays: ordered collection of elements.
+  - More used iterable.
+  - They allow us storage and access to a list of sort elements.
+- Sets: collection of unique elements.
+- Sets: collection of key-value pairs.
+  - They allow us to store and access elements by a key.
+  - They are used to store data in a structured way.
+- Objects: collection of properties.
+  - They allow us to store and access data in a structured way.
 
 ## Arrays
 [Up](#table-of-contents)
+
+- Arrays are a type of object that allows us to store multiple values in a single variable.
+- They are a key tool in JavaScript.
+- The index of the elements starts at 0.
+
+### Declaration and access to the elements
+
+- Literal notation: most common way to create an array.
+```javascript
+const array = [element1, element2, ...];
+const numeros = [10, 5, 3, 2];
+const mixto = ["valor1", 20, true, { nombre: "Objeto" }];
+```
+- Constructor notation: less common way to create an array.
+```javascript
+const array = new Array(element1, element2, ...);
+const numeros = new Array(10, 5, 3, 2);
+const mixto = new Array("valor1", 20, true, { nombre: "Objeto" });
+```
+
+### Properties and methods
+
+- `length`: property that returns the number of elements in the array.
+```javascript
+const numeros = [10, 5, 3, 2];
+console.log(numeros.length); // Imprime: 4
+```
+#### Add, delite and extract elements:
+- `push()`: method that adds one or more elements to the end of an array and returns the new length of the array.
+```javascript
+const numeros = [10, 5, 3, 2];
+numeros.push(7);
+console.log(numeros); // Imprime: [10, 5, 3, 2, 7]
+```
+  - `pop()`: method that removes the last element from an array and returns that element.
+```javascript
+const numeros = [10, 5, 3, 2];
+const ultimo = numeros.pop();
+console.log(ultimo); // Imprime: 2
+```
+  - `shift()`: method that removes the first element from an array and returns that element.
+```javascript
+const numeros = [10, 5, 3, 2];
+const primero = numeros.shift();
+console.log(primero); // Imprime: 10
+```
+  - `unshift()`: method that adds one or more elements to the beginning of an array and returns the new length of the array.
+```javascript
+const numeros = [10, 5, 3, 2];
+numeros.unshift(7);
+console.log(numeros); // Imprime: [7, 10, 5, 3, 2]
+```
+  - `splice()`: method that changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+    - The first parameter is the index where the change will start.
+    - The second parameter is the number of elements to remove.
+    - The third and following parameters are the elements to add.
+```javascript
+const numeros = [10, 5, 3, 2];
+numeros.splice(1, 2, 7, 8);
+console.log(numeros); // Imprime: [10, 7, 8, 2]
+```
+- `slice()`: method that returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).
+```javascript
+const numeros = [10, 5, 3, 2];
+const subArray = numeros.slice(1, 3);
+console.log(subArray); // Imprime: [5, 3]
+```
+- `concat()`: method that returns a new array comprised of this array joined with other array(s) and/or value(s).
+```javascript
+const numeros = [10, 5, 3, 2];
+const numeros2 = [7, 8];
+const resultado = numeros.concat(numeros2);
+console.log(resultado); // Imprime: [10, 5, 3, 2, 7, 8]
+```
+#### Iterate each element
+  - `forEach()`: method that executes a provided function once for each array element.
+```javascript
+const numeros = [10, 5, 3, 2];
+numeros.forEach(function(elemento, indice) {
+    console.log(`En la posición ${indice} hay el valor ${elemento}`);
+});
+```
+#### Search elements
+  - `indexOf()`: method that returns the first index at which a given element can be found in the array, or -1 if it is not present.
+```javascript
+const numeros = [10, 5, 3, 2];
+const posicion = numeros.indexOf(5);
+console.log(posicion); // Imprime: 1
+```
+  - `lastIndexOf()`: method that returns the last index at which a given element can be found in the array, or -1 if it is not present.
+```javascript
+const numeros = [10, 5, 3, 2, 5];
+const posicion = numeros.lastIndexOf(5);
+console.log(posicion); // Imprime: 4
+```
+  - `includes()`: method that determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+```javascript
+const numeros = [10, 5, 3, 2];
+const incluido = numeros.includes(5);
+console.log(incluido); // Imprime: true
+```
+- `find()`: method that returns the value of the first element in the provided array that satisfies the provided testing function.
+  - If the value does not exist, `undefined` is returned.
+```javascript
+const numeros = [10, 5, 3, 2];
+const encontrado = numeros.find(function(elemento) {
+    return elemento > 3;
+});
+console.log(encontrado); // Imprime: 10
+```
+- `findIndex()`: method that returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1.
+```javascript
+const numeros = [10, 5, 3, 2];
+const indice = numeros.findIndex(function(elemento) {
+    return elemento > 3;
+});
+console.log(indice); // Imprime: 0
+```
+- `findLast()`: method that returns the value of the last element in the provided array that satisfies the provided testing function.
+  - If the value does not exist, `undefined` is returned.
+```javascript
+const numeros = [10, 5, 3, 2];
+const encontrado = numeros.findLast(function(elemento) {
+    return elemento > 3;
+});
+console.log(encontrado); // Imprime: 5
+```
+- `filter()`: method that creates a new array with all elements that pass the test implemented by the provided function.
+```javascript
+const numeros = [10, 5, 3, 2];
+const filtrados = numeros.filter(function(elemento) {
+    return elemento > 3;
+});
+console.log(filtrados); // Imprime: [10, 5]
+```
+
+#### Transform an array
 
 ### Declaration and access to the elements
 [Up](#table-of-contents)

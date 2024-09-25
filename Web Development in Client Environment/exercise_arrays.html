@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <button id="1" onclick="verAlumnos()">Ver alumnos</button>
+    <button id="2" onclick="addAlumno()">Añadir alumno</button>
+    <button id="3" onclick="deleteAlumno()">Borrar alumno</button>
+    <button id="4" onclick="searchAlumno()">Buscar alumno</button>
+    <div id="divAlumnos"></div>
+    
+    <script>
+        let alumnos = ["Pepe", "Ana", "Juan", "Luis"];
+        let textAlumnos = "";
+    
+        function verAlumnos() {
+            console.log(alumnos);
+            if (alumnos.length > 0) {
+                textAlumnos = "<ul> Listado de alumnos";
+                alumnos.forEach(a => textAlumnos += `<li>${a}</li>`);
+                textAlumnos += "</ul>";
+                document.getElementById("divAlumnos").innerHTML = `${textAlumnos}`;
+            } else {
+                document.getElementById("divAlumnos").innerHTML = "No hay alumnos registrados";
+            }
+        }
+
+        function addAlumno() {
+            let name = prompt("Introduce el nombre del alumno:");
+            if (name == alumnos.find(a => a == name)) {
+                alert("El alumno ya existe");
+            } else {
+            alumnos.push(name);
+            alert("El alumno ha sido añadido exitosamente");
+            }
+            verAlumnos();
+        }
+
+        function deleteAlumno() {
+            let name = prompt("Introduce el nombre del alumno que quieres eliminar: ");
+            if (name == alumnos.find(a => a == name)) {
+                alumnos.pop(alumnos.indexOf(name));
+                alert("El alumno ha sido eliminado exitosamente");
+            } else {
+                alert("El alumno no existe");
+            }
+            verAlumnos();
+        }
+
+        function searchAlumno() {
+            let name = prompt("Introduce el nombre del alumno a buscar");
+            (alumnos.includes(name)) ? alert("El alumno existe") : alert("El alumno no existe");
+            verAlumnos(); 
+        }
+    </script>
+</body>
+</html>
