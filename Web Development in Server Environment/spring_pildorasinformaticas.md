@@ -122,6 +122,93 @@ With that, modifiyng the XML file we can change the type of the classes that imp
 - It is a design pattern that allows to inject the dependencies of the objects
 - It allows modularity
 - *It is like a PC, where there are independent components that are connected working as a unit*
-- **3:50**
+- It allows to reduce the coupling between the objects
 
-*Continue here: [Video 9](https://www.youtube.com/watch?v=BghyeYN34a4&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=9)*
+Forms of injection:
+- Constructor
+  - Create the class and interface of the object
+  - Create a constructor in the class that receives the interface
+```java
+public class ClassName {
+
+// Interface object 
+  private InterfaceName interfaceName;
+
+// Constructor with the interface as parameter
+  public ClassName(InterfaceName interfaceName) {
+    this.interfaceName = interfaceName;
+  }
+}
+```
+  - Create the object in the XML file (`ApplicationContext.xml`)
+```xml
+<bean id="miInforme" class="es.pildoras.IoC.Informe">
+  <constructor-arg ref="nameObject"/>
+
+</bean>
+
+<bean id="miEmpleado" class="es.pildoras.IoC.DirectorEmpleado">
+  <constructor-arg href="miInforme" value="value"/>
+
+</bean>
+```
+  - Configurate the XML file with the constructor-arg (`ApplicationContext.xml`)
+```xml
+
+```
+- Setter
+  - Create the class and interface of the object
+  - Create a setter in the class that receives the interface
+  - Create the object in the XML file (`ApplicationContext.xml`)
+- Auto-wired (with annotations)
+
+# Design Patterns
+
+## Singleton
+
+- It is a design pattern that allows to create a single instance of a class
+- Examples: Runtime, Logger, Spring Beans
+- Advantages:
+  - It allows to reduce the memory usage
+  - It allows to reduce the time of execution
+  - Better hierarchical control
+  - Stronger control of the objects
+- Spring uses the Singleton pattern by default
+
+```java
+public class Singleton {
+  private static Singleton instance = new Singleton();
+
+  private Singleton() {}
+
+  public static Singleton getInstance() {
+    return instance;
+  }
+}
+```
+
+## Prototype
+
+- It is a design pattern that allows to create multiple instances of a class
+- They are created by cloning the object
+- It is better to clone the object than to create a new one
+- The cloned object is independent of the original object and can be modified thanks to setters
+- Advantages:
+  - An app can create and delete objects in runtime
+  - It allows creating new objects modifying the original object, reducing time and resources
+  - Cloning is faster than creating a new object
+- Spring can use it when needed
+
+```java
+public class Prototype implements Cloneable {
+  private String name;
+
+  public Prototype clone() {
+    Prototype clone = new Prototype();
+    clone.setName(this.name);
+    return clone;
+  }
+}
+```
+
+*Continue here: [Video 14](https://www.youtube.com/watch?v=J6Mae6LLpLI&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=14)*
