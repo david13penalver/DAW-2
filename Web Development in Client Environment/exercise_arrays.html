@@ -56,6 +56,15 @@
             (alumnos.includes(name)) ? alert("El alumno existe") : alert("El alumno no existe");
             verAlumnos(); 
         }
+
+        arrayPrueba = [1, 2, 3, 4, 4, 5, 6];
+
+        nuevoArray = arrayPrueba.filter((element, index, array) => array.indexOf(element) === index);
+
+        // explícame cómo el nuevo array hace que no se repitan los números
+        console.log(nuevoArray);
+
+        
     </script>
 </body>
 </html>
