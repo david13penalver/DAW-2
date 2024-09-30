@@ -3,17 +3,59 @@
 - [Layout CSS](#layout-css)
 - [Reset CSS](#reset-css)
 - [CSS Arquitecture](#css-arquitecture)
-- [Files' Structure](#files-structure)
+- [CSS Preprocessors](#css-preprocessors)
+  - [Variables](#variables)
+  - [Loops](#loops)
+  - [Father Selector](#father-selector)
+  - [Using SASS](#using-sass)
+- [BEM](#bem)
+- [Files Structure](#files-structure)
 
 # Layout CSS
 [Up](#table-of-contents)
 
-*Notes here*
+Grid is a layout system that allows you to create complex layouts with rows and columns. It is a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system.
+
+```css
+.contenedor {
+                display: grid;
+                grid-template-areas:
+                  "cabecera cabecera cabecera cabecera cabecera"
+                  "lateral-izquierdo cuerpo cuerpo cuerpo lateral-derecho"
+                  "pie pie pie pie pie";
+            }
+ 
+            .cabecera {
+                grid-area: cabecera;
+            }
+ 
+            .cuerpo {
+                grid-area: cuerpo;
+            }
+ 
+            .lateral-izquierdo {
+                grid-area: lateral-izquierdo;
+            }
+ 
+            .lateral-derecho {
+                grid-area: lateral-derecho;
+            }
+ 
+            .pie {
+                grid-area: pie;
+            }
+```
+
+With BEM, the classes are going to be like this: _l-piramid.scss, _l-piramid--right, _l-piramid--left and _l-piramid--peak.
 
 # Reset CSS
 [Up](#table-of-contents)
 
-*Notes here*
+Each navigation has its own default styles. The reset is a CSS file that removes all the default styles of the browser.
+
+CSS that we must include:
+- [Normalize.css](https://necolas.github.io/normalize.css/)
+- [Eric Meyer's Reset CSS 2.0](https://meyerweb.com/eric/tools/css/reset/)
 
 # CSS Arquitecture
 [Up](#table-of-contents)
@@ -28,7 +70,171 @@ Objetives:
 
 ![BEM](./Assets/02_bem.png)
 
-# Files' Structure
+# CSS Preprocessors
+
+SASS is a CSS Preprocessor.
+
+It is like adding functionality to CSS in order it write less.
+
+It aloows loops, functions, variables, etc.
+
+## Variables
+    
+```scss
+    $font-main: Helvetica, sans-serif;
+$primary-color: #E4A23F;
+ 
+ 
+body {
+  font-family: $font-main;
+  color: $primary-color;
+}
+```
+
+It will be transformed into:
+```css
+body {
+  font-family: Helvetica, sans-serif;
+  color: #E4A23F;
+}
+```
+
+## Loops
+
+```scss
+$colors: (
+   "rojo": #FF0000, 
+   "verde": #00FF00, 
+   "azul": #0000FF
+);
+ 
+@each $name, $color in $colors {
+  .background-#{$name} {
+    background-color: $color;
+  }
+} 
+```
+
+It will be transformed into:
+
+```css
+.background-rojo  {  background-color: #FF0000; }
+.background-verde {  background-color: #00FF00; }
+.background-azul  {  background-color: #0000FF; }
+```
+
+## Father Selector
+
+```scss
+AAA {
+  color:red;
+   
+  &__BBB {
+    padding:5px;
+  }
+}
+````
+
+It will be transformed into:
+
+```css
+AAA {
+  color:red;
+}
+AAA__BBB {
+  padding:5px;
+}
+```
+
+## Using SASS
+
+Transform SASS to CSS:
+```bash
+sass  ./main.scss ./main.css
+```
+
+Transform SASS to CSS and watch for changes:
+```bash
+sass --watch ./main.scss ./main.css
+```
+
+This means that if you make any changes to main.scss, SASS will automatically detect the change and recompile the main.css file.
+
+You don't need to run the command manually every time you make a modification.
+
+We can join all the files in one file and then transform it into CSS.
+```scss
+@import "01_utilities/_css-variables.scss";
+@import "01_utilities/_sass-variables.scss";
+@import "01_utilities/_functions.scss";
+```
+
+# BEM
+
+BEM is a methodology that helps you to create reusable components and code sharing in front-end development.
+
+Parameters:
+- Block: The main component.
+- Element: A part of the block that has no meaning by itself.
+- Modifier: A variation of the block or element.
+
+```html
+<div class="block">
+  <div class="block__element block__element--modifier"></div>
+</div>
+```
+
+```scss
+.block {
+  background-color: red;
+}
+.block__element {
+  background-color: green;
+}
+.block__element--modifier {
+  background-color: blue;
+}
+```
+
+- -c: for blocks that are visual components.
+- -l: for blocks that are layout components.
+- -g: for blocks that are global components.
+
+Example:
+```html
+<body class="c-body">    
+    <div class="l-page">
+        <div class="l-page__header">
+            <img class="c-logo">
+            <div class="c-menu">
+                <div class="c-menu__item ">Nuevo</div>
+                <div class="c-menu__item menu__item--active">Editar</div>
+                <div class="c-menu__item menu__item--disable">Borrar</div>
+            </div>
+        </div>
+        <div class="l-page__body">
+            <form class="c-form g--margin-4 g--margin-bottom-6">
+                <input class="c-input" >
+                <input class="c-input" >
+                <input class="c-input" >
+                <button class="c-button c-button--primary c-button--normal">Guardar</button>
+            </form>
+        </div>     
+        <div class="l-page__footer">
+            <div class="l-horizontal">
+                <img class="c-social" src="facebook.png">
+                <img class="c-social" src="youtube.png">
+                <img class="c-social" src="instagram.png">
+                <img class="c-social" src="twitter.png">
+            </div>    
+        </div> 
+    </div>
+</body>
+```
+
+
+
+# Files Structure
 [Up](#table-of-contents)
 
 ```
