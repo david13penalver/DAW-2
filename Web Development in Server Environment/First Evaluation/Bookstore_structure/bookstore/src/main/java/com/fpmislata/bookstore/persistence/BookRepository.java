@@ -1,6 +1,7 @@
 package com.fpmislata.bookstore.persistence;
 
 import com.fpmislata.bookstore.domain.model.Book;
+import com.fpmislata.bookstore.domain.model.Genre;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,4 +12,6 @@ public interface BookRepository {
     Optional<Book> findByIsbn(String isbn);
 
     List<Book> getBooksByAuthor(int id);
+
+    List<Book> getBooksByGenre(int id);
 }

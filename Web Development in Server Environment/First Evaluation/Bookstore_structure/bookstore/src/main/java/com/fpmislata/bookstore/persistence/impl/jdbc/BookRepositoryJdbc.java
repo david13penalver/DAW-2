@@ -2,6 +2,7 @@ package com.fpmislata.bookstore.persistence.impl.jdbc;
 
 import com.fpmislata.bookstore.domain.model.Book;
 import com.fpmislata.bookstore.domain.model.Category;
+import com.fpmislata.bookstore.domain.model.Genre;
 import com.fpmislata.bookstore.persistence.BookRepository;
 import com.fpmislata.bookstore.persistence.GenreRepository;
 import com.fpmislata.bookstore.persistence.PublisherRepository;
@@ -66,5 +67,16 @@ public class BookRepositoryJdbc implements BookRepository {
                 WHERE authors.id = ?
                 """;
         return jdbcTemplate.query(sql, new BookRowMapper(), id);
-    }       
+    }
+
+    @Override
+    public List<Book> getBooksByGenre(int id) {
+        String sql = """
+                SELECT * FROM books
+                JOIN books_genres ON books.id = books_genres.book_id
+                JOIN genres ON books_genres.genre_id = genres.id
+                WHERE genres.id = ?
+                """;    
+        return jdbcTemplate.query(sql, new BookRowMapper(), id);
+    }
 }

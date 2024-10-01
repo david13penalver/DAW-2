@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface GenreRepository {
     List<Genre> getByIsbnBook(String isbn);
+
+    List<Genre> getAll();
 }

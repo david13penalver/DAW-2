@@ -26,4 +26,10 @@ public class GenreRepositoryJdbc implements GenreRepository {
                 """;
         return jdbcTemplate.query(sql, new GenreRowMapper(), isbn);
     }
+
+    @Override
+    public List<Genre> getAll() {
+        String sql = "SELECT * FROM genres";
+        return jdbcTemplate.query(sql, new GenreRowMapper());
+    }
 }
