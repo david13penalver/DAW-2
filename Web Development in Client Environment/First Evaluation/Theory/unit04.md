@@ -311,6 +311,8 @@ console.log(filtrados); // Imprime: [10, 5]
 
 #### Transform an array
 
+
+
 ### Declaration and access to the elements
 [Up](#table-of-contents)
 
@@ -346,3 +348,48 @@ console.log(filtrados); // Imprime: [10, 5]
 
 # Classes
 [Up](#table-of-contents)
+
+
+Integrar líneas de autobuses
+- Investigación y mapeo del mercado
+  - Identificar las principales líneas (Alsa, Avanza, Socibus…)
+  - Analizar servicios actuales
+    - Reservas en línea
+    - API pública
+  - Rutas clave y zonas de alta demanda
+- Establecer colaboraciones
+  - Contacto directo con la compañía
+    - Tarifas
+    - Ruta en tiempo real
+    - Nuestra plataforma es una forma de ampliar su alcance
+  - Propuesta de valor
+    - Plan claro que resalte los beneficios que les podemos ofertar
+    - Visibilidad
+    - Facilidad para usuarios
+    - Aumento de ventas
+  - Modelo de comisión o acuerdos de afiliación
+    - Solo pagan por cada transacción exitosa (“enlace referido”)
+  - Visibilidad sin coste
+- Aspectos técnicos
+  - Acceso a la API de las compañías (públicas o privadas)
+    - Rutas
+    - Horarios
+    - Tarifas
+    - Disponibilidad en tiempo real
+  - API propia
+    - Si no tienen API propia
+    - Para que se conecten con BusKa
+    - Centralización de las reservas e información
+  - Screen scrapping (última opción)
+    - Si no tienen API o no quieren colaborar directamente
+    - Solución temporal
+  - Pruebas de conectividad
+    - Pruebas exhaustivas de la integración con cada compañía
+    - Actualización en tiempo real de horarios, precios y reservas
+  - Cumplimiento legal y regulaciones
+    - Contratos de colaboración
+    - Cumplimiento normativo: RGPD, normativas locales, etc.
+  - Monetización y estrategia de precios
+    - Comisiones por cada reserva
+    - Modelo freemium: pago por destacarse
+    - Publicidad dentro de la plataforma

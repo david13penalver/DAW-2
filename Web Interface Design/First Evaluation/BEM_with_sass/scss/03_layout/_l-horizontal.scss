@@ -1,0 +1,19 @@
+.l-horizontal {
+    display: flex;
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
+
+    &--gap-32 {
+        gap: 32px;
+    }
+
+    &--direction-row {
+        flex-direction: row;
+    }
+}

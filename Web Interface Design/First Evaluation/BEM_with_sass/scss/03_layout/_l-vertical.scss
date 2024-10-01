@@ -1,0 +1,7 @@
+.l-vertical {
+    display: flex;
+
+    &--direction-column {
+        flex-direction: column;
+    }
+}

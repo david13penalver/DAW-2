@@ -1,0 +1,7 @@
+$lista:(3px,6px,7px,9px);
+
+@each $value in $lista {
+    .g--padding-#{$value} {
+        padding: $value;
+    }
+}
