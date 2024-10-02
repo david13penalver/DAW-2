@@ -13,16 +13,20 @@
       - [Iterate each element](#iterate-each-element)
       - [Search elements](#search-elements)
       - [Transform an array](#transform-an-array)
-    - [Declaration and access to the elements](#declaration-and-access-to-the-elements-1)
-    - [Properties and methods](#properties-and-methods-1)
+      - [String - Array](#string---array)
     - [Callbacks](#callbacks)
     - [Array Type](#array-type)
   - [Sets](#sets)
+    - [Methods of a set](#methods-of-a-set)
   - [Maps](#maps)
+    - [Methods](#methods)
 - [Objects](#objects)
   - [Object Creation](#object-creation)
   - [Access to the properties](#access-to-the-properties)
-  - [Methods](#methods)
+    - [Loop "for...in"](#loop-forin)
+    - [Object.keys(object)](#objectkeysobject)
+  - [Methods](#methods-1)
+    - [`this` keyword](#this-keyword)
   - [JSON](#json)
 - [Classes](#classes)
 
@@ -310,38 +314,390 @@ console.log(filtrados); // Imprime: [10, 5]
 ```
 
 #### Transform an array
-
-
-
-### Declaration and access to the elements
 [Up](#table-of-contents)
 
-### Properties and methods
-[Up](#table-of-contents)
+- `map()`: transforms the content of an array.
+```javascript
+const numeros = [10, 5, 3, 2];
+const duplicados = numeros.map(function(elemento) {
+    return elemento * 2;
+});
+console.log(duplicados); // Imprime: [20, 10, 6, 4]
+```
+- `revert()`: reverts the order of the elements in an array. 
+```javascript
+const numeros = [10, 5, 3, 2];
+const revertido = numeros.reverse();
+console.log(revertido); // Imprime: [2, 3, 5, 10]
+``` 
+
+#### String - Array
+
+- `split()`: method that divides a string into an array of substrings.
+```javascript
+const texto = "Hola, soy un texto";
+const palabras = texto.split(" ");
+console.log(palabras); // Imprime: ["Hola,", "soy", "un", "texto"]
+```
+- `join()`: method that joins all elements of an array into a string.
+```javascript
+const palabras = ["Hola,", "soy", "un", "texto"];
+const texto = palabras.join(" ");
+console.log(texto); // Imprime: "Hola, soy un texto"
+```
 
 ### Callbacks
 [Up](#table-of-contents)
 
+Simplifies the operations with arrays.
+
+They allow us use functional programming.
+
+Example showing the elements of an array:
+- Traditional way:
+```javascript
+let lista=[1,2,3,4,5]
+for(let i=0;i<lista.length;i++){
+console.log(lista[i])
+}
+```
+- Using a callback:
+```javascript
+lista.forEach(function(e){console.log(e)})
+```
+
+The most habitual is to use fat arrows:
+```javascript
+lista.forEach(e=>console.log(e))
+```
+
 ### Array Type
 [Up](#table-of-contents)
+
+There is a specific method to check if a variable is an array:
+```javascript
+alert(Array.isArray({})); // false
+alert(Array.isArray([])); // true
+```
+- `Array.from(object)`: method that creates a new, shallow-copied array instance from an array-like or iterable object.
+```javascript
+const array = Array.from("Hola");
+console.log(array); // Imprime: ["H", "o", "l", "a"]
+const array2 = Array.from({ length: 5 }, (v, i) => i);
+console.log(array2); // Imprime: [0, 1, 2, 3, 4]
+```
+
+`NodeList` is an array-like object that is returned by methods like `document.querySelectorAll()`, `childNodes`.
+
+It is possible operate it with `forEach()`.
+
+```html
+<div id="contenedor">
+<p>Parrafo</p>
+<button>Boton</button>
+<h1>Encabezado</h1>
+</div>
+<script>
+// NodeList
+nodosHijos=document.getElementById("contenedor").childNodes
+console.log(nodosHijos)
+nodosHijos.forEach(n=>console.log(n))
+// It will display:
+// #text
+//    <p>Parrafo</p>
+// #text
+//    <button>Boton</button>
+// #text
+//    <h1>Encabezado</h1>
+// #text
+</script>
+```
+
+`HTMLCollection` is another array-like object that is returned by methods like `document.getElementBy...`.
+
+We can use for or convert it into an array: `Array.from(HTMLCollecionElement).forEach(method)`.
 
 ## Sets
 [Up](#table-of-contents)
 
+It is a collection of unique elements.
+
+They keep the order of the elements as they were inserted.
+
+Creation of a Set:
+```javascript
+// Solo se agregan "uva" y "pera" una vez
+const frutas = new Set(["uva", "pera", "uva", "pera"]);
+console.log(frutas); // Imprime: Set { "uva", "pera" }
+``` 
+
+### Methods of a set
+[Up](#table-of-contents)
+
+- `add()`: method that adds a new element to the end of a Set object.
+```javascript
+const frutas = new Set(["uva", "pera"]);
+frutas.add("manzana");
+console.log(frutas); // Imprime: Set { "uva", "pera", "manzana" }
+```
+- `delete()`: method that removes the specified element from a Set object.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+frutas.delete("pera");
+console.log(frutas); // Imprime: Set { "uva", "manzana" }
+```
+- `has()`: method that returns a boolean indicating whether an element with the specified value exists in a Set object or not.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+const existe = frutas.has("pera");
+console.log(existe); // Imprime: true
+```
+- `size`: property that returns the number of elements in a Set object.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+console.log(frutas.size); // Imprime: 3
+```
+- `clear()`: method that removes all elements from a Set object.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+frutas.clear();
+console.log(frutas); // Imprime: Set {}
+```
+- `values()`: method that returns a new Iterator object that contains the values for each element in a Set object in insertion order.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+const iterador = frutas.values();
+console.log(iterador.next().value); // Imprime: uva
+console.log(iterador.next().value); // Imprime: pera
+console.log(iterador.next().value); // Imprime: manzana
+```
+- `forEach(callback)`: method that executes a provided function once for each value in the Set object, in insertion order.
+```javascript
+const frutas = new Set(["uva", "pera", "manzana"]);
+frutas.forEach(function(valor) {
+    console.log(valor);
+});
+
+// Imprime: uva pera manzana
+```
+
 ## Maps
 [Up](#table-of-contents)
+
+It is a collection of key-value pairs.
+
+Keys are unique. If we add a key that already exists, the value is replaced.
+
+Keys can be any type of data.
+
+Values can be any type of data.
+
+Creation of a Map:
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+clientes.set(3, {nombre: "Carlos", ciudad: "Valencia", edad: 40});
+```
+
+### Methods
+[Up](#table-of-contents)
+
+- `has()`: method that returns a boolean indicating whether an element with the specified key exists in a Map object or not.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+const existe = clientes.has(2);
+console.log(existe); // Imprime: true
+```
+- `get()`: method that returns the value associated to the key, or undefined if there is none.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+const cliente = clientes.get(2);
+console.log(cliente); // Imprime: {nombre: "Ana", ciudad:" Barna", edad:25}
+```
+- `set()`: method that adds or updates an element with a specified key and a value to a Map object.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+clientes.set(3, {nombre: "Carlos", ciudad: "Valencia", edad: 40});
+```
+- `delete()`: method that removes the specified element from a Map object.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+clientes.delete(2);
+```
+- `keys()`: method that returns a new Iterator object that contains the keys for each element in a Map object in insertion order.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+const iterador = clientes.keys();
+console.log(iterador.next().value); // Imprime: 1
+console.log(iterador.next().value); // Imprime: 2
+```
+- `values()`: method that returns a new Iterator object that contains the values for each element in a Map object in insertion order.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+const iterador = clientes.values();
+console.log(iterador.next().value); // Imprime: {nombre: "Juan", ciudad: "Madrid", edad: 30}
+console.log(iterador.next().value); // Imprime: {nombre: "Ana", ciudad:" Barna", edad:25}
+```
+- `entries()`: method that returns a new Iterator object that contains an array of [key, value] for each element in a Map object in insertion order.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+const iterador = clientes.entries();
+console.log(iterador.next().value); // Imprime: [1, {nombre: "Juan", ciudad: "Madrid", edad: 30}]
+console.log(iterador.next().value); // Imprime: [2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+```
+- `forEach(callback)`: method that executes a provided function once for each key-value pair in the Map object, in insertion order.
+```javascript
+const clientes = new Map([
+[1, {nombre: "Juan", ciudad: "Madrid", edad: 30}],
+[2, {nombre: "Ana", ciudad:" Barna", edad:25}]
+]);
+clientes.forEach(function(valor, clave) {
+    console.log(`Cliente ${clave}: ${valor.nombre}`);
+});
+``` 
 
 # Objects
 [Up](#table-of-contents)
 
+Fundamental data structures that allow us to store, organize and access information in a flexible and efficient way.
+
+They are used in virtually all areas of modern web development.
+
+An object in JavaScript is a collection of key-value pairs. 
+
+Each pair consists of a key (which identifies the value) and a value (which can be of any data type in JavaScript).
+
+The objects themselves are associative arrays, i.e. they are arrays in which the information is not stored in positions accessible by numeric indexes, but is stored in positions accessible by names.  
+
 ## Object Creation
 [Up](#table-of-contents)
+
+- Literal notation: most common way to create an object.
+```javascript
+const persona = {
+nombre: "Juan",
+apellido: "Pérez",
+edad: 30,
+ciudad: "Valencia"
+};
+```
+- Constructor notation: less common way to create an object.
+```javascript
+const persona = new Object();
+persona.nombre = "Juan";
+persona.apellido = "Pérez";
+persona.edad = 30;
+persona.ciudad = "Valencia";
+```
 
 ## Access to the properties
 [Up](#table-of-contents)
 
+- Point notation: most common way to access the properties of an object.
+```javascript
+const nombrePersona = persona.nombre;
+```
+- Bracket notation: less common way to access the properties of an object.
+  - Useful when the name of the property is dynamic or not known in advance
+```javascript
+const propiedad = "edad";
+const edadPersona = persona[propiedad];
+```
+
+Reading a non-existing property only returns undefined. 
+
+We can easily test if the property exists.
+
+There is a special operator to check if a property exists in an object: `in`.
+- We can differenciate if a property has the value `undefined` or if it does not exist.
+```javascript
+alert("nombre" in persona)
+alert("cp" in persona)
+```
+
+### Loop "for...in"
+[Up](#table-of-contents)
+
+- It is used to iterate over the properties of an object.
+- It is not recommended to use it with:
+  - Arrays.
+  - Objects that are not created by us.
+  - Objects that have been modified.
+
+```javascript
+for (key in persona){
+console.log(`${key}: ${persona[key]}`)
+}
+```
+
+### Object.keys(object)
+[Up](#table-of-contents)
+
+It allows us to obtain an array with the keys of an object.
+
+```javascript
+let propiedades=Object.keys(persona)
+console.log(propiedades)
+```
+
+In the objects, if you change the order of a property, it will return that the two objects are different.
+
+When we want to work with object comparison, what we really want for two objects to be equal is that they have the same properties and the same values for each property.
+
 ## Methods
 [Up](#table-of-contents)
+
+The methods are defined using the function keyword and are called using the same syntax as the properties.
+
+```javascript
+const persona = {
+nombre: "Juan",
+apellido: "Pérez",
+edad: 30,
+ciudad: "Madrid",
+// Método "obtenerNombreCompleto"
+obtenerNombreCompleto: function() {
+return this.nombre + " " + this.apellido;
+}
+};
+const nombreCompleto = persona.obtenerNombreCompleto();
+console.log(nombreCompleto); // Imprime: Juan Pérez
+```
+
+### `this` keyword
+
+It can be used in any function.
+
+It behaves differently from most other programming languages.
+
+The value of this is evaluated during runtime, depending on the context. 
+
+*For example, in JavaScript we can use a function to manage the click event of a series of buttons of our web, that is to say, we are not going to create a function for each button, but all will have the same function.*
+
+*`this` inside that function will allow to know which is the button that has called it and according to that to carry out the necessary actions.*
 
 ## JSON
 [Up](#table-of-contents)

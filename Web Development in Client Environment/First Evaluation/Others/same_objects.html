@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+
+    <script>
+        object1 = {nombre: "David", apellido: "Peñalver", edad: 28};
+        object21 = {nombre: "David", apellido: "Peñalver", edad: 28};
+        object2 = {edad: 28, nombre: "David", apellido: "Peñalver"};
+
+        function compareObject(a, b) {
+            
+            if (a == b) {return true;}
+
+            props1 = Object.keys(a).sort();
+            console.log(props1);
+            props2 = Object.keys(b).sort(); 
+            console.log(props2);  
+            
+            if (props1.length != props2.length) return false;
+
+            for (let prop of props1) {
+                if (a[prop] != b[prop]) {return false;}
+            }
+        
+
+            for (let prop of props1) {
+                if (a[prop] === undefined) {return false}
+            }
+            
+            for (let prop of props2) {
+                if (b[prop] == undefined) {return false}
+            }
+            
+            return true;
+        };
+
+        console.log(compareObject(object1, object2));
+    </script>
+</body>
+</html>
