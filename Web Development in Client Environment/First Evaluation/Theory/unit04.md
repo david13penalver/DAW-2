@@ -706,6 +706,14 @@ The value of this is evaluated during runtime, depending on the context.
 [Up](#table-of-contents)
 
 
+
+Prompt inicial:
+Tengo una idea rompedora, innovadora y disruptiva en España. Se trata de una empresa estilo SkyScanner que se encarga de realizar la búsqueda de las mejores ofertas de líneas de bus, ya que es algo que en España no existe. La empresa se llamaría BusKa
+
+“¡Tu idea de BusKa suena genial! Crear una plataforma que centralice las ofertas de las líneas de bus puede facilitar mucho la vida de los viajeros y llenar un vacío en el mercado español. Si logras integrar a diferentes compañías de autobuses y ofrecer una interfaz amigable y funcional, tienes el potencial de generar una herramienta de uso masivo.”
+—————————————————————————————————————————
+
+
 Integrar líneas de autobuses
 - Investigación y mapeo del mercado
   - Identificar las principales líneas (Alsa, Avanza, Socibus…)
@@ -749,3 +757,62 @@ Integrar líneas de autobuses
     - Comisiones por cada reserva
     - Modelo freemium: pago por destacarse
     - Publicidad dentro de la plataforma
+
+
+
+- Viajeros frecuentes entre ciudades medianas y pequeñas
+  - Estudiantes universitarios
+    - Que no tengan buenas opciones ferroviarias
+    - Transporte económico
+  - Trabajadores semanales
+    - Personas que viven en una ciudad y trabajan en otra, especialmente en áreas con menos conexiones ferroviarias o aeroportuarias
+- Turistas nacionales e internacionales con presupuesto ajustado
+  - Mochileros y turistas low-cost
+  - Turismo rural o de naturaleza (playas, pueblos, parajes naturales)
+- Personas que buscan conveniencia y comparación de precios
+  - Consumidores sensibles al precio
+    - Facilitar la comparación de precios
+    - Ofertas
+  - Usuarios que valoran la conveniencia: ahorro de tiempo unificando todo en una web
+- Residentes de zonas rurales: dependen más del bus que las grandes ciudades (el tren no llega)
+- Usuarios de transporte de media distancia: 1-5h son los más comunes
+- Grupos con alta movilidad dentro del país
+  - Migrantes o trabajadores temporales: campaña de la uva, de la fresa, etc.
+- Ocasionales
+  - Huelgas de trenes
+  - Saturación en aeropuertos
+  - Aumentos de precios en otros medios de transporte
+- Diferenciación:
+  - Precios más bajos y ofertas exclusivas
+  - Facilidad de uso
+  - Amplitud de rutas
+
+
+El nicho de mercado de BusKa se compone de varios grupos que tienen en común la necesidad de un transporte económico, eficaz y flexible, con especial enfoque en aquellos usuarios que buscan alternativas al tren y al avión o que no tienen la posibilidad de emplear dichos medios de transporte. Por ello, los principales segmentos son los siguientes:
+
+1. Viajeros frecuentes entre ciudades medianas y pequeñas:
+- Estudiantes universitarios: un grupo con, a menudo, un presupuesto limitado, que busca opciones de transporte económicas para moverse entre su lugar de estudio y su ciudad de origen, especialmente en áreas donde las opciones ferroviarias no son accesibles, son más costosas o donde la diferencia de tiempo del tren no es suficiente.
+- Trabajadores semanales: personas que residen en una ciudad y trabajan en otra, especialmente en zonas mal conectadas por tren o avión.
+
+2. Turistas nacionales e internacionales con presupuesto ajustado:
+- Mochileros y turistas low-cost.
+- Turismo rural o de naturaleza: ya que, a menudo, solo se puede acceder en autobús.
+
+3. Personas que buscan conveniencia y comparación de precios:
+- Consumidores sensibles al precio.
+- Usuarios que valoran la conveniencia: el ahorro de tiempo al centralizar la búsqueda, la reserva y el pago en una única plataforma atraería a aquellos que prefieren una experiencia de compra simplificada y en una misma plataforma.
+
+1. Residentes de zonas rurales: ya que en estas zonas el tren no suele llegar y las conexiones aéreas son inexistentes o poco prácticas.
+
+5. Usuarios de transporte de media distancia (1-5h): la mayoría de los usuarios de autobuses interurbanos realiza trayectos de entre 1 y 5 horas. Este grupo es clave, ya que ofrece la posibilidad de conectar rutas de media distancia que no siempre están bien servidas por otros medios de transporte.
+
+6. Grupos con alta movilidad dentro del país:
+- Migrantes o trabajadores temporales: durante campañas agrícolas como la de la uva o la fresa, estos trabajadores dependen del transporte en autobús para moverse entre diferentes localidades.
+
+1. Usuarios ocasionales: momentos de huelga de trenes, saturación en aeropuertos o aumentos de precios en otros medios de transporte.
+
+Diferenciación de BusKa:
+- Precios más bajos y ofertas exclusivas.
+- Comparaciones en tiempo real.
+- Facilidad de uso.
+- Amplitud de rutas.
