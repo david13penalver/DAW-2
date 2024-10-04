@@ -76,7 +76,7 @@ public class BookRepositoryJdbc implements BookRepository {
                 JOIN books_genres ON books.id = books_genres.book_id
                 JOIN genres ON books_genres.genre_id = genres.id
                 WHERE genres.id = ?
-                """;    
+                """;
         return jdbcTemplate.query(sql, new BookRowMapper(), id);
     }
 }

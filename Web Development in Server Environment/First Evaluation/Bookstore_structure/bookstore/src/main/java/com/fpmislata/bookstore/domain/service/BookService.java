@@ -8,5 +8,5 @@ import java.util.Optional;
 public interface BookService {
     List<Book> getAll();
 
-    Optional<Book> findByIsbn(String isbn);
+    Book findByIsbn(String isbn);
 }
