@@ -1,5 +1,6 @@
 package com.fpmislata.bookstore.domain.service.impl;
 
+import com.fpmislata.bookstore.domain.exceptions.ResourceNotFoundException;
 import com.fpmislata.bookstore.domain.model.Book;
 import com.fpmislata.bookstore.domain.service.BookService;
 import com.fpmislata.bookstore.persistence.BookRepository;
@@ -26,6 +27,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book findByIsbn(String isbn) {
-        return bookRepository.findByIsbn(isbn).orElseThrow(() -> new RuntimeException("Book Not Found"));
+        return bookRepository.findByIsbn(isbn).orElseThrow(() -> new ResourceNotFoundException("Book with isbn " + isbn + " Not Found"));
     }
 }

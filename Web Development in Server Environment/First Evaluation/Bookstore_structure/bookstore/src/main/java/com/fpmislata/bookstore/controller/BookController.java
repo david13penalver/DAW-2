@@ -5,6 +5,7 @@ import com.fpmislata.bookstore.controller.webModel.BookCollection;
 import com.fpmislata.bookstore.controller.webModel.BookDetail;
 import com.fpmislata.bookstore.domain.service.BookService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,20 +23,19 @@ public class BookController {
     public static final String URL = "/api/books";
 
     private final BookService bookService;
-    private final BookMapper bookMapper;
 
     @GetMapping
     public ResponseEntity<List<BookCollection>> getAll() {
         List<BookCollection> bookCollections = bookService.getAll()
                 .stream()
-                .map(bookMapper::toBookCollection)
+                .map(BookMapper.INSTANCE::toBookCollection)
                 .toList();
         return new ResponseEntity<>(bookCollections, HttpStatus.OK);
     }
 
     @GetMapping("{isbn}")
     public ResponseEntity<BookDetail> findByIsbn(@PathVariable String isbn) {
-        BookDetail bookDetail = bookMapper.toBookDetail(bookService.findByIsbn(isbn));
+        BookDetail bookDetail = BookMapper.INSTANCE.toBookDetail(bookService.findByIsbn(isbn));
         return new ResponseEntity<>(bookDetail, HttpStatus.OK);
     }
 }

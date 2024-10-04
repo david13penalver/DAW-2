@@ -9,7 +9,7 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper (uses = {AuthorMapper.class, GenreMapper.class, PublihserMapper.class})
 public interface BookMapper {
-    BookMapper INSTACE = Mappers.getMapper(BookMapper.class);
+    BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
 
     BookCollection toBookCollection(Book book);
 
