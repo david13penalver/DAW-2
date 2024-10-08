@@ -1,12 +1,13 @@
 package com.fpmislata.bookstore.domain.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Data
-//@NoArgsConstructor
-//@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Author {
 
     private long id;
