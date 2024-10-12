@@ -28,7 +28,12 @@
   - [Methods](#methods-1)
     - [`this` keyword](#this-keyword)
   - [JSON](#json)
+    - [Characteristics](#characteristics)
+    - [Sintaxis](#sintaxis)
+    - [Methods](#methods-2)
 - [Classes](#classes)
+  - [Basic concepts](#basic-concepts)
+  - [Getters and Setters](#getters-and-setters)
 
 # Functions
 [Up](#table-of-contents)
@@ -702,117 +707,147 @@ The value of this is evaluated during runtime, depending on the context.
 ## JSON
 [Up](#table-of-contents)
 
+Lightsweight data interchange format.
+
+Used specially in APIs.
+
+### Characteristics
+[Up](#table-of-contents)
+
+- Lightweight: easy to read and write.
+- Independent of the programming language.
+- Flexible structure.
+- Easy use and generation.
+
+### Sintaxis
+[Up](#table-of-contents)
+
+- Data is in name/value pairs.
+- Non ordered list of values.
+- {}: object.
+- []: array.
+- "": for the name of properties and strings.
+- :: separates the name of the value.
+- ,: separates the pairs.
+
+Example:
+```json
+{
+"nombre": "Juan",
+"apellido": "Pérez",
+"edad": 30,
+"ciudad": "Madrid",
+"casado": false,
+"hijos": ["Ana", "Carlos"],
+"coche": null,
+"mascotas": {
+  "tipo": "perro",
+  "nombre": "Rex"
+}
+}
+```
+
+Ejemplo de array de objetos:
+```json
+let estudiantes = [
+{
+"nombre": "Juan",
+"apellido": "Pérez",
+"edad": 30
+},
+{
+"nombre": "Ana",
+"apellido": "Gómez",
+"edad": 25
+}
+]
+```
+
+### Methods
+[Up](#table-of-contents)
+
+- `JSON.stringify(object)`: method that converts a JavaScript object or value to a JSON string.
+```javascript
+const persona = {
+nombre: "Juan",
+apellido: "Pérez",
+edad: 30,
+ciudad: "Madrid"
+};
+const json = JSON.stringify(persona);
+console.log(json); // Imprime: {"nombre":"Juan","apellido":"Pérez","edad":30,"ciudad":"Madrid"}
+```
+  - Deleted properties:
+    - Functions.
+    - Undefined properties.
+    - Symbol properties.
+- `JSON.parse(string)`: method that parses a JSON string, constructing the JavaScript value or object described by the string.
+```javascript
+const json = '{"nombre":"Juan","apellido":"Pérez","edad":30,"ciudad":"Madrid"}';
+const persona = JSON.parse(json);
+console.log(persona); // Imprime: {nombre: "Juan", apellido: "Pérez", edad: 30, ciudad: "Madrid"}
+```
+
 # Classes
 [Up](#table-of-contents)
 
+Introduced in ECMAScript 6 (ES6).
 
+## Basic concepts
+[Up](#table-of-contents)
+- Classes: templates that define the structure and behavior of objects.
+- Objects: instances of classes.
+- Properties: characteristics of the objects.
+- Methods: functions that define the behavior of the objects.
+- Heritance: mechanism that allows a class to inherit the properties and methods of another class.
+- Encapsulation: mechanism that allows to restrict access to certain properties and methods of a class.
+- Polymorphism: mechanism that allows to define methods with the same name but with different implementations.
 
-Prompt inicial:
-Tengo una idea rompedora, innovadora y disruptiva en España. Se trata de una empresa estilo SkyScanner que se encarga de realizar la búsqueda de las mejores ofertas de líneas de bus, ya que es algo que en España no existe. La empresa se llamaría BusKa
+Creation of a class:
+```javascript
+class Persona {
+constructor(nombre, apellido, edad) {
+this.nombre = nombre;
+this.apellido = apellido;
+this.edad = edad;
+}
+saludar() {
+console.log(`Hola, soy ${this.nombre} ${this.apellido}`);
+}
+}
+```
 
-“¡Tu idea de BusKa suena genial! Crear una plataforma que centralice las ofertas de las líneas de bus puede facilitar mucho la vida de los viajeros y llenar un vacío en el mercado español. Si logras integrar a diferentes compañías de autobuses y ofrecer una interfaz amigable y funcional, tienes el potencial de generar una herramienta de uso masivo.”
-—————————————————————————————————————————
+## Getters and Setters
+[Up](#table-of-contents)
 
+- Getters: methods that get the value of a property.
+- Setters: methods that set the value of a property.
+- Private properties: properties that are not accessible from outside the class.
 
-Integrar líneas de autobuses
-- Investigación y mapeo del mercado
-  - Identificar las principales líneas (Alsa, Avanza, Socibus…)
-  - Analizar servicios actuales
-    - Reservas en línea
-    - API pública
-  - Rutas clave y zonas de alta demanda
-- Establecer colaboraciones
-  - Contacto directo con la compañía
-    - Tarifas
-    - Ruta en tiempo real
-    - Nuestra plataforma es una forma de ampliar su alcance
-  - Propuesta de valor
-    - Plan claro que resalte los beneficios que les podemos ofertar
-    - Visibilidad
-    - Facilidad para usuarios
-    - Aumento de ventas
-  - Modelo de comisión o acuerdos de afiliación
-    - Solo pagan por cada transacción exitosa (“enlace referido”)
-  - Visibilidad sin coste
-- Aspectos técnicos
-  - Acceso a la API de las compañías (públicas o privadas)
-    - Rutas
-    - Horarios
-    - Tarifas
-    - Disponibilidad en tiempo real
-  - API propia
-    - Si no tienen API propia
-    - Para que se conecten con BusKa
-    - Centralización de las reservas e información
-  - Screen scrapping (última opción)
-    - Si no tienen API o no quieren colaborar directamente
-    - Solución temporal
-  - Pruebas de conectividad
-    - Pruebas exhaustivas de la integración con cada compañía
-    - Actualización en tiempo real de horarios, precios y reservas
-  - Cumplimiento legal y regulaciones
-    - Contratos de colaboración
-    - Cumplimiento normativo: RGPD, normativas locales, etc.
-  - Monetización y estrategia de precios
-    - Comisiones por cada reserva
-    - Modelo freemium: pago por destacarse
-    - Publicidad dentro de la plataforma
+```javascript
+class Persona {
+#nombre; // Propiedad privada
+#ciudad; // Propiedad privada
 
+constructor(nombre, ciudad) {
+  this._nombre = nombre;
+  this._ciudad=ciudad
+}
 
+get nombre(){
+  return this._nombre
+}
 
-- Viajeros frecuentes entre ciudades medianas y pequeñas
-  - Estudiantes universitarios
-    - Que no tengan buenas opciones ferroviarias
-    - Transporte económico
-  - Trabajadores semanales
-    - Personas que viven en una ciudad y trabajan en otra, especialmente en áreas con menos conexiones ferroviarias o aeroportuarias
-- Turistas nacionales e internacionales con presupuesto ajustado
-  - Mochileros y turistas low-cost
-  - Turismo rural o de naturaleza (playas, pueblos, parajes naturales)
-- Personas que buscan conveniencia y comparación de precios
-  - Consumidores sensibles al precio
-    - Facilitar la comparación de precios
-    - Ofertas
-  - Usuarios que valoran la conveniencia: ahorro de tiempo unificando todo en una web
-- Residentes de zonas rurales: dependen más del bus que las grandes ciudades (el tren no llega)
-- Usuarios de transporte de media distancia: 1-5h son los más comunes
-- Grupos con alta movilidad dentro del país
-  - Migrantes o trabajadores temporales: campaña de la uva, de la fresa, etc.
-- Ocasionales
-  - Huelgas de trenes
-  - Saturación en aeropuertos
-  - Aumentos de precios en otros medios de transporte
-- Diferenciación:
-  - Precios más bajos y ofertas exclusivas
-  - Facilidad de uso
-  - Amplitud de rutas
+set nombre(nombre){
+  this._nombre=nombre
+}
 
+unaPersona=new Persona('Juan','Valencia')
+console.log(unaPersona.nombre) // Juan por el getter
+unaPersona.nombre='Pepe' // Cambia nombre por el setter
+console.log(unaPersona.nombre)
 
-El nicho de mercado de BusKa se compone de varios grupos que tienen en común la necesidad de un transporte económico, eficaz y flexible, con especial enfoque en aquellos usuarios que buscan alternativas al tren y al avión o que no tienen la posibilidad de emplear dichos medios de transporte. Por ello, los principales segmentos son los siguientes:
-
-1. Viajeros frecuentes entre ciudades medianas y pequeñas:
-- Estudiantes universitarios: un grupo con, a menudo, un presupuesto limitado, que busca opciones de transporte económicas para moverse entre su lugar de estudio y su ciudad de origen, especialmente en áreas donde las opciones ferroviarias no son accesibles, son más costosas o donde la diferencia de tiempo del tren no es suficiente.
-- Trabajadores semanales: personas que residen en una ciudad y trabajan en otra, especialmente en zonas mal conectadas por tren o avión.
-
-2. Turistas nacionales e internacionales con presupuesto ajustado:
-- Mochileros y turistas low-cost.
-- Turismo rural o de naturaleza: ya que, a menudo, solo se puede acceder en autobús.
-
-3. Personas que buscan conveniencia y comparación de precios:
-- Consumidores sensibles al precio.
-- Usuarios que valoran la conveniencia: el ahorro de tiempo al centralizar la búsqueda, la reserva y el pago en una única plataforma atraería a aquellos que prefieren una experiencia de compra simplificada y en una misma plataforma.
-
-1. Residentes de zonas rurales: ya que en estas zonas el tren no suele llegar y las conexiones aéreas son inexistentes o poco prácticas.
-
-5. Usuarios de transporte de media distancia (1-5h): la mayoría de los usuarios de autobuses interurbanos realiza trayectos de entre 1 y 5 horas. Este grupo es clave, ya que ofrece la posibilidad de conectar rutas de media distancia que no siempre están bien servidas por otros medios de transporte.
-
-6. Grupos con alta movilidad dentro del país:
-- Migrantes o trabajadores temporales: durante campañas agrícolas como la de la uva o la fresa, estos trabajadores dependen del transporte en autobús para moverse entre diferentes localidades.
-
-1. Usuarios ocasionales: momentos de huelga de trenes, saturación en aeropuertos o aumentos de precios en otros medios de transporte.
-
-Diferenciación de BusKa:
-- Precios más bajos y ofertas exclusivas.
-- Comparaciones en tiempo real.
-- Facilidad de uso.
-- Amplitud de rutas.
+console.log(unaPersona.ciudad) // devuelve undefined por ser privada y no tener getter
+unaPersona.ciudad='Alicante' // deberia generar error por no tener setter
+console.log(unaPersona.ciudad) // devuelve undefined por ser privada y no tener getter
+```
