@@ -67,6 +67,57 @@ let alumnos=[{'codigo':'DAW-1-2020',
 
 // Solucionar abajo:
 
+function notasAlumno() {	
+	let alumno = prompt("Inserta nombre alumno")
+
+	let pos = alumnos.findIndex(a => a.nombre == alumno);
+
+	if (pos == -1) {
+		console.log("El alumno no existe");
+	} else {
+		let media = 0;
+		let mejorNota = 0;
+		let menorNota = 10;
+		let nombreMejor = "";
+		let nombreMenor ="";
+
+		alumnos[pos].calificaciones.forEach(c => {
+			media += c.nota;	
+			if (c.nota > mejorNota) {
+				mejorNota = c.nota;
+				nombreMejor = c.asignatura;
+			}
+			if (c.nota < menorNota) {
+				menorNota = c.nota;
+				nombreMenor = c.asignatura;
+			}
+		})
+
+		media = media / alumnos[pos].calificaciones.length;
+		console.log(`El alumno ${alumnos[pos].nombre} tiene una nota media de ${media}.
+		Su mejor nota es un ${mejorNota} en ${nombreMejor}.
+		Su peor nota es un ${menorNota} en ${nombreMenor}`);			
+	}
+}
+
+function subeUnPunto() {
+	alumnos.forEach(a => a.calificaciones.forEach(c => c.nota++))
+	console.log(alumnos);
+}
+
+function alumnosCiudad() {
+	let ciudad = prompt("Nombre ciudad");
+
+	let alumnosDeCiudad = alumnos.filter(a => a.ciudad == ciudad);
+
+	if (alumnosDeCiudad.length == 0) {
+		console.log("La ciudad no existe");
+	} else {
+		alumnosDeCiudad.forEach(a => console.log(a.nombre));
+	}
+}
+
+
 </script>
 
 </html>
