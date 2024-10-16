@@ -117,6 +117,18 @@ function alumnosCiudad() {
 	}
 }
 
+function alumnosCurso() {
+	let curso = prompt("Nombre alumno")
+
+	let alumnosDeCurso = alumnos.filter(a => a.codigo.split("-")[1]==curso);
+
+	if (alumnosDeCurso.length == 0) {
+		console.log("No hay");
+	} else {
+		alumnosDeCurso.forEach(a => console.log(a.nombre));
+	}
+}
+
 
 </script>
 
