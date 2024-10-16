@@ -19,12 +19,13 @@ public class LocaleConfig implements WebMvcConfigurer {
         return localeResolver;
     }
 
-    @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor() {
-        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
-        localeInterceptor.setParamName("Accept-Language");
-        return localeInterceptor;
-    }
+//    @Bean
+//    public LocaleChangeInterceptor localeChangeInterceptor() {
+//        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
+//        localeInterceptor.setParamName("Accept-Language");
+//        return localeInterceptor;
+//    }
+    // No lo usamos, lo dejo comentado en vez de borrarlo por si acaso
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
