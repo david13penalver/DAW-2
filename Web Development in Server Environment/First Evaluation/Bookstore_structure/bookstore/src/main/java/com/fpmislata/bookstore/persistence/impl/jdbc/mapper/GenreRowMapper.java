@@ -1,5 +1,6 @@
 package com.fpmislata.bookstore.persistence.impl.jdbc.mapper;
 
+import com.fpmislata.bookstore.common.locale.LanguageUtils;
 import com.fpmislata.bookstore.domain.model.Genre;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -10,9 +11,10 @@ public class GenreRowMapper implements RowMapper<Genre> {
 
     @Override
     public Genre mapRow(ResultSet rs, int rowNum) throws SQLException {
+        String language = LanguageUtils.getCurrentLanguage();
         Genre genre = new Genre();
         genre.setId(rs.getInt("genres.id"));
-        genre.setName(rs.getString("genres.name_es"));
+        genre.setName(rs.getString("genres.name_" + language));
         genre.setSlug(rs.getString("genres.slug"));
         return genre;
     }
