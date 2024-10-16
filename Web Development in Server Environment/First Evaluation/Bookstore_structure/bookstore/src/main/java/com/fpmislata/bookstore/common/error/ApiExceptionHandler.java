@@ -1,4 +1,4 @@
-package com.fpmislata.bookstore.controller.common;
+package com.fpmislata.bookstore.common.error;
 
 import com.fpmislata.bookstore.domain.exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;

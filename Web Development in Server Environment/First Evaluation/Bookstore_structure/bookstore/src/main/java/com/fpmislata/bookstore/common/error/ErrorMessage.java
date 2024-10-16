@@ -1,4 +1,4 @@
-package com.fpmislata.bookstore.controller.common;
+package com.fpmislata.bookstore.common.error;
 
 import lombok.Getter;
 import lombok.ToString;
