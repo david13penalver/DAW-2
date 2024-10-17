@@ -51,6 +51,39 @@ function verCarro(){
 		alert("El carrito esta vacio.");
 	} else {
 		document.getElementById("miDialogo").showModal();
+
+		// quiero llamar al metodo verCarrito de la clase Carrito
+		let tabla = document.getElementById("dialogContent");
+		tabla.innerHTML = `<table class="table table-striped">
+        					<tr>
+          					
+            						<th>Nombre</th>
+            						<th>Precio</th>
+						            <th>Unidades</th>
+            						<th>Total</th>
+            						<th>Acciones</th>
+          						
+        					</tr>
+        				`;
+		let total = 0;
+		carrito.articulos.forEach(a => {
+			tabla.innerHTML += `
+				<tr>
+					<td>${a.nombre}</td>
+					<td>${a.precio}</td>
+					<td>${a.unidades}</td>
+					<td>${a.total}</td>
+					<td>
+						<button class="btn-info" id="inc-${a.codigo}">+</button>
+						<button class="btn-warning" id="dec-${a.codigo}">-</button>
+						<button class="btn-danger" id="del-${a.codigo}">Borrar</button>	
+					</td>
+				</tr>
+			`
+			tabla.innerHTML += `</table>`;
+			total += a.total;
+		});
+		document.getElementById("total").innerHTML = `Total: ${total}€`;
 	}
 
 }
