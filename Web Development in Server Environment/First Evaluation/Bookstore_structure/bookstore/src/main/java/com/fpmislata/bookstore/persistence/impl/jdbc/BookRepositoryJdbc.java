@@ -35,7 +35,7 @@ public class BookRepositoryJdbc implements BookRepository {
                 """;
 //        String sql = """
 //                SELECT books.title_es FROM books;
-//                """;
+//                """;  
         return jdbcTemplate.query(sql, new BookRowMapper());
     }
 

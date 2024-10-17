@@ -29,7 +29,7 @@ public class BookController {
             @RequestParam(defaultValue = "10") int size,
             HttpServletRequest request) {
         List<BookCollection> bookCollections = bookService
-                .getAll(page -1, size)  
+                .getAll(page -1, size)
                 .stream()
                 .map(BookMapper.INSTANCE::toBookCollection)
                 .toList();
