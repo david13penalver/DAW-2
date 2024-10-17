@@ -84,12 +84,12 @@ It reduces traffic and makes pages faster.
 
 Introduced in ES6, modules are a way to organize code. They are separate files that can be imported into other files.
 
-The alloy to split the code into separate files, making it easier to manage.
+They allow you to split the code into separate files, making it easier to manage.
 
 Benefits:
 - Modularity: the code is split into separate files.
 - Reusability: modules can be reused in other parts of the code.
-- Encapsulation: variables and functions are not visible outside the module.
+- Encapsulation: variables and functions are not visible outside of the module.
 - Asynchronous loading: modules are loaded asynchronously, only when needed.
 
 ## Module usage

@@ -19,11 +19,11 @@
   - [IndexedDB](#indexeddb)
 
 # Predefined Objects
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 They are objects that are already defined in JavaScript. They are used to perform specific tasks. Some of the predefined objects are:
 - Window
-  - Represents the browser window.
+  - Represents the browser's window.
   - It provides access to the browser's properties and methods.
 - Document Object
   - Represents the HTML document.
@@ -53,7 +53,7 @@ They are objects that are already defined in JavaScript. They are used to perfor
   - Used to exchange data with a server.
 
 # Window
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 The window object in JavaScript is a global object that represents the browser window and provides access to its properties and methods. 
 
@@ -118,7 +118,7 @@ console.log("Usuario canceló la acción");
 ```
 
 # String
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 In JavaScript, data is stored as strings. A string is a sequence of characters enclosed in single or double quotes.
 
@@ -232,6 +232,8 @@ let textoConcatenado = texto1.concat(", ", texto2);
 console.log(textoConcatenado);
 ```
 - `slice(start, end)`: extracts a part of a string and returns it as a new string.
+  - The first parameter is included.
+  - The second parameter (optiona) is not included.
 ```javascript
 let frase = "JavaScript es un lenguaje de programación";
 // Extrae la subcadena "es un lenguaje"
@@ -251,8 +253,7 @@ let colores = lista.split(",");
 console.log(colores); 
 // Imprime un array con los colores: ["rojo", "verde", "azul", "amarillo"]
 
-let cadenaLarga = "Lorem ipsum dolor sit amet, consectetur
-adipiscing elit.
+let cadenaLarga = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 let partes = cadenaLarga.split(" ", 5); // Límite de 5 subcadenas
 console.log(partes); // Imprime las primeras 5 palabras de la cadena
 
@@ -265,7 +266,7 @@ console.log(caracteres); // Imprime un array con cada caracter
 
 
 # Date
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 It represents a date and time in JavaScript. It is used to work with dates and times (past, present or future).
 
@@ -291,12 +292,12 @@ console.log(fechaObjeto);
 - `getFullYear`: 
 
 # Number & Math
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 *Notes here*
 
 # Local Storage
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 To storage data in local.
 
@@ -309,7 +310,7 @@ console.log(nombre); // Imprime "Juan"
 ```
 
 ## Cookies
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 They are a small piece of data stored in the user's computer by the web browser while browsing a website. Cookies are used to store user-specific information to improve the user experience.
 
@@ -357,11 +358,11 @@ document.cookie = "ciuda=Valencia" + date;
 - By default, the cookie is deleted when the browser is closed. 
 
 ## Web Storage API
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 *Notes here*
 
 ## IndexedDB
-[Up] (#table-of-contents)
+[Up](#table-of-contents)
 
 *Notes here*
