@@ -27,7 +27,4 @@ class Carrito{
 	
 	modificaUnidades(codigo,n){
 	}
-			
-	verCarrito(){
-	}			
 }
