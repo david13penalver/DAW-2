@@ -1,6 +1,6 @@
 package com.fpmislata.bookstore.data;
 
-import com.fpmislata.bookstore.domain.model.*;
+import com.fpmislata.bookstore.domain.user.model.*;
 
 import java.math.BigDecimal;
 import java.util.List;

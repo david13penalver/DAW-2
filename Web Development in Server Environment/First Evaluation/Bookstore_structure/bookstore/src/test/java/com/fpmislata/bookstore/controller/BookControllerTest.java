@@ -1,8 +1,9 @@
 package com.fpmislata.bookstore.controller;
 
+import com.fpmislata.bookstore.controller.user.BookController;
 import com.fpmislata.bookstore.data.BookTestData;
 import com.fpmislata.bookstore.domain.exceptions.ResourceNotFoundException;
-import com.fpmislata.bookstore.domain.service.BookService;
+import com.fpmislata.bookstore.domain.user.service.BookService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

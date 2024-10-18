@@ -1,6 +1,6 @@
 package com.fpmislata.bookstore.data;
 
-import com.fpmislata.bookstore.domain.model.Genre;
+import com.fpmislata.bookstore.domain.user.model.Genre;
 
 import java.util.List;
 
