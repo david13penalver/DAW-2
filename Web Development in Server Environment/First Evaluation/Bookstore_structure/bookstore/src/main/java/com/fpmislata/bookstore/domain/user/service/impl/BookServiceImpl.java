@@ -1,6 +1,6 @@
 package com.fpmislata.bookstore.domain.user.service.impl;
 
-import com.fpmislata.bookstore.domain.exceptions.ResourceNotFoundException;
+import com.fpmislata.bookstore.common.exceptions.ResourceNotFoundException;
 import com.fpmislata.bookstore.domain.user.model.Book;
 import com.fpmislata.bookstore.domain.user.service.BookService;
 import com.fpmislata.bookstore.persistence.user.BookRepository;

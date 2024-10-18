@@ -1,4 +1,4 @@
-package com.fpmislata.bookstore.domain.exceptions;
+package com.fpmislata.bookstore.common.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     private static final String DESCRIPTION = "Resource not Found";

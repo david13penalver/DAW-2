@@ -1,6 +1,6 @@
 package com.fpmislata.bookstore.common.error;
 
-import com.fpmislata.bookstore.domain.exceptions.ResourceNotFoundException;
+import com.fpmislata.bookstore.common.exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
