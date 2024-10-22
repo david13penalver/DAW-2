@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <form name="example">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="inputNameError"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div id="inputEmailError"></div>
+        <button type="submit">Submit</button>
+    </form>
+<script>
+    const inputName = document.getElementById('name');
+    const inputEmail = document.getElementById('email');
+    const inputNameError = document.getElementById('inputNameError');
+    const inputEmailError = document.getElementById('inputEmailError');
+    const form = document.forms.example;
+
+    form.addEventListener('submit', function() {
+        event.preventDefault();
+        inputNameError.innerHTML = '';
+        inputEmailError.innerHTML = '';
+
+        let validate = true;
+
+        if (inputName.value == "") {
+            validate = false;
+            inputNameError.innerHTML = 'Name is required';
+        }
+        if (inputEmail.value == "") {
+            validate = false;
+            inputEmailError.innerHTML = 'Email is required';
+        }
+        if (inputName.value.trim().length < 5) {
+            validate = false;
+            inputNameError.innerHTML = 'Name must be at least 5 characters';
+        }
+        if (inputEmail.value.indexOf('@') == -1 || inputEmail.value.indexOf('.') == -1) {
+            validate = false;
+            inputEmailError.innerHTML = 'Email format is incorrect';
+        }
+        if (validate) {
+            alert('Form submitted');
+        }
+    });
+</script>
+</body>
+</html>
