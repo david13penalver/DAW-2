@@ -3,8 +3,9 @@ package com.fpmislata.bookstore.controller.admin;
 import com.fpmislata.bookstore.controller.admin.webModel.book.BookCollection;
 import com.fpmislata.bookstore.controller.admin.webModel.book.BookMapper;
 import com.fpmislata.bookstore.controller.common.PaginatedResponse;
+import com.fpmislata.bookstore.domain.admin.service.BookAdminService;
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,9 @@ public class BookAdminController {
 
     @Value("${app.base.url}")
     private String baseUrl;
+
+    @Value("${app.pageSize.default}")
+    private String defaultPageSize;
 
     private final BookAdminService bookAdminService;
 
