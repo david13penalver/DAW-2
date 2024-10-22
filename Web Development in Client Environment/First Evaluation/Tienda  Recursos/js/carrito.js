@@ -23,8 +23,26 @@ class Carrito{
 	}
 				
 	borraArticulo(codigo){
+		carrito.articulos.splice(carrito.articulos.findIndex(a => a.codigo == codigo), 1);
+		if (carrito.articulos.length == 0) {
+			document.getElementById("miDialogo").close();
+		}
+
 	}
 	
 	modificaUnidades(codigo,n){
+		let item = this.articulos.find(a => a.codigo == codigo);
+		if (item) {
+			if (n === 1) {
+				item.unidades += 1;
+			} else if (n === -1) {
+				item.unidades -= 1;
+				if (item.unidades === 0) {
+					this.borraArticulo(codigo);
+					return;
+				}
+			}
+		}
+		item.total = item.precio * item.unidades;
 	}
 }

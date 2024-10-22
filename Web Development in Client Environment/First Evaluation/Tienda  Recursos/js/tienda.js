@@ -84,7 +84,32 @@ function verCarro(){
 		});
 		contenidoTabla += `</tbody></table>`;
 		tabla.innerHTML = contenidoTabla;
+
 		document.getElementById("total").innerHTML = `Total: ${total}€`;
+
+		window.addEventListener("click", function () {
+			document.querySelectorAll(".btn-primary").forEach(button => {
+				button.addEventListener("click", function() {
+					let codigo = this.id.split("-")[1];
+					carrito.modificaUnidades(codigo,1);
+					verCarro();
+				})
+			})
+			document.querySelectorAll(".btn-warning").forEach(button => {
+				button.addEventListener("click", function() {
+					let codigo = this.id.split("-")[1];
+					carrito.modificaUnidades(codigo,-1);
+					verCarro();
+				})
+			})
+			document.querySelectorAll(".btn-danger").forEach(button => {
+				button.addEventListener("click", function() {
+					let codigo = this.id.split("-")[1];
+					carrito.borraArticulo(codigo);
+					verCarro();
+				})
+			})
+		})
 	}
 
 }
