@@ -16,6 +16,8 @@
   - [Cookies](#cookies)
   - [Cookies Creation](#cookies-creation)
   - [Web Storage API](#web-storage-api)
+    - [LocalStorage](#localstorage)
+      - [Most important methods](#most-important-methods)
   - [IndexedDB](#indexeddb)
 
 # Predefined Objects
@@ -360,9 +362,53 @@ document.cookie = "ciuda=Valencia" + date;
 ## Web Storage API
 [Up](#table-of-contents)
 
-*Notes here*
+The web storage API provides mechanisms by which browsers can store key/value pairs locally within the user's browser.
+
+It is mucho more intuitive than cookies.
+
+There are two types of storage:
+- `localStorage`: stores data with no expiration date.
+- `sessionStorage`: stores data for one session (data is lost when the browser tab is closed).
+
+### LocalStorage
+[Up](#table-of-contents)
+
+It allows to store data with no expiration date.
+
+It uses key-value pairs.
+
+The key is a string, and the value can be any data type.
+
+#### Most important methods
+[Up](#table-of-contents)
+
+- `setItem(key, value)`: stores a key/value pair.
+```javascript
+localStorage.setItem("nombre", "Juan");
+localStorage.setItem("edad", 30);
+```
+
+- `getItem(key)`: retrieves the value of a key.
+```javascript
+let nombre = localStorage.getItem("nombre");
+let edad = localStorage.getItem("edad");
+console.log(nombre, edad);
+```
+  - If the key does not exist, it returns `null`.
+- `removeItem(key)`: removes a key/value pair.
+```javascript
+localStorage.removeItem("nombre");
+```
+- `clear()`: removes all key/value pairs.
+```javascript
+localStorage.clear();
+```
 
 ## IndexedDB
 [Up](#table-of-contents)
 
-*Notes here*
+It is a low level API for client-side storage of significant amounts of structured data, including files/blobs.
+
+For high performance, it uses indexes to enable high-performance searches of the data.
+
+LocalStorage is not suitable for storing large amounts of data, so IndexedDB is used.
