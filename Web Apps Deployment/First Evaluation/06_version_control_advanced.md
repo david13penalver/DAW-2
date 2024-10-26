@@ -9,10 +9,10 @@
   - [`git merge rama`](#git-merge-rama)
 - [Merge uses](#merge-uses)
 - [Conflicts](#conflicts)
-  - [`git rebase`](#git-rebase)
-  - [`git merge --squash`](#git-merge---squash)
-  - [`git merge --ff-only`](#git-merge---ff-only)
-  - [`git merge`](#git-merge)
+  - [`git rebase` branch](#git-rebase-branch)
+  - [`git merge --squash` branch](#git-merge---squash-branch)
+  - [`git merge --ff-only` branch](#git-merge---ff-only-branch)
+  - [`git merge` branch](#git-merge-branch)
 - [Receipts](#receipts)
 
 # Branch necessities
@@ -192,27 +192,106 @@ git merge develop
 # Conflicts
 [Up](#table-of-contents)
 
-*Notes here*
+When a conflict occurs, the resulting file will contain the conflict markers `<<<<<<<`, `=======`, and `>>>>>>>`.
 
-## `git rebase`
+```html
+<html>
+    <body>
+<<<<<<< HEAD
+        <h1>Hola mundo</h1>
+=======
+        <h1>Adios planeta</h1>
+>>>>>>> Rama a Fusionar
+    </body>
+</html>
+```
+
+## `git rebase` branch
 [Up](#table-of-contents)
 
-*Notes here*
+If we want to merge `origin/develop` into `develop` and there are conflics, we will see the next message:
 
-## `git merge --squash`
+```bash
+En primer lugar, rebobinando HEAD para después reproducir tus cambios encima de ésta...
+Aplicando: feat(#50):Cabecera tercera
+Usando la información del índice para reconstruir un árbol base...
+M	index.html
+Retrocediendo para parchar base y fusión de 3-vías...
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+error: Falló al fusionar en los cambios.
+El parche falló en 0001 feat(#50):Cabecera tercera
+Use 'git am --show-current-patch' para ver el parche fallido
+
+Resuelva todos los conflictos manualmente ya sea con 
+"git add/rm <archivo_conflictivo>", luego ejecute "git rebase --continue".
+Si prefieres saltar este parche, ejecuta "git rebase --skip" .
+Para abortar y regresar al estado previo al "git rebase", ejecuta "git rebase --abort".
+```
+
+We have to resolve the conflicts and, after that, do the next:
+
+```bash
+git add index.html
+git rebase --continue
+```
+
+The complete process is:
+
+```bash
+git switch develop
+git rebase origin/develop
+vi index.html  #Arreglar el conflicto
+git add index.html
+git rebase --continue
+```
+
+## `git merge --squash` branch
 [Up](#table-of-contents)
 
-*Notes here*
+Let's imagine we want to merge a branch of a functionality called`lorenzo/3` into `develop`. If there are conflicts, we will see the next message:
 
-## `git merge --ff-only`
+```bash
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+Commit de squash -- no actualizando HEAD
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+```
+
+The wole proccess will be the next:
+
+```bash
+git switch develop
+git merge --squash Lorenzo_3
+vi index.html  #Arreglar el conflicto
+git commit -am "feat(#45):Nueva cabecera"
+```
+
+## `git merge --ff-only` branch
 [Up](#table-of-contents)
 
-*Notes here*
+With a fast-forward merge, we will see the next message if there are conflicts.
 
-## `git merge`
+## `git merge` branch
 [Up](#table-of-contents)
 
-*Notes here*
+Let's imagine we ant to merge the changes of `develop` into `lorenzo/3`. If there are conflicts, we will see the next message:
+
+```bash
+Auto-fusionando index.html
+CONFLICTO (contenido): Conflicto de fusión en index.html
+Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+```
+
+The whole process will be the next:
+
+```bash
+git switch Lorenzo_3
+git merge develop
+vi index.html  #Arreglar el conflicto
+git add index.html 
+git merge --continue
+```
 
 # Receipts
 [Up](#table-of-contents)
