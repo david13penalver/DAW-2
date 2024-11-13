@@ -207,27 +207,216 @@ function deleteCharacter() {
 ## Sending Data to the Server (POST, PUT and PATCH) 
 [Up](#table-of-contents)
 
-*Text here*
+As we are sending data to the server, we need to specify which type it is.
+
+For that, we must use the HTTP header, using the `setRequestHeader(name, value)` method.
+
+The JSON format and the UTF-8 encoding are the most used.
+
+```javascript
+setRequestHeader("Content-Type", "application/json; charset=utf-8");
+```
+
+In our API, to add an article, we must use the POST method:
+
+```javascript
+const url = "https://localhost:3000/articulos";
+
+function postArticulo() {
+  let id = prompt("Enter the ID of the article to add");
+  let nombre = prompt("Enter the name of the article to add");
+  let precio = parseInt(prompt("Enter the price of the article to add"));
+
+  let articulo = JSON.stringify({
+    id: id,
+    nombre: nombre,
+    precio: precio
+  });
+
+  let xhr = new XMLHttpRequest();
+
+  xhr.open("post", url);
+  xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+  xhr.send(articulo);
+
+  xhr.onload = function() {
+    if (xhr.status == 201) {
+      console.log("El artículo se ha añadido correctamente");
+    } else {
+      console.error("Error en la petición. El artículo no se ha añadido.");
+    };
+
+    xhr.onerror = function() {
+      alert("Error en la petición");
+    }:
+  }
+}
+```
+
+In our API, to modify an article, we must use the PUT method.
+
+```javascript
+const url = "https://localhost:3000/articulos";
+
+function putArticulo() {
+  let id = prompt("Enter the ID of the article to modify");
+  let nombre = prompt("Enter the new name of the article");
+  let precio = parseInt(prompt("Enter the new price of the article"));
+
+  let articulo = JSON.stringify({
+    id: id,
+    nombre: nombre,
+    precio: precio
+  });
+
+  let xhr = new XMLHttpRequest();
+  xhr.open("PUT", `${url}/${id}`, true);
+  xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+  xhr.send(articulo);
+
+  xhr.onload = function() {
+    if (xhr.status == 200) {
+      console.log("The article has been modified correctly");
+    } else {
+      console.error("Error in the petition. The article has not been modified.");
+    };
+
+    xhr.onerror = function() {
+      alert("Error in the petition");
+    };
+  }
+}
+```
 
 # Promises
 [Up](#table-of-contents)
 
-*Text here*
+XMLHttpRequest works with callbacks (we pass a function to manage the petition). It is easy for easy petitions, but the problem comes when we have to manage nested petitions.
+
+We should launch the next petition in the onload of the first one.
+
+This is call a Callback Hell of Pyramid of Doom:
+```javascript
+a(function (resultrsFromA) {
+  b(resultrsFromA, function (resultrsFromB) {
+    c(resultrsFromB, function (resultrsFromC) {
+      d(resultrsFromC, function (resultrsFromD) {
+        e(resultrsFromD, function (resultrsFromE) {
+          f(resultrsFromE, function (resultrsFromF) {
+            console.log(resultrsFromF);
+          });
+        });
+      });
+    });
+  });
+});
+```
+
+Promises are a way to manage asynchronous code in a more elegant way.
+
+They were introduced in ES6.
+
+A promise is an object that represents the ending or failing of an asynchronous operation.
+
+The majority of developers use promises already created.
+
+Characteristics:
+- Asynchronous.
+- Ended:
+  - Fulfilled: the operation has been completed successfully.
+  - Rejected: the operation has failed.
+
+Why it is useful:
+- Asynchronous code manage: it is easier to manage asynchronous code.
+- Operation enchainment.
+- Better readability.
+
+States of the Promise object:
+- Pending: the operation has not finished yet.
+- Fulfilled: the operation has been completed successfully
+  - It will be managed by the `then` method.
+- Rejected: the operation has failed.
+  - It will be managed by the `catch` method.
 
 ## Then
 [Up](#table-of-contents)
 
-*Text here*
+It is the method that allows us manage the fulfilled state of the promise.
+
+Syntax:
+```javascript
+prmise.then( function(result) {
+    // Code to manage the result
+  }, function(error) {
+    // Code to manage the error
+  }
+);
+```
+
+The most common us using the fat arrow function:
+```javascript
+promise.then(result => {
+    // Code to manage the result
+  }, error => {
+    // Code to manage the error
+  }
+);
+```
 
 ## Catch
 [Up](#table-of-contents)
 
-*Text here*
+It is the method that allows us manage the rejected state of the promise.
+
+Syntax:
+```javascript
+promise.catch( function(error) {
+    // Code to manage the error
+  }
+);
+```
+
+The most common us using the fat arrow function:
+```javascript
+promise.catch(error => {
+    // Code to manage the error
+  }
+);
+```
 
 ## Fetch
 [Up](#table-of-contents)
 
-*Text here*
+Fetch is a modern API that allows us to make AJAX requests in a more elegant way.
+
+It is the standard way to make AJAX requests.
+
+Why it is useful:
+- It is easier to use than XMLHttpRequest.
+- Promises are used by default.
+- Flexibility: it allows customizing the request with different HTTPS methods, headers and bodies.
+
+With Fetch we will no longer use directly the XMLHttpRequest object since fetch is an API that manages the HTTP request through promises. Fetch is in charge of creating, configuring and sending the HTTP request and will return the result of the request that we will manage with the methods `then` and `catch`.
+
+The function `fetch()`accepts two parameters:
+- The URL of the resource to fetch.
+- The options to configure the request (optional).
+
+The `fetch()`function returns a promise:
+- If the request is successful, the promise will be fulfilled: it will call the `then()` method.
+- If the request fails, the promise will be rejected: it will call the `catch()`method.
+
+```javascript
+fetch("url", {})
+  .then(responde => {
+    // Code to manage the response
+  })
+  .catch(error => {
+    // Code to manage the error
+  });
+```
+
+The method `.catch()`can be ommited. It is used only when `fetch`can not connect to the server.
 
 ### GET Petition
 [Up](#table-of-contents)
