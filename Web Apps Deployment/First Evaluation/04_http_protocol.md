@@ -16,19 +16,19 @@
 # Characteristics
 [Up](#table-of-contents)
 
-- `Easy`: It is in text mode and is easy to use by a person.
-- `Extensible`: You can send more metadata rather than just the default ones.
-- `Without state`: Each petition is independent of the previous one.
+- Easy: It is in text mode and is easy to use by a person.
+- Extensible: You can send more metadata rather than just the default ones.
+- Without state: Each petition is independent of the previous one.
   - That's a problem for sites like cart shops, where you need to keep the state of the user.
 
 # Advantages
 [Up](#table-of-contents)
 
--`Cache`: Improves speed by caching the data.
-- `Authentication`: It allows authenticating the user.
-- `Proxys`: It allows the use of proxies transparently.
-- `Sessions`: It allows keeping the status between petitions.
-- `Formats`: It allows indicating the format of what it is sent, of what it is demanded and of what it is returned.
+- Cache: Improves speed by caching the data.
+- Authentication: It allows authenticating the user.
+- Proxys: It allows the use of proxies transparently.
+- Sessions: It allows keeping the status between petitions.
+- Formats: It allows indicating the format of what it is sent, of what it is demanded and of what it is returned.
 
 # Format
 [Up](#table-of-contents)
@@ -53,11 +53,23 @@ Content-Type: text/html; charset=utf-8
 <!DOCTYPE html... (los 29769 bytes de la página)
 ```
 
+Explanation of the petition:
+
 - `GET`: Method of the petition (GET, PUT, POST, DELETE).
 - `/index.html`: Path of the document we are demanding on the server.
 - `HTTP/1.1`: Version of the protocol. It is practically always 1.1.
 - `Host: www.fpmislata.com`: Host of the server.
 - `Accept-Language: fr`: Language that we want whe the data is returned.
+
+So, in an HTTP petition there is a first line and the several lines with the headers.
+
+Explanation of the answer:
+
+- `HTTP/1.1`: Version of the protocol. It is practically always 1.1.
+- `200 OK`: State of the petition. In this case it is 200, which means that everything went well.
+- `Content-Length: 29769`: Size of the data that is being returned.
+- `Content-Type: text/html; charset=utf-8`: Format of the data that is being returned.
+- `<!DOCTYPE html... (los 29769 bytes de la página)`: Data that is being returned.
 
 # HTTPS Headers
 [Up](#table-of-contents)
@@ -148,6 +160,16 @@ The server will delete `index.html`.
 # REST
 [Up](#table-of-contents)
 
+We could say that REST is using all the power of HTTP in our own applications. 
+
+It usually uses JSON data format, it is very simple and uses all the features of HTTP that it can instead of reinventing what HTTP already has. 
+
+This last feature I think is the one that best explains what REST is: if something already exists in HTTP and REST always works under HTTP, then why not use everything HTTP has to offer. 
+
+So when we need something in our application we should always ask ourselves, how does the HTTP protocol already solve this problem? And use it instead of creating our solution.
+
+Translated with DeepL.com (free version)
+
 ## Operators to use
 [Up](#table-of-contents)
 
@@ -171,6 +193,8 @@ The server will delete `index.html`.
 
 # REST Server in NodeJS
 [Up](#table-of-contents)
+
+Let's see how to modify our server in NodeJS to be able to read and modify things related to HTTP.
 
 The next example can:
 - Read headers.

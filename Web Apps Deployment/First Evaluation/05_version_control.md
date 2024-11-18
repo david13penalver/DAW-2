@@ -1,10 +1,12 @@
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
 - [Installing Git](#installing-git)
 - [Starting a Repository](#starting-a-repository)
 - [File Status Lifecycle](#file-status-lifecycle)
 - [Git Sync](#git-sync)
+  - [Remotes](#remotes)
 - [Commit Deletion](#commit-deletion)
 - [Undoing Changes](#undoing-changes)
 - [Moving around the Repository](#moving-around-the-repository)
@@ -18,7 +20,7 @@
 
 # Introduction
 
-Important step in Windows:
+Important steps in Windows:
 - Choosing default editor: **Vim**, Nano, Notepad++, etc.
 - Adjusting PATH environment: Use Git and optional Unix tools from the Windows Command Prompt (the one with the warning).
 - Choose the default behavior of `git pull`: Only even fast-forward.
@@ -27,7 +29,7 @@ Important step in Windows:
 git config --global core.editor "vim"
                                 git config --global pull.ff only
 ```
-// ruta de git config global en Linux: `~/.gitconfig`
+- Path of `git config` global in Linux: `~/.gitconfig`
 
 The rest is `Next`.
 
@@ -76,9 +78,10 @@ Aquí tienes la tabla con los datos solicitados:
 | **`git restore`**|          | ✓        |
 | **`git diff`**   | ✓        | ✓        |
 
+
 - `git restore` in the staging area does not work. It only works in the working directory. It is used to restore a file to the last commit.
-- To restore a file in the staging area, you need to use `git restore --staged <file>`.
-- `git restore` in an untracked file does not work.
+  - To restore a file in the staging area, you need to use `git restore --staged <file>`.
+  - `git restore` in an untracked file does not work.
 - `git rm --cached <file>` removes a file from the committed area but keeps it in the working directory. 
   - It is useful when you want to stop tracking a file but keep it in your working directory.
   - If you want to delete it permanently, you can use `git rm <file>`.
@@ -91,13 +94,16 @@ Aquí tienes la tabla con los datos solicitados:
   - `git stash push` is the same as `git stash`.
   - `git stash push --all` stashes all changes, including untracked files.
 - To see the list of remotes:
+
 ```bash
 git remote -v
 
 origin	https://github.com/lgonzalezmislata/prueba.git (fetch)
 origin	https://github.com/lgonzalezmislata/prueba.git (push)
 ```
+
 - To add a remote:
+
 ```bash
 git remote add otroservidor https://www.otroservidor.com/lgonzalezmislata/prueba.git
 ```
@@ -121,6 +127,24 @@ git remote add otroservidor https://www.otroservidor.com/lgonzalezmislata/prueba
 - `git merge --ff-only origin master` does not have sense. It should be `git merge --ff-only origin/master`.
   - You cannot merge to the branch of a different server.
 
+## Remotes
+[Up](#table-of-contents)
+
+To see the list of remotes:
+
+```bash
+git remote -v
+
+origin	https://github.com/lgonzalezmislata/prueba.git (fetch)
+origin	https://github.com/lgonzalezmislata/prueba.git (push)
+```
+
+To add a new remote:
+
+```bash
+git remote add nombreminuevoremote https://www.otroservidor.com/lgonzalezmislata/prueba.git
+```
+
 # Commit Deletion
 [Up](#table-of-contents)
 
@@ -141,6 +165,10 @@ git remote add otroservidor https://www.otroservidor.com/lgonzalezmislata/prueba
   - Useful because it allows us to review what the commit is going to do and allows us to make any further modifications.
   - If we are not interested in doing the commit we can abort it with `git revert --abort` or use the already known `git restore --staged --worktree file`.
   - Finally, to commit everything we can use `git commit -m "message"` or `git commit -am "message"`.
+
+> **Note**: The `--no-commit` option is useful because it allows us to review what the commit is going to do and allows us to make some more modifications. if we are not interested in doing the commit we can abort it with `git revert --abort` or use the already known `git restore --staged --worktree file`.
+> In case of a conflict, you must resolve the conflict in the file, do the `git add <file>` and finally commit.
+> The difference between `git revert` and `git reset` is that `git revert` creates a new commit that undoes the work of another commit, while `git reset` actually deletes the commits.
 
 # Moving around the Repository
 [Up](#table-of-contents)

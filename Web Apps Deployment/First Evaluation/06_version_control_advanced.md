@@ -21,10 +21,10 @@
 ![Branches scheme](./Assets/06_branches.png)
 
 Branches to create:
-- `master`: main branch, production-ready
-- `develop`: development branch, where all the features are merged
-- `feature/feature-name`: branch for a new feature
-- `release/vX.Y.Z`: branch for a new release
+- `master`: main branch, production-ready.
+- `develop`: development branch, where all the features are merged.
+- `feature/feature-name`: branch for a new feature, created from `develop`.
+- `release/vX.Y.Z`: branch for a new release. When is tested, it is merged into `master`.
 
 Steps to create a new branch:
 1. Create the branch `feature`from `develop`
@@ -52,8 +52,9 @@ Download a branch from the remote repository:
 git fetch --prune   
 git switch nuevaRama
 ```
-We use `--prune`to delete the branches that are not in the remote repository
-By default, `switch`downloads the branch from the remote repository (`--track`to `origin/nuevaRama`)
+> **Note**: We use `--prune`to delete the branches that are not in the remote repository.
+
+> **Note**: By default, `switch`downloads the branch from the remote repository (`--track`to `origin/nuevaRama`)
 
 Delete a branch that has been merge or uploaded to the remote repository:
 ```bash

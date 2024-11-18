@@ -32,7 +32,7 @@ In the example we can see that the resource `/index.html` is requested. Once obt
 
 With all this, it displays the HTML+CSS+Image page and executes the JavaScript code on the page inside the browser.
 
-On the server host was running the TCP/IP server that understands the HTTP protocol. We will call this software the Web server. The server is “customizable” allowing code specific to our application to be executed. That specific code is the server code that is usually written in Java, PHP, NodeJS, etc.
+On the server host was running the TCP/IP server that understands the HTTP protocol. We will call this software the Web server. The server is “customizable” allowing the executing of the code specific of our application. That specific code is the server code that is usually written in Java, PHP, NodeJS, etc.
 
 Therefore in a web app there are 3 types of code:
 - Display code: HTML, CSS, Images, Videos, etc.
@@ -54,7 +54,7 @@ In 'Network' we can see the requests made by the browser to the server.
 # Deploy
 [Up](#table-of-contents)
 
-Deploy is the process of moving the code from the development environment to the production environment into a web server.
+Deployment is the process of moving the code from the development environment to the production environment into a web server.
 
 # Challenges ands tasks to deploy
 [Up](#table-of-contents)
@@ -78,7 +78,7 @@ Deploy is the process of moving the code from the development environment to the
 - Administration:
   - Backup creation.
   - Logs.
-  - Sequrity: recovery in case of loss.
+  - Sequrity: recovery in case of data loss.
 - Performance: allow that the app continues to work even if there is a peak of users.
   - Adding new machines if there is a peak and removing them when the peak is over.
   - Load balancing.
@@ -115,7 +115,10 @@ Other apps and services:
 - Fault tolerance: Design the application in such a way that even if a host fails, the application continues to work.
 
 - IAAS (Infrastructure as a Service): If the Hosting company only offers the Host and we have to install all the software, including the operating system and manage everything.
-- PAAS (Platform as a Service): If the Hosting company offers us the Host but also generic software already installed, such as the Operating System, Web Server, Mail Server, Load Balancer, etc. In this case we only have to install the specific code of our application, in this case although they offer us a host because the app must be somewhere, they are really offering us the web server where to install our app. In the case of PAAS, we do not have to manage either the Operating System or the server.
+- PAAS (Platform as a Service): 
+  - If the Hosting company offers us the Host but also generic software already installed, such as the Operating System, Web Server, Mail Server, Load Balancer, etc. 
+  - In this case we only have to install the specific code of our application, in this case although they offer us a host because the app must be somewhere, they are really offering us the web server where to install our app. 
+  - In the case of PAAS, we do not have to manage either the Operating System or the server.
 - SAAS (Software as a Service): As developers we never use a SASS since the hosting company already offers even the installed application. An example would be Google with “Google Docs”, Microsoft with its “MS Office 365”, DropBox, etc. that already offer everything to the end user.
 
 ## IAAS vs PAAS
