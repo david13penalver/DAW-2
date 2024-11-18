@@ -1,0 +1,157 @@
+.l-flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&--direction-columns{
+		flex-direction: column;
+	}
+
+	&--direction-row{
+		flex-direction: row;
+	}
+
+	&--wrap{
+		&--wrap{
+			flex-wrap: wrap;
+		}
+		&--nowrap{
+			flex-wrap: nowrap;
+		}
+		&--reverse{
+			flex-wrap: wrap-reverse;
+		}
+	}
+
+	&--justify-content{
+		&--start{
+			justify-content: start;
+		}
+		&--end{
+			justify-content: end;
+		}
+		&--center{
+			justify-content: center;
+		}
+		&--right{
+			justify-content: right;
+		}
+		&--left{
+			justify-content: left;
+		}
+		&--normal{
+			justify-content: normal;
+		}
+		&--flex{
+			&--start{
+				justify-content: flex-start;
+			}
+			&--end{
+				justify-content: flex-end;
+			}
+		}
+		&--space{
+			&--between{
+				justify-content: space-between;
+			}
+			&--evenly{
+				justify-content: space-evenly;
+			}
+			&--around{
+				justify-content: space-around;
+			}
+		}
+		&--stretch{
+			justify-content: stretch;
+		}
+		&--inherit{
+			justify-content: inherit;
+		}
+		&--initial{
+			justify-content: initial;
+		}
+		&--revert{
+			justify-content: revert;
+		}
+		&--unset{
+			justify-content: unset;
+		}
+	}
+	&--align-items{
+		&--flex{
+			&--start{
+				align-items: flex-start;
+			}
+			&--end{
+				align-items: flex-end;
+			}
+		}
+		&--normal{
+			align-items: normal;
+		}
+		&--stretch{
+			align-items: stretch;
+		}
+		&--center{
+			align-items: center;
+		}
+		&--start{
+			align-items: start;
+		}
+		&--end{
+			align-items: end;
+		}
+		&--self{
+			&--start{
+				align-items: self-start;
+			}
+			&--end{
+				align-items: self-end;
+			}
+		}
+		&--baseline{
+			align-items: baseline;
+		}
+		&--first-baseline{
+			align-items: first baseline;
+		}
+		&--last-baseline{
+			align-items: last baseline;
+		}
+		&--inherit{
+			align-items: inherit;
+		}
+		&--initial{
+			align-items: initial;
+		}
+		&--unset{
+			align-items: unset;
+		}
+	}
+	&--grow {
+		@for $i from 1 through 5 {
+			$num: $i * 0.5;
+			&-#{$i} {
+				flex-grow: $num;
+			}
+		}
+	}
+
+	&--shrink {
+		@for $i from 1 through 5 {
+			$num: $i * 0.5;
+			&-#{$i} {
+				flex-shrink: $num;
+			}
+		}
+	}
+
+	&--basis {
+		@for $i from 1 through 5 {
+			$num: $i * 0.5;
+			&-#{$i} {
+				flex-basis: #{$num}px;
+			}
+		}
+	}
+}

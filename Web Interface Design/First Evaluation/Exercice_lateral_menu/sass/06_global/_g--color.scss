@@ -1,0 +1,24 @@
+$lista: (
+    "main",
+    "alternative",
+    "red",
+    "orange",
+    "yellow",
+    "lime",
+    "green",
+    "cyan",
+    "blue",
+    "purple",
+    "pink",
+    "white",
+    "black",
+    "gray"
+);
+
+@each $value in $lista {
+    @for $i from 1 through 9 {
+        .g---color-#{$value}-#{$i} {
+            color: var(--color-#{$value}-#{$i});
+        }
+    }
+}

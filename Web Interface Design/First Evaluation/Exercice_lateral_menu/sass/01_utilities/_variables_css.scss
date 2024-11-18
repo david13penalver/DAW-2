@@ -1,0 +1,203 @@
+// COLORS
+$colorMap: (
+    "main": (
+        hsl(13deg 95% 5%),
+        hsl(16deg 97% 16%),
+        hsl(18deg 99% 28%),
+        hsl(21deg 100% 39%),
+        hsl(23deg 100% 50%),
+        hsl(26deg 100% 61%),
+        hsl(28deg 99% 73%),
+        hsl(31deg 97% 84%),
+        hsl(33deg 95% 95%)
+    ),
+
+    "alternative": (
+        hsl(244deg 95% 5%),
+        hsl(247deg 93% 8%),
+        hsl(249deg 92% 11%),
+        hsl(252deg 91% 14%),
+        hsl(254deg 91% 17%),
+        hsl(257deg 91% 20%),
+        hsl(259deg 92% 23%),
+        hsl(262deg 93% 26%),
+        hsl(264deg 95% 29%)
+    ),
+
+    "red": (
+        hsl(360deg 95% 5%),
+        hsl(360deg 97% 16%),
+        hsl(360deg 99% 28%),
+        hsl(360deg 100% 39%),
+        hsl(0deg 100% 50%),
+        hsl(3deg 100% 61%),
+        hsl(5deg 99% 73%),
+        hsl(8deg 97% 84%),
+        hsl(10deg 95% 95%)
+    ),
+
+    "orange": (
+        hsl(29deg 95% 5%),
+        hsl(32deg 97% 16%),
+        hsl(34deg 99% 28%),
+        hsl(37deg 100% 39%),
+        hsl(39deg 100% 50%),
+        hsl(42deg 100% 61%),
+        hsl(44deg 99% 73%),
+        hsl(47deg 97% 84%),
+        hsl(49deg 95% 95%)
+    ),
+
+    "yellow": (
+        hsl(50deg 95% 5%),
+        hsl(53deg 97% 16%),
+        hsl(55deg 99% 28%),
+        hsl(58deg 100% 39%),
+        hsl(60deg 100% 50%),
+        hsl(63deg 100% 61%),
+        hsl(65deg 99% 73%),
+        hsl(68deg 97% 84%),
+        hsl(70deg 95% 95%)
+    ),
+
+    "lime": (
+        hsl(65deg 95% 5%),
+        hsl(68deg 97% 16%),
+        hsl(70deg 99% 28%),
+        hsl(73deg 100% 39%),
+        hsl(75deg 100% 50%),
+        hsl(78deg 100% 61%),
+        hsl(80deg 99% 73%),
+        hsl(83deg 97% 84%),
+        hsl(85deg 95% 95%)
+    ),
+
+    "green": (
+        hsl(110deg 95% 5%),
+        hsl(113deg 97% 16%),
+        hsl(115deg 99% 28%),
+        hsl(118deg 100% 39%),
+        hsl(120deg 100% 50%),
+        hsl(123deg 100% 61%),
+        hsl(125deg 99% 73%),
+        hsl(128deg 97% 84%),
+        hsl(130deg 95% 95%)
+    ),
+
+    "cyan": (
+        hsl(170deg 95% 5%),
+        hsl(173deg 97% 16%),
+        hsl(175deg 99% 28%),
+        hsl(178deg 100% 39%),
+        hsl(180deg 100% 50%),
+        hsl(183deg 100% 61%),
+        hsl(185deg 99% 73%),
+        hsl(188deg 97% 84%),
+        hsl(190deg 95% 95%)
+    ),
+
+    "blue": (
+        hsl(230deg 95% 5%),
+        hsl(233deg 97% 16%),
+        hsl(235deg 99% 28%),
+        hsl(238deg 100% 39%),
+        hsl(240deg 100% 50%),
+        hsl(243deg 100% 61%),
+        hsl(245deg 99% 73%),
+        hsl(248deg 97% 84%),
+        hsl(250deg 95% 95%)
+    ),
+
+    "purple": (
+        hsl(290deg 95% 5%),
+        hsl(293deg 97% 10%),
+        hsl(295deg 99% 15%),
+        hsl(298deg 100% 20%),
+        hsl(300deg 100% 25%),
+        hsl(303deg 100% 30%),
+        hsl(305deg 99% 35%),
+        hsl(308deg 97% 40%),
+        hsl(310deg 95% 45%)
+    ),
+
+    "pink": (
+        hsl(340deg 95% 76%),
+        hsl(343deg 97% 79%),
+        hsl(345deg 99% 82%),
+        hsl(348deg 100% 85%),
+        hsl(350deg 100% 88%),
+        hsl(353deg 100% 91%),
+        hsl(355deg 99% 94%),
+        hsl(358deg 97% 97%),
+        hsl(360deg 95% 100%)
+    ),
+
+    "white": (
+        hsl(20deg 95% 16%),
+        hsl(23deg 53% 27%),
+        hsl(25deg 24% 37%),
+        hsl(28deg 6% 48%),
+        hsl(30deg 0% 58%),
+        hsl(33deg 6% 69%),
+        hsl(35deg 24% 79%),
+        hsl(38deg 53% 90%),
+        hsl(40deg 95% 100%)
+    ),
+
+    "black": (
+        hsl(360deg 95% 0%),
+        hsl(360deg 53% 0%),
+        hsl(360deg 24% 0%),
+        hsl(360deg 6% 0%),
+        hsl(0deg 0% 0%),
+        hsl(3deg 6% 1%),
+        hsl(5deg 24% 3%),
+        hsl(8deg 53% 4%),
+        hsl(10deg 95% 5%)
+    ),
+
+    "gray": (
+        hsl(360deg 95% 5%),
+        hsl(360deg 53% 16%),
+        hsl(360deg 24% 28%),
+        hsl(360deg 6% 39%),
+        hsl(0deg 0% 50%),
+        hsl(3deg 6% 61%),
+        hsl(5deg 24% 73%),
+        hsl(8deg 53% 84%),
+        hsl(10deg 95% 95%)
+    ),
+
+    "brown": (
+        hsl(20deg 95% 5%),
+        hsl(23deg 97% 10%),
+        hsl(25deg 99% 15%),
+        hsl(28deg 100% 20%),
+        hsl(30deg 100% 25%),
+        hsl(33deg 100% 30%),
+        hsl(35deg 99% 35%),
+        hsl(38deg 97% 40%),
+        hsl(40deg 95% 45%)
+    )
+);
+
+// FONT FAMILY
+$font: (
+        "primary": '"Arial", "Helvetica", sans-serif',
+        "secondary": '"Georgia", "Times New Roman", Times, serif',
+        "tertiary": '"Courier New", Courier, monospace',
+        "quaternary": '"Arial", "Helvetica", sans-serif',
+        "quinary": '"Georgia", "Times New Roman", Times, serif'
+);
+
+:root {
+    @each $colorName, $colorList in $colorMap {
+        @for $i from 1 through length($colorList) {
+            --color-#{$colorName}-#{$i}: #{nth($colorList, $i)};
+        }
+    }
+
+    @each $key, $value in $font {
+        --font-#{$key}: #{$value};
+    }
+}

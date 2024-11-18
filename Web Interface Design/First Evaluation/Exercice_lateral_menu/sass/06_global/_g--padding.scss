@@ -1,0 +1,36 @@
+$lista: ("xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl");
+
+$padding: (
+    "top","bottom","right","left"
+);
+
+@each $value in $lista {
+        .g--padding-#{$value} {
+            padding: var(--padding-#{$value});
+        }
+    
+}
+
+@each $padding_type in $padding {
+    @each $value in $lista {
+        .g--padding-#{$padding_type}-#{$value} {
+            padding-#{$padding_type}: var(--padding-#{$value});
+        }
+    }
+}
+
+
+@each $value in $lista {
+    .g--padding-vertical-#{$value} {
+        padding-top: var(--padding-#{$value});
+        padding-bottom: var(--padding-#{$value});
+    }
+}
+
+@each $value in $lista {
+    .g--padding-horizontal-#{$value} {
+        padding-right: var(--padding-#{$value});
+        padding-left: var(--padding-#{$value});
+    }
+    
+}

@@ -1,0 +1,23 @@
+$family: ("font-sans-serif", "font-serif", "font-monospace");
+
+$size: ("xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl");
+
+$weight: ("light", "normal", "bold");
+
+@each $value in $family {
+    .g--font-family-#{$value} {
+        font-family: var(--#{$value});
+    }
+}
+
+@each $value in $size {
+    .g--font-size-#{$value} {
+        font-size: var(--font-size-#{$value});
+    }
+}
+
+@each $value in $weight {
+    .g--font-weight-#{$value} {
+        font-weight: var(--font-weight-#{$value});
+    }
+}

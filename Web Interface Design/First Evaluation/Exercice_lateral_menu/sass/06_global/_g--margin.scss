@@ -1,0 +1,34 @@
+$lista: ("xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl");
+
+$margin: (
+    "top","bottom","right","left"
+);
+
+@each $value in $lista {
+    .g--margin-#{$value} {
+        margin: var(--margin-#{$value});
+    }
+}
+
+@each $margin_type in $margin {
+    @each $value in $lista {
+        .g--margin-#{$margin_type}-#{$value} {
+            margin-#{$margin_type}: var(--margin-#{$value});
+        }
+    }
+}
+
+
+@each $value in $lista {
+    .g--margin-vertical-#{$value} {
+        margin-top: var(--margin-#{$value});
+        margin-bottom: var(--margin-#{$value});
+    }
+}
+
+@each $value in $lista {
+    .g--margin-horizontal-#{$value} {
+        margin-right: var(--margin-#{$value});
+        margin-left: var(--margin-#{$value});
+    }
+}

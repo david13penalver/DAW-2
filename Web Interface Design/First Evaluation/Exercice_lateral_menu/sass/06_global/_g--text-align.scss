@@ -1,0 +1,7 @@
+$align: ("left", "right", "center", "justify");
+
+@each $value in $align {
+    .g--text-aligj-#{$value} {
+        text-align: #{$value};
+    }
+}

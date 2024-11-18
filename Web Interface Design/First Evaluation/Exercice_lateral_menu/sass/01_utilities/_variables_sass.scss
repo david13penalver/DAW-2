@@ -1,0 +1,102 @@
+// FONT SIZE
+$font-size: (
+        "xxxs": 8px,
+        "xxs": 10px,
+        "xs": 12px,
+        "s": 14px,
+        "": 16px, // es la por defecto
+        "l": 18px,
+        "xl": 20px,
+        "xxl": 24px,
+        "xxxl": 32px
+);
+
+@each $key, $value in $font-size {
+  @if $key == "" {
+    .g--font-size {
+      font-size: $value;
+    }
+  } @else {
+    .g--font-size-#{$key} {
+      font-size: $value;
+    }
+  }
+}
+
+// FONT WEIGHT
+$font-weight: (
+        "light": 300,
+        "normal": 400,
+        "bold": 700
+);
+
+@include generateClassesVariablesSass($font-weight, "font-weight");
+
+// BORDER RADIUS
+$border-radius: (
+        "xs": 2px,
+        "s": 4px,
+        "m": 8px,
+        "l": 16px,
+        "xl": 32px
+);
+
+@include generateClassesVariablesSass($border-radius, "border-radius");
+
+// WIDTH
+$width: (
+        "xs": 1px,
+        "s": 2px,
+        "m": 4px,
+        "l": 8px,
+        "xl": 16px
+);
+
+@include generateClassesVariablesSass($width, "width");
+
+// HEIGHT
+$height: (
+        "xs": 1px,
+        "s": 2px,
+        "m": 4px,
+        "l": 8px,
+        "xl": 16px
+);
+
+@include generateClassesVariablesSass($height, "height");
+
+// BOX SHADOW
+$box-shadow: (
+        "1": 0 1px 3px hsla(0, 0%, 0%, .2),
+        "2": 0 4px 6px hsla(0, 0%, 0%, .2),
+        "3": 0 5px 15px hsla(0, 0%, 0%, .2),
+        "4": 0 10px 24px hsla(0, 0%, 0%, .2),
+        "5": 0 15px 35px hsla(0, 0%, 0%, .2)
+);
+
+@include generateClassesVariablesSass($box-shadow, "box-shadow");
+
+// Z-INDEX
+$z-index: (
+        "1": 100,
+        "2": 200,
+        "3": 300,
+        "4": 400,
+        "5": 500
+);
+
+@include generateClassesVariablesSass($z-index, "z-index");
+
+// MARGIN, PADDING, MARGIN-LEFT, MARGIN-RIGHT, PADDING-LEFT, PADDING-RIGHT, MARGIN-TOP, MARGIN-BOTTOM, PADDING-TOP, PADDING-BOTTOM
+$margins: "margin", "margin-top", "margin-right", "margin-bottom", "margin-left";
+$paddings: "padding", "padding-top", "padding-right", "padding-bottom", "padding-left";
+$sizes: 4px, 8px, 12px, 16px, 24px, 32px, 48px, 64px, 96px;
+
+@include marginPaddingCreator($margins, $sizes);
+@include marginPaddingCreator($paddings, $sizes);
+
+// CURSORS
+$cursors: ("auto", "grab", "grabbing", "help", "move", "none", "not-allowed", "pointer", "progress", "text", "wait", "zoom-in", "zoom-out");
+
+// TEXT ALIGN
+$align: ("left", "right", "center", "justify");

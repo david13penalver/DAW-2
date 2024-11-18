@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Windows</title>
+    <script src="https://kit.fontawesome.com/bb3f7d7133.js" crossorigin="anonymous"></script>
+
+    <style>
+      .c-header {
+        width: 100%;
+      }
+      .c-arbol{
+        list-style: none;
+      }
+
+      .c-arbol__nivel-1 {
+        font-size: 20px; //seria una variable
+      }
+      .c-arbol__nivel-2 {
+        display: flex;
+        padding: 10px; //seria una variable
+      }
+
+      .c-arbol__icono {
+
+      }
+      .c-arbol__pin {
+        margin-left: auto;
+      }
+
+      .c-arbol__texto {
+
+      }
+    </style>
+  </head>
+  <body>
+    <header class="c-header">
+      <ul class="c-arbol">
+          <li class="c-arbol__nivel-1"><i class="fa-solid fa-chevron-down c-arbol__icono"></i> Menu 1
+            <li class="c-arbol__nivel-2"><p class="c-arbol__texto">Equipo</p><span class="c-arbol__pin"><i class="fa-solid fa-thumbtack"></i></span></li>
+            <li class="c-arbol__nivel-2"><p class="c-arbol__texto">Documentos</p><span class="c-arbol__pin"><i class="fa-solid fa-thumbtack"></i></span></li>
+            <li class="c-arbol__nivel-2"><p class="c-arbol__texto">Escritorio</p><span class="c-arbol__pin"><i class="fa-solid fa-thumbtack"></i></span></li>
+            <li class="c-arbol__nivel-2"><p class="c-arbol__texto">Imagenes</p><span class="c-arbol__pin"><i class="fa-solid fa-thumbtack"></i></span></li>
+            <li class="c-arbol__nivel-2"><p class="c-arbol__texto">Videos</p><span class="c-arbol__pin"><i class="fa-solid fa-thumbtack"></i></span></li>
+          </li>
+          <li class="c-arbol__nivel-1"><i class="fa-solid fa-chevron-down c-arbol__icono"></i> Menu 2
+            <li class="c-arbol__nivel-2"><i class="fa-solid fa-chevron-right c-arbol__icono"></i> <div class="c-arbol__texto"> Equipo</div></li>
+            <li class="c-arbol__nivel-2"><i class="fa-solid fa-chevron-right c-arbol__icono"></i> <div class="c-arbol__texto">Documentos</div></li>
+            <li class="c-arbol__nivel-2"><i class="fa-solid fa-chevron-right c-arbol__icono"></i> <div class="c-arbol__texto">Escritorio</div></li>
+            <li class="c-arbol__nivel-2"><i class="fa-solid fa-chevron-right c-arbol__icono"></i> <div class="c-arbol__texto">Imagenes</div></li>
+            <li class="c-arbol__nivel-2"><i class="fa-solid fa-chevron-right c-arbol__icono"></i> <div class="c-arbol__texto">Videos</div></li>
+        </li>
+      </ul>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>

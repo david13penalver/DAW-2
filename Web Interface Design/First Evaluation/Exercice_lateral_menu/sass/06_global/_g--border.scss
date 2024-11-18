@@ -1,0 +1,78 @@
+$lista: ("xxxs", "xxs", "xs", "s", "m", "l", "xl", "xxl", "xxxl");
+
+$border: ("top","bottom","right","left");
+
+$radius: ("xs", "s", "m", "l", "xl");
+
+$border_style: ("dotted","dashed","solid","double","groove","ridge","inset","outset","hidden","none");
+
+$listaColores: ("main", "alternative", "red", "orange", "yellow", "lime", "green", "cyan", "blue", "purple", "pink", "white", "black", "gray");
+
+
+// Border width
+
+@each $value in $lista {
+        .g--border-#{$value} {
+            border: var(--border-#{$value});
+        }
+    
+}
+
+@each $border_type in $border {
+    @each $value in $lista {
+            .g--border-#{$border_type}-#{$value} {
+                border-#{$border_type}: var(--border-#{$value});
+            }
+        }
+}
+
+
+@each $value in $lista {        
+        .g--border-vertical-#{$value} {
+            border-top: var(--border-#{$value});
+            border-bottom: var(--border-#{$value});
+        }
+}
+
+@each $value in $lista {
+        .g--border-horizontal-#{$value} {
+            border-right: var(--border-#{$value});
+            border-left: var(--border-#{$value});
+        }
+}
+
+// Border radius
+
+@each $value in $radius {
+    .g--border-radius-#{$value} {
+        border-radius: var(--border-radius-#{$value});
+    }
+}
+
+// Border style
+
+@each $value in $border_style {
+    .g--border-style-#{value} {
+        border-style: #{$value};
+    }
+}
+
+// Border style each
+
+@each $border_side in $border {
+    @each $value in $border_style {
+        .g--boder-#{$border_side}-#{$value} {
+            border-#{$border_side}: #{$value}; 
+        }
+    }
+}
+
+// Border color
+
+@each $value in $listaColores {
+    @for $i from 1 through 9 {
+        .g--border-color-#{$value}-#{$i} {
+            border-color: var(--color-#{$value}-#{$i});
+        }
+    }
+}

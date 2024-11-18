@@ -1,0 +1,7 @@
+$size: ("xs", "s", "m", "l", "xl");
+
+@each $value in $size {
+    .g--width-#{$value} {
+        width: var(--width-#{$value});
+    }
+}

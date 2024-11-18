@@ -1,0 +1,7 @@
+$cursors: ("auto", "grab", "grabbing", "help", "move", "none", "not-allowed", "pointer", "progress", "text", "wait", "zoom-in", "zoom-out");
+
+@each $value in $cursors {
+    .g--pointer-#{$value} {
+        cursor: #{$value};
+    }
+}
