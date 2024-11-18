@@ -13,6 +13,7 @@ function pintaArticulos(){
 
 	listaArticulos.forEach(a => {
 		let card = `
+			<div class="col">
 			<div class="card">
 				<img src="./assets/${a.codigo}.jpg" alt="${"a.nombre"}" class="card-img-top">
 				<div class="card-body">
@@ -22,7 +23,8 @@ function pintaArticulos(){
 						<p class ="card-text text-center">${a.precio}</p>
 					</b>
 				</div>
-				<button class="btn-success">Comprar</button>
+				<button id="${a.codigo}" class="btn-success">Comprar</button>
+			</div>
 			</div>
 		`;
 
@@ -30,13 +32,16 @@ function pintaArticulos(){
 		});
 
 		document.querySelectorAll("btn-success").forEach(b => {
-			b.addEventListener("click",()=>ponArticuloEnCarrito(this.codigo));
+			b.addEventListener("click",function() {ponArticuloEnCarrito(this.id)});
 		});
 }
 	
 	
 function ponArticuloEnCarrito(codigo){
-
+	const articulo = listaArticulos.find(c => c.codigo == codigo);
+	if (articulo){
+		carrito.anyadeArticulo(articulo);
+	}
 }
 
 
@@ -57,4 +62,5 @@ window.onload=()=>{
 	let imagenCarrito = document.getElementsByTagName("img")[0];
 	imagenCarrito.addEventListener("click",verCarro);
 	pintaArticulos();
+	document.getElementById("idPedido").innerHTML = `${carrito.id}`;
 }
