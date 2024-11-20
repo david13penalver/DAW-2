@@ -14,6 +14,8 @@
     - [GET Petition](#get-petition-1)
     - [DELETE Petition](#delete-petition-1)
     - [Sending Data to the Server (POST, PUT and PATCH)](#sending-data-to-the-server-post-put-and-patch-1)
+    - [POST Petition](#post-petition)
+    - [PUT Petition](#put-petition)
   - [Promises Enchainment](#promises-enchainment)
   - [Refactoring](#refactoring)
 - [Async / Await](#async--await)
@@ -421,29 +423,325 @@ The method `.catch()`can be ommited. It is used only when `fetch`can not connect
 ### GET Petition
 [Up](#table-of-contents)
 
-*Text here*
+Syntax:
+
+```javascript
+let url='http://localhost:3000/articulos'
+
+fetch(url, {})
+  .then(response => console.log(respuesta))
+  .catch(error => console.log("Network error"));
+```
+
+The result is:
+
+![GET petition with Fetch](./Assets/07_fetch_get.png)
+
+The promise returns a Response object, including the following properties:
+- `status`: the status code of the response (200, 404, 500...).
+- `statusText`: the status text of the response (OK, Not Found, Internal Server Error...).
+- `headers`: the headers of the response. They provide additional information about the responde (content type, encoding...).
+- `body`: the body of the response. 
+  - It is a readable stream that allows us to read the content of the response. 
+    - It can be a json object, a blob, a text, a form data, an array buffer or a readable stream.
+    - To access to them, we use the methods `json()`, `blob()` and `text()`, respectively.
+- `ok`: a boolean value that indicates if the response is successful (status code between 200 and 299).
+
+With the `json()` method, we can get the response in JSON format.
+
+```javascript
+let url = "http://localhost:3000/articulos";
+
+fetch(url, {})
+  .then(response => response.json())
+  .then(articulos => console.log(articulos))
+  .catch(error => console.log("Network error"));
+```
+
+If we want a specific article, we can use the next code:
+
+```javascript
+let url = "http://localhost:3000/articulos/2";
+
+fetch(url, {})
+  .then(response => response.json())
+  .then(articulo => console.log(articulo))
+  .catch(error => console.log("Network error"));
+```
+
+If we want to check the errors:
+
+```javascript
+let url='http://localhost:3000/articulos/5'
+
+fetch(url,{})
+  .then(response => {
+    if (!response.ok) {
+    throw new Error(`Mi Error ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(articulo => console.log(articulo))
+  .catch(error => alert(error))
+```
+
+If we access to a non-existing article, we will get the next error:
+
+![GET petition with error with Fetch](./Assets/07_fetch_get_error.png)
 
 ### DELETE Petition
 [Up](#table-of-contents)
 
-*Text here*
+Syntax:
+```javascript
+let url = "http://localhost:3000/articulos/2";
+
+fetch(url, {
+  method: "DELETE"
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`My Error ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(articulo => console.log(articulo))
+  .catch(error => alert(error));
+```
+
+In this case, we have deleted the article with id 2. Json-server will return am empty object.
 
 ### Sending Data to the Server (POST, PUT and PATCH) 
 [Up](#table-of-contents)
 
-*Text here*
+These petitions send an object to the server.
+
+Additionally, as we are sending information, we must specify the type of the content with an HTTP header.
+
+### POST Petition
+[Up](#table-of-contents)
+
+Steps:
+1. Indicate the URL of the resource.
+2. Indicate the POST method.
+3. Stablish the header `Content-Type: application/json`.
+4. Convert the object to a string with `JSON.stringify()`.
+
+Example:
+
+```javascript
+let url='http://localhost:3000/articulos'
+
+let id=prompt("Dime el id: ")
+let nombre=prompt("Dime el nombre: ")
+let precio=parseInt(prompt("Dime el precio: "))
+
+let articuloNuevo=JSON.stringify({"id":id,"nombre":nombre,"precio":precio})
+
+let opciones={method: 'POST',
+headers: {'Content-Type': 'application/json'},
+body: articuloNuevo
+}
+
+fetch(url,opciones)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Mi Error ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then (articulo => console.log(articulo))
+  .catch(error => alert(error))
+```
+If the object is inserted, we will return the inserted object.
+
+If the object already exists, we will return an error (`Error 500: Duplicated id`).
+
+### PUT Petition
+[Up](#table-of-contents)
+
+Steps:
+1. Indicate the URL of the resource.
+2. Indicate the PUT method.
+3. Stablish the header `Content-Type: application/json`.
+4. Convert the object to a string with `JSON.stringify()`.
+
+Example:
+
+```javascript
+let url='http://localhost:3000/articulos'
+
+let id=prompt("Dime el id del registro a modificar: ")
+let nombre=prompt("Dime el nuevo nombre: ")
+let precio=parseInt(prompt("Dime el nuevo precio: "))
+
+let articuloMod=JSON.stringify({"id":id,"nombre":nombre,"precio":precio})
+
+let opciones={method: 'PUT',
+  headers: {'Content-Type': 'application/json'},
+  body: articuloMod
+  }
+
+fetch(url + "/" + id, opciones)
+  .then(response => {
+    if (!response.ok) {
+    throw new Error(`Mi Error ${response.status} ${response.statusText}`);
+  }
+  return response.json();
+  })
+  .then (articulo => console.log(articulo))
+  .catch(error => alert(error))
+```
+
+If the object is modified, json-server will return the modified object.
+
+If the object does not exist, json-server will return an error (`Error 404: Not Found` with that id).
 
 ## Promises Enchainment
 [Up](#table-of-contents)
 
-*Text here*
+If we want to access to the data of an article that a provider sells, we must do two petitions: one to access the data of the provider and another to access the data of the article.
+
+Furthermore, the second petition must be done when the first petition has finished.
+
+Structure:
+
+```javascript
+let url='http://localhost:3000/'
+
+let idProveedor=prompt("Dime el id del proveedor: ")
+
+fetch(url + "proveedores" + "/" + idProveedor)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error proveedor ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(p => {console.log(p)
+    fetch(url + "articulos" + "/" + p.idArticulo)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error articulo ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(a=>console.log(a))
+      .catch(error=>alert(error))
+  })
+  .catch(error => alert(error))
+```
+
+![Promises enchainment](./Assets/07_promises_enchainment.png)
+
+Example:
+
+```javascript
+let url='http://localhost:3000/'
+
+let idProveedor=prompt("Dime el id del proveedor: ")
+
+fetch(url + "proveedores" + "/" + idProveedor)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error proveedor ${response.status} ${response.statusText}`);
+    }
+    return response.json();
+  })
+  .then(p => {console.log(p)
+    return fetch(url + "articulos" + "/" + p.idArticulo)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error articulo ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      })
+    })
+  .then(a=>console.log(a))
+  .catch(error => alert(error))
+```
+
+Each petition returns the data to the next `then` method. If an error appears in one of the petitions, the `catch` method will be executed.
 
 ## Refactoring
 [Up](#table-of-contents)
 
-*Text here*
+We are going to encapsulate the `fetch` petitions in functions.
+
+In this way, we can use the petition every time we need it.
+
+Function to do the GET petitions to an article entity:
+
+```javascript
+function getArticulo(id){
+  return fetch(url+"articulos"+"/"+id)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error en articulo ${response.status} ${response.statusText}`);
+      }
+    return response.json()
+  });
+}
+```
+
+This functions accepts an `id` as a parameter and, if the petition is successful, it returns the JSON object.
+
+As the function returns directly a promise, we can call and manage it as a promise. The call would be like this:
+
+```javascript
+getArticulo(2)
+  .then(articulo => console.log(articulo))
+  .catch(error => alert(error));
+```
+
+We could do the same for providers:
+  
+```javascript
+function getProveedor(id) {
+  return fetch(url + "proveedores" + "/" + id)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error en proveedor ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    });
+}
+
+// The call would be like this:
+getProveedor(1)
+  .then(proveedor => console.log(proveedor))
+  .catch(error => alert(error));
+```
+
+We can also make the nested petition to obtain the data of an article that sells a provider:
+
+```javascript
+getProveedor(1)
+  .then(proveedor => {
+    console.log(proveedor);
+    return getArticulo(proveedor.idArticulo);
+  })
+  .then(articulo => console.log(articulo))
+  .catch(error => alert(error));
+```
+
+With refactoring we could design our own functions passing the parameters we need to implement the utilities of our application. 
+
+For example, we could further refactor our example and design a single function to be able to access any entity and any object within it. In this case we should implement a function called for example getEntity that accepts two parameters, the entity and the id.
+
+```javascript
+function getEntidad(entidad,id){
+  return fetch(url + entidad + "/" + id)
+    .then(response => {
+      if (!response.ok) {
+      throw new Error(`error en ${entidad} con id ${id} ${response.status} ${response.statusText}`);
+      }
+      return response.json()
+    });
+}
+```
 
 # Async / Await
 [Up](#table-of-contents)
 
-*Text here*
+*Text here, page 30*
