@@ -1,0 +1,42 @@
+$utilities: (
+    "padding": (
+        property: padding,
+        class: g--padding,
+        values: (
+            1: 1px,
+            2: 5px,
+            3: 10px,
+            4: 20px,
+            5: 40px)
+    ),
+    "width": (
+        property: width,
+        class: g--width,
+        values: (
+            1: 10px,
+            2: 20px,
+            3: 25px,
+            4: 40px,
+            5: 70px)
+    )/*,
+    "font-size": (
+        property: font-size,
+        class: g--font-size,
+        values: (6px, 7px, 10px, 12px, 14px, 16px, 18px, 20px)
+    )
+    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl)*/
+);
+
+// Sheng (funciona)
+
+@each $category, $value in $utilities {
+    $property: map-get($value, property);
+    $class: map-get($value, class);
+    $values: map-get($value, values);
+    
+    @each $value_variant, $value_variant-value in $values {
+        #{$class}-#{$value_variant} {
+            #{$property} : #{$value_variant-value};
+        }
+    }
+}
