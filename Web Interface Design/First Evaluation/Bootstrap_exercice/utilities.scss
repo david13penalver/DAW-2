@@ -1,5 +1,6 @@
 $utilities: (
     "padding": (
+        usekeys: 0,
         property: padding,
         class: g--padding,
         values: (
@@ -10,6 +11,7 @@ $utilities: (
             5: 40px)
     ),
     "width": (
+        usekeys: 0,
         property: width,
         class: g--width,
         values: (
@@ -18,25 +20,73 @@ $utilities: (
             3: 25px,
             4: 40px,
             5: 70px)
-    )/*,
+    ),
     "font-size": (
+        usekeys: 1,
         property: font-size,
         class: g--font-size,
         values: (6px, 7px, 10px, 12px, 14px, 16px, 18px, 20px)
-    )
-    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl)*/
+    ),
+    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl)
 );
 
-// Sheng (funciona)
+// Àngela (funciona)
+$prefix: ".";
 
 @each $category, $value in $utilities {
-    $property: map-get($value, property);
-    $class: map-get($value, class);
-    $values: map-get($value, values);
+    @if ($category != "$keys") {
+
+        $usekeys: map-get($value, usekeys);
+        $property: map-get($value, property);
+        $class: map-get($value, class);
+        $values: map-get($value, values);
+        $values-lenght: length($values);
     
-    @each $value_variant, $value_variant-value in $values {
-        #{$class}-#{$value_variant} {
-            #{$property} : #{$value_variant-value};
+        @if ($usekeys == 0) {
+            @each $value_variant, $value_variant-value in $values {
+                #{$prefix}#{$class}-#{$value_variant} {
+                    #{$property} : #{$value_variant-value};
+                }
+            }
+        } @else {
+            @for $i from 1 to $values-lenght {
+                $key: nth(map-get($utilities, "$keys"), $i);
+
+                #{$prefix}#{$class}-#{$key} {
+                    #{$property}: nth($values, $i);
+                }
+            }
         }
     }
 }
+
+
+// Sheng (funciona)
+
+/*
+@each $category, $value in $utilities {
+    @if $category !="$keys" {
+        $property: map-get($value, property);
+        $class: map-get($value, class);
+        $values: map-get($value, values);
+
+        @if type-of($values) == list {
+            @for $i from 1 to length($values) {
+                $key: nth(map-get($utilities, "$keys"), $i);
+
+                .#{$class}-#{$key} {
+                    #{$property}: nth($values, $i)
+                }
+            }
+        }
+
+        @else {
+            @each $name, $valor in $values {
+                .#{$class}-#{$name} {
+                    #{$property} : #{$valor};
+                }
+            }
+        }
+    }
+}
+*/
