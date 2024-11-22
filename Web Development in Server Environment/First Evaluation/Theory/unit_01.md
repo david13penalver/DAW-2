@@ -106,11 +106,3 @@ Server:
 ### Development Environments [(Up)](#table-of-contents)
 
 *Notes here*
-
-# Web Java Ecosystem [(Up)](#table-of-contents)
-# Spring Boot [(Up)](#table-of-contents)
-# Layer Architecture [(Up)](#table-of-contents)
-# API REST [(Up)](#table-of-contents)
-# API REST - Response [(Up)](#table-of-contents)
-# API REST - Data Manipulation [(Up)](#table-of-contents)
-# Transport Data Between Layers [(Up)](#table-of-contents)
