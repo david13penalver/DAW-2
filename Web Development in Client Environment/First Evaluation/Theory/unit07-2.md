@@ -744,4 +744,96 @@ function getEntidad(entidad,id){
 # Async / Await
 [Up](#table-of-contents)
 
-*Text here, page 30*
+Introduced in ES8.
+
+Are nothing more than a form of syntactic sugar to manage promises in a way that is more similar to what we are used to.
+
+We can manage promises, but there are some important changes:
+- We do not enchain the promises with `then` 
+- We do not have `catch`.
+- We abandon the no blocking code.
+
+The functioning of `async` / `await` is based in the blocking of the code until the promise is fulfilled or rejected.
+
+We can get the articles like this:
+
+```javascript
+let url = "http://localhost:3000/articulos";
+
+const response = await fetch(url);
+const articulos = await response.json();
+console.log(articulos);
+```
+
+This code will return an error because we can not use `await` outside an `async` function.
+
+We can solve the code like this:
+
+```javascript
+let url = "http://localhost:3000/articulos";
+
+async function getArticulos() {
+  const response = await fetch(url);
+  const articulos = await response.json();
+  console.log(articulos);
+}
+```
+
+If we want to get a specific article:
+
+```javascript
+let url = "http://localhost:3000/articulos";
+
+async function getArticulo(id) {
+  const response = await fetch(url + "/" + id);
+  const articulo = await response.json();
+  console.log(articulo);
+}
+```
+
+If we put the id of a non-existing article, we will get an error 404, but have not managet it from the code. In order to do that, we must use a `try` / `catch` block:
+
+```javascript
+let url = "http://localhost:3000/articulos";
+
+async function getArticulo(id) {
+  try {
+    const response = await fetch(url + "/" + id);
+    if (!response.ok) {
+      throw new Error(`Error ${response.status} ${response.statusText}`);
+    }
+    const articulo = await response.json();
+    console.log(articulo);
+  } catch (error) {
+    alert(error);
+  }
+}
+```
+
+We can have an enchained petition like this:
+
+```javascript
+async function gtArticuloProveedor() {
+  let ur = "http://localhost:3000/";
+  let idProveedor = prompt("Dime el id del proveedor: ");
+
+  // Petition for the provider
+  try {
+    let response = await fetch(url + "proveedores" + "/" + idProveedor);
+    if (!response.ok) {
+      throw new Error(`Error proveedor ${response.status} ${response.statusText}`);
+    }
+    let proveedor = await response.json();
+
+    // Petition for the article
+    response = await fetch(url + "articulos" + "/" + proveedor.idArticulo);
+    if (!response.ok) {
+      throw new Error(`Error articulo ${response.status} ${response.statusText}`);
+    }
+    let articuo = await response.json();
+    console.log(articulo);
+  } catch (error) {
+    alert(error);
+  }
+}
+```
