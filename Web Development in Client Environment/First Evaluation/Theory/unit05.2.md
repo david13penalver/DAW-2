@@ -251,24 +251,219 @@ There are times where we want that the field is only read:
 ## Radio Buttons
 [Up](#table-of-contents)
 
-*Notes here. Page 9 out of 15*
+The most important is that the radio buttons have the same name to be able to select only one of them.
+
+If we have the next radio buttons:
+
+```html
+<input type="radio" value="casado" name="estadoCivil" id="casado"/> casado
+<input type="radio" value="soltero" name="estadoCivil" id="soltero"/> soltero
+<input type="radio" value="divorciado" name="estadoCivil" id="divorciado"/>
+divorciado
+<input type="radio" value="viudo" name="estadoCivil" id="viudo"/> viudo
+<input type="radio" value="otro" name="estadoCivil" id="otro"/> otro
+```
+
+This code will allow us determine if each radio button is selected:
+
+```javascript
+let elements = document.getElementsByName("estadoCivil");
+
+Array.frm(elementos).forEach(ec => alert(ec.value + " es " + ec.checked));
+
+// If "soltero" is selected, the next alerts will appear:
+
+// casado es false
+// soltero es true
+// divorciado es false
+// viudo es false
+// otro es false
+```
+
+Generally, what we want if checking which is selected:
+
+```javascript
+let elements = document.getElementsByName("estadoCivil");
+
+let seleccionado = Array.from(elementos).find(ec => ec.checked);
+
+alert("El estado civil seleccionado es " + seleccionado.value);
+```
 
 ## Checkboxes
 [Up](#table-of-contents)
 
-*Notes here.*
+In this case, we have to check if the checkbox is checked indepently:
+
+We have the next checkboxes:
+
+```html
+<input type="checkbox" value="condiciones" id="condiciones"/>
+He leído y acepto las condiciones
+
+<input type="checkbox" value="privacidad" id="privacidad"/>
+He leído la política de privacidad
+
+<button onclick="verCondicionesPrivacidad()">Ver seleccion</button>
+```
+
+This code will allow us determine if each checkbox is checked:
+
+```javascript
+function verCondicionesPrivacidad(){
+  let el = document.getElementById("condiciones");
+  texto= " no se ha aceptado"
+  if (el.checked){
+    let texto=" se ha aceptado"
+  }
+  alert(el.value + texto);
+
+  el = document.getElementById("privacidad");
+  texto= " no se ha aceptado"
+  if (el.checked){
+  let texto=" se ha aceptado"
+  }
+  alert(el.value + texto);
+}
+```
 
 ## Select
 [Up](#table-of-contents)
 
-*Notes here.*
+These are the elements with more properties.
+
+We can see it as an array of elements with two properties:
+- `text`: what we see in the list.
+- `value`: what we get when we select it.
+
+With the next HTML:
+
+```html
+<select id="lista">
+  <option value="1">Primer valor</option>
+  <option value="2">Segundo valor</option>
+  <option value="3">Tercer valor</option>
+  <option value="4">Cuarto valor</option>
+</select>
+```
+
+We can access to the selected option with the next code:
+
+```javascript
+let lista=document.getElementById("lista")
+alert ("Valor lista " + lista.value)
+
+lista.addEventListener("change",()=>alert(lista.value));
+```
 
 ### Access To Every Element of a Select
 [Up](#table-of-contents)
 
-*Notes here.*
+In general, what we want is obtaining the selected element and, generally, when the option is changed, to get the new one.
+
+We must nedd the next properties:
+- `options`: It is an array with all the options. It is created automatically and contains the reference for each option of the list.
+- `selectedIndex`: It is the index of the selected option. If there ir no selection, the value is `-1`.
+
+```javascript
+// Obtener la referencia a la lista
+let lista = document.getElementById("lista");
+
+// Obtener el índice de la opción que se ha seleccionado
+var indiceSeleccionado = lista.selectedIndex;
+
+// Con el índice y el array "options", obtener la opción seleccionada
+var opcionSeleccionada = lista.options[indiceSeleccionado];
+
+// Obtener el valor y el texto de la opción seleccionada
+var textoSeleccionado = opcionSeleccionada.text;
+var valorSeleccionado = opcionSeleccionada.value;
+
+alert("Opción seleccionada: " + textoSeleccionado)
+alert("Valor de la opción: " + valorSeleccionado)
+```
+
+Normally, it is abbreviated in the next way:
+
+```javascript
+// Acceder a lista
+let lista = document.getElementById("lista");
+
+// Obtener el texto que muestra la opción seleccionada
+let textoSeleccionado = lista.options[lista.selectedIndex].text;
+
+// Obtener el valor de la opción seleccionada
+let valorSeleccionado = lista.options[lista.selectedIndex].value;
+```
 
 ### Adding and Removing Options of a Select
 [Up](#table-of-contents)
 
-*Notes here.*
+We have the next code:
+
+```html
+<select id="lista2">
+</select>
+
+<button onclick="anyadirElementoLista()">Añadir elemento</button>
+```
+
+We can use the DOM:
+
+```javascript
+function anyadirElementoLista(){
+  let texto=prompt("Dime Text");
+  let valor=prompt("Dime Value");
+
+  mioption=document.createElement("option");
+  mioption.value=valor;
+  mioption.text=texto;
+
+  lista2.appendChild(mioption);
+}
+```
+
+Or the specific methods:
+
+```javascript
+selectObject.add(option, index)
+```
+- `option`: The option to add.
+- `index`: The position where the option will be added. If it is not specified, the option will be added at the end.
+
+```javascript
+function addLista(){
+  let texto=prompt("Dime Text");
+  let valor=prompt("Dime Value");
+
+  mioption=document.createElement("option");
+  mioption.value=valor;
+  mioption.text=texto;
+
+  lista.add(mioption,2)
+}
+```
+
+In this case, we have added the option in the position second position (third element: 0, 1, 2...).
+
+To delete an option, we can use the next code:
+
+```javascript
+selectObject.remove(index)
+```
+
+Examples:
+
+- It will delete the third element of the dropdown menu:
+```javascript
+function deleteLista(){
+  lista.remove(2);
+}
+```
+
+- It will delete the last element of the dropdown menu:
+```javascript
+if (lista.length > 0) {
+lista.remove(lista.length-1);
+}
+```
