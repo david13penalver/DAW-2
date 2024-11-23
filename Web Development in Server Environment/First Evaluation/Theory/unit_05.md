@@ -7,10 +7,10 @@ UNIT 05 - DOMAIN LAYER
 - [Insertion of Data](#insertion-of-data)
   - [Reception and Data Mapping](#reception-and-data-mapping)
   - [Service and Model](#service-and-model)
-  - [Repository](#repository)
+  - [Repository Layer](#repository-layer)
   - [Use Cases](#use-cases)
   - [Transactions](#transactions)
-- [Repository](#repository-1)
+- [Repository](#repository)
 
 # Injection of Dependencies in the Domain Layer
 [Up](#table-of-contents)
@@ -27,7 +27,7 @@ UNIT 05 - DOMAIN LAYER
 ## Service and Model
 [Up](#table-of-contents)
 
-## Repository
+## Repository Layer
 [Up](#table-of-contents)
 
 ## Use Cases
