@@ -28,6 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<org.mapstruct.version>1.6.3</org.mapstruct.version>
+		<lombok-mapstruck-bindings.version>0.2.0</lombok-mapstruck-bindings.version>
 	</properties>
 	<dependencies>
 		<dependency>
