@@ -21,7 +21,6 @@ Repository where I upload all the activities, practises and notes of the last co
   - [Unit 7.1: API REST](./Web%20Development%20in%20Client%20Environment/First%20Evaluation/Theory/unit07-1.md)
   - [Unit 7.2: Asynchronous Communication](./Web%20Development%20in%20Client%20Environment/First%20Evaluation/Theory/unit07-2.md)
 - [Web Development in Server Environment](./Web%20Development%20in%20Server%20Environment/)
-  - [Class notes](./Web%20Development%20in%20Server%20Environment/First%20Evaluation/class_notes.md)
   - [Unit 1: Introduction to Web Server Development](./Web%20Development%20in%20Server%20Environment/First%20Evaluation/Theory/unit_01.md)
   - [Unit 3: API REST](./Web%20Development%20in%20Server%20Environment/First%20Evaluation/Theory/unit_03.md)
   - [Unit 4: Layered Structure](./Web%20Development%20in%20Server%20Environment/First%20Evaluation/Theory/unit_04.md)
