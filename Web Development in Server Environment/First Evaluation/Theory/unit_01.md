@@ -1,3 +1,6 @@
+
+UNIT 01 - INTRODUCTION TO SERVER WEB DEVELOPMENT
+
 Table of contents
 =================
 
@@ -12,13 +15,6 @@ Table of contents
   - [Local Development Environment (Up)](#local-development-environment-up)
     - [Integrated Web Apps (Up)](#integrated-web-apps-up)
     - [Development Environments (Up)](#development-environments-up)
-- [Web Java Ecosystem (Up)](#web-java-ecosystem-up)
-- [Spring Boot (Up)](#spring-boot-up)
-- [Layer Architecture (Up)](#layer-architecture-up)
-- [API REST (Up)](#api-rest-up)
-- [API REST - Response (Up)](#api-rest---response-up)
-- [API REST - Data Manipulation (Up)](#api-rest---data-manipulation-up)
-- [Transport Data Between Layers (Up)](#transport-data-between-layers-up)
 
 # Introduction [(Up)](#table-of-contents)
 
