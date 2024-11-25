@@ -1,0 +1,117 @@
+$utilities: (
+    "padding": (
+        usekeys: 0,
+        property: padding,
+        class: g--padding,
+        values: (
+            1: 1px,
+            2: 5px,
+            3: 10px,
+            4: 20px,
+            5: 40px)
+    ),
+    "margin": (
+        usekeys: 0,
+        property: margin,
+        class: g--margin,
+        values: (
+            1: 10px,
+            2: 20px,
+            3: 25px,
+            4: 40px,
+            5: 70px)
+    ),
+    "font-size": (
+        usekeys: 1,
+        property: font-size,
+        class: g--font-size,
+        values: (6px, 7px, 10px, 12px, 14px, 16px, 18px, 20px)
+    ),
+    "width": (
+        usekeys: 2,
+        property: width,
+        class: g--width,
+        max: 20
+    ),
+    "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl)
+    
+);
+
+// Àngela (funciona)
+$prefix: ".";
+@function getWidth($value) {
+    @return $value * $value * 1px;
+}
+@function getKeyFunction($index) {
+    $key: $index * 10;
+    @return $key;
+}
+
+@each $category, $value in $utilities {
+    @if ($category != "$keys") {
+
+        $usekeys: map-get($value, usekeys);
+        $property: map-get($value, property);
+        $class: map-get($value, class);
+        $values: map-get($value, values);
+        $values-length: length($values);
+    
+        @if ($usekeys == 0) {
+            @each $value_variant, $value_variant-value in $values {
+                #{$prefix}#{$class}-#{$value_variant} {
+                    #{$property} : #{$value_variant-value};
+                }
+            }
+        } 
+        @if ($usekeys == 1) {
+            @for $i from 1 through $values-length {
+                $key: nth(map-get($utilities, "$keys"), $i);
+
+                #{$prefix}#{$class}-#{$key} {
+                    #{$property}: nth($values, $i);
+                }
+            }
+        }
+        @if ($usekeys == 2) {
+            $max: map-get($value, max);
+
+            @for $i from 1 through $max {
+                $key: getKeyFunction($i);
+                $value: getWidth($i);
+
+                #{$prefix}#{$class}-#{$key} {
+                    #{$property}: $value;
+                }
+            }
+        }
+    }
+}
+
+
+// Sheng (funciona)
+
+// @each $category, $value in $utilities {
+//     @if $category !="$keys" {
+//         $property: map-get($value, property);
+//         $class: map-get($value, class);
+//         $values: map-get($value, values);
+
+//         @if type-of($values) == list {
+//             @for $i from 1 to length($values) {
+//                 $key: nth(map-get($utilities, "$keys"), $i);
+
+//                 .#{$class}-#{$key} {
+//                     #{$property}: nth($values, $i)
+//                 }
+//             }
+//         }
+
+//         @else {
+//             @each $name, $valor in $values {
+//                 .#{$class}-#{$name} {
+//                     #{$property} : #{$valor};
+//                 }
+//             }
+//         }
+//     }
+// }
