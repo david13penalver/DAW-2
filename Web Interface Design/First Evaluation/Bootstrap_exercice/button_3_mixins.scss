@@ -1,0 +1,21 @@
+@mixin button--border($color-fondo, $color-principal) {
+    border-radius: 5px;
+    border: var(--bem-fondo) 1px solid;
+}
+
+@mixin button-font() {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+@mixin button--background($color1, $color2, $sombra) {
+    background-image: linear-gradient(90deg, var(#{$color1}), var(#{$color2}));
+    box-shadow: 0 0 5px 0 var(var(#{$color1})-#{$sombra});
+}
+
+.c-button {
+    @include button--border(--bem-principal, --bem-fondo);
+    @include button--background(--fondo, --principal, 30);
+    @include button-font();
+}

@@ -1,0 +1,65 @@
+// El HTML sería este:
+
+// <div class="c-modal_window">
+//     <div class="c-modal-window__title">Título</div>
+//     <button class="c-modal_window__close">X</button>
+
+//     <button class="c-button">Aceptar</button>
+//     <button class="c-button .c-button--importancia-secundaria c-button--funcion-peligrosa">Cancelar</button>
+// </div>
+
+// El mixin iría en su carpeta
+@mixin button($color-fondo, $color-principal) {
+    display: flex;
+    align-items: center;
+    padding: 1.5em 1.5em;
+    border-radius: 5px;
+    height: 2em;
+    background-color: var(#{$color-fondo});
+    color: var(#{$color-principal});
+}
+
+.c-button {
+    @include button(--bem-principal, --bem-fondo);
+    // display: flex;
+    // align-items: center;
+    // padding: 1.5em 1.5em;
+    // border-radius: 5px;
+    // height: 2em;
+    // background-color: var(--bem-principal);
+    // color: var(--bem-fondo);
+    border: var(--bem-fondo) 1px solid;
+}
+
+.c-modal-window__close {
+    @include button(--alternativo-3, --principal-3);
+    // display: flex;
+    // align-items: center;
+    // padding: 1.5em 1.5em;
+    // border-radius: 5px;
+    // background-color: var(--alternativo-3);
+    // color: var(--principal-3);
+
+    border: var(--alternativo-3) 2px dotted;
+}
+
+.c-button--funcion-alternativa{
+    --bem-principal: #ED8836;
+    --bem-fondo: #FFFFFF;
+}
+
+.c-button--funcion-peligrosa{
+    --bem-principal: #C43030;
+    --bem-fondo: #FFFFFF;
+}
+
+.c-button--importancia-secundaria {
+    background-color: var(--bem-fondo);
+    color: var(--bem-principal);
+    border: var(--bem-principal) 1px solid;
+}
+
+.c-button--importancia-terciaria{
+    background-color: var(--bem-fondo);
+    color: var(--bem-principal);
+}
