@@ -1,0 +1,10 @@
+@each $nombre_color, $valor_color in $variantes {
+  @for $i from 1 through $num-claves {
+    $color_especifico: nth($valor_color, $i);
+    $clave_especifica: nth($claves, $i);
+
+    .g--background-color-#{$nombre-color}-#{$clave_especifica} {
+      background-color: $color_especifico;
+    }
+  }
+}

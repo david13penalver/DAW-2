@@ -1,0 +1,16 @@
+@import
+"./01_utilities/_sass-variables.scss",
+"./01_utilities/_css-variables.scss";
+
+@import
+"./02_base/_normalize.scss",
+"./02_base/_reset.scss";
+
+@import
+"./06_global/_g--margin.scss",
+"./06_global/_g--padding.scss",
+"./06_global/_g--font-size.scss",
+"./06_global/_g--background-color.scss",
+"./06_global/_g--color.scss";
+
+// sass ./scss/_main.scss .css/main.css
