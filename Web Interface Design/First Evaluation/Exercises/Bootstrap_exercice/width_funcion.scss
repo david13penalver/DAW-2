@@ -77,10 +77,10 @@ $prefix: ".";
 
             @for $i from 1 through $max {
                 $key: getKeyFunction($i);
-                $value: getWidth($i);
+                $valor: getWidth($i);
 
                 #{$prefix}#{$class}-#{$key} {
-                    #{$property}: $value;
+                    #{$property}: $valor;
                 }
             }
         }
