@@ -1,0 +1,28 @@
+.c-button {
+  --color-boton-fondo: var(--color-principal-50);
+  --color-boton-texto: var(--color-gray-90);
+
+  color: var(--color-boton-texto);
+  background-color: var(--color-boton-fondo);
+  @include borde-boton(--color-boton-fondo);
+
+  &--alternativo {
+    --color-boton-texto: var(--color-gray-90);
+    --color-boton-fondo: var(--color-alternative-50);
+  }
+
+  &--peligroso {
+    --color-boton-texto: var(--color-gray-90);
+    --color-boton-fondo: var(--color-yellow-50);
+  }
+
+  &--funcion-secundaria {
+    background-color: var(--color-boton-texto);
+    color: var(--color-boton-fondo);
+  }
+
+  &--funcion-terciaria {
+    background-color: white;
+    border: none;
+  }
+}

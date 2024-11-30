@@ -1,0 +1,3 @@
+@mixin borde-boton($color-variable) {
+  border: solid 1px var(#{$color-variable});
+}
