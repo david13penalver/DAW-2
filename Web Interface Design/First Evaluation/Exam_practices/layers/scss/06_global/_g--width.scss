@@ -1,0 +1,7 @@
+.g--width {
+  @each $key, $value in $width {
+    &--#{$key} {
+      width: $value;
+    }
+  }
+}

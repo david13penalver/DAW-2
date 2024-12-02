@@ -1,0 +1,7 @@
+.g--font-size {
+    @each $key, $value in $font-size {
+        &-#{$key} {
+        font-size: #{$value};
+        }
+    }
+}
