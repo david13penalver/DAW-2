@@ -1,0 +1,28 @@
+.c-menu {
+  display: flex;
+  font-family: Arial;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.c-menu--final {
+  justify-content: flex-end;
+}
+.c-menu__item {
+  padding: 5px;
+}
+.c-menu__item--izquierda {
+  display: flex;
+  margin-right: auto;
+}
+.c-menu__item--derecha {
+  display: flex;
+  margin-left: auto;
+}
+.c-menu__item--centro {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

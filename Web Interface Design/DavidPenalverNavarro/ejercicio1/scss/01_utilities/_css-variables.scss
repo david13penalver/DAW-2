@@ -1,0 +1,25 @@
+:root {
+  @each $nombre-color, $valor-color in $variantes {
+    @for $i from 1 through $num-claves {
+      $color-array: nth($valor-color, $i);
+      $clave: nth($claves, $i);
+      --color-#{$nombre-color}-#{$clave}: #{$color-array};
+    }
+  }
+
+  @for $i from 1 through length($padding) {
+    $super_i: $i * 10;
+    $key: nth($padding, $i);
+    --padding-#{$super_i}: #{$key};
+  }
+
+  @each $key, $value in $font-size {
+    --font-size-#{$key}: #{$value};
+  }
+
+  @for $i from 1 through length($border-radius) {
+    $super_i: $i * 10;
+    $key: nth($border-radius, $i);
+    --border-radius-#{$super_i}: #{$key};
+  }
+}

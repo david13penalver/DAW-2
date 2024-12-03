@@ -1,0 +1,13 @@
+@mixin borderIzq($tamanyo) {
+  border-top-left-radius: $tamanyo;
+  border-bottom-left-radius: $tamanyo;
+}
+
+@mixin borderDer($tamanyo) {
+  border-top-right-radius: $tamanyo;
+  border-bottom-right-radius: $tamanyo;
+}
+
+@mixin borderSquare($tamanyo) {
+  border-radius: $tamanyo;
+}

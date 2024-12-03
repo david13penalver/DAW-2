@@ -1,0 +1,52 @@
+.c-medidor {
+  --font-size-defecto: var(--font-size-s);
+  --font-size-grande: var(--font-size-m);
+  --font-size-color: var(--color-neutral-50);
+
+  --padding-horizontal-defecto: var(--padding-70);
+  --padding-vertical-defecto: var(--padding-40);
+  --padding-horizontal-grande: var(--padding-80);
+  --padding-vertical-grande: var(--padding-50);
+
+  --border-radius-redondo: var(--border-radius-60);
+  --border-radius-cuadrado: var(--border-radius-10);
+
+  --background-color-texto: var(--color-neutral-600);
+  --background-color-normal: var(--color-lime-500);
+  --background-color-alerta: var(--color-yellow-400);
+  --background-color-peligro: var(--color-red-600);
+
+  display: inline-block;
+  font-size: var(--font-size-defecto);
+  font-family: Arial;
+  color: var(--font-size-color);
+
+  &__texto {
+    background-color: var(--background-color-texto);
+    padding: var(--padding-horizontal-defecto) var(--padding-vertical-defecto);
+    @include borderIzq(var(--border-radius-redondo));
+  }
+
+  &__valor {
+    background-color: var(--background-color-normal);
+    padding: var(--padding-horizontal-defecto) var(--padding-vertical-defecto);
+    @include borderDer(var(--border-radius-redondo));
+  }
+
+  &--alerta {
+    background-color: var(--background-color-alerta);
+  }
+
+  &--peligro {
+    background-color: var(--background-color-peligro);
+  }
+
+  &--cuadrado {
+    @include borderSquare(var(--border-radius-cuadrado));
+  }
+
+  &--grande {
+    font-size: var(--font-size-grande);
+    padding: var(--padding-horizontal-grande) var(--padding-vertical-grande);
+  }
+}

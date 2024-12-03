@@ -1,0 +1,33 @@
+.c-menu {
+  display: flex;
+  font-family: Arial;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &--final {
+    justify-content: flex-end;
+  }
+
+  &__item {
+    padding: 5px;
+
+    &--izquierda {
+      display: flex;
+      margin-right: auto;
+    }
+
+    &--derecha {
+      display: flex;
+      margin-left: auto;
+    }
+
+    &--centro {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+}

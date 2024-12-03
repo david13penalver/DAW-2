@@ -1,0 +1,109 @@
+$utilities:(
+    "propiedades":((width,a,a,1),(padding,b,a,0),(margin,a,b,1)),
+    "keys":(
+        "a":(10,20,30,40,50),
+        "b":(xs,s,m,l,xl)
+    ),
+    "values":(
+        "a":(2px,4px,8px,16px,20px),
+        "b":(10%,20%,30%,40%,50%)
+    )    
+);
+
+$propiedades: map-get($utilities, "propiedades");
+$keys: map-get($utilities, "keys");
+$keys-a: map-get($keys, "a");
+$keys-b: map-get($keys, "b");
+$valores: map-get($utilities, "values");
+$valores-a: map-get($valores, "a");
+$valores-b: map-get($valores, "b");
+
+@for $i from 1 through length($propiedades) {
+    $indice: $i;
+    $valor: nth($propiedades, $indice);
+
+    @for $i_2 from 1 through length($valor) {
+        $propiedad-valor: nth($valor, 1);
+        $keys-valor: nth($valor, 2);
+        $values-valor: nth($valor, 3);
+        $indice: nth($valor, 4);
+
+
+        @if ($keys-valor == "a" & & $values-valor == "a") {
+            @for $i-3 from 1 through length($valores-a) {
+                $clave: nth($keys-a, $i-3);
+                $valor: nth($valores-a, $i-3);
+
+                @if ($indice == 0) {
+                    .g--#{$propiedad_valor} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+                else {
+                    .g--#{$propiedad_valor}-#{$clave} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+            }
+
+        }
+
+        @if ($keys-valor == "b" & & $values-valor == "a") {
+            @for $i-3 from 1 through length($valores-a) {
+                $clave: nth($keys-b, $i-3);
+                $valor: nth($valores-a, $i-3);
+
+                @if ($indice == 0) {
+                    .g--#{$propiedad_valor} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+                else {
+                    .g--#{$propiedad_valor}-#{$clave} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+            }
+
+        }
+
+        @if ($keys-valor == "b" & & $values-valor == "b") {
+            @for $i-3 from 1 through length($valores-a) {
+                $clave: nth($keys-b, $i-3);
+                $valor: nth($valores-b, $i-3);
+
+                @if ($indice == 0) {
+                    .g--#{$propiedad_valor} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+                else {
+                    .g--#{$propiedad_valor}-#{$clave} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+            }
+
+        }
+
+        @if ($keys-valor == "a" & & $values-valor == "b") {
+            @for $i-3 from 1 through length($valores-a) {
+                $clave: nth($keys-a, $i-3);
+                $valor: nth($valores-b, $i-3);
+
+                @if ($indice == 0) {
+                    .g--#{$propiedad_valor} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+                else {
+                    .g--#{$propiedad_valor}-#{$clave} {
+                        #{$propiedad-valor}: $valor;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
