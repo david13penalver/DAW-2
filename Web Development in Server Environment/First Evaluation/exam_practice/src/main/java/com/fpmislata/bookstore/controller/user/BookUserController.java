@@ -1,5 +1,6 @@
 package com.fpmislata.bookstore.controller.user;
 
+import com.fpmislata.bookstore.controller.admin.webmodel.BookCollection;
 import com.fpmislata.bookstore.controller.common.PaginatedResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,16 +25,15 @@ public class BookUserController {
     @Value("${app.pageSize.default}")
     private String defaultPageSize;
 
-    private final BookGetAllUseCase bookGetAllUseCase;
+    //private final BookGetAllUseCase bookGetAllUseCase;
 
-    @GetMapping
-    public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(required = false) Integer size) {
+//    @GetMapping
+//    public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
+//            @RequestParam(defaultValue = "1") int page,
+//            @RequestParam(required = false) Integer size) {
+//
+//        int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
 
-        int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
+        //List<BookCollection>
 
-        List<BookCollection>
-    }
-    )
 }
