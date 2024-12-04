@@ -6,7 +6,7 @@ import com.fpmislata.bookstore.domain.model.Author;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class AuthorRowMapper implements CustomRowMapper {
+public class AuthorRowMapper implements CustomRowMapper<Author> {
     @Override
     public Author mapRow(ResultSet rs, int rowNum) throws SQLException {
         Author author = new Author();
@@ -17,6 +17,7 @@ public class AuthorRowMapper implements CustomRowMapper {
         author.setBiographyEn(rs.getString("authors.biography_en"));
         author.setBirthYear(rs.getInt("authors.birth_year"));
         author.setDeathYear(rs.getInt("authors.death_year"));
+
         return author;
     }
 }

@@ -5,7 +5,7 @@ import com.fpmislata.bookstore.domain.model.Category;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CategoryRowMapper implements CustomRowMapper{
+public class CategoryRowMapper implements CustomRowMapper<Category>{
     @Override
     public Category mapRow(ResultSet rs, int rowNum) throws SQLException {
         Category category = new Category();

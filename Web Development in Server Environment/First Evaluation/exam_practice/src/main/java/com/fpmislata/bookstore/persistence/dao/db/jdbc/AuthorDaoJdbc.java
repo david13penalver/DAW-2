@@ -5,9 +5,12 @@ import com.fpmislata.bookstore.persistence.dao.db.AuthorDaoDb;
 import com.fpmislata.bookstore.persistence.dao.db.jdbc.mapper.AuthorRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Component
@@ -15,6 +18,7 @@ import java.util.Optional;
 public class AuthorDaoJdbc implements AuthorDaoDb {
 
     private final JdbcTemplate jdbcTemplate;
+    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Override
     public List<Author> getByIsbnBook(String isbn) {
@@ -39,7 +43,12 @@ public class AuthorDaoJdbc implements AuthorDaoDb {
 
     @Override
     public List<Author> findAllById(Long[] ids) {
-        return List.of();
+        String sql = """
+               SELECT authors.* FROM authors
+               WHERE id IN (:ids)   
+           """;
+        Map<String, List<Long>> params = Map.of("ids", Arrays.asList(ids));
+        return namedParameterJdbcTemplate.query(sql, params, new AuthorRowMapper());
     }
 
     @Override

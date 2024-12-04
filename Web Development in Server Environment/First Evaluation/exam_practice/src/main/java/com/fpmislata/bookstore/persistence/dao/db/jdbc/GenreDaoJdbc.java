@@ -5,9 +5,12 @@ import com.fpmislata.bookstore.persistence.dao.db.GenreDaoDb;
 import com.fpmislata.bookstore.persistence.dao.db.jdbc.mapper.GenreRowMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Component
@@ -15,6 +18,7 @@ import java.util.Optional;
 public class GenreDaoJdbc implements GenreDaoDb {
 
     private final JdbcTemplate jdbcTemplate;
+    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     @Override
     public List<Genre> getByIdBook(long idBook) {
@@ -27,8 +31,16 @@ public class GenreDaoJdbc implements GenreDaoDb {
     }
 
     @Override
-    public List<Genre> findAllById(Long[] ids) {
-        return List.of();
+    public List<Genre> findAllById(List<Genre> genres) {
+        String sql = """
+                SELECT * FROM genres
+                WHERE id IN (:ids)
+           """;
+        Map<String, List<Long>> params = Map.of("ids", Arrays.asList(genres
+                .stream()
+                .map(Genre::getId)
+                .toArray(Long[]::new)));
+        return namedParameterJdbcTemplate.query(sql, params, new GenreRowMapper());
     }
 
     @Override
