@@ -1,0 +1,14 @@
+{
+  "name": "exercise3",
+  "version": "1.0.0",
+  "description": "Class exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./scripts/build.sh",
+    "deploy": "./scripts/deploy.sh",
+    "sass": "./scripts/sass.sh"
+  },
+  "author": "david",
+  "license": "ISC"
+}

@@ -4,22 +4,22 @@ $utilities: (
         property: padding,
         class: g--padding,
         values: (
-            1: 1px,
-            2: 5px,
-            3: 10px,
-            4: 20px,
-            5: 40px)
+            10: 1px,
+            20: 5px,
+            30: 10px,
+            40: 20px,
+            50: 40px)
     ),
     "margin": (
         usekeys: 0,
         property: margin,
         class: g--margin,
         values: (
-            1: 10px,
-            2: 20px,
-            3: 25px,
-            4: 40px,
-            5: 70px)
+            10: 10px,
+            20: 20px,
+            30: 25px,
+            40: 40px,
+            50: 70px)
     ),
     "font-size": (
         usekeys: 1,
@@ -32,6 +32,12 @@ $utilities: (
         property: width,
         class: g--width,
         max: 20
+    ),
+    "height": (
+            usekeys: 2,
+            property: width,
+            class: g--height,
+            max: 20
     ),
     "$keys": (xxxxs, xxxs, xxs, xs, s, m, l, xl, xxl, xxxl)
     

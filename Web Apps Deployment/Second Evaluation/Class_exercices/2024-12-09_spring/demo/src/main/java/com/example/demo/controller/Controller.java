@@ -8,9 +8,4 @@ public class Controller {
     public String hello() {
         return "index.html";
     }
-
-    @GetMapping("/hello")
-    public String hello2() {
-        return "index.html";
-    }
 }

@@ -1,16 +1,17 @@
-echo "Esto es el build equisdé"
-sleep 1
-echo "."
-sleep 1
-echo "."
-sleep 1
-echo "."
-sleep 1
-echo "."
-sleep 1
-echo "."
-sleep 1
+./scripts/build.sh
 
-./scripts/sass.sh
+./sass.sh
 
-echo "Build realizado."
+sleep 1
+echo "Ejecutando el deploy.sh"
+echo "."
+sleep 1
+echo "."
+sleep 1
+echo "."
+sleep 1
+echo "."
+sleep 1
+echo "."
+sleep 1
+echo "Deploy realizado."
