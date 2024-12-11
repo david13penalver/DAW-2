@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>DAW</title>
+  <meta charset="utf-8">
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <button class="btn btn-primary" onclick="ciudadesAlumnos()">Ciudades alumnos</button>
+</body>
+
+<script>
+
+  let alumnos = [
+    { "codigo": 1, "nombre": "Pepe", "ciudad": "Valencia" },
+    { "codigo": 2, "nombre": "Ana", "ciudad": "Alicante" },
+    { "codigo": 3, "nombre": "Maria", "ciudad": "Valencia" },
+    { "codigo": 4, "nombre": "Luis", "ciudad": "Castellon" },
+    { "codigo": 1, "nombre": "Pedro", "ciudad": "Madrid" }
+  ]
+
+  function ciudadesAlumnos() {
+    let ciudades = {};
+
+    alumnos.forEach(alumno => {
+      let ciudadAnyadir = alumno.ciudad;
+        if (ciudades[ciudadAnyadir] == undefined) {
+            ciudades[ciudadAnyadir] = 1;
+        } else {
+            ciudades[ciudadAnyadir]++;
+        }
+    });
+
+    console.log(ciudades);
+  }
+
+</script>
+
+</html>
