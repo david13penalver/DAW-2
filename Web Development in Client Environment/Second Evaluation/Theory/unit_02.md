@@ -131,6 +131,79 @@ Particularities:
 ## Lifecycle of a Component
 [Up](#table-of-contents)
 
+The lifecycle of a component has 8 stages:
+
+![Component lifecycle](./Assets/02_lifecycle.png)
+- `ngOnChanges`: It is executed when detects a change in the properties of the entrace of a component.
+- `ngOnInit`: It is executed once, after the comoonent has been initiated and the properties have been stablert.
+- `ngDoCheck`: It is executed after each change detection, what allows persoalized checkings.
+- `ngAfterContentInit`: It is executed once, after the content of the component (child components) has been initialized.
+- `ngAfterContentChecked`: It is executed after each change detection, what allows persoalized checkings.
+- `ngAfterViewInit`: It is executed once, after the view of the component (DOM) has been initialized.
+- `ngAfterViewChecked`: It is executed after each change detection in the view of the component.
+- `ngOnDestroy`: It is executed once, before the component is destroyed, what allows cleaning tasks.
+
+Each stage is associated with a `hook` (special method) that we can implement in our component.
+
+Those hooks allow executing code in specific moments of the lifecycle of the component.
+
+- `ngOnChanges`: 
+  - This event is executed each time a value of a control input changes inside of a component.
+  - It is activated first when a value of a linked property changed.
+  - It always receives a `change data map` with the previous and the current value of the property.
+- `ngOnInit`:
+  - Once Angular has deployed the `data-bound properties` or when the component has been initiated. (once `ngOnChanges` has been executed).
+  - This event is mainly used to initialize the data of the component.
+- `ngDoCheck`:
+  - It is executed after the entry properties of a component are verified.
+  - This method implements our own logic or algorithm of personalized changes detection for any component.
+- `ngAfterContentInit`:
+  - It is executed when Angular does any content projection in the component.
+  - It is executed once after all component links have been verified.
+  - It is linked  with the initialize of the child component.
+- `ngAfterContentChecked`:
+  - It is executed after method `ngAfterViewInit` and every time the vew of the componen verifies changes.
+  - It is also exexuted when every link of the secondary directives has been modified.
+  - Very useful when the component awaits any value that comes from its secondary components.
+- `ngOnDestroy`: 
+  - This method is executed just before Angular destroys the components.
+  - Very useful to deregister observables and disconnect event handlers to avoid memory leaks.
+
+If we want to use those hooks, we must implement the `ts` file of the component:
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+    selector: 'app-componente1',
+    standalone: true,
+    imports: [],
+    templateUrl: './componente1.component.html',
+    styleUrl: './componente1.component.css'
+})
+export class Componente1Component {
+    constructor(){
+        console.log("Se ejecuta constructor")
+    }
+ngOnInit(){
+    console.log("Se ejecuta ngOnInit")
+}
+}
+```
+
 # Burst Process
 [Up](#table-of-contents)
 
+From Angular 17th version, the burst is done indicating in the `main.ts` whitch component initializes the application.
+
+```typescript
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+    .catch(err => console.error(err));
+```
+
+And adding that component to the `index.html`:
+
+![Index.html](./Assets/02_module_index.png)
