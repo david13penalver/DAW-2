@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./scripts/build.sh",
     "deploy": "./scripts/deploy.sh",
-    "sass": "./scripts/sass.sh"
+    "sass": "./scripts/sass.sh",
   },
   "author": "david",
   "license": "ISC"
