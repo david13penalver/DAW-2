@@ -13,10 +13,15 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MovieRepositoryImpl implements MovieRepository {
 
-    private static MovieDaoDb movieDaoDb;
+    private final MovieDaoDb movieDaoDb;
 
     @Override
     public List<Movie> getAll(Integer page, Integer size) {
         return movieDaoDb.getAll(page, size);
+    }
+
+    @Override
+    public Integer count() {
+        return movieDaoDb.count();
     }
 }

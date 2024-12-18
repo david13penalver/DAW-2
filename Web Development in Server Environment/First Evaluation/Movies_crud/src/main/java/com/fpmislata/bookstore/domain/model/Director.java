@@ -7,11 +7,21 @@ import lombok.RequiredArgsConstructor;
 import javax.swing.*;
 
 @Data
-@NoArgsConstructor
-@RequiredArgsConstructor
+//@NoArgsConstructor
+//@RequiredArgsConstructor
 public class Director {
-    private Integer id;
+    private String id;
     private String name;
     private Integer birthYear;
     private Integer deathYear;
+
+    public Director() {
+    }
+
+    public Director(String id, String name, Integer birthYear, Integer deathYear) {
+        this.id = id;
+        this.name = name;
+        this.birthYear = birthYear;
+        this.deathYear = deathYear;
+    }
 }

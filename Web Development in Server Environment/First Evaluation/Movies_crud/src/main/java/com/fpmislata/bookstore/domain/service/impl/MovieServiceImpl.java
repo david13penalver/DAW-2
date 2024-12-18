@@ -6,17 +6,21 @@ import com.fpmislata.bookstore.domain.repository.MovieRepository;
 import com.fpmislata.bookstore.domain.service.MovieService;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Collection;
 import java.util.List;
 
 @DomainService
 @RequiredArgsConstructor
 public class MovieServiceImpl implements MovieService {
 
-    private static MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 
     @Override
     public List<Movie> getAll(Integer page, Integer size) {
         return movieRepository.getAll(page, size);
+    }
+
+    @Override
+    public Integer count() {
+        return movieRepository.count();
     }
 }

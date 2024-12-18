@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 public class Actor {
     private Integer id;
     private String name;

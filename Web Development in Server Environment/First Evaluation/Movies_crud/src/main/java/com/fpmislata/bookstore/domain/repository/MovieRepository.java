@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface MovieRepository {
     List<Movie> getAll(Integer page, Integer size);
+
+    Integer count();
 }
