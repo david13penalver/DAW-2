@@ -1,0 +1,11 @@
+# Ignorar archivos temporales
+*.tmp
+*.log
+
+# Ignorar directorios
+/node_modules
+/dist
+/Web Apps Deployment/Second Evaluation/Class_exercices/External_server_deployment/jdk-21.0.5+11/
+
+**/jdk-21.0.5+11/
+
