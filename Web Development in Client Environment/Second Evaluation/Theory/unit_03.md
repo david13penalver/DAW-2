@@ -1,4 +1,4 @@
-UNIT 02 - MODULES AND COMPONENTS
+UNIT 02 - DATA BINDING
 
 # Table of Contents
 - [Table of Contents](#table-of-contents)
