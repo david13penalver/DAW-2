@@ -4,7 +4,7 @@
   "description": "Class exercise",
   "main": "index.js",
   "scripts": {
-    "deploy:develop": "./scripts/deploy.sh develop.env",
+    "deploy:develop": "./scripts/deploy.sh ./entornos/develop.env",
     "deploy:preproduccion": "mvn clean install && ./deploy.sh preproduccion.env",
     "deploy:produccion": "mvn clean install && ./deploy.sh produccion.env"
   },
