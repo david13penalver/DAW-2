@@ -1,0 +1,20 @@
+Articulo:
+<input [(ngModel)]="id" size="3">
+<button class="btn btn-success" (click)="ver()">Ver</button>
+
+<div class="card" style="width: 18rem;">
+  <img src="assets/{{articulo.id}}.jpg" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{articulo.nombre}} ({{ articulo.unidades }})</h5>
+    <p class="card-text">{{articulo.descripcion}}</p>
+    <b>
+      <p class="card-text text-center">{{ articulo.precio }}€</p>
+    </b>
+  </div>
+  <button class="btn btn-primary"
+          (click)="comprar(articulo)"
+          [disabled]="articulo.unidades==0">Comprar</button>
+  <button class="btn btn-info"
+    (click)="aumentar()">Aumentar</button>
+  <button class="btn btn-danger" (click)="disminuir()">Disminuir</button>
+</div>
