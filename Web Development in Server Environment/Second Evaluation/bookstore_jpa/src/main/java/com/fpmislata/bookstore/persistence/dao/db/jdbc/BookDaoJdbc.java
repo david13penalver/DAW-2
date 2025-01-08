@@ -31,7 +31,8 @@ public class BookDaoJdbc implements BookDaoDb {
         String sql = """
                         SELECT * FROM books
                      """;
-        return jdbcTemplate.query(sql, new BookRowMapper());
+        //return jdbcTemplate.query(sql, new BookRowMapper());
+        return null;
     }
 
     @Override
@@ -40,9 +41,10 @@ public class BookDaoJdbc implements BookDaoDb {
                         SELECT * FROM books
                         LIMIT ? OFFSET ?
                      """;
-        List<Book> books = jdbcTemplate.query(sql, new BookRowMapper(), size, page * size);
-        int total = (int) this.count();
-        return new ListWithCount<Book>(books, total);
+//        List<Book> books = jdbcTemplate.query(sql, new BookRowMapper(), size, page * size);
+//        int total = (int) this.count();
+//        return new ListWithCount<Book>(books, total);
+        return null;
     }
 
     @Override
@@ -78,9 +80,10 @@ public class BookDaoJdbc implements BookDaoDb {
                 WHERE books.isbn = ?
            """;
         try {
-            Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), isbn);
-            setAuthorsAndGenres(book);
-            return Optional.of(book);
+//            Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), isbn);
+//            setAuthorsAndGenres(book);
+//            return Optional.of(book);
+            return null;
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }
@@ -95,9 +98,10 @@ public class BookDaoJdbc implements BookDaoDb {
                 WHERE books.id = ?
            """;
         try {
-            Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), id);
-            setAuthorsAndGenres(book);
-            return Optional.of(book);
+//            Book book = jdbcTemplate.queryForObject(sql, new BookRowMapper(), id);
+//            setAuthorsAndGenres(book);
+//            return Optional.of(book);
+            return null;
         } catch (EmptyResultDataAccessException e) {
             return Optional.empty();
         }

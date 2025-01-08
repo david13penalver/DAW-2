@@ -1,5 +1,6 @@
 package com.fpmislata.bookstore.persistence.dao.db.jdbc;
 
+import com.fpmislata.bookstore.domain.model.ListWithCount;
 import com.fpmislata.bookstore.domain.model.Publisher;
 import com.fpmislata.bookstore.persistence.dao.db.PublisherDaoDb;
 import com.fpmislata.bookstore.persistence.dao.db.jdbc.mapper.PublisherRowMapper;
@@ -25,7 +26,8 @@ public class PublisherDaoJdbc implements PublisherDaoDb {
                 """;
         try
         {
-            return Optional.of(jdbcTemplate.queryForObject(sql, new PublisherRowMapper(), id));
+            // return Optional.of(jdbcTemplate.queryForObject(sql, new PublisherRowMapper(), id));
+            return null;
         }
         catch (Exception e)
         {
