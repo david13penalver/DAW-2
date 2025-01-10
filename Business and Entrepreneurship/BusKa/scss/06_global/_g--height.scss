@@ -1,0 +1,7 @@
+.g--height {
+  @each $key, $value in $height {
+    &--#{$key} {
+      height: $value;
+    }
+  }
+}

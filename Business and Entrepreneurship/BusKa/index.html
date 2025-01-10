@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/bb3f7d7133.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        header, footer {
+            background-color: #e6fee8;
+            display: flex;
+            flex-direction: row;
+            height: 8vh;
+        }
+
+        .logo {
+            margin-right: auto;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .color {
+            background-color: #f4f4f5;
+        }
+    </style>
+</head>
+<body>
+    <header class="g--font-size-xl g--padding-bottom-100">
+        <div class="logo g--padding-left-70 g--padding-top-30"><img src="assets/BusKa.png" alt="logo"></div>
+        <div><i class="fa-solid fa-flag-usa g--color-principal-50 g--padding-70"></i></div>
+        <div><i class="fa-solid fa-user g--color-principal-50 g--padding-70"></i></div>
+    </header>
+    <main class="color">
+        <div class="l-flex g--padding-vertical-100 g--padding-horizontal-70">
+            <img src="assets/galicia.jpeg" alt="imagen central">
+        </div>
+
+        <div class="l-flex g--padding-vertical-100">
+            <div class="c-card">
+                <img class="c-card--img g--height--100" src="assets/ofertas.jpg">
+                <div class="c-card--title">Ofertas</div>
+            </div>
+            <div class="c-card">
+                <img class="c-card--img g--height--100" src="assets/descubre.jpg">
+                <div class="c-card--title">DesKubre</div>
+            </div>
+            <div class="c-card">
+                <img class="c-card--img g--height--100" src="assets/unete.png">
+                <div class="c-card--title">Únete a la flota</div>
+            </div>
+        </div>
+
+        <div class="c-newsletter l-flex g--padding-vertical-100">
+            <div>¡Apúntate a nuestra newsletter y consigue grandes ofertas!</div>
+            <input type="text" placeholder="Tu mejor correo">
+            <button class="g--background-color-alternative-10">Enviar</button>
+        </div>
+    </main>
+
+    <footer>Esto es un footer jiji</footer>
+</body>
+</html>
