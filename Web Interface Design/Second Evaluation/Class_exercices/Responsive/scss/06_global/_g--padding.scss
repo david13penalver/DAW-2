@@ -1,0 +1,57 @@
+.g--padding {
+  @each $key, $value in $padding {
+    &-#{$key} {
+      padding: $value;
+    }
+  }
+
+  &-top {
+    @each $key, $value in $padding {
+      &-#{$key} {
+        padding-top: $value;
+      }
+    }
+  }
+
+    &-bottom {
+        @each $key, $value in $padding {
+        &-#{$key} {
+            padding-bottom: $value;
+        }
+        }
+    }
+
+    &-right {
+        @each $key, $value in $padding {
+        &-#{$key} {
+            padding-right: $value;
+        }
+        }
+    }
+
+    &-left {
+        @each $key, $value in $padding {
+        &-#{$key} {
+            padding-left: $value;
+        }
+        }
+    }
+
+    &-vertical {
+        @each $key, $value in $padding {
+        &-#{$key} {
+            padding-top: $value;
+            padding-bottom: $value;
+        }
+        }
+    }
+
+    &-horizontal {
+        @each $key, $value in $padding {
+        &-#{$key} {
+            padding-right: $value;
+            padding-left: $value;
+        }
+        }
+    }
+}

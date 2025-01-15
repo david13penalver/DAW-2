@@ -1,0 +1,7 @@
+.c-menu-lateral {
+  display: grid;
+  gap: 10px;
+  height: 88vh;
+  grid-template-rows: repeat(4, 1fr);
+  padding-left: var(--padding-20);
+}

@@ -1,0 +1,21 @@
+/* Error: Missing argument $n.
+ *   ,--> _g--font-size.scss
+ * 34|         @for $i from 1 through length(nth($frameworkOption), 0) {
+ *   |                                       ^^^^^^^^^^^^^^^^^^^^^ invocation
+ *   '
+ *   ,--> sass:list
+ * 1 | @function nth($list, $n) {
+ *   |           ============== declaration
+ *   '
+ *   _g--font-size.scss 34:39  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Missing argument $n.\a   \250c \2500 \2500 > _g--font-size.scss\a 34\2502          @for $i from 1 through length(nth($frameworkOption), 0) {\a   \2502                                        ^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > sass:list\a 1 \2502  @function nth($list, $n) {\a   \2502            \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   _g--font-size.scss 34:39  root stylesheet";
+}

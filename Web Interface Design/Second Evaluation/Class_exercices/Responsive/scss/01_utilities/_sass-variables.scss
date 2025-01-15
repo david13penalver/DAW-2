@@ -1,0 +1,72 @@
+$colors: (
+
+        "variantes": (
+
+                "principal": (#7c2d13, #9a3412, #c2410c, #ea580c, #f97316, #fb923c, #fdba74, #fed7aa, #ffedd5),
+
+                "alternative": (#312e81, #3730a3, #4338ca, #4f46e5, #6366f1, #818cf8, #a5b4fc, #c7d2fe, #e0e7ff),
+
+                "red": (#811D1D, #981B1B, #BA1C1C, #DC2828, #EF4343, #F87272, #FCA6A6, #FEC8C8, #FEE1E1),
+
+                "blue": (#1E3B8A, #1E3FAE, #1D4FD7, #2463EB, #3C83F6, #61A6FA, #91C3FD, #BEDBFE, #DCEBFE),
+
+                "green": (#064C39, #066046, #047756, #059467, #10B77F, #36D399, #6EE7B7, #A5F3CF, #D1FAE5),
+
+                "yellow": (#76350F, #91400D, #B35309, #DB7706, #F59F0A, #FBBD23, #FCD44F, #FDE68B, #FEF3C8),
+
+                "purple": (#4D1D95, #5A21B5, #6B26D9, #7C3BED, #895AF6, #A689FA, #C3B4FD, #DED7FE, #EBE7FE),
+
+                "pink": (#811842, #9B174C, #BF185D, #DB2979, #EC4699, #F471B5, #F9A9D5, #FBD0E8, #FCE8F4),
+
+                "grey": (#111827, #1f2937, #374151, #4b5563, #6b7280, #9ca3af, #d1d5db, #e5e7eb, #f3f4f6, )
+
+        ),
+
+        "claves": (10,20,30,40,50,60,70,80,90)
+
+);
+
+$variantes: map-get($colors, "variantes");
+$claves: map-get($colors, "claves");
+$num-claves: length($claves);
+
+$margin: ("0px", "4px", "6x", "8px", "10px", "12px", "16px", "20px", "24px", "32px", "40px", "48px", "64px", "80px");
+
+$padding: (
+        "10": 2px,
+        "20": 4px,
+        "30": 6px,
+        "40": 8px,
+        "50": 10px,
+        "60": 14px,
+        "70": 20px,
+        "80": 24px,
+        "90": 36px,
+        "100": 48px
+);
+
+$width: (
+        "10": 10px,
+        "20": 20px,
+        "30": 30px,
+        "40": 50px,
+        "50": 70px,
+        "60": 100px,
+        "70": 140px,
+        "80": 200px,
+        "90": 300px,
+        "100": 400px
+);
+
+$height: $width;
+
+$font-size: (
+        "xs": "10px",
+        "s":"14px",
+        "":"16px",
+        "m": "20px",
+        "l": "24px",
+        "xl": "32px",
+        "xxl": "42px",
+        "xxxl": "48px"
+)

@@ -1,0 +1,42 @@
+$font-size: (
+        "xs": "10px",
+        "s":"14px",
+        "":"16px",
+        "m": "20px",
+        "l": "24px",
+        "xl": "32px",
+        "xxl": "42px",
+        "xxxl": "48px"
+);
+
+.g--font-size {
+    @each $key, $value in $font-size {
+        &-#{$key} {
+            font-size: #{$value};
+        }
+    }
+
+    $deviceWidth: ( // También sería global para hacer los breakpoints
+            "mobile": 320px,
+            "tablet": 768px,
+            "laptop": 1024px,
+            "desktop": 1440px
+    );
+
+    $frameworkOption: (
+            0: ("\@mobile", "\@tablet", "\@laptop", "\@desktop"),
+            1: ("sm:", "md:", "lg:", "xl:")
+    );
+
+    $frameworkOptionSelected: 0; //esto sería la global donde elijes si tipo Lorenzo o si tipo TailwindCSS
+
+    @if ($frameworkOptionSelected == 0) {
+        @for $i from 1 through length(nth($frameworkOption), 0) {
+            @each $key, $value in $font-size {
+                &-#{$key}#{nth(nth($frameworkOption, 2), $i)} {
+                    font-size: #{$value};
+                }
+            }
+        }
+    }
+}

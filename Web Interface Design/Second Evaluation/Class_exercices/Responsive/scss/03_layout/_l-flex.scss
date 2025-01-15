@@ -1,0 +1,9 @@
+.l-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-column {
+    flex-direction: column;
+  }
+}
