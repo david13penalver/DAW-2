@@ -1,6 +1,9 @@
 package com.fpmislata.bookstore.domain.model;
 
 import com.fpmislata.bookstore.common.locale.LanguageUtils;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.Null;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +17,7 @@ import java.util.List;
 public class Book {
 
     private Long id;
+    @Nonnull
     private String isbn;
     private String titleEs;
     private String titleEn;
