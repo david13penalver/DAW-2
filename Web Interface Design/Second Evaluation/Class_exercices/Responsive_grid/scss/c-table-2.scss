@@ -1,0 +1,77 @@
+$table-dimensions: (
+  "increment": 50,
+  "max-width": 1200,
+);
+
+$devices: (
+  "\@mobile": 320,
+  "\@tablet": 768,
+  "\@desktop": 1024,
+  "\@large-desktop": 1200,
+);
+
+
+
+
+$table-increment: map-get($table-dimensions, "increment");
+$table-max-width: map-get($table-dimensions, "max-width");
+
+.c-table2 {
+  border-collapse: collapse;
+  border: 1px solid black;
+  overflow: auto;
+  max-width: 100vw;
+
+    &__cell {
+      border: 1px solid black;
+      overflow: auto;
+    }
+
+  $i: $table-increment;
+  @while $i <= $table-max-width {
+    &--width-#{$i} {
+      width: #{$i}px;
+    }
+
+    &--min-width-#{$i} {
+      min-width: #{$i}px;
+    }
+
+    &--max-width-#{$i} {
+      max-width: #{$i}px;
+    }
+
+    $i: $i + $table-increment;
+  }
+}
+
+@each $key, $value in $devices {
+  @media screen and (min-width: #{$value}px) {
+    $displays: ("mobile", "tablet", "desktop", "large-desktop");
+
+    @each $value in $displays {
+      .c-table2 {
+
+        $i: $table-increment;
+        @while $i <= $table-max-width {
+          &--width-#{$i}\@#{$value} {
+            width: #{$i}px;
+          }
+
+          &--min-width-#{$i}\@#{$value} {
+            min-width: #{$i}px;
+          }
+
+          &--max-width-#{$i}\@#{$value} {
+            max-width: #{$i}px;
+          }
+
+          $i: $i + $table-increment;
+        }
+      }
+    }
+  }
+}
+
+
+
