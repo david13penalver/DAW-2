@@ -331,14 +331,20 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<h1>INTERPOLACIÓN</h1>
 <h2>Estamos viendo el {{titulo}}</h2>
 
 <img [src]="img" alt="No carga esta imagen, es para el ejemplo del []">
 
 <button [disabled]="desactivado" (click)="mensaje()">Botón</button>
 
+<h1>AÑADIR COMPONENTES AL ROOT</h1>
 <app-error></app-error>
 <app-articulos></app-articulos>
+
+<h1>DATA BINDING</h1>
+
+<button id="120" (click)="idBoton($event)">Botón ID</button>
 
 <input type="text" [(ngModel)]="nombre2WDB">
 <h3>{{nombre2WDB}}</h3>
@@ -348,27 +354,38 @@
 <input type="checkbox" [(ngModel)]="isChecked">
 <p>Checkbox is {{isChecked ? 'sí' : 'no'}}</p>
 
+<h1>DIRECTIVAS</h1>
 @if (isChecked) {
-  <div style="background-color: greenyellow">Está logeado</div>
+  <div style="background-color: greenyellow">Está logeado ARROBA_IF</div>
 } @else {
-  <div style="background-color: red">No está logeado</div>
+  <div style="background-color: red">No está logeado ARROBA_IF</div>
 }
+
+<br>
 
 @switch (numeroSwitch) {
   @case (1) {
-    <div>1</div>
+    <div>1 ARROBA_SWITCH</div>
   }
   @case (2) {
-    <div>2</div>
+    <div>2 ARROBA_SWITCH</div>
   }
   @case (3) {
-    <div>3</div>
+    <div>3 ARROBA_SWITCH</div>
   }
   @default {
-    <div>Otro número cualquiera</div>
+    <div>Otro número cualquiera ARROBA_SWITCH</div>
   }
 }
 
-<button id="120" (click)="idBoton($event)">Botón ID</button>
+<br>
+
+@for (bucle of bucleFor; track bucle) {
+  <div>{{bucle}} ARROBA_FOR</div>
+} @empty {
+  <div>No hay datos ARROBA_FOR</div>
+}
+
+<app-header></app-header>
 
 <router-outlet />

@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {ArticulosComponent} from './Components/articulos/articulos.component';
-import {ErrorComponent} from './Components/error/error.component';
 import {FormsModule} from '@angular/forms';
 import {HeaderComponent} from './Components/header/header.component';
+import {HijoParaPadreHijoComponent} from './Components/hijo-para-padre-hijo/hijo-para-padre-hijo.component';
+import {HijoParaHijoPadreComponent} from './Components/hijo-para-hijo-padre/hijo-para-hijo-padre.component';
+import {HijoParaBidireccionalComponent} from './Components/hijo-para-bidireccional/hijo-para-bidireccional.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ArticulosComponent, ErrorComponent, FormsModule, HeaderComponent],
+  imports: [RouterOutlet, FormsModule, HeaderComponent, HijoParaPadreHijoComponent, HijoParaHijoPadreComponent, HijoParaBidireccionalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -25,6 +26,9 @@ export class AppComponent {
 
   bucleFor:Array<number> = [1,2,3,4,5,6,7,8,9,10];
   bucleFor2!:Array<any>;
+
+  variablePadreHijo:number = 0;
+  mensajeDelHijo!: string;
 
   ngOnInit(){
     setTimeout(() => {console.log("Desactivamos boton...");
@@ -48,4 +52,11 @@ export class AppComponent {
     alert($event.target.id);
   }
 
+  incrementar() {
+    this.variablePadreHijo++;
+  }
+
+  muestraMensaje(dato: string) {
+    this.mensajeDelHijo = dato;
+  }
 }
