@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <style>
+        body {margin-left: 10%}
+        div {
+            height: 50px;
+            width: 50px;
+            background-color: grey;
+        }
+
+        .div1 {
+            background-color: red;
+            transform: translate(50px, 100px);
+        }
+        .div2 {
+            background-color: grey;
+            transform: rotate(20deg);
+        }
+        .div3 {
+            background-color: darkblue;
+            transform: scale(2, 3);
+            transition: background-color 1s ease-in-out 0.3s;
+        }
+        .div3:hover {
+            background-color: #0a58ca;
+            transition: background-color 1s ease-in-out 0.3s;
+        }
+        .div4 {
+            background-color: silver;
+            transform: scale(0.5, 0.5);
+            transition: transform 0.3s ease-in-out 0.3s;
+        }
+        .div4:hover{
+            transform: scale(1, 1);
+            transition: transform 0.3s ease-in-out 0.3s;
+        }
+        .div5 {
+            background-color: navajowhite;
+            transform: skew(30deg, 20deg);
+        }
+        .div6 {
+            display: block;
+            background-color: gold;
+            transform: translate(50px, 100px) rotate(20deg);
+            transition: display 0.3s ease-in-out 3s;
+        }
+        .div6:hover{
+            display: none;
+            transition: display 0.3s ease-in-out 3s;
+        }
+
+        .div360degrees {
+            background-color: green;
+            animation-name: girarDiv;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+        }
+        
+        @keyframes girarDiv {
+            0% {
+                transform: rotate(0deg);
+                background-color: yellow;
+            }
+            10% {
+                transform: rotate(20deg);
+            }
+            20% {
+                transform: rotate(30deg);
+            }
+            30% {
+                transform: rotate(40deg);
+            }
+            50% {
+                transform: rotate(360deg);
+                background-color: orange;
+            }
+            100% {
+                transform: rotate(0deg);
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <br>
+<div class="div2"></div>
+    <br>
+<div class="div3"></div>
+    <br>
+<div class="div4"></div>
+    <br>
+<div class="div5"></div>
+    <br>
+<div class="div6"></div>
+<div id="girarlo"></div>
+<button onclick="animar()">Girar</button>
+    <button onclick="parar()">Parar</button>
+
+<script>
+    function animar() {
+        let cuadradoElement = document.getElementById("girarlo");
+        cuadradoElement.classList.remove("div360degrees");
+        setTimeout(function() {
+            cuadradoElement.classList.add("div360degrees");
+        }, 10);
+    }
+
+    function parar() {
+        let cuadradoElement = document.getElementById("girarlo");
+        cuadradoElement.classList.remove("div360degrees");
+    }
+</script>
+</body>
+</html>

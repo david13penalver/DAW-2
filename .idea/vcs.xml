@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Web Apps Deployment/Second Evaluation/Class_exercices/External_server_deployment/Facturas" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Web Development in Server Environment/First Evaluation/Final_model_first_evaluation_cesar" vcs="Git" />
   </component>
 </project>
