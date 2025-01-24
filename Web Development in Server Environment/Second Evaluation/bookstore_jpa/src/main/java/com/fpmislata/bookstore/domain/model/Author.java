@@ -20,7 +20,7 @@ public class Author {
     private String nationality;
     private String biographyEs;
     private String biographyEn;
-    @Min(value = -1880, message = "El año de nacimiento debe ser mayor o igual a 1880")
+    @Min(value = 1880, message = "El año de nacimiento debe ser mayor o igual a 1880")
     private Integer birthYear;
     @ValidYear
     private Integer deathYear;

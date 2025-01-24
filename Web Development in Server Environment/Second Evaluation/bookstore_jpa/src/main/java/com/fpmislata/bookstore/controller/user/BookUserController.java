@@ -42,7 +42,7 @@ public class BookUserController {
                         .stream()
                         .map(BookMapper.INSTANCE::toBookCollection)
                         .toList(),
-                bookList.getCount(), page, pageSize, baseUrl);
+                (int) bookList.getCount(), page, pageSize, baseUrl);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 

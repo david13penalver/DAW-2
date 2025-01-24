@@ -1,5 +1,7 @@
 package com.fpmislata.bookstore.persistence.dao.db.jdbc.mapper;
 
+import com.fpmislata.bookstore.domain.model.Book;
+
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;

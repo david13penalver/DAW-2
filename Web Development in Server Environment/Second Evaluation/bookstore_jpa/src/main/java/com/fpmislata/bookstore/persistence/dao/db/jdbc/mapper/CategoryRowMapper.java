@@ -1,5 +1,6 @@
 package com.fpmislata.bookstore.persistence.dao.db.jdbc.mapper;
 
+import com.fpmislata.bookstore.domain.model.Category;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

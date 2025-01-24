@@ -2,8 +2,10 @@ package com.fpmislata.bookstore.common.error;
 
 import com.fpmislata.bookstore.common.exception.ResourceAlreadyExistsException;
 import com.fpmislata.bookstore.common.exception.ResourceNotFoundException;
+import com.fpmislata.bookstore.common.exception.ValidationException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,6 +31,16 @@ public class ApiExceptionHandler {
     })
     @ResponseBody
     public ErrorMessage resourceAlreadyExists(ResourceAlreadyExistsException exception) {
+        log.error(exception.getMessage());
+        return new ErrorMessage(exception);
+    }
+
+    @ResponseStatus(HttpStatus.CONFLICT)
+    @ExceptionHandler({
+            MethodArgumentNotValidException.class
+    })
+    @ResponseBody
+    public ErrorMessage validationException(MethodArgumentNotValidException exception) {
         log.error(exception.getMessage());
         return new ErrorMessage(exception);
     }

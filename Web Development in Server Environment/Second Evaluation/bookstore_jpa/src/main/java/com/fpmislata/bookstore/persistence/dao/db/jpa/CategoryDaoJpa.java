@@ -20,7 +20,6 @@ import java.util.Optional;
 import static java.util.stream.Collectors.toList;
 
 @Repository
-@Data
 @AllArgsConstructor
 @Primary
 public class CategoryDaoJpa implements GenericDaoDb<Category> {
