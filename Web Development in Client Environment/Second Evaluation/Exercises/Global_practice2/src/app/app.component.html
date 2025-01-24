@@ -18,6 +18,11 @@
 <input type="checkbox" [(ngModel)]="isChecked">
 <p>Checkbox is {{isChecked ? 'sí' : 'no'}}</p>
 
+<input type="text" [(ngModel)]="valorTexto">
+<p>Valor: {{valorTexto}}</p>
+<button (click)="valorTexto = ''">Limpiar</button>
+<button (click)="cambiarValor()">Cambiar valor</button>
+
 <h1>DIRECTIVAS</h1>
 @if (isChecked) {
   <div style="background-color: greenyellow">Está logeado ARROBA_IF</div>
@@ -64,10 +69,6 @@
 Mensaje enviado desde el hijo: {{mensajeDelHijo}}
 
 <h2>COMUNICACIÓN BIDIRECCIONAL</h2>
-<div id="contenedor" class="row row-cols-1 row-cols-md-6 g-4">
-  @for (articulo of articulos) {
-    <app-hijo-para-bidireccional></app-hijo-para-bidireccional>
-  }
-</div>
+La haré con el ejemplo de Cards que ha hecho Salva para poder entenderlo bien.
 
 <router-outlet />

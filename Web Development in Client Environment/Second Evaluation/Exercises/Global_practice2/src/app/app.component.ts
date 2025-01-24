@@ -4,11 +4,10 @@ import {FormsModule} from '@angular/forms';
 import {HeaderComponent} from './Components/header/header.component';
 import {HijoParaPadreHijoComponent} from './Components/hijo-para-padre-hijo/hijo-para-padre-hijo.component';
 import {HijoParaHijoPadreComponent} from './Components/hijo-para-hijo-padre/hijo-para-hijo-padre.component';
-import {HijoParaBidireccionalComponent} from './Components/hijo-para-bidireccional/hijo-para-bidireccional.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, HeaderComponent, HijoParaPadreHijoComponent, HijoParaHijoPadreComponent, HijoParaBidireccionalComponent],
+  imports: [RouterOutlet, FormsModule, HeaderComponent, HijoParaPadreHijoComponent, HijoParaHijoPadreComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -29,6 +28,7 @@ export class AppComponent {
 
   variablePadreHijo:number = 0;
   mensajeDelHijo!: string;
+  valorTexto: string = "hola";
 
   ngOnInit(){
     setTimeout(() => {console.log("Desactivamos boton...");
@@ -58,5 +58,14 @@ export class AppComponent {
 
   muestraMensaje(dato: string) {
     this.mensajeDelHijo = dato;
+  }
+
+  cambiarValor() {
+    let nuevoValor!: string | null;
+    nuevoValor = prompt("Introduce el nuevo valor");
+    if (nuevoValor == null)
+      this.valorTexto = "Pene";
+    else
+      this.valorTexto = nuevoValor;
   }
 }
