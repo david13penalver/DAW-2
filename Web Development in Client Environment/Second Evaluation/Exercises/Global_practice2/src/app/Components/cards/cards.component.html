@@ -1,1 +1,11 @@
-<p>cards works!</p>
+<h2>Bidireccional padre-hijo (html padre)</h2>
+
+<div id="contenedor" class="row row-cols-1 row-cols-md-6 g-4">
+  @for (articulo of articulos; track articulo.id) {
+    <app-card [articulito]="articulo"
+    (borrarArticulo)="borrar($event)">
+    </app-card>
+  } @empty {
+    <div class="alert alert-danger">No hay datos</div>
+  }
+</div>

@@ -3,7 +3,7 @@
 <h2>Estamos viendo el {{titulo}}</h2>
 
 <img [src]="img" alt="No carga esta imagen, es para el ejemplo del []">
-
+<br>
 <button [disabled]="desactivado" (click)="mensaje()">Botón</button>
 
 <h1>DATA BINDING</h1>
@@ -70,5 +70,21 @@ Mensaje enviado desde el hijo: {{mensajeDelHijo}}
 
 <h2>COMUNICACIÓN BIDIRECCIONAL</h2>
 La haré con el ejemplo de Cards que ha hecho Salva para poder entenderlo bien.
+dwqf
+<app-cards></app-cards>
 
+Ídem con Pokédex:
+<app-pokedex></app-pokedex>
+
+Ídem con Digimon:
+<app-digipedia></app-digipedia>
+
+<h1>SERVICIOS E INYECCIÓN DE DEPENDENCIAS</h1>
+<app-articulos-con-servicios></app-articulos-con-servicios>
+
+<h1>OBSERVABLES</h1>
+<app-ejemplo-observables></app-ejemplo-observables>
+
+<h1>ROUTER OUTLET</h1>
+<app-router-header></app-router-header>
 <router-outlet />

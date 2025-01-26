@@ -1,0 +1,24 @@
+<h3>Listado de artículos</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+  @for (articulo of articulos; track articulo.id) {
+    <tr>
+      <td>{{articulo.id}}</td>
+      <td>{{articulo.nombre}}</td>
+      <td>{{articulo.descripcion}}</td>
+      <td>{{articulo.precio}}€</td>
+    </tr>
+  } @empty {
+    <td colspan="4">No hay artículos</td>
+  }
+  </tbody>
+</table>

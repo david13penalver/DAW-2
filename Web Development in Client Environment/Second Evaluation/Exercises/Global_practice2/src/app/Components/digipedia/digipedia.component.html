@@ -1,0 +1,14 @@
+<div id="digiContainer" class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+  @for (digimonItem of digimonList; track digimonItem.id) {
+    <app-digimon-item [digimooooon]="digimonItem"
+    (borrarDigimon)="deleteDigimon($event)">
+
+    </app-digimon-item>
+  } @empty {
+    <div class="alert alert-danger">
+      No hay Mundo Digital
+    </div>
+  }
+</div>
+
+<button class="btn btn-info" (click)="addDigimon()">Añadir Digimon</button>

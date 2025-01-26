@@ -4,10 +4,17 @@ import {FormsModule} from '@angular/forms';
 import {HeaderComponent} from './Components/header/header.component';
 import {HijoParaPadreHijoComponent} from './Components/hijo-para-padre-hijo/hijo-para-padre-hijo.component';
 import {HijoParaHijoPadreComponent} from './Components/hijo-para-hijo-padre/hijo-para-hijo-padre.component';
+import {CardsComponent} from './Components/cards/cards.component';
+import {PokedexComponent} from './Components/pokedex/pokedex.component';
+import {DigipediaComponent} from './Components/digipedia/digipedia.component';
+import {ArticulosConServiciosComponent} from './Components/articulos-con-servicios/articulos-con-servicios.component';
+import {EjemploObservablesComponent} from './Observable/ejemplo-observables/ejemplo-observables.component';
+import {RouterInicioComponent} from './Components/router-inicio/router-inicio.component';
+import {RouterHeaderComponent} from './Components/router-header/router-header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, HeaderComponent, HijoParaPadreHijoComponent, HijoParaHijoPadreComponent],
+  imports: [RouterOutlet, FormsModule, HeaderComponent, HijoParaPadreHijoComponent, HijoParaHijoPadreComponent, CardsComponent, PokedexComponent, DigipediaComponent, ArticulosConServiciosComponent, EjemploObservablesComponent, RouterInicioComponent, RouterHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -21,7 +28,7 @@ export class AppComponent {
 
   desactivado:boolean = false;
   isChecked: boolean = true; // Asi el checkbox está marcado por defecto. Por ejemplo, para los términos y condiciones automáticos
-  numeroSwitch: number = 10;
+  numeroSwitch: number = 3;
 
   bucleFor:Array<number> = [1,2,3,4,5,6,7,8,9,10];
   bucleFor2!:Array<any>;
@@ -42,14 +49,13 @@ export class AppComponent {
 
   cambiarNombre() {
     let nuevoNombre:string | null = prompt("Introduce el nuevo nombre");
-    if (nuevoNombre == null)
-      this.nombre2WDB = this.nombre2WDB;
+    if (nuevoNombre == null || nuevoNombre == "") {}
     else
       this.nombre2WDB = nuevoNombre;
   }
 
-  idBoton($event:any) {
-    alert($event.target.id);
+  idBoton(dato:any) {
+    alert(dato.target.id);
   }
 
   incrementar() {

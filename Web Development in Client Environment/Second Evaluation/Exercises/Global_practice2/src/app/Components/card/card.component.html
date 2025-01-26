@@ -1,1 +1,13 @@
-<p>card works!</p>
+<div class="card">
+  <img src="assets/{{articulito.id}}.jpg" >
+  <div class="card-body">
+    <h5 class="card-title">{{articulito.nombre}}</h5>
+    <p class="card-text">{{articulito.descripcion}}</p>
+    <b><p class="card-text text-center">{{articulito.precio}}</p></b>
+    <div class="card-text text-center">
+      <button (click)="borrar(articulito.id)" class="btn btn-danger">
+        Borrar
+      </button>
+    </div>
+  </div>
+</div>
