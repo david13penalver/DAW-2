@@ -12,6 +12,14 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/articulos">Articulos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/verarticulos"
+          [queryParams]="{precio: 10, orden: 'asc'}">Artículos con filtros (Router Link)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/verarticulos"
+             (click)="verArticulos()">Artículos con filtros (Router)</a>
+        </li>
       </ul>
     </div>
   </div>

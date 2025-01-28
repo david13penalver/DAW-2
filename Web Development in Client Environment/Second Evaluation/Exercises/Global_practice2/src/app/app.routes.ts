@@ -3,11 +3,12 @@ import {RouterInicioComponent} from './Components/router-inicio/router-inicio.co
 import {RouterErrorComponent} from './Components/router-error/router-error.component';
 import {RouterArticulosComponent} from './Components/router-articulos/router-articulos.component';
 import {RouterArticuloComponent} from './Components/router-articulo/router-articulo.component';
+import {RouterVerArticulosComponent} from './Components/router-ver-articulos/router-ver-articulos.component';
 
 export const routes: Routes = [
   {path: "", component: RouterInicioComponent},
   {path:"articulos", component:RouterArticulosComponent},
   {path:"articulos/:id", component:RouterArticuloComponent},
+  {path: "verarticulos", component: RouterVerArticulosComponent},
   {path: "**", component: RouterErrorComponent}
-
 ];
