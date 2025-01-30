@@ -1,0 +1,14 @@
+services:
+  davidp_compose_mariadb:
+      image: mariadb:10.0.19
+      restart: always
+      hostname: davidp_compose_mariadb
+      volumes:
+        - /home/alumno/davidp/mariadb:/var/lib/mysql
+      ports:
+        - "4113:3306"
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+      tty: true
+      stdin_open: true
+

@@ -1,0 +1,28 @@
+services:
+  davidp_app_mariadb:
+    image: mariadb:10.0.19
+    restart: always
+    hostname: davidp_app_mariadb
+    volumes:
+      - /home/alumno/davidp/:/var/lib/mysql
+    ports:
+      - "4813:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never
+
+  davidp_app_jdk:
+    image: app_davidp:1.0.0
+    restart: always
+    hostname: davidp_app_jdk
+    volumes:
+      - /home/alumno/davidp/:/opt/davidp/bookstore
+    ports:
+      - "4814:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never

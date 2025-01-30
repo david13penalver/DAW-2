@@ -1,0 +1,28 @@
+services:
+  davidp_doble_mariadb_1:
+    image: mariadb:10.0.19
+    restart: always
+    hostname: davidp_doble_mariadb_1
+    volumes:
+      - /home/alumno/davidp/maria1:/var/lib/mysql
+    ports:
+      - "4913:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never
+
+  davidp_doble_mariadb_2:
+    image: mariadb:10.0.19
+    restart: always
+    hostname: davidp_doble_mariadb_2
+    volumes:
+      - /home/alumno/davidp/maria2:/var/lib/mysql
+    ports:
+      - "4914:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never
