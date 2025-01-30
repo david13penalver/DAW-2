@@ -24,4 +24,14 @@ public class BookRepositoryImpl implements BookRepository {
     public Optional<Book> findByIsbn(String isbn) {
         return bookDaoJpa.findByIsbn(isbn);
     }
+
+    @Override
+    public void save(Book book) {
+        bookDaoJpa.save(book);
+    }
+
+    @Override
+    public Optional<Book> findById(Long id) {
+        return bookDaoJpa.findById(id);
+    }
 }

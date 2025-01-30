@@ -9,4 +9,8 @@ public interface BookRepository {
     ListWithCount<Book> getAll(int page, int pageSize);
 
     Optional<Book> findByIsbn(String isbn);
+
+    void save(Book book);
+
+    Optional<Book> findById(Long id);
 }

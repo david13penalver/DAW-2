@@ -7,8 +7,10 @@ import com.fpmislata.bookstore.controller.user.webmodel.book.BookDetail;
 import com.fpmislata.bookstore.controller.user.webmodel.book.BookMapper;
 import com.fpmislata.bookstore.domain.model.Book;
 import com.fpmislata.bookstore.domain.model.ListWithCount;
+import com.fpmislata.bookstore.domain.usecase.book.BookDeleteBookUseCase;
 import com.fpmislata.bookstore.domain.usecase.book.BookFindById;
 import com.fpmislata.bookstore.domain.usecase.book.BookGetAllUseCase;
+import com.fpmislata.bookstore.domain.usecase.book.BookInsertBookUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ public class BookController {
 
     private final BookGetAllUseCase bookGetAllUseCase;
     private final BookFindById bookFindById;
+    private final BookInsertBookUseCase bookInsertBookUseCase;
+    private final BookDeleteBookUseCase bookDeleteBookUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<BookCollection>> getAll(
@@ -47,5 +51,17 @@ public class BookController {
     public ResponseEntity<BookDetail> findByIsbn(@PathVariable String isbn) {
         BookDetail bookDetail = BookMapper.INSTANCE.toBookDetail(bookFindById.execute(isbn));
         return new ResponseEntity<>(bookDetail, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Void> insert(@RequestBody Book book) {
+        bookInsertBookUseCase.execute(book);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> delete(@RequestBody Long id) {
+        bookDeleteBookUseCase.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

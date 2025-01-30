@@ -41,7 +41,8 @@ public class BookDaoJpaImpl implements BookDaoJpa {
 
     @Override
     public Optional<Book> findById(long id) {
-        return Optional.empty();
+        return bookJpaRepository.findById(id)
+                .map(BookJpaMappper.INSTANCE::toBook);
     }
 
     @Override
@@ -56,7 +57,7 @@ public class BookDaoJpaImpl implements BookDaoJpa {
 
     @Override
     public void delete(long id) {
-
+        bookJpaRepository.deleteById(id);
     }
 
     @Override
@@ -66,7 +67,8 @@ public class BookDaoJpaImpl implements BookDaoJpa {
 
     @Override
     public Book save(Book book) {
-        return null;
+        BookEntity bookEntity = BookJpaMappper.INSTANCE.toBookEntity(book);
+        return BookJpaMappper.INSTANCE.toBook(bookJpaRepository.save(bookEntity));
     }
 
     @Override
