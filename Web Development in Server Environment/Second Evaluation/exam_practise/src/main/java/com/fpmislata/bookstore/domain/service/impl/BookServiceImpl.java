@@ -7,6 +7,8 @@ import com.fpmislata.bookstore.domain.repository.BookRepository;
 import com.fpmislata.bookstore.domain.service.BookService;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Optional;
+
 @DomainService
 @RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
@@ -17,5 +19,10 @@ public class BookServiceImpl implements BookService {
     @Override
     public ListWithCount<Book> getAll(int page, int pageSize) {
         return bookRepository.getAll(page, pageSize);
+    }
+
+    @Override
+    public Optional<Book> findByIsbn(String isbn) {
+        return bookRepository.findByIsbn(isbn);
     }
 }

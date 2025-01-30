@@ -68,4 +68,10 @@ public class BookDaoJpaImpl implements BookDaoJpa {
     public Book save(Book book) {
         return null;
     }
+
+    @Override
+    public Optional<Book> findByIsbn(String isbn) {
+        return Optional.ofNullable(
+                bookJpaRepository.findByIsbn(isbn)).map(BookJpaMappper.INSTANCE::toBook);
+    }
 }

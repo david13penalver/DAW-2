@@ -7,6 +7,8 @@ import com.fpmislata.bookstore.persistence.dao.db.BookDaoJpa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 @RequiredArgsConstructor
 public class BookRepositoryImpl implements BookRepository {
@@ -16,5 +18,10 @@ public class BookRepositoryImpl implements BookRepository {
     @Override
     public ListWithCount<Book> getAll(int page, int pageSize) {
         return bookDaoJpa.getAll(page, pageSize);
+    }
+
+    @Override
+    public Optional<Book> findByIsbn(String isbn) {
+        return bookDaoJpa.findByIsbn(isbn);
     }
 }

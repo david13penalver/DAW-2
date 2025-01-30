@@ -26,10 +26,10 @@ public class BookEntity {
     private String cover;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "publisher_id")
-    private PublisherEntity publisherEntity;
+    private PublisherEntity publisher;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private CategoryEntity categoryEntity;
+    private CategoryEntity category;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "books_authors",
