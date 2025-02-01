@@ -29,4 +29,9 @@ public class RaceServiceImpl implements RaceService {
     public void insert(Race race) {
         raceRepository.insert(race);
     }
+
+    @Override
+    public void delete(Long id) {
+        raceRepository.delete(id);
+    }
 }

@@ -56,7 +56,7 @@ public class RaceDaoDb implements RaceDao {
 
     @Override
     public void delete(long id) {
-
+        raceJPARepository.deleteById(id);
     }
 
     @Override

@@ -4,7 +4,8 @@ import com.fpmislata.bookstore.common.config.PropertiesConfig;
 import com.fpmislata.bookstore.controller.common.PaginatedResponse;
 import com.fpmislata.bookstore.domain.model.ListWithCount;
 import com.fpmislata.bookstore.domain.model.Race;
-import com.fpmislata.bookstore.domain.usecase.RaceGetAllUseCase;
+import com.fpmislata.bookstore.domain.usecase.race.RaceDeleteRace;
+import com.fpmislata.bookstore.domain.usecase.race.RaceGetAllUseCase;
 import com.fpmislata.bookstore.domain.usecase.race.RaceFindByIdUseCase;
 import com.fpmislata.bookstore.domain.usecase.race.RaceInsertUseCase;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ public class RaceController {
     private final RaceGetAllUseCase raceGetAllUseCase;
     private final RaceFindByIdUseCase raceFindByIdUseCase;
     private final RaceInsertUseCase raceInsertUseCase;
+    private final RaceDeleteRace raceDeleteRace;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<Race>> getAll(
@@ -50,5 +52,11 @@ public class RaceController {
     public ResponseEntity<Void> insert(@RequestBody Race race) {
         raceInsertUseCase.execute(race);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        raceDeleteRace.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

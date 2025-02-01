@@ -60,7 +60,7 @@ public class BookController {
     }
 
     @DeleteMapping
-    public ResponseEntity<Void> delete(@RequestBody Long id) {
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
         bookDeleteBookUseCase.execute(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

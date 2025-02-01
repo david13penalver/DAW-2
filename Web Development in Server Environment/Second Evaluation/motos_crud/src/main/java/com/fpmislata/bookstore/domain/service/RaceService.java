@@ -11,4 +11,6 @@ public interface RaceService {
     Optional<Race> findById(Long id);
 
     void insert(Race race);
+
+    void delete(Long id);
 }
