@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/bb3f7d7133.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
     <style>
@@ -204,6 +205,52 @@
                 background-color: yellow;
             }
         }
+
+        .c-campana {
+            font-size: 64px;
+            animation: campana 0.75s ease-in-out infinite;
+            animation-direction: alternate;
+            transform-origin: 50% 4px;
+        }
+
+        @keyframes campana {
+
+
+            0% {
+                transform: rotate(60deg);
+            }
+            1% {
+                transform: rotate(60deg);
+            }
+            99% {
+                transform: rotate(-60deg);
+            }
+            100% {
+                transform: rotate(-60deg);
+            }
+
+
+        }
+
+        .c-campana2 {
+            font-size: 64px;
+            animation: campana 0.75s 0s cubic-bezier( 0.4, 0.01, 0.62, 0.99 ) infinite;
+            animation-direction: alternate-reverse;
+            transform-origin: 50% 4px;
+        }
+
+        @keyframes campana2 {
+
+
+            0% {
+                transform: rotate(60deg);
+            }
+            100% {
+                transform: rotate(-60deg);
+            }
+
+
+        }
     </style>
 </head>
 <body>
@@ -249,6 +296,12 @@
             <button id="c-card__boton-3" class="c-card__boton" onclick="animacion3()">Comprar</button>
         </div>
     </div>
+
+    Campana moviéndose:<br><br>
+    <i class="fa-solid fa-bell c-campana"></i>
+    <br>
+    <br>
+    <i class="fa-solid fa-bell c-campana2"></i>
     <br>
     <br>
     <br>

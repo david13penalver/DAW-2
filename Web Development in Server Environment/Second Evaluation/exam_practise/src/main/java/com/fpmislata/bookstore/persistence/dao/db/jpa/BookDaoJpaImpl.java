@@ -76,4 +76,9 @@ public class BookDaoJpaImpl implements BookDaoJpa {
         return Optional.ofNullable(
                 bookJpaRepository.findByIsbn(isbn)).map(BookJpaMappper.INSTANCE::toBook);
     }
+
+    @Override
+    public ListWithCount<Book> getAllBooksByAuthor(Long id, int page, int pageSize) {
+        return bookJpaRepository.getAllBooksByAuthor(id, page, pageSize);
+    }
 }

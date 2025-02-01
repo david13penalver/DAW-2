@@ -13,4 +13,6 @@ public interface BookRepository {
     void save(Book book);
 
     Optional<Book> findById(Long id);
+
+    ListWithCount<Book> getAllBooksByAuthor(Long id, int page, int pageSize);
 }

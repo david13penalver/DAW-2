@@ -34,4 +34,9 @@ public class BookRepositoryImpl implements BookRepository {
     public Optional<Book> findById(Long id) {
         return bookDaoJpa.findById(id);
     }
+
+    @Override
+    public ListWithCount<Book> getAllBooksByAuthor(Long id, int page, int pageSize) {
+        return bookDaoJpa.getAllBooksByAuthor(id, page, pageSize);
+    }
 }

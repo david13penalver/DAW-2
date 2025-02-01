@@ -40,4 +40,9 @@ public class BookServiceImpl implements BookService {
     public void delete(Long id) {
         bookRepository.findById(id);
     }
+
+    @Override
+    public ListWithCount<Book> getAllBooksByAuthor(Long id, int page, int pageSize) {
+        return bookRepository.getAllBooksByAuthor(id, page, pageSize);
+    }
 }

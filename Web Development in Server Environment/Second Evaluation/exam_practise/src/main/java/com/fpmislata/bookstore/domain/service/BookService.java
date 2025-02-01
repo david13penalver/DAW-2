@@ -15,4 +15,6 @@ public interface BookService {
     Optional<Book> findById(Long id);
 
     void delete(Long id);
+
+    ListWithCount<Book> getAllBooksByAuthor(Long id, int page, int pageSize);
 }
