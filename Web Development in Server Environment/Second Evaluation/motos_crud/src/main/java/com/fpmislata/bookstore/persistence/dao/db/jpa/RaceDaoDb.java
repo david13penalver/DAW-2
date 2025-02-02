@@ -51,7 +51,8 @@ public class RaceDaoDb implements RaceDao {
 
     @Override
     public void update(Race race) {
-
+        RaceJPA raceJPA = RaceJPAMapper.INSTANCE.toRaceJPA(race);
+        raceJPARepository.save(raceJPA);
     }
 
     @Override

@@ -34,4 +34,9 @@ public class RaceRepositoryImpl implements RaceRepository {
     public void delete(Long id) {
         raceDao.delete(id);
     }
+
+    @Override
+    public void update(Long id, Race race) {
+        raceDao.update(race);
+    }
 }

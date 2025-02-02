@@ -13,4 +13,6 @@ public interface RaceRepository {
     void insert(Race race);
 
     void delete(Long id);
+
+    void update(Long id, Race race);
 }

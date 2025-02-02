@@ -4,10 +4,7 @@ import com.fpmislata.bookstore.common.config.PropertiesConfig;
 import com.fpmislata.bookstore.controller.common.PaginatedResponse;
 import com.fpmislata.bookstore.domain.model.ListWithCount;
 import com.fpmislata.bookstore.domain.model.Race;
-import com.fpmislata.bookstore.domain.usecase.race.RaceDeleteRace;
-import com.fpmislata.bookstore.domain.usecase.race.RaceGetAllUseCase;
-import com.fpmislata.bookstore.domain.usecase.race.RaceFindByIdUseCase;
-import com.fpmislata.bookstore.domain.usecase.race.RaceInsertUseCase;
+import com.fpmislata.bookstore.domain.usecase.race.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +22,7 @@ public class RaceController {
     private final RaceFindByIdUseCase raceFindByIdUseCase;
     private final RaceInsertUseCase raceInsertUseCase;
     private final RaceDeleteRace raceDeleteRace;
+    private final RaceUpdateRace raceUpdateRace;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<Race>> getAll(
@@ -58,5 +56,11 @@ public class RaceController {
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         raceDeleteRace.execute(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable Long id, @RequestBody Race race) {
+        raceUpdateRace.execute(id, race);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
