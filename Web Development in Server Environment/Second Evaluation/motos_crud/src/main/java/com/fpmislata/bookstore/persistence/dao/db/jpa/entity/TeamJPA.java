@@ -1,9 +1,13 @@
 package com.fpmislata.bookstore.persistence.dao.db.jpa.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "equipos")
+@Data
+@NoArgsConstructor
 public class TeamJPA {
 
     @Id

@@ -5,7 +5,7 @@ import com.fpmislata.bookstore.persistence.dao.db.jpa.entity.RiderJPA;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(uses = {TeamJPAMapper.class})
 public interface RiderJPAMapper {
 
     RiderJPAMapper INSTANCE = Mappers.getMapper(RiderJPAMapper.class);

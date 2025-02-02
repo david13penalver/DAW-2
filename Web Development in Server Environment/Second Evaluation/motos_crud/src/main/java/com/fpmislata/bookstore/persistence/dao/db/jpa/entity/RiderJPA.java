@@ -20,6 +20,7 @@ public class RiderJPA {
     private Long age;
     @Column(name = "nacionalidad")
     private String nationality;
-    @ManyToOne(fetch = FetchType.LAZY)
-    private TeamJPA teamJPA;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_equipo")
+    private TeamJPA team;
 }
