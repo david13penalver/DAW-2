@@ -1,0 +1,54 @@
+USE musica;
+
+INSERT INTO Artista (nombre, pais) VALUES ('The Beatles', 'Reino Unido');
+INSERT INTO Artista (nombre, pais) VALUES ('Queen', 'Reino Unido');
+INSERT INTO Artista (nombre, pais) VALUES ('Michael Jackson', 'USA');
+INSERT INTO Artista (nombre, pais) VALUES ('David Bowie', 'Reino Unido');
+
+INSERT INTO Album (titulo, anio, artista_id) VALUES ('Abbey Road', 1969, 1);
+INSERT INTO Album (titulo, anio, artista_id) VALUES ('A Night at the Opera', 1975, 2);
+INSERT INTO Album (titulo, anio, artista_id) VALUES ('Thriller', 1982, 3);
+INSERT INTO Album (titulo, anio, artista_id) VALUES ('Let''s Dance', 1983, 4);
+
+INSERT INTO ImagenPortada (url, album_id) VALUES ('http://example.com/abbeyroad.jpg', 1);
+INSERT INTO ImagenPortada (url, album_id) VALUES ('http://example.com/anightattheopera.jpg', 2);
+INSERT INTO ImagenPortada (url, album_id) VALUES ('http://example.com/thriller.jpg', 3);
+INSERT INTO ImagenPortada (url, album_id) VALUES ('http://example.com/letsdance.jpg', 4);
+
+-- Álbum: Abbey Road (id = 1)
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Come Together', 259, 1);
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Something', 182, 1);
+
+-- Álbum: A Night at the Opera (id = 2)
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Bohemian Rhapsody', 354, 2);
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Love of My Life', 217, 2);
+
+-- Álbum: Thriller (id = 3)
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Thriller', 358, 3);
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Beat It', 258, 3);
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Billie Jean', 294, 3);
+
+-- Álbum: Let's Dance (id = 4)
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('Let''s Dance', 265, 4);
+INSERT INTO Cancion (titulo, duracion, album_id) VALUES ('China Girl', 233, 4);
+
+-- The Beatles en sus canciones del álbum Abbey Road
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (1, 1);  -- The Beatles -> Come Together
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (1, 2);  -- The Beatles -> Something
+
+-- Queen en sus canciones del álbum A Night at the Opera
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (2, 3);  -- Queen -> Bohemian Rhapsody
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (2, 4);  -- Queen -> Love of My Life
+
+-- Michael Jackson en sus canciones del álbum Thriller
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (3, 5);  -- Michael Jackson -> Thriller
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (3, 6);  -- Michael Jackson -> Beat It
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (3, 7);  -- Michael Jackson -> Billie Jean
+
+-- David Bowie en sus canciones del álbum Let's Dance
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (4, 8);  -- David Bowie -> Let's Dance
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (4, 9);  -- David Bowie -> China Girl
+
+-- Colaboración: David Bowie participa también en "Billie Jean" (id = 7)
+INSERT INTO Artista_Cancion (artista_id, cancion_id) VALUES (4, 7);
+

@@ -1,0 +1,46 @@
+CREATE DATABASE musica;
+USE musica;
+
+-- Tabla Artista: almacena la información de los artistas.
+CREATE TABLE Artista (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    pais VARCHAR(50)
+);
+
+-- Tabla Album: cada álbum pertenece a un artista.
+CREATE TABLE Album (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    anio INT,
+    artista_id INT,
+    CONSTRAINT fk_album_artista FOREIGN KEY (artista_id) REFERENCES Artista(id)
+);
+
+-- Tabla ImagenPortada: relación uno a uno con Album.
+-- Se usa la columna album_id con restricción UNIQUE para asegurar que 
+-- cada álbum tenga como máximo una imagen de portada.
+CREATE TABLE ImagenPortada (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(255) NOT NULL,
+    album_id INT UNIQUE,
+    CONSTRAINT fk_imagen_album FOREIGN KEY (album_id) REFERENCES Album(id)
+);
+
+-- Tabla Cancion: cada canción pertenece a un álbum.
+CREATE TABLE Cancion (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    duracion INT,  -- duración en segundos, por ejemplo
+    album_id INT,
+    CONSTRAINT fk_cancion_album FOREIGN KEY (album_id) REFERENCES Album(id)
+);
+
+-- Tabla Artista_Cancion: tabla intermedia para la relación muchos a muchos entre Artista y Cancion.
+CREATE TABLE Artista_Cancion (
+    artista_id INT,
+    cancion_id INT,
+    PRIMARY KEY (artista_id, cancion_id),
+    CONSTRAINT fk_ac_artista FOREIGN KEY (artista_id) REFERENCES Artista(id),
+    CONSTRAINT fk_ac_cancion FOREIGN KEY (cancion_id) REFERENCES Cancion(id)
+);
