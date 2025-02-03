@@ -1,0 +1,26 @@
+services:
+  davidp_app_mariadb_database:
+    image: mariadb:11.6.2-ubi9
+    restart: always
+    hostname: davidp_app_mariadb_database
+    volumes:
+      - /home/alumno/davidp/deployment_with_structure/mariadb/volumes:/var/lib/mysql
+    ports:
+      - "13013:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    tty: true
+    stdin_open: true
+    pull_policy: never
+
+  davidp_app_motos:
+    image: app_davidp:2.0.0
+    restart: always
+    hostname: davidp_app_motos
+    volumes:
+      - /home/alumno/davidp/deployment_with_structure/java/volumes:/opt/davidp/motos_crud
+    ports:
+      - "13011:8080"
+    tty: true
+    stdin_open: true
+    pull_policy: never
