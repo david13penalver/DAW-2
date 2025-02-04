@@ -2,15 +2,13 @@ package com.fpmislata.bookstore.controller.user;
 
 import com.fpmislata.bookstore.common.config.PropertiesConfig;
 import com.fpmislata.bookstore.controller.common.PaginatedResponse;
-import com.fpmislata.bookstore.controller.user.webmodel.GameCollection;
-import com.fpmislata.bookstore.controller.user.webmodel.GameCollectionMapper;
-import com.fpmislata.bookstore.controller.user.webmodel.GameDetail;
-import com.fpmislata.bookstore.controller.user.webmodel.GameDetailMapper;
+import com.fpmislata.bookstore.controller.user.webmodel.*;
 import com.fpmislata.bookstore.domain.model.Game;
 import com.fpmislata.bookstore.domain.model.ListWithCount;
 import com.fpmislata.bookstore.domain.usecase.game.GameGetAllUseCase;
 import com.fpmislata.bookstore.domain.usecase.game.GameGetGameByGameCodeUseCase;
-import com.fpmislata.bookstore.domain.usecase.game.GameInsertGame;
+import com.fpmislata.bookstore.domain.usecase.game.GameInsertGameUseCase;
+import com.fpmislata.bookstore.domain.usecase.game.GameRoleOfCharactersUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +24,8 @@ public class GameController {
 
     private final GameGetAllUseCase gameGetAllUseCase;
     private final GameGetGameByGameCodeUseCase gameGetGameByGameCodeUseCase;
-    private final GameInsertGame gameInsertGame;
+    private final GameInsertGameUseCase gameInsertGame;
+    private final GameRoleOfCharactersUseCase gameRoleOfCharacters;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<GameCollection>> getAll(
@@ -56,5 +55,22 @@ public class GameController {
     public ResponseEntity<Void> insert(@RequestBody Game game) {
         gameInsertGame.execute(game);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+//    @GetMapping("/{gameCode}/characters")
+//    public ResponseEntity<GameDetail> getRoleOfCharacters(@PathVariable String gameCode, @RequestParam String role) {
+//        Game game = gameRoleOfCharacters.execute(gameCode, role);
+//        GameDetail gameDetail = GameDetailMapper.INSTANCE.toGameDetail(game);
+//        return new ResponseEntity<>(gameDetail, HttpStatus.OK);
+//
+//    }
+
+    @GetMapping("/{gameCode}/characters")
+    public ResponseEntity<GameWithRole> getRoleOfCharacters(@PathVariable String gameCode, @RequestParam String role) {
+        Game game = gameRoleOfCharacters.execute(gameCode, role);
+
+        GameWithRole gameWithRole = GameWithRoleMapper.INSTANCE.toGameWithRole(game);
+        return new ResponseEntity<>(gameWithRole, HttpStatus.OK);
+
     }
 }

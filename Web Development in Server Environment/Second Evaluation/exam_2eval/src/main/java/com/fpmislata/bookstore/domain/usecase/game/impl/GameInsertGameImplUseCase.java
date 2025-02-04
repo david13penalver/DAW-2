@@ -8,13 +8,13 @@ import com.fpmislata.bookstore.domain.model.Game;
 import com.fpmislata.bookstore.domain.service.DirectorService;
 import com.fpmislata.bookstore.domain.service.FigureService;
 import com.fpmislata.bookstore.domain.service.GameService;
-import com.fpmislata.bookstore.domain.usecase.game.GameInsertGame;
+import com.fpmislata.bookstore.domain.usecase.game.GameInsertGameUseCase;
 import lombok.RequiredArgsConstructor;
 
 @DomainUseCase
 @DomainTransactional
 @RequiredArgsConstructor
-public class GameInsertGameImpl implements GameInsertGame {
+public class GameInsertGameImplUseCase implements GameInsertGameUseCase {
 
     private final GameService gameService;
     private final DirectorService directorService;
