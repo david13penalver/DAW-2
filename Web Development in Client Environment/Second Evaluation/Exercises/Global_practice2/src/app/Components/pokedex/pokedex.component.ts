@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Monstruitos, monstruitosss} from '../../Models/monstruitos';
+import {Monstruitos, monstruitosss} from '../../Interface/monstruitos';
 import {PokemonComponent} from '../pokemon/pokemon.component';
 
 @Component({

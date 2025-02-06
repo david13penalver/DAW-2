@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Digimones, digimonesss} from '../../Models/digimones';
+import {Digimones, digimonesss} from '../../Interface/digimones';
 
 @Component({
   selector: 'app-digimon-item',

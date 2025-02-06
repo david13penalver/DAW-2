@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {Articulo} from '../../Models/articulo';
+import {Articulo} from '../../Interface/articulo';
 import {ArticulosServiceService} from '../../Services/articulos-service.service';
 
 @Component({

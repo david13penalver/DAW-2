@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Articulo, articulos} from "../../Models/articulo";
+import {Articulo, articulos} from "../../Interface/articulo";
 import {CardComponent} from '../card/card.component';
 
 @Component({

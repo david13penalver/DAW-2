@@ -1,0 +1,102 @@
+{
+  "articulos": [
+    {
+      "id": 1,
+      "nombre": "Articulo 1",
+      "descripcion": "Descripción 1",
+      "precio": 10
+    },
+    {
+      "id": 2,
+      "nombre": "Articulo 2",
+      "descripcion": "Descripción 2",
+      "precio": 5
+    },
+    {
+      "id": 3,
+      "nombre": "Articulo 3",
+      "descripcion": "Descripción 3",
+      "precio": 20
+    },
+    {
+      "id": 4,
+      "nombre": "Piplup",
+      "descripcion": "Inicial tipo agua. Categoría pingüino",
+      "precio": 14.99
+    }
+  ],
+  "pokemons": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+      "height": 0.7,
+      "weight": 6.9
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "type": "Grass",
+      "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+      "height": 1,
+      "weight": 13
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "type": "Grass",
+      "description": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+      "height": 2,
+      "weight": 100
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "type": "Fire",
+      "description": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.",
+      "height": 0.6,
+      "weight": 8.5
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "type": "Fire",
+      "description": "When it swings its burning tail, it elevates the temperature to unbearably high levels.",
+      "height": 1.1,
+      "weight": 19
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "type": "Fire",
+      "description": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally.",
+      "height": 1.7,
+      "weight": 90.5
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "type": "Water",
+      "description": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.",
+      "height": 0.5,
+      "weight": 9
+    },
+    {
+      "id": 8,
+      "name": "Wartortle",
+      "type": "Water",
+      "description": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance.",
+      "height": 1,
+      "weight": 22.5
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "type": "Water",
+      "description": "A brutal POKéMON with pressurized water jets on its shell. They are used for high-speed tackles.",
+      "height": 1.6,
+      "weight": 85.5
+    }
+  ]
+}

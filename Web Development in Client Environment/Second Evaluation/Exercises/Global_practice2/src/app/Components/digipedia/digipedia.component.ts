@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Digimones, digimonesss} from '../../Models/digimones';
+import {Digimones, digimonesss} from '../../Interface/digimones';
 import {DigimonItemComponent} from '../digimon-item/digimon-item.component';
 
 @Component({

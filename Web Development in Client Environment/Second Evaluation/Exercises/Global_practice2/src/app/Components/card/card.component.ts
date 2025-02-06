@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Articulo} from '../../Models/articulo';
+import {Articulo} from '../../Interface/articulo';
 
 @Component({
   selector: 'app-card',

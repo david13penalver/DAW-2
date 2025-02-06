@@ -20,59 +20,5 @@ import {ArticulosComponent} from './Components/aaHttp/articulos/articulos.compon
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Practise_exercise';
 
-  titulo:string = "'Hola interpolado'";
-  img:string = "logo.jpg";
-
-  nombre2WDB:string = "Juan";
-
-  desactivado:boolean = false;
-  isChecked: boolean = true; // Asi el checkbox está marcado por defecto. Por ejemplo, para los términos y condiciones automáticos
-  numeroSwitch: number = 3;
-
-  bucleFor:Array<number> = [1,2,3,4,5,6,7,8,9,10];
-  bucleFor2!:Array<any>;
-
-  variablePadreHijo:number = 0;
-  mensajeDelHijo!: string;
-  valorTexto: string = "hola";
-
-  ngOnInit(){
-    setTimeout(() => {console.log("Desactivamos boton...");
-      this.desactivado = true
-    }, 5000)
-  }
-
-  mensaje() {
-    alert("Hola desde el evento click");
-  }
-
-  cambiarNombre() {
-    let nuevoNombre:string | null = prompt("Introduce el nuevo nombre");
-    if (nuevoNombre == null || nuevoNombre == "") {}
-    else
-      this.nombre2WDB = nuevoNombre;
-  }
-
-  idBoton(dato:any) {
-    alert(dato.target.id);
-  }
-
-  incrementar() {
-    this.variablePadreHijo++;
-  }
-
-  muestraMensaje(dato: string) {
-    this.mensajeDelHijo = dato;
-  }
-
-  cambiarValor() {
-    let nuevoValor!: string | null;
-    nuevoValor = prompt("Introduce el nuevo valor");
-    if (nuevoValor == null)
-      this.valorTexto = "Pene";
-    else
-      this.valorTexto = nuevoValor;
-  }
 }

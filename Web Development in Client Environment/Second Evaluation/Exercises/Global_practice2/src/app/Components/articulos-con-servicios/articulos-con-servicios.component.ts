@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ArticulosServiceService} from '../../Services/articulos-service.service';
-import {Articulo} from '../../Models/articulo';
+import {Articulo} from '../../Interface/articulo';
 
 @Component({
   selector: 'app-articulos-con-servicios',
