@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Pokemons} from '../../interface/pokemons';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './pokemon.component.css'
 })
 export class PokemonComponent {
+
+  @Input() pokemon!:Pokemons;
+
+  borrar(id: number) {
+    return console.log(`Borrando pokemon con id ${id}`);
+  }
 
 }

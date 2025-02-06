@@ -1,1 +1,26 @@
-<p>pokemons works!</p>
+<h3>Listado de artículos</h3>
+
+<button class="btn btn-secondary" (click)="nuevo()">Nuevo artículo</button>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Sprite</th>
+    <th scope="col">Name</th>
+    <th scope="col">Type</th>
+    <th scope="col">Description</th>
+    <th scope="col">Height</th>
+    <th scope="col">Weight</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (pokemon of pokemons; track pokemon.id) {
+      <tr>
+        <app-pokemon [pokemon]="pokemon"></app-pokemon>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="6">No hay artículos</td>
+      </tr>
+    }
+  </tbody>
+</table>
