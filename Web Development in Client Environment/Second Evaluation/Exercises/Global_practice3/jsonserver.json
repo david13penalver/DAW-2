@@ -27,20 +27,12 @@
   ],
   "pokemons": [
     {
-      "id": 1,
-      "name": "Bulbasaur",
-      "type": "Grass",
-      "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
-      "height": 0.7,
-      "weight": 6.9
-    },
-    {
       "id": 2,
-      "name": "Ivysaur",
-      "type": "Grass",
-      "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
-      "height": 1,
-      "weight": 13
+      "name": "Cock",
+      "type": "Sex",
+      "description": "When it gets hard, it doubles its power",
+      "height": "0.2",
+      "weight": "1"
     },
     {
       "id": 3,

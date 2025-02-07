@@ -20,7 +20,7 @@ export class PokemonServiceService {
     return this.miHttp.get<Pokemons>(this.url + "/" + id);
   }
 
-  delete(id:string):Observable<Pokemons> {
+  delete(id:number):Observable<Pokemons> {
     return this.miHttp.delete<Pokemons>(this.url + "/" + id);
   }
 

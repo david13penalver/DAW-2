@@ -14,13 +14,13 @@
   </thead>
   <tbody>
     @for (pokemon of pokemons; track pokemon.id) {
-      <tr>
-        <app-pokemon [pokemon]="pokemon"></app-pokemon>
-      </tr>
+        <app-pokemon [pokemon]="pokemon"
+        (deleteChild)="delete($event)"
+(modifyChild)="put($event.id, $event)"></app-pokemon>
     } @empty {
       <tr>
         <td colspan="6">No hay artículos</td>
       </tr>
     }
-  </tbody>
+  <tbody>
 </table>

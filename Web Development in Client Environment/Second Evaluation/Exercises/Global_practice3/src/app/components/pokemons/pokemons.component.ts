@@ -29,4 +29,18 @@ export class PokemonsComponent {
   nuevo() {
 
   }
+
+  delete(id:number) {
+    this.miServicio.delete(id).subscribe({
+      next: () => this.cargar(),
+      error: error => console.log(error.status)
+    })
+  }
+
+  put(id:number, pokemon: Pokemons) {
+    this.miServicio.put(id, pokemon).subscribe({
+      next: () => this.cargar(),
+      error: error => console.log(error.status)
+    })
+  }
 }

@@ -1,6 +1,10 @@
-<td><img src="/assets/{{pokemon.id}}.png" width="40px" alt="{{pokemon.id}}"></td>
-<td>{{pokemon.name}}</td>
-<td>{{pokemon.type}}</td>
-<td>{{pokemon.description}}</td>
-<td>{{pokemon.height}}m</td>
-<td>{{pokemon.weight}}kg</td>
+<tr>
+  <td><img src="/assets/{{pokemon.id}}.png" width="40px" alt="{{pokemon.id}}"></td>
+  <td>{{pokemon.name}}</td>
+  <td>{{pokemon.type}}</td>
+  <td>{{pokemon.description}}</td>
+  <td>{{pokemon.height}}m</td>
+  <td>{{pokemon.weight}}kg</td>
+  <td><button class="btn btn-success" (click)="modify(pokemon.id, pokemon)">Modify</button></td>
+  <td><button class="btn btn-danger" (click)="delete(pokemon.id)">Delete</button></td>
+</tr>
