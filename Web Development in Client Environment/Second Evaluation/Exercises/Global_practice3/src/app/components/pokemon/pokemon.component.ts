@@ -1,9 +1,12 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Pokemons} from '../../interface/pokemons';
+import {provideRouter, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-pokemon',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'
 })
@@ -31,4 +34,6 @@ export class PokemonComponent {
 
     this.modifyChild.emit(this.updatedPokemon);
   }
+
+  protected readonly provideRouter = provideRouter;
 }

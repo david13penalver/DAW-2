@@ -7,4 +7,5 @@
   <td>{{pokemon.weight}}kg</td>
   <td><button class="btn btn-success" (click)="modify(pokemon.id, pokemon)">Modify</button></td>
   <td><button class="btn btn-danger" (click)="delete(pokemon.id)">Delete</button></td>
+  <td><button class="btn btn-danger" [routerLink]="['/pokemons/delete', pokemon.id]">Delete (RouterLink)</button></td>
 </tr>
