@@ -27,14 +27,6 @@
   ],
   "pokemons": [
     {
-      "id": 2,
-      "name": "Cock",
-      "type": "Sex",
-      "description": "When it gets hard, it doubles its power",
-      "height": "0.2",
-      "weight": "1"
-    },
-    {
       "id": 3,
       "name": "Venusaur",
       "type": "Grass",
@@ -89,6 +81,22 @@
       "description": "A brutal POKéMON with pressurized water jets on its shell. They are used for high-speed tackles.",
       "height": 1.6,
       "weight": 85.5
+    },
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.",
+      "height": "0.7",
+      "weight": "6.9"
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "type": "Grass",
+      "description": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+      "height": "1",
+      "weight": "13"
     }
   ]
 }
