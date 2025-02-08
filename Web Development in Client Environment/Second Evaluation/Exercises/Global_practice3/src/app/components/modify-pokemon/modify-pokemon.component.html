@@ -1,0 +1,10 @@
+<p>modify-pokemon works!</p>
+
+<label for="id">Id</label><input id="id" type="text" placeholder="{{pokemon.id}}" disabled>
+<label for="name">Name</label><input id="name" type="text" placeholder="{{pokemon.name}}" [(ngModel)]="pokemon.name">
+<label for="type">Type</label><input id="type" type="text" placeholder="{{pokemon.type}}" [(ngModel)]="pokemon.type">
+<label for="description">Description</label><input id="description" type="text" placeholder="{{pokemon.description}}" [(ngModel)]="pokemon.description">
+<label for="height">Height</label><input id="height" type="text" placeholder="{{pokemon.height}}" [(ngModel)]="pokemon.height">
+<label for="weight">Weight</label><input id="weight" type="text" placeholder="{{pokemon.weight}}" [(ngModel)]="pokemon.weight">
+
+<button (click)="modifyPokemon(pokemon)">Modify</button>
