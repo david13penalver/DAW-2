@@ -1,0 +1,59 @@
+.g--margin {
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-#{$super_i}{
+      margin: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-top-#{$super_i}{
+      margin-top: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-bottom-#{$super_i}{
+      margin-bottom: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-right-#{$super_i}{
+      margin-right: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-left-#{$super_i}{
+      margin-left: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-vertical-#{$super_i}{
+      margin-top: #{$key};
+      margin-bottom: #{$key};
+    }
+  }
+
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    &-horizontal-#{$super_i}{
+      margin-right: #{$key};
+      margin-left: #{$key};
+    }
+  }
+}

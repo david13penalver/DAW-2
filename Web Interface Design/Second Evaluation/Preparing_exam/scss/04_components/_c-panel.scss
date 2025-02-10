@@ -1,0 +1,31 @@
+.c-panel {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: pink;
+  align-items: baseline;
+  border: #1D4FD7 1px solid;
+  border-radius: 5px;
+  height: 75px;
+
+  &:hover{
+    background-color: red;
+  }
+
+  &__titulo {
+    display: flex;
+    background-color: purple;
+    height: 30px;
+  }
+
+  &__contenido {
+    display: flex;
+    background-color: yellow;
+    height: 20px;
+  }
+
+  &--bottom {
+    display: flex;
+    margin-top: auto;
+  }
+}
