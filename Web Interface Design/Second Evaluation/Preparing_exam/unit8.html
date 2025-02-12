@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/unit8.css">
+</head>
+<body>
+
+<!-- Ejercicio 1 -->
+
+<h1>Ejercicio 1</h1>
+
+<div class="ejercicio1"></div>
+
+<!-- Ejercicio 2 -->
+
+<h1>Ejercicio 2</h1>
+
+<div class="ejercicio2"></div>
+
+
+<p id="ejercicio2p">Ejercicio 2 animado</p>
+<button onclick="ejercicio2()">Cambiar tamaño</button>
+
+<!-- Ejercicio 3 -->
+
+<h1>Ejercicio 3</h1>
+
+<label for="ejercicio3">Ejercicio 3 label: </label><input id="ejercicio3" type="text" class="ejercicio3">
+
+<!-- Ejercicio 4 -->
+
+<h1>Ejercicio 4</h1>
+
+<div id="ejercicio4pelota" class="ejercicio4"></div>
+
+<img src="assets/responsive-large.jpg">
+
+<button onclick="ejercicio4()">Caer</button>
+
+<!-- Ejercicio 5 -->
+
+<h1>Ejercicio 5</h1>
+
+<img style="height: 30px" src="assets/ejercicio5pelota.png" id="ejercicio5pelota"></img>
+
+<img style="height: 300px" src="assets/ejercicio5canasta.png">
+
+<button onclick="ejercicio5()">Lanzar</button>
+
+
+<script>
+    function ejercicio2() {
+        var cuadradoElement=document.getElementById("ejercicio2p");
+        cuadradoElement.classList.remove("ejercicio2p");
+        setTimeout(function() {
+            cuadradoElement.classList.add("ejercicio2p");
+        },10);
+    }
+
+    function ejercicio4() {
+        var cuadradoElement=document.getElementById("ejercicio4pelota");
+        cuadradoElement.classList.remove("ejercicio4--caer");
+        setTimeout(function() {
+            cuadradoElement.classList.add("ejercicio4--caer");
+        },10);
+    }
+
+    function ejercicio5() {
+        var cuadradoElement=document.getElementById("ejercicio5pelota");
+        cuadradoElement.classList.remove("ejercicio5");
+        setTimeout(function() {
+            cuadradoElement.classList.add("ejercicio5");
+        },10);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/unit6.css">
+    <style>
+
+        <!-- Tabla responsiva -->
+
+
+        .c-table {
+            overflow: auto;
+        }
+        .c-table__head {
+
+        }
+        .c-table__head--min-width-1 {
+            min-width: 100px;
+        }
+        .c-table__head--min-width-2 {
+            min-width: 150px;
+        }
+        .c-table__head--min-width-3 {
+            min-width: 200px;
+        }
+        .c-table__head--max-width-1 {
+            max-width: 100px;
+        }
+        .c-table__head--max-width-2 {
+            max-width: 150px;
+        }
+        .c-table__head--max-width-3 {
+            max-width: 200px;
+        }
+
+        .c-table__head--width-1 {
+            width: 100px;
+            min-width: 100px;
+        }
+        .c-table__head--width-2 {
+            width: 150px;
+            min-width: 150px;
+        }
+        .c-table__head--width-3 {
+            width: 200px;
+            min-width: 200px;
+        }
+
+        <!-- Título responsivo -->
+
+        .c-titulo {
+            font-size: 40px;
+        }
+
+
+
+
+        @media (min-width: 576px) {
+            .c-titulo {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .c-titulo {
+                font-size: 55px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .c-titulo {
+                font-size: 70px;
+            }
+        }
+
+        <!-- Fuentes responsivas con control externo -->
+
+        .g--font-size-1 {
+            font-size: 40px;
+        }
+        .g--font-size-2 {
+            font-size: 50px;
+        }
+        .g--font-size-3 {
+            font-size: 55px;
+        }
+        .g--font-size-4 {
+            font-size: 70px;
+        }
+
+        @media (min-width: 576px) {
+            .g--font-size-1\@tablet {
+                font-size: 40px;
+            }
+            .g--font-size-2\@tablet {
+                font-size: 50px;
+            }
+            .g--font-size-3\@tablet {
+                font-size: 55px;
+            }
+            .g--font-size-4\@tablet {
+                font-size: 70px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .g--font-size-1\@desktop {
+                font-size: 40px;
+            }
+            .g--font-size-2\@desktop {
+                font-size: 50px;
+            }
+            .g--font-size-3\@desktop {
+                font-size: 55px;
+            }
+            .g--font-size-4\@desktop {
+                font-size: 70px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .g--font-size-1\@fulldesktop {
+                font-size: 40px;
+            }
+            .g--font-size-2\@fulldesktop {
+                font-size: 50px;
+            }
+            .g--font-size-3\@fulldesktop {
+                font-size: 55px;
+            }
+            .g--font-size-4\@fulldesktop {
+                font-size: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Unidad 6</h1>
+    <h2>Clamp()</h2>
+        <p>Fórmula de clamp(): clamp(MINvalue, PENDIENTE, COEFICIENTEposicion, MAXvalue)</p>
+        <p>MINvalue es el valor mínimo de la propiedad CSS</p>
+        <p>MAXvalue es el valor máximo de la propiedad CSS</p>
+        <p>PENDIENTE es el valor que se pone en vw</p>
+        <p>COEFICIENTEposicion es el valor que se suma a la pendiente</p>
+        <br>
+        <p>Wlower es el ancho de pantalla para el valor mínimo</p>
+        <p>Wupper es el ancho de pantalla para el valor máximo</p>
+
+        <img src="assets/clamp.png" alt="Gráfico de la fórmula clamp()">
+        <h3>Fórmulas</h3>
+            <img src="assets/clamp_formula.png" alt="Fórmulas de la fórmula clamp()">
+        <h3>Ejemplo</h3>
+            <img src="assets/clamp_ejemplo.png" alt="Ejemplo de la fórmula clamp()">
+
+<h2>Tablas (comentar lo anterior para ver bien lo del overflow:auto para el scroll de solo la tabla</h2>
+<div class="c-table">
+    <table>
+        <thead>
+        <tr>
+            <th class="c-table__head c-table__head--min-width-2 c-table__head--max-width-3">Author</th>
+            <th class="c-table__head c-table__head--min-width-2 c-table__head--max-width-3 ">Title</th>
+            <th class="c-table__head c-table__head--min-width-1 c-table__head--max-width-2">Year</th>
+            <th class="c-table__head c-table__head--width-3">ISBN-13</th>
+            <th class="c-table__head c-table__head--width-2">ISBN-10</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Miguel De Cervantes</td>
+            <td>The Ingenious Gentleman Don Quixote of La Mancha</td>
+            <td>1605</td>
+            <td>9783125798502</td>
+            <td>3125798507</td>
+        </tr>
+        <tr>
+            <td>Gabrielle-Suzanne Barbot de Villeneuve</td>
+            <td lang="fr">La Belle et la Bête</td>
+            <td>1740</td>
+            <td>9781910880067</td>
+            <td>191088006X</td>
+        </tr>
+        <tr>
+            <td>Sir Isaac Newton</td>
+            <td>The Method of Fluxions and Infinite Series: With Its Application to the Geometry of Curve-lines</td>
+            <td>1763</td>
+            <td>9781330454862</td>
+            <td>1330454863</td>
+        </tr>
+        <tr>
+            <td>Mary Shelley</td>
+            <td>Frankenstein; or, The Modern Prometheus</td>
+            <td>1818</td>
+            <td>9781530278442</td>
+            <td>1530278449</td>
+        </tr>
+        <tr>
+            <td>Herman Melville</td>
+            <td>Moby-Dick; or, The Whale</td>
+            <td>1851</td>
+            <td>9781530697908</td>
+            <td>1530697905</td>
+        </tr>
+        <tr>
+            <td >Emma Dorothy Eliza Nevitte Southworth</td>
+            <td>The Hidden Hand</td>
+            <td>1888</td>
+            <td>9780813512969</td>
+            <td>0813512964</td>
+        </tr>
+        <tr>
+            <td>F. Scott Fitzgerald</td>
+            <td>The Great Gatsby</td>
+            <td>1925</td>
+            <td>9780743273565</td>
+            <td>0743273567</td>
+        </tr>
+        <tr>
+            <td>George Orwell</td>
+            <td>Nineteen Eighty-Four</td>
+            <td>1948</td>
+            <td>9780451524935</td>
+            <td>0451524934</td>
+        </tr>
+        <tr>
+            <td>Nnedi Okorafor</td>
+            <td>Who Fears Death</td>
+            <td>2010</td>
+            <td>9780756406691</td>
+            <td>0756406692</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<h2>Media queries</h2>
+<h3>Control interno</h3>
+<p class="c-titulo">Título</p>
+<h3>Control externo</h3>
+<p class="g--font-size-1 g--font-size-2@tablet g--font-size-3@desktop g--font-size-4@fulldesktop">Hola mundo</p>
+
+<h1>Ejercicios</h1>
+<h2>Ejercicio 3</h2>
+<div class="rojo"></div>
+<div class="verde"></div>
+<div class="azul"></div>
+<div class="rosa"></div>
+<div class="amarillo"></div>
+
+<h2>Ejercicio 5</h2>
+<div class="l-flex">
+    <div class="c-header">
+        Título
+    </div>
+    <div class="c-aside">
+        Sidebar
+    </div>
+    <div class="c-main">
+        Main
+    </div>
+    <div class="c-footer">
+        Footer
+    </div>
+</div>
+
+<h2>Ejercicio 6</h2>
+<p class="g--color-fondo-responsivo">Interno</p>
+
+<h2>Ejercicio 7</h2>
+<p class="g--bg-color-red@tablet g--bg-color-green@desktop g--bg-color-blue@fulldesktop">Externo</p>
+
+<h2>Ejercicio 8</h2>
+<h2>Ejercicio 9</h2>
+<h2>Ejercicio 10</h2>
+<h2>Ejercicio 11</h2>
+</body>
+</html>

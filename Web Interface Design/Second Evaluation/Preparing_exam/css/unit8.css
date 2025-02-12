@@ -1,0 +1,96 @@
+body {
+    display: grid;
+    justify-content: center;
+}
+
+.ejercicio1 {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: transform 2s, background-color 2s 1.3s;
+}
+
+.ejercicio1:hover {
+    transform: rotate(45deg);
+    background-color: blue;
+    transition: transform 2s, background-color 2s 1.3s;
+}
+
+.ejercicio2 {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: transform 3s;
+}
+
+.ejercicio2:hover {
+    transform: scaleX(3);
+}
+
+.ejercicio2p {
+    font-size: 30px;
+    transition: font-size 3s;
+}
+
+.ejercicio3 {
+    background-color: gray;
+    border: none;
+}
+
+.ejercicio3:focus {
+    background-color: deepskyblue;
+    color: wheat;
+    border: 1px solid deepskyblue;
+    border-radius: 5px;
+    box-shadow: 0 0 10px deepskyblue;
+}
+
+.ejercicio4 {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+}
+
+.ejercicio4--caer {
+    animation-name: caer;
+    animation-duration: 9.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes caer {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+.ejercicio5 { /* sería .c-ejercicio5--tiro */
+    animation: tiro 2s ease-in-out 0.3s, rebote 0.7s ease-in-out infinite alternate 2s;
+}
+
+@keyframes tiro {
+    0% {
+        transform: translate(500px, 300px);
+    }
+    50% {
+        transform: translate(250px, 0px);
+    }
+    100% {
+        transform: translate(50px, 100px);
+    }
+}
+
+@keyframes rebote {
+    0% {
+        transform: translate(90px, 80px);
+    }
+    100% {
+        transform: translate(90px, -10px);
+    }
+}
+

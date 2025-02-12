@@ -1,0 +1,151 @@
+/* Ejercicio 3 */
+
+.rojo {
+    width: max(100px, 10vw);
+    height: 100px;
+    background-color: red;
+}
+
+.verde {
+    width: min(800px, 50vw);
+    height: 100px;
+    background-color: green;
+}
+
+.azul {
+    width: clamp(100px, 50vw, 900px);
+    height: 100px;
+    background-color: blue;
+}
+
+.rosa {
+    width: calc(50vw + 20px);
+    height: 100px;
+    background-color: pink;
+}
+
+.amarillo {
+    width: clamp(100px, 50vw + 20px, 600px);
+    height: 100px;
+    background-color: yellow;
+}
+
+/* Ejercicio 5 */
+
+.l-flex {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+}
+
+.c-header {
+    grid-column: span 2;
+    background-color: red;
+}
+
+.c-aside {
+    display: none;
+    background-color: green;
+}
+
+.c-main {
+    grid-column: span 2;
+    background-color: blue;
+}
+
+.c-footer {
+    grid-column: span 2;
+    background-color: yellow;
+}
+
+@media  (min-width: 500px) {
+    .c-header {
+        background-color: red;
+    }
+
+    .c-aside {
+        display: flex;
+        background-color: green;
+    }
+
+    .c-main {
+        grid-column: span 1;
+        background-color: blue;
+    }
+
+    .c-footer {
+        background-color: yellow;
+    }
+}
+
+/* Ejercicio 6 */
+
+.g--color-fondo-responsivo {
+    background-color: red;
+}
+
+@media screen and (min-width: 576px) {
+    .g--color-fondo-responsivo {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .g--color-fondo-responsivo {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .g--color-fondo-responsivo {
+        background-color: orange;
+    }
+}
+
+/* Ejercicio 7 */
+
+.g--bg-color-red\@tablet {
+    background-color:#FF0000;
+}
+.g--bg-color-green\@tablet {
+    background-color:#00FF00;
+}
+.g--bg-color-blue\@tablet {
+    background-color:#0000FF;
+}
+.g--bg-color-orange\@tablet {
+    background-color:#FFA500;
+}
+
+@media screen and (min-width: 576px) {
+    .g--bg-color-red\@desktop {
+        background-color:#FF0000;
+    }
+    .g--bg-color-green\@desktop {
+        background-color:#00FF00;
+    }
+    .g--bg-color-blue\@desktop {
+        background-color:#0000FF;
+    }
+    .g--bg-color-orange\@desktop {
+        background-color:#FFA500;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .g--bg-color-red\@fulldesktop {
+        background-color:#FF0000;
+    }
+    .g--bg-color-green\@fulldesktop {
+        background-color:#00FF00;
+    }
+    .g--bg-color-blue\@fulldesktop {
+        background-color:#0000FF;
+    }
+    .g--bg-color-orange\@fulldesktop {
+        background-color:#FFA500;
+    }
+}
+
+
+
