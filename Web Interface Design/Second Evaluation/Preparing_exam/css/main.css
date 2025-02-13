@@ -809,6 +809,101 @@ html {
   padding-left: var(--padding-20);
 }
 
+.c-button {
+  --c-button-background-color: var(--color-principal-50);
+  --c-button-color: var(--color-alternative-50);
+  padding: 12px;
+  background-color: var(--c-button-background-color);
+  color: var(--c-button-color);
+}
+@media (min-width: 567px) {
+  .c-button\@tablet {
+    height: 100px;
+    width: 50px;
+    background-color: var(--c-button-background-color);
+    color: var(--c-button-color);
+  }
+}
+@media (min-width: 768px) {
+  .c-button\@desktop {
+    height: 100px;
+    width: 50px;
+    background-color: var(--c-button-background-color);
+    color: var(--c-button-color);
+  }
+}
+@media (min-width: 992px) {
+  .c-button\@fulldesktop {
+    height: 100px;
+    width: 50px;
+    background-color: var(--c-button-background-color);
+    color: var(--c-button-color);
+  }
+}
+@media (min-width: 567px) {
+  .c-button--red\@tablet {
+    --c-button-background-color: var(--color-red-30);
+    background-color: var(--c-button-background-color);
+  }
+}
+@media (min-width: 768px) {
+  .c-button--red\@desktop {
+    --c-button-background-color: var(--color-red-30);
+    background-color: var(--c-button-background-color);
+  }
+}
+@media (min-width: 992px) {
+  .c-button--red\@fulldesktop {
+    --c-button-background-color: var(--color-red-30);
+    background-color: var(--c-button-background-color);
+  }
+}
+@media (min-width: 567px) {
+  .c-button--small\@tablet {
+    padding: 6px;
+  }
+}
+@media (min-width: 768px) {
+  .c-button--small\@desktop {
+    padding: 6px;
+  }
+}
+@media (min-width: 992px) {
+  .c-button--small\@fulldesktop {
+    padding: 6px;
+  }
+}
+@media (min-width: 567px) {
+  .c-button--medium\@tablet {
+    padding: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .c-button--medium\@desktop {
+    padding: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .c-button--medium\@fulldesktop {
+    padding: 16px;
+  }
+}
+@media (min-width: 567px) {
+  .c-button--large\@tablet {
+    padding: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .c-button--large\@desktop {
+    padding: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .c-button--large\@fulldesktop {
+    padding: 24px;
+  }
+}
+
 .c-panel {
   display: flex;
   flex-direction: column;
@@ -1780,737 +1875,737 @@ html {
 }
 
 @media (min-width: 567px) {
-  .\@tablet-g--background-color-principal-10 {
+  .g--background-color-principal-10\@tablet {
     background-color: #7c2d13;
   }
-  .\@tablet-g--background-color-principal-20 {
+  .g--background-color-principal-20\@tablet {
     background-color: #9a3412;
   }
-  .\@tablet-g--background-color-principal-30 {
+  .g--background-color-principal-30\@tablet {
     background-color: #c2410c;
   }
-  .\@tablet-g--background-color-principal-40 {
+  .g--background-color-principal-40\@tablet {
     background-color: #ea580c;
   }
-  .\@tablet-g--background-color-principal-50 {
+  .g--background-color-principal-50\@tablet {
     background-color: #f97316;
   }
-  .\@tablet-g--background-color-principal-60 {
+  .g--background-color-principal-60\@tablet {
     background-color: #fb923c;
   }
-  .\@tablet-g--background-color-principal-70 {
+  .g--background-color-principal-70\@tablet {
     background-color: #fdba74;
   }
-  .\@tablet-g--background-color-principal-80 {
+  .g--background-color-principal-80\@tablet {
     background-color: #fed7aa;
   }
-  .\@tablet-g--background-color-principal-90 {
+  .g--background-color-principal-90\@tablet {
     background-color: #ffedd5;
   }
-  .\@tablet-g--background-color-alternative-10 {
+  .g--background-color-alternative-10\@tablet {
     background-color: #312e81;
   }
-  .\@tablet-g--background-color-alternative-20 {
+  .g--background-color-alternative-20\@tablet {
     background-color: #3730a3;
   }
-  .\@tablet-g--background-color-alternative-30 {
+  .g--background-color-alternative-30\@tablet {
     background-color: #4338ca;
   }
-  .\@tablet-g--background-color-alternative-40 {
+  .g--background-color-alternative-40\@tablet {
     background-color: #4f46e5;
   }
-  .\@tablet-g--background-color-alternative-50 {
+  .g--background-color-alternative-50\@tablet {
     background-color: #6366f1;
   }
-  .\@tablet-g--background-color-alternative-60 {
+  .g--background-color-alternative-60\@tablet {
     background-color: #818cf8;
   }
-  .\@tablet-g--background-color-alternative-70 {
+  .g--background-color-alternative-70\@tablet {
     background-color: #a5b4fc;
   }
-  .\@tablet-g--background-color-alternative-80 {
+  .g--background-color-alternative-80\@tablet {
     background-color: #c7d2fe;
   }
-  .\@tablet-g--background-color-alternative-90 {
+  .g--background-color-alternative-90\@tablet {
     background-color: #e0e7ff;
   }
-  .\@tablet-g--background-color-red-10 {
+  .g--background-color-red-10\@tablet {
     background-color: #811D1D;
   }
-  .\@tablet-g--background-color-red-20 {
+  .g--background-color-red-20\@tablet {
     background-color: #981B1B;
   }
-  .\@tablet-g--background-color-red-30 {
+  .g--background-color-red-30\@tablet {
     background-color: #BA1C1C;
   }
-  .\@tablet-g--background-color-red-40 {
+  .g--background-color-red-40\@tablet {
     background-color: #DC2828;
   }
-  .\@tablet-g--background-color-red-50 {
+  .g--background-color-red-50\@tablet {
     background-color: #EF4343;
   }
-  .\@tablet-g--background-color-red-60 {
+  .g--background-color-red-60\@tablet {
     background-color: #F87272;
   }
-  .\@tablet-g--background-color-red-70 {
+  .g--background-color-red-70\@tablet {
     background-color: #FCA6A6;
   }
-  .\@tablet-g--background-color-red-80 {
+  .g--background-color-red-80\@tablet {
     background-color: #FEC8C8;
   }
-  .\@tablet-g--background-color-red-90 {
+  .g--background-color-red-90\@tablet {
     background-color: #FEE1E1;
   }
-  .\@tablet-g--background-color-blue-10 {
+  .g--background-color-blue-10\@tablet {
     background-color: #1E3B8A;
   }
-  .\@tablet-g--background-color-blue-20 {
+  .g--background-color-blue-20\@tablet {
     background-color: #1E3FAE;
   }
-  .\@tablet-g--background-color-blue-30 {
+  .g--background-color-blue-30\@tablet {
     background-color: #1D4FD7;
   }
-  .\@tablet-g--background-color-blue-40 {
+  .g--background-color-blue-40\@tablet {
     background-color: #2463EB;
   }
-  .\@tablet-g--background-color-blue-50 {
+  .g--background-color-blue-50\@tablet {
     background-color: #3C83F6;
   }
-  .\@tablet-g--background-color-blue-60 {
+  .g--background-color-blue-60\@tablet {
     background-color: #61A6FA;
   }
-  .\@tablet-g--background-color-blue-70 {
+  .g--background-color-blue-70\@tablet {
     background-color: #91C3FD;
   }
-  .\@tablet-g--background-color-blue-80 {
+  .g--background-color-blue-80\@tablet {
     background-color: #BEDBFE;
   }
-  .\@tablet-g--background-color-blue-90 {
+  .g--background-color-blue-90\@tablet {
     background-color: #DCEBFE;
   }
-  .\@tablet-g--background-color-green-10 {
+  .g--background-color-green-10\@tablet {
     background-color: #064C39;
   }
-  .\@tablet-g--background-color-green-20 {
+  .g--background-color-green-20\@tablet {
     background-color: #066046;
   }
-  .\@tablet-g--background-color-green-30 {
+  .g--background-color-green-30\@tablet {
     background-color: #047756;
   }
-  .\@tablet-g--background-color-green-40 {
+  .g--background-color-green-40\@tablet {
     background-color: #059467;
   }
-  .\@tablet-g--background-color-green-50 {
+  .g--background-color-green-50\@tablet {
     background-color: #10B77F;
   }
-  .\@tablet-g--background-color-green-60 {
+  .g--background-color-green-60\@tablet {
     background-color: #36D399;
   }
-  .\@tablet-g--background-color-green-70 {
+  .g--background-color-green-70\@tablet {
     background-color: #6EE7B7;
   }
-  .\@tablet-g--background-color-green-80 {
+  .g--background-color-green-80\@tablet {
     background-color: #A5F3CF;
   }
-  .\@tablet-g--background-color-green-90 {
+  .g--background-color-green-90\@tablet {
     background-color: #D1FAE5;
   }
-  .\@tablet-g--background-color-yellow-10 {
+  .g--background-color-yellow-10\@tablet {
     background-color: #76350F;
   }
-  .\@tablet-g--background-color-yellow-20 {
+  .g--background-color-yellow-20\@tablet {
     background-color: #91400D;
   }
-  .\@tablet-g--background-color-yellow-30 {
+  .g--background-color-yellow-30\@tablet {
     background-color: #B35309;
   }
-  .\@tablet-g--background-color-yellow-40 {
+  .g--background-color-yellow-40\@tablet {
     background-color: #DB7706;
   }
-  .\@tablet-g--background-color-yellow-50 {
+  .g--background-color-yellow-50\@tablet {
     background-color: #F59F0A;
   }
-  .\@tablet-g--background-color-yellow-60 {
+  .g--background-color-yellow-60\@tablet {
     background-color: #FBBD23;
   }
-  .\@tablet-g--background-color-yellow-70 {
+  .g--background-color-yellow-70\@tablet {
     background-color: #FCD44F;
   }
-  .\@tablet-g--background-color-yellow-80 {
+  .g--background-color-yellow-80\@tablet {
     background-color: #FDE68B;
   }
-  .\@tablet-g--background-color-yellow-90 {
+  .g--background-color-yellow-90\@tablet {
     background-color: #FEF3C8;
   }
-  .\@tablet-g--background-color-purple-10 {
+  .g--background-color-purple-10\@tablet {
     background-color: #4D1D95;
   }
-  .\@tablet-g--background-color-purple-20 {
+  .g--background-color-purple-20\@tablet {
     background-color: #5A21B5;
   }
-  .\@tablet-g--background-color-purple-30 {
+  .g--background-color-purple-30\@tablet {
     background-color: #6B26D9;
   }
-  .\@tablet-g--background-color-purple-40 {
+  .g--background-color-purple-40\@tablet {
     background-color: #7C3BED;
   }
-  .\@tablet-g--background-color-purple-50 {
+  .g--background-color-purple-50\@tablet {
     background-color: #895AF6;
   }
-  .\@tablet-g--background-color-purple-60 {
+  .g--background-color-purple-60\@tablet {
     background-color: #A689FA;
   }
-  .\@tablet-g--background-color-purple-70 {
+  .g--background-color-purple-70\@tablet {
     background-color: #C3B4FD;
   }
-  .\@tablet-g--background-color-purple-80 {
+  .g--background-color-purple-80\@tablet {
     background-color: #DED7FE;
   }
-  .\@tablet-g--background-color-purple-90 {
+  .g--background-color-purple-90\@tablet {
     background-color: #EBE7FE;
   }
-  .\@tablet-g--background-color-pink-10 {
+  .g--background-color-pink-10\@tablet {
     background-color: #811842;
   }
-  .\@tablet-g--background-color-pink-20 {
+  .g--background-color-pink-20\@tablet {
     background-color: #9B174C;
   }
-  .\@tablet-g--background-color-pink-30 {
+  .g--background-color-pink-30\@tablet {
     background-color: #BF185D;
   }
-  .\@tablet-g--background-color-pink-40 {
+  .g--background-color-pink-40\@tablet {
     background-color: #DB2979;
   }
-  .\@tablet-g--background-color-pink-50 {
+  .g--background-color-pink-50\@tablet {
     background-color: #EC4699;
   }
-  .\@tablet-g--background-color-pink-60 {
+  .g--background-color-pink-60\@tablet {
     background-color: #F471B5;
   }
-  .\@tablet-g--background-color-pink-70 {
+  .g--background-color-pink-70\@tablet {
     background-color: #F9A9D5;
   }
-  .\@tablet-g--background-color-pink-80 {
+  .g--background-color-pink-80\@tablet {
     background-color: #FBD0E8;
   }
-  .\@tablet-g--background-color-pink-90 {
+  .g--background-color-pink-90\@tablet {
     background-color: #FCE8F4;
   }
-  .\@tablet-g--background-color-grey-10 {
+  .g--background-color-grey-10\@tablet {
     background-color: #111827;
   }
-  .\@tablet-g--background-color-grey-20 {
+  .g--background-color-grey-20\@tablet {
     background-color: #1f2937;
   }
-  .\@tablet-g--background-color-grey-30 {
+  .g--background-color-grey-30\@tablet {
     background-color: #374151;
   }
-  .\@tablet-g--background-color-grey-40 {
+  .g--background-color-grey-40\@tablet {
     background-color: #4b5563;
   }
-  .\@tablet-g--background-color-grey-50 {
+  .g--background-color-grey-50\@tablet {
     background-color: #6b7280;
   }
-  .\@tablet-g--background-color-grey-60 {
+  .g--background-color-grey-60\@tablet {
     background-color: #9ca3af;
   }
-  .\@tablet-g--background-color-grey-70 {
+  .g--background-color-grey-70\@tablet {
     background-color: #d1d5db;
   }
-  .\@tablet-g--background-color-grey-80 {
+  .g--background-color-grey-80\@tablet {
     background-color: #e5e7eb;
   }
-  .\@tablet-g--background-color-grey-90 {
+  .g--background-color-grey-90\@tablet {
     background-color: #f3f4f6;
   }
 }
 @media (min-width: 768px) {
-  .\@desktop-g--background-color-principal-10 {
+  .g--background-color-principal-10\@desktop {
     background-color: #7c2d13;
   }
-  .\@desktop-g--background-color-principal-20 {
+  .g--background-color-principal-20\@desktop {
     background-color: #9a3412;
   }
-  .\@desktop-g--background-color-principal-30 {
+  .g--background-color-principal-30\@desktop {
     background-color: #c2410c;
   }
-  .\@desktop-g--background-color-principal-40 {
+  .g--background-color-principal-40\@desktop {
     background-color: #ea580c;
   }
-  .\@desktop-g--background-color-principal-50 {
+  .g--background-color-principal-50\@desktop {
     background-color: #f97316;
   }
-  .\@desktop-g--background-color-principal-60 {
+  .g--background-color-principal-60\@desktop {
     background-color: #fb923c;
   }
-  .\@desktop-g--background-color-principal-70 {
+  .g--background-color-principal-70\@desktop {
     background-color: #fdba74;
   }
-  .\@desktop-g--background-color-principal-80 {
+  .g--background-color-principal-80\@desktop {
     background-color: #fed7aa;
   }
-  .\@desktop-g--background-color-principal-90 {
+  .g--background-color-principal-90\@desktop {
     background-color: #ffedd5;
   }
-  .\@desktop-g--background-color-alternative-10 {
+  .g--background-color-alternative-10\@desktop {
     background-color: #312e81;
   }
-  .\@desktop-g--background-color-alternative-20 {
+  .g--background-color-alternative-20\@desktop {
     background-color: #3730a3;
   }
-  .\@desktop-g--background-color-alternative-30 {
+  .g--background-color-alternative-30\@desktop {
     background-color: #4338ca;
   }
-  .\@desktop-g--background-color-alternative-40 {
+  .g--background-color-alternative-40\@desktop {
     background-color: #4f46e5;
   }
-  .\@desktop-g--background-color-alternative-50 {
+  .g--background-color-alternative-50\@desktop {
     background-color: #6366f1;
   }
-  .\@desktop-g--background-color-alternative-60 {
+  .g--background-color-alternative-60\@desktop {
     background-color: #818cf8;
   }
-  .\@desktop-g--background-color-alternative-70 {
+  .g--background-color-alternative-70\@desktop {
     background-color: #a5b4fc;
   }
-  .\@desktop-g--background-color-alternative-80 {
+  .g--background-color-alternative-80\@desktop {
     background-color: #c7d2fe;
   }
-  .\@desktop-g--background-color-alternative-90 {
+  .g--background-color-alternative-90\@desktop {
     background-color: #e0e7ff;
   }
-  .\@desktop-g--background-color-red-10 {
+  .g--background-color-red-10\@desktop {
     background-color: #811D1D;
   }
-  .\@desktop-g--background-color-red-20 {
+  .g--background-color-red-20\@desktop {
     background-color: #981B1B;
   }
-  .\@desktop-g--background-color-red-30 {
+  .g--background-color-red-30\@desktop {
     background-color: #BA1C1C;
   }
-  .\@desktop-g--background-color-red-40 {
+  .g--background-color-red-40\@desktop {
     background-color: #DC2828;
   }
-  .\@desktop-g--background-color-red-50 {
+  .g--background-color-red-50\@desktop {
     background-color: #EF4343;
   }
-  .\@desktop-g--background-color-red-60 {
+  .g--background-color-red-60\@desktop {
     background-color: #F87272;
   }
-  .\@desktop-g--background-color-red-70 {
+  .g--background-color-red-70\@desktop {
     background-color: #FCA6A6;
   }
-  .\@desktop-g--background-color-red-80 {
+  .g--background-color-red-80\@desktop {
     background-color: #FEC8C8;
   }
-  .\@desktop-g--background-color-red-90 {
+  .g--background-color-red-90\@desktop {
     background-color: #FEE1E1;
   }
-  .\@desktop-g--background-color-blue-10 {
+  .g--background-color-blue-10\@desktop {
     background-color: #1E3B8A;
   }
-  .\@desktop-g--background-color-blue-20 {
+  .g--background-color-blue-20\@desktop {
     background-color: #1E3FAE;
   }
-  .\@desktop-g--background-color-blue-30 {
+  .g--background-color-blue-30\@desktop {
     background-color: #1D4FD7;
   }
-  .\@desktop-g--background-color-blue-40 {
+  .g--background-color-blue-40\@desktop {
     background-color: #2463EB;
   }
-  .\@desktop-g--background-color-blue-50 {
+  .g--background-color-blue-50\@desktop {
     background-color: #3C83F6;
   }
-  .\@desktop-g--background-color-blue-60 {
+  .g--background-color-blue-60\@desktop {
     background-color: #61A6FA;
   }
-  .\@desktop-g--background-color-blue-70 {
+  .g--background-color-blue-70\@desktop {
     background-color: #91C3FD;
   }
-  .\@desktop-g--background-color-blue-80 {
+  .g--background-color-blue-80\@desktop {
     background-color: #BEDBFE;
   }
-  .\@desktop-g--background-color-blue-90 {
+  .g--background-color-blue-90\@desktop {
     background-color: #DCEBFE;
   }
-  .\@desktop-g--background-color-green-10 {
+  .g--background-color-green-10\@desktop {
     background-color: #064C39;
   }
-  .\@desktop-g--background-color-green-20 {
+  .g--background-color-green-20\@desktop {
     background-color: #066046;
   }
-  .\@desktop-g--background-color-green-30 {
+  .g--background-color-green-30\@desktop {
     background-color: #047756;
   }
-  .\@desktop-g--background-color-green-40 {
+  .g--background-color-green-40\@desktop {
     background-color: #059467;
   }
-  .\@desktop-g--background-color-green-50 {
+  .g--background-color-green-50\@desktop {
     background-color: #10B77F;
   }
-  .\@desktop-g--background-color-green-60 {
+  .g--background-color-green-60\@desktop {
     background-color: #36D399;
   }
-  .\@desktop-g--background-color-green-70 {
+  .g--background-color-green-70\@desktop {
     background-color: #6EE7B7;
   }
-  .\@desktop-g--background-color-green-80 {
+  .g--background-color-green-80\@desktop {
     background-color: #A5F3CF;
   }
-  .\@desktop-g--background-color-green-90 {
+  .g--background-color-green-90\@desktop {
     background-color: #D1FAE5;
   }
-  .\@desktop-g--background-color-yellow-10 {
+  .g--background-color-yellow-10\@desktop {
     background-color: #76350F;
   }
-  .\@desktop-g--background-color-yellow-20 {
+  .g--background-color-yellow-20\@desktop {
     background-color: #91400D;
   }
-  .\@desktop-g--background-color-yellow-30 {
+  .g--background-color-yellow-30\@desktop {
     background-color: #B35309;
   }
-  .\@desktop-g--background-color-yellow-40 {
+  .g--background-color-yellow-40\@desktop {
     background-color: #DB7706;
   }
-  .\@desktop-g--background-color-yellow-50 {
+  .g--background-color-yellow-50\@desktop {
     background-color: #F59F0A;
   }
-  .\@desktop-g--background-color-yellow-60 {
+  .g--background-color-yellow-60\@desktop {
     background-color: #FBBD23;
   }
-  .\@desktop-g--background-color-yellow-70 {
+  .g--background-color-yellow-70\@desktop {
     background-color: #FCD44F;
   }
-  .\@desktop-g--background-color-yellow-80 {
+  .g--background-color-yellow-80\@desktop {
     background-color: #FDE68B;
   }
-  .\@desktop-g--background-color-yellow-90 {
+  .g--background-color-yellow-90\@desktop {
     background-color: #FEF3C8;
   }
-  .\@desktop-g--background-color-purple-10 {
+  .g--background-color-purple-10\@desktop {
     background-color: #4D1D95;
   }
-  .\@desktop-g--background-color-purple-20 {
+  .g--background-color-purple-20\@desktop {
     background-color: #5A21B5;
   }
-  .\@desktop-g--background-color-purple-30 {
+  .g--background-color-purple-30\@desktop {
     background-color: #6B26D9;
   }
-  .\@desktop-g--background-color-purple-40 {
+  .g--background-color-purple-40\@desktop {
     background-color: #7C3BED;
   }
-  .\@desktop-g--background-color-purple-50 {
+  .g--background-color-purple-50\@desktop {
     background-color: #895AF6;
   }
-  .\@desktop-g--background-color-purple-60 {
+  .g--background-color-purple-60\@desktop {
     background-color: #A689FA;
   }
-  .\@desktop-g--background-color-purple-70 {
+  .g--background-color-purple-70\@desktop {
     background-color: #C3B4FD;
   }
-  .\@desktop-g--background-color-purple-80 {
+  .g--background-color-purple-80\@desktop {
     background-color: #DED7FE;
   }
-  .\@desktop-g--background-color-purple-90 {
+  .g--background-color-purple-90\@desktop {
     background-color: #EBE7FE;
   }
-  .\@desktop-g--background-color-pink-10 {
+  .g--background-color-pink-10\@desktop {
     background-color: #811842;
   }
-  .\@desktop-g--background-color-pink-20 {
+  .g--background-color-pink-20\@desktop {
     background-color: #9B174C;
   }
-  .\@desktop-g--background-color-pink-30 {
+  .g--background-color-pink-30\@desktop {
     background-color: #BF185D;
   }
-  .\@desktop-g--background-color-pink-40 {
+  .g--background-color-pink-40\@desktop {
     background-color: #DB2979;
   }
-  .\@desktop-g--background-color-pink-50 {
+  .g--background-color-pink-50\@desktop {
     background-color: #EC4699;
   }
-  .\@desktop-g--background-color-pink-60 {
+  .g--background-color-pink-60\@desktop {
     background-color: #F471B5;
   }
-  .\@desktop-g--background-color-pink-70 {
+  .g--background-color-pink-70\@desktop {
     background-color: #F9A9D5;
   }
-  .\@desktop-g--background-color-pink-80 {
+  .g--background-color-pink-80\@desktop {
     background-color: #FBD0E8;
   }
-  .\@desktop-g--background-color-pink-90 {
+  .g--background-color-pink-90\@desktop {
     background-color: #FCE8F4;
   }
-  .\@desktop-g--background-color-grey-10 {
+  .g--background-color-grey-10\@desktop {
     background-color: #111827;
   }
-  .\@desktop-g--background-color-grey-20 {
+  .g--background-color-grey-20\@desktop {
     background-color: #1f2937;
   }
-  .\@desktop-g--background-color-grey-30 {
+  .g--background-color-grey-30\@desktop {
     background-color: #374151;
   }
-  .\@desktop-g--background-color-grey-40 {
+  .g--background-color-grey-40\@desktop {
     background-color: #4b5563;
   }
-  .\@desktop-g--background-color-grey-50 {
+  .g--background-color-grey-50\@desktop {
     background-color: #6b7280;
   }
-  .\@desktop-g--background-color-grey-60 {
+  .g--background-color-grey-60\@desktop {
     background-color: #9ca3af;
   }
-  .\@desktop-g--background-color-grey-70 {
+  .g--background-color-grey-70\@desktop {
     background-color: #d1d5db;
   }
-  .\@desktop-g--background-color-grey-80 {
+  .g--background-color-grey-80\@desktop {
     background-color: #e5e7eb;
   }
-  .\@desktop-g--background-color-grey-90 {
+  .g--background-color-grey-90\@desktop {
     background-color: #f3f4f6;
   }
 }
 @media (min-width: 992px) {
-  .\@fulldesktop-g--background-color-principal-10 {
+  .g--background-color-principal-10\@fulldesktop {
     background-color: #7c2d13;
   }
-  .\@fulldesktop-g--background-color-principal-20 {
+  .g--background-color-principal-20\@fulldesktop {
     background-color: #9a3412;
   }
-  .\@fulldesktop-g--background-color-principal-30 {
+  .g--background-color-principal-30\@fulldesktop {
     background-color: #c2410c;
   }
-  .\@fulldesktop-g--background-color-principal-40 {
+  .g--background-color-principal-40\@fulldesktop {
     background-color: #ea580c;
   }
-  .\@fulldesktop-g--background-color-principal-50 {
+  .g--background-color-principal-50\@fulldesktop {
     background-color: #f97316;
   }
-  .\@fulldesktop-g--background-color-principal-60 {
+  .g--background-color-principal-60\@fulldesktop {
     background-color: #fb923c;
   }
-  .\@fulldesktop-g--background-color-principal-70 {
+  .g--background-color-principal-70\@fulldesktop {
     background-color: #fdba74;
   }
-  .\@fulldesktop-g--background-color-principal-80 {
+  .g--background-color-principal-80\@fulldesktop {
     background-color: #fed7aa;
   }
-  .\@fulldesktop-g--background-color-principal-90 {
+  .g--background-color-principal-90\@fulldesktop {
     background-color: #ffedd5;
   }
-  .\@fulldesktop-g--background-color-alternative-10 {
+  .g--background-color-alternative-10\@fulldesktop {
     background-color: #312e81;
   }
-  .\@fulldesktop-g--background-color-alternative-20 {
+  .g--background-color-alternative-20\@fulldesktop {
     background-color: #3730a3;
   }
-  .\@fulldesktop-g--background-color-alternative-30 {
+  .g--background-color-alternative-30\@fulldesktop {
     background-color: #4338ca;
   }
-  .\@fulldesktop-g--background-color-alternative-40 {
+  .g--background-color-alternative-40\@fulldesktop {
     background-color: #4f46e5;
   }
-  .\@fulldesktop-g--background-color-alternative-50 {
+  .g--background-color-alternative-50\@fulldesktop {
     background-color: #6366f1;
   }
-  .\@fulldesktop-g--background-color-alternative-60 {
+  .g--background-color-alternative-60\@fulldesktop {
     background-color: #818cf8;
   }
-  .\@fulldesktop-g--background-color-alternative-70 {
+  .g--background-color-alternative-70\@fulldesktop {
     background-color: #a5b4fc;
   }
-  .\@fulldesktop-g--background-color-alternative-80 {
+  .g--background-color-alternative-80\@fulldesktop {
     background-color: #c7d2fe;
   }
-  .\@fulldesktop-g--background-color-alternative-90 {
+  .g--background-color-alternative-90\@fulldesktop {
     background-color: #e0e7ff;
   }
-  .\@fulldesktop-g--background-color-red-10 {
+  .g--background-color-red-10\@fulldesktop {
     background-color: #811D1D;
   }
-  .\@fulldesktop-g--background-color-red-20 {
+  .g--background-color-red-20\@fulldesktop {
     background-color: #981B1B;
   }
-  .\@fulldesktop-g--background-color-red-30 {
+  .g--background-color-red-30\@fulldesktop {
     background-color: #BA1C1C;
   }
-  .\@fulldesktop-g--background-color-red-40 {
+  .g--background-color-red-40\@fulldesktop {
     background-color: #DC2828;
   }
-  .\@fulldesktop-g--background-color-red-50 {
+  .g--background-color-red-50\@fulldesktop {
     background-color: #EF4343;
   }
-  .\@fulldesktop-g--background-color-red-60 {
+  .g--background-color-red-60\@fulldesktop {
     background-color: #F87272;
   }
-  .\@fulldesktop-g--background-color-red-70 {
+  .g--background-color-red-70\@fulldesktop {
     background-color: #FCA6A6;
   }
-  .\@fulldesktop-g--background-color-red-80 {
+  .g--background-color-red-80\@fulldesktop {
     background-color: #FEC8C8;
   }
-  .\@fulldesktop-g--background-color-red-90 {
+  .g--background-color-red-90\@fulldesktop {
     background-color: #FEE1E1;
   }
-  .\@fulldesktop-g--background-color-blue-10 {
+  .g--background-color-blue-10\@fulldesktop {
     background-color: #1E3B8A;
   }
-  .\@fulldesktop-g--background-color-blue-20 {
+  .g--background-color-blue-20\@fulldesktop {
     background-color: #1E3FAE;
   }
-  .\@fulldesktop-g--background-color-blue-30 {
+  .g--background-color-blue-30\@fulldesktop {
     background-color: #1D4FD7;
   }
-  .\@fulldesktop-g--background-color-blue-40 {
+  .g--background-color-blue-40\@fulldesktop {
     background-color: #2463EB;
   }
-  .\@fulldesktop-g--background-color-blue-50 {
+  .g--background-color-blue-50\@fulldesktop {
     background-color: #3C83F6;
   }
-  .\@fulldesktop-g--background-color-blue-60 {
+  .g--background-color-blue-60\@fulldesktop {
     background-color: #61A6FA;
   }
-  .\@fulldesktop-g--background-color-blue-70 {
+  .g--background-color-blue-70\@fulldesktop {
     background-color: #91C3FD;
   }
-  .\@fulldesktop-g--background-color-blue-80 {
+  .g--background-color-blue-80\@fulldesktop {
     background-color: #BEDBFE;
   }
-  .\@fulldesktop-g--background-color-blue-90 {
+  .g--background-color-blue-90\@fulldesktop {
     background-color: #DCEBFE;
   }
-  .\@fulldesktop-g--background-color-green-10 {
+  .g--background-color-green-10\@fulldesktop {
     background-color: #064C39;
   }
-  .\@fulldesktop-g--background-color-green-20 {
+  .g--background-color-green-20\@fulldesktop {
     background-color: #066046;
   }
-  .\@fulldesktop-g--background-color-green-30 {
+  .g--background-color-green-30\@fulldesktop {
     background-color: #047756;
   }
-  .\@fulldesktop-g--background-color-green-40 {
+  .g--background-color-green-40\@fulldesktop {
     background-color: #059467;
   }
-  .\@fulldesktop-g--background-color-green-50 {
+  .g--background-color-green-50\@fulldesktop {
     background-color: #10B77F;
   }
-  .\@fulldesktop-g--background-color-green-60 {
+  .g--background-color-green-60\@fulldesktop {
     background-color: #36D399;
   }
-  .\@fulldesktop-g--background-color-green-70 {
+  .g--background-color-green-70\@fulldesktop {
     background-color: #6EE7B7;
   }
-  .\@fulldesktop-g--background-color-green-80 {
+  .g--background-color-green-80\@fulldesktop {
     background-color: #A5F3CF;
   }
-  .\@fulldesktop-g--background-color-green-90 {
+  .g--background-color-green-90\@fulldesktop {
     background-color: #D1FAE5;
   }
-  .\@fulldesktop-g--background-color-yellow-10 {
+  .g--background-color-yellow-10\@fulldesktop {
     background-color: #76350F;
   }
-  .\@fulldesktop-g--background-color-yellow-20 {
+  .g--background-color-yellow-20\@fulldesktop {
     background-color: #91400D;
   }
-  .\@fulldesktop-g--background-color-yellow-30 {
+  .g--background-color-yellow-30\@fulldesktop {
     background-color: #B35309;
   }
-  .\@fulldesktop-g--background-color-yellow-40 {
+  .g--background-color-yellow-40\@fulldesktop {
     background-color: #DB7706;
   }
-  .\@fulldesktop-g--background-color-yellow-50 {
+  .g--background-color-yellow-50\@fulldesktop {
     background-color: #F59F0A;
   }
-  .\@fulldesktop-g--background-color-yellow-60 {
+  .g--background-color-yellow-60\@fulldesktop {
     background-color: #FBBD23;
   }
-  .\@fulldesktop-g--background-color-yellow-70 {
+  .g--background-color-yellow-70\@fulldesktop {
     background-color: #FCD44F;
   }
-  .\@fulldesktop-g--background-color-yellow-80 {
+  .g--background-color-yellow-80\@fulldesktop {
     background-color: #FDE68B;
   }
-  .\@fulldesktop-g--background-color-yellow-90 {
+  .g--background-color-yellow-90\@fulldesktop {
     background-color: #FEF3C8;
   }
-  .\@fulldesktop-g--background-color-purple-10 {
+  .g--background-color-purple-10\@fulldesktop {
     background-color: #4D1D95;
   }
-  .\@fulldesktop-g--background-color-purple-20 {
+  .g--background-color-purple-20\@fulldesktop {
     background-color: #5A21B5;
   }
-  .\@fulldesktop-g--background-color-purple-30 {
+  .g--background-color-purple-30\@fulldesktop {
     background-color: #6B26D9;
   }
-  .\@fulldesktop-g--background-color-purple-40 {
+  .g--background-color-purple-40\@fulldesktop {
     background-color: #7C3BED;
   }
-  .\@fulldesktop-g--background-color-purple-50 {
+  .g--background-color-purple-50\@fulldesktop {
     background-color: #895AF6;
   }
-  .\@fulldesktop-g--background-color-purple-60 {
+  .g--background-color-purple-60\@fulldesktop {
     background-color: #A689FA;
   }
-  .\@fulldesktop-g--background-color-purple-70 {
+  .g--background-color-purple-70\@fulldesktop {
     background-color: #C3B4FD;
   }
-  .\@fulldesktop-g--background-color-purple-80 {
+  .g--background-color-purple-80\@fulldesktop {
     background-color: #DED7FE;
   }
-  .\@fulldesktop-g--background-color-purple-90 {
+  .g--background-color-purple-90\@fulldesktop {
     background-color: #EBE7FE;
   }
-  .\@fulldesktop-g--background-color-pink-10 {
+  .g--background-color-pink-10\@fulldesktop {
     background-color: #811842;
   }
-  .\@fulldesktop-g--background-color-pink-20 {
+  .g--background-color-pink-20\@fulldesktop {
     background-color: #9B174C;
   }
-  .\@fulldesktop-g--background-color-pink-30 {
+  .g--background-color-pink-30\@fulldesktop {
     background-color: #BF185D;
   }
-  .\@fulldesktop-g--background-color-pink-40 {
+  .g--background-color-pink-40\@fulldesktop {
     background-color: #DB2979;
   }
-  .\@fulldesktop-g--background-color-pink-50 {
+  .g--background-color-pink-50\@fulldesktop {
     background-color: #EC4699;
   }
-  .\@fulldesktop-g--background-color-pink-60 {
+  .g--background-color-pink-60\@fulldesktop {
     background-color: #F471B5;
   }
-  .\@fulldesktop-g--background-color-pink-70 {
+  .g--background-color-pink-70\@fulldesktop {
     background-color: #F9A9D5;
   }
-  .\@fulldesktop-g--background-color-pink-80 {
+  .g--background-color-pink-80\@fulldesktop {
     background-color: #FBD0E8;
   }
-  .\@fulldesktop-g--background-color-pink-90 {
+  .g--background-color-pink-90\@fulldesktop {
     background-color: #FCE8F4;
   }
-  .\@fulldesktop-g--background-color-grey-10 {
+  .g--background-color-grey-10\@fulldesktop {
     background-color: #111827;
   }
-  .\@fulldesktop-g--background-color-grey-20 {
+  .g--background-color-grey-20\@fulldesktop {
     background-color: #1f2937;
   }
-  .\@fulldesktop-g--background-color-grey-30 {
+  .g--background-color-grey-30\@fulldesktop {
     background-color: #374151;
   }
-  .\@fulldesktop-g--background-color-grey-40 {
+  .g--background-color-grey-40\@fulldesktop {
     background-color: #4b5563;
   }
-  .\@fulldesktop-g--background-color-grey-50 {
+  .g--background-color-grey-50\@fulldesktop {
     background-color: #6b7280;
   }
-  .\@fulldesktop-g--background-color-grey-60 {
+  .g--background-color-grey-60\@fulldesktop {
     background-color: #9ca3af;
   }
-  .\@fulldesktop-g--background-color-grey-70 {
+  .g--background-color-grey-70\@fulldesktop {
     background-color: #d1d5db;
   }
-  .\@fulldesktop-g--background-color-grey-80 {
+  .g--background-color-grey-80\@fulldesktop {
     background-color: #e5e7eb;
   }
-  .\@fulldesktop-g--background-color-grey-90 {
+  .g--background-color-grey-90\@fulldesktop {
     background-color: #f3f4f6;
   }
 }

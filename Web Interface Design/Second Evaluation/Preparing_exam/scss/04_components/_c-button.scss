@@ -1,0 +1,128 @@
+.c-button {
+  --c-button-background-color: var(--color-principal-50);
+  --c-button-color: var(--color-alternative-50);
+
+  padding: 12px;
+  background-color: var(--c-button-background-color);
+  color: var(--c-button-color);
+
+  @each $key, $value in $mediaQueries {
+    @media (min-width: #{$value}) {
+
+      @if ($posicionDelMediaQuerie) {
+
+            &#{$separadorMediaQueries}#{$key} {
+
+              height: 100px;
+              width: 50px;
+              background-color: var(--c-button-background-color);
+              color: var(--c-button-color);
+          }
+      } @else {
+        @each $nombre_color, $valor_color in $variantes {
+
+            .#{$separadorMediaQueries}#{$key}-c-button {
+              height: 100px;
+              width: 50px;
+              background-color: var(--c-button-background-color);
+              color: var(--c-button-color);
+
+          }
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $mediaQueries {
+
+    @media (min-width: #{$value}) {
+
+
+      @if ($posicionDelMediaQuerie) {
+
+        &--red#{$separadorMediaQueries}#{$key} {
+          --c-button-background-color: var(--color-red-30);
+
+          background-color: var(--c-button-background-color);
+        }
+      } @else {
+        @each $nombre_color, $valor_color in $variantes {
+
+          .#{$separadorMediaQueries}#{$key}-c-button--red {
+            --c-button-background-color: var(--color-red-30);
+
+            background-color: var(--c-button-background-color);
+
+          }
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $mediaQueries {
+
+    @media (min-width: #{$value}) {
+
+
+      @if ($posicionDelMediaQuerie) {
+
+        &--small#{$separadorMediaQueries}#{$key} {
+          padding: 6px;
+        }
+      } @else {
+        @each $nombre_color, $valor_color in $variantes {
+
+          .#{$separadorMediaQueries}#{$key}-c-button--small {
+            padding: 6px;
+
+          }
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $mediaQueries {
+
+    @media (min-width: #{$value}) {
+
+
+      @if ($posicionDelMediaQuerie) {
+
+        &--medium#{$separadorMediaQueries}#{$key} {
+          padding: 16px;
+        }
+      } @else {
+        @each $nombre_color, $valor_color in $variantes {
+
+          .#{$separadorMediaQueries}#{$key}-c-button--medium {
+            padding: 16px;
+
+          }
+        }
+      }
+    }
+  }
+
+  @each $key, $value in $mediaQueries {
+
+    @media (min-width: #{$value}) {
+
+
+      @if ($posicionDelMediaQuerie) {
+
+        &--large#{$separadorMediaQueries}#{$key} {
+          padding: 24px;
+        }
+      } @else {
+        @each $nombre_color, $valor_color in $variantes {
+
+          .#{$separadorMediaQueries}#{$key}-c-button--large {
+            padding: 24px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
