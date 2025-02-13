@@ -1,0 +1,52 @@
+.l-grid {
+	display: grid;
+}
+
+GRID TEMPLATE COLUMNS
+grid-template-columns: 1fr 1fr 2fr;
+grid-template-columns: 1fr 2fr 80px auto;
+grid-template-columns: repeat(6, 1fr);
+grid-template-columns: repeat(auto-fit, 100px);
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+GRID TEMPLATE ROWS
+grid-template-rows: IDEM CON FILAS
+
+GAP: también para flex, también hay gap-row y gap-column
+gap: 10px;
+gap: 15px 10px; // 15px entre filas, 10px entre columnas
+
+L COLUMNS: puede pedir algo así en cuanto al número de columnas, se puede meter entre media queries
+.l-columns {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+ 
+.l-columns--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.l-columns--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.l-columns--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.l-columns {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+ 
+  @for $i from 1 to 12 {
+    &--#{$i} {
+      grid-template-columns: repeat($i, 1fr);
+    }    
+  } 
+   
+  &__area {
+  }
+}
+
+
+SPAN
+grid-columns: span 2; // Que ocupe X número de columnas
