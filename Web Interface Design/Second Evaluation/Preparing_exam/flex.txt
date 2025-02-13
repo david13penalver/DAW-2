@@ -1,0 +1,38 @@
+.l-flex {
+	display: flex;
+}
+
+DIRECTION
+flex-direction:row
+flex-direction:column
+
+WRAP
+flex-wrap:wrap
+
+JUSTIFY-CONTENT: distribución del espacio sobrante en horizontal
+$justify-content: ("flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly");
+
+ALIGN-CONTENT: distribución del espacio sobrante en vertical
+$align-content: ("flex-start", "flex-end", "center", "stretch", "space-between", "space-around");
+
+ALIGN-ITEMS: justificación de los elementos
+$align-items: ("flex-start", "flex-end", "center", "stretch", "baseline");
+
+FLEX-GROW: el crecimiento. Por defecto 0 (no crece, usa el espacio que necesita)
+flex-grow: NUMBER
+- 1: todos los ítems con este valor crecerán para ocupar el espacio, pero lo mismo todos ellos
+- 2: el doble que los del uno
+- Etc.
+- Se usa en los hijos
+
+FLEX-SHRINK
+flex-shrink: NUMBER
+
+FLEX-BASIS: define tamaño inicial antes de aplicar crecimiento o reducción
+flex-basis: 300px (puede ser cualquier tipo de medida)
+
+@for $i from 1 through length($VARIABLE) {
+        $valor_especifico: nth($VARIABLE, $i);
+
+        &--JUSTIFYOALIGN-{$valor_especifico}: #{$valor_especifico};
+    }
