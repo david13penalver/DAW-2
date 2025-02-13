@@ -81,6 +81,8 @@ $mediaQueries:(
         "fulldesktop":992px
 );
 
+$posicionDelMediaQuerie: false;
+
 $colors-usando-1-array: (
         "principal": (#7c2d12, #9a3412, #c2410c, #ea580c, #f97316, #fb923c, #fdba74, #fed7aa, #ffedd5),
         "alternative":(#312e81, #3730a3, #4338ca, #4f46e5, #6366f1, #818cf8, #a5b4fc, #c7d2fe, #e0e7ff),

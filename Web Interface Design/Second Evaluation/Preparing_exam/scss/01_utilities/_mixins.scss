@@ -1,0 +1,84 @@
+@mixin box-shadow($name) {
+  -webkit-box-shadow: 2px 10px 24px $name;
+  -moz-box-shadow: 2px 10px 24px $name;
+  box-shadow: 2px 10px 24px $name;
+}
+
+@mixin padding($name) {
+  padding-top: $name;
+  padding-bottom: $name;
+  padding-left: $name;
+  padding-right: $name;
+}
+
+@mixin border($color, $radius){
+  border: 1px solid $color;
+  border-radius: $radius;
+}
+/*boton borde y boton general */
+
+@mixin buttonBorder($color, $size) {
+  border-bottom: $size solid $color;
+  border-right: $size solid $color;
+  border-top: $size solid white;
+  border-left: $size solid white;
+  border-radius: 10%;
+}
+@mixin buttonBg($backgroundColor, $fontColor) {
+  background-color: $backgroundColor;
+  color: $fontColor;
+}
+@mixin buttonFont($font-size, $font-family) {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+@mixin font($colors, $font-size, $text-aling, $text-decoration) {
+  color: $colors;
+  font-size: $font-size;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: $text-aling;
+  text-decoration: $text-decoration;
+}
+@mixin mediaQuery( $breakpoint, $valuebreak, $breakmark,$markposition,$map,$name) {
+  @if ($breakpoint == "") {
+    @each $key, $value in $map {
+      @if $key == "" {
+        .g--#{$name} {
+          #{$name}: #{$value};
+        }
+      } @else {
+        .g--#{$name}-#{$key} {
+          #{$name}: #{$value};
+        }
+      }
+    }
+  } @else {
+    @media (min-width: $valuebreak) {
+      @each $key, $value in $map {
+        @if ($markposition == "end") {
+          @if $key == "" {
+            .g--#{$name}#{$breakmark}#{$breakpoint} {
+              #{$name}: #{$value};
+            }
+          } @else {
+            .g--#{$name}-#{$key}#{$breakmark}#{$breakpoint} {
+              #{$name}: #{$value};
+            }
+          }
+        }
+        @if ($markposition == "start") {
+          @if $key == "" {
+            .#{$breakpoint}#{$breakmark}g--#{$name} {
+              #{$name}: #{$value};
+            }
+          } @else {
+            .#{$breakpoint}#{$breakmark}g--#{$name}-#{$key} {
+              #{$name}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+}

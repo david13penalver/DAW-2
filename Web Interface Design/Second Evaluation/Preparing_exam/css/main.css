@@ -1,85 +1,85 @@
 :root {
-  --color-principal--10: #7c2d13;
-  --color-principal--20: #9a3412;
-  --color-principal--30: #c2410c;
-  --color-principal--40: #ea580c;
-  --color-principal--50: #f97316;
-  --color-principal--60: #fb923c;
-  --color-principal--70: #fdba74;
-  --color-principal--80: #fed7aa;
-  --color-principal--90: #ffedd5;
-  --color-alternative--10: #312e81;
-  --color-alternative--20: #3730a3;
-  --color-alternative--30: #4338ca;
-  --color-alternative--40: #4f46e5;
-  --color-alternative--50: #6366f1;
-  --color-alternative--60: #818cf8;
-  --color-alternative--70: #a5b4fc;
-  --color-alternative--80: #c7d2fe;
-  --color-alternative--90: #e0e7ff;
-  --color-red--10: #811D1D;
-  --color-red--20: #981B1B;
-  --color-red--30: #BA1C1C;
-  --color-red--40: #DC2828;
-  --color-red--50: #EF4343;
-  --color-red--60: #F87272;
-  --color-red--70: #FCA6A6;
-  --color-red--80: #FEC8C8;
-  --color-red--90: #FEE1E1;
-  --color-blue--10: #1E3B8A;
-  --color-blue--20: #1E3FAE;
-  --color-blue--30: #1D4FD7;
-  --color-blue--40: #2463EB;
-  --color-blue--50: #3C83F6;
-  --color-blue--60: #61A6FA;
-  --color-blue--70: #91C3FD;
-  --color-blue--80: #BEDBFE;
-  --color-blue--90: #DCEBFE;
-  --color-green--10: #064C39;
-  --color-green--20: #066046;
-  --color-green--30: #047756;
-  --color-green--40: #059467;
-  --color-green--50: #10B77F;
-  --color-green--60: #36D399;
-  --color-green--70: #6EE7B7;
-  --color-green--80: #A5F3CF;
-  --color-green--90: #D1FAE5;
-  --color-yellow--10: #76350F;
-  --color-yellow--20: #91400D;
-  --color-yellow--30: #B35309;
-  --color-yellow--40: #DB7706;
-  --color-yellow--50: #F59F0A;
-  --color-yellow--60: #FBBD23;
-  --color-yellow--70: #FCD44F;
-  --color-yellow--80: #FDE68B;
-  --color-yellow--90: #FEF3C8;
-  --color-purple--10: #4D1D95;
-  --color-purple--20: #5A21B5;
-  --color-purple--30: #6B26D9;
-  --color-purple--40: #7C3BED;
-  --color-purple--50: #895AF6;
-  --color-purple--60: #A689FA;
-  --color-purple--70: #C3B4FD;
-  --color-purple--80: #DED7FE;
-  --color-purple--90: #EBE7FE;
-  --color-pink--10: #811842;
-  --color-pink--20: #9B174C;
-  --color-pink--30: #BF185D;
-  --color-pink--40: #DB2979;
-  --color-pink--50: #EC4699;
-  --color-pink--60: #F471B5;
-  --color-pink--70: #F9A9D5;
-  --color-pink--80: #FBD0E8;
-  --color-pink--90: #FCE8F4;
-  --color-grey--10: #111827;
-  --color-grey--20: #1f2937;
-  --color-grey--30: #374151;
-  --color-grey--40: #4b5563;
-  --color-grey--50: #6b7280;
-  --color-grey--60: #9ca3af;
-  --color-grey--70: #d1d5db;
-  --color-grey--80: #e5e7eb;
-  --color-grey--90: #f3f4f6;
+  --color-principal-10: #7c2d13;
+  --color-principal-20: #9a3412;
+  --color-principal-30: #c2410c;
+  --color-principal-40: #ea580c;
+  --color-principal-50: #f97316;
+  --color-principal-60: #fb923c;
+  --color-principal-70: #fdba74;
+  --color-principal-80: #fed7aa;
+  --color-principal-90: #ffedd5;
+  --color-alternative-10: #312e81;
+  --color-alternative-20: #3730a3;
+  --color-alternative-30: #4338ca;
+  --color-alternative-40: #4f46e5;
+  --color-alternative-50: #6366f1;
+  --color-alternative-60: #818cf8;
+  --color-alternative-70: #a5b4fc;
+  --color-alternative-80: #c7d2fe;
+  --color-alternative-90: #e0e7ff;
+  --color-red-10: #811D1D;
+  --color-red-20: #981B1B;
+  --color-red-30: #BA1C1C;
+  --color-red-40: #DC2828;
+  --color-red-50: #EF4343;
+  --color-red-60: #F87272;
+  --color-red-70: #FCA6A6;
+  --color-red-80: #FEC8C8;
+  --color-red-90: #FEE1E1;
+  --color-blue-10: #1E3B8A;
+  --color-blue-20: #1E3FAE;
+  --color-blue-30: #1D4FD7;
+  --color-blue-40: #2463EB;
+  --color-blue-50: #3C83F6;
+  --color-blue-60: #61A6FA;
+  --color-blue-70: #91C3FD;
+  --color-blue-80: #BEDBFE;
+  --color-blue-90: #DCEBFE;
+  --color-green-10: #064C39;
+  --color-green-20: #066046;
+  --color-green-30: #047756;
+  --color-green-40: #059467;
+  --color-green-50: #10B77F;
+  --color-green-60: #36D399;
+  --color-green-70: #6EE7B7;
+  --color-green-80: #A5F3CF;
+  --color-green-90: #D1FAE5;
+  --color-yellow-10: #76350F;
+  --color-yellow-20: #91400D;
+  --color-yellow-30: #B35309;
+  --color-yellow-40: #DB7706;
+  --color-yellow-50: #F59F0A;
+  --color-yellow-60: #FBBD23;
+  --color-yellow-70: #FCD44F;
+  --color-yellow-80: #FDE68B;
+  --color-yellow-90: #FEF3C8;
+  --color-purple-10: #4D1D95;
+  --color-purple-20: #5A21B5;
+  --color-purple-30: #6B26D9;
+  --color-purple-40: #7C3BED;
+  --color-purple-50: #895AF6;
+  --color-purple-60: #A689FA;
+  --color-purple-70: #C3B4FD;
+  --color-purple-80: #DED7FE;
+  --color-purple-90: #EBE7FE;
+  --color-pink-10: #811842;
+  --color-pink-20: #9B174C;
+  --color-pink-30: #BF185D;
+  --color-pink-40: #DB2979;
+  --color-pink-50: #EC4699;
+  --color-pink-60: #F471B5;
+  --color-pink-70: #F9A9D5;
+  --color-pink-80: #FBD0E8;
+  --color-pink-90: #FCE8F4;
+  --color-grey-10: #111827;
+  --color-grey-20: #1f2937;
+  --color-grey-30: #374151;
+  --color-grey-40: #4b5563;
+  --color-grey-50: #6b7280;
+  --color-grey-60: #9ca3af;
+  --color-grey-70: #d1d5db;
+  --color-grey-80: #e5e7eb;
+  --color-grey-90: #f3f4f6;
   --margin-10: 0px;
   --margin-20: 4px;
   --margin-30: 6x;
@@ -93,6 +93,7 @@
   --margin-110: 40px;
   --margin-120: 48px;
   --margin-130: 64px;
+  --margin-140: 80px;
   --padding-10: 2px;
   --padding-20: 4px;
   --padding-30: 6px;
@@ -103,9 +104,29 @@
   --padding-80: 24px;
   --padding-90: 36px;
   --padding-100: 48px;
+  --witdh-10: 10px;
+  --witdh-20: 20px;
+  --witdh-30: 30px;
+  --witdh-40: 50px;
+  --witdh-50: 70px;
+  --witdh-60: 100px;
+  --witdh-70: 140px;
+  --witdh-80: 200px;
+  --witdh-90: 300px;
+  --witdh-100: 400px;
+  --height-10: 10px;
+  --height-20: 20px;
+  --height-30: 30px;
+  --height-40: 50px;
+  --height-50: 70px;
+  --height-60: 100px;
+  --height-70: 140px;
+  --height-80: 200px;
+  --height-90: 300px;
+  --height-100: 400px;
   --font-size-xs: 10px;
   --font-size-s: 14px;
-  --font-size-: 16px;
+  --font-size: 16px;
   --font-size-m: 20px;
   --font-size-l: 24px;
   --font-size-xl: 32px;
@@ -847,2286 +868,6 @@ html {
   width: 400px;
 }
 
-@media (min-width: 567px) {
-  \@tablet.g--background-color-principal-1 {
-    background-color: var(--color-usando-array-1-principal-1);
-  }
-  \@tablet.g--text-color-principal-1 {
-    color: var(--color-usando-array-1-principal-1);
-  }
-  \@tablet.g--border-color-principal-1 {
-    border-color: var(--color-usando-array-1-principal-1);
-  }
-  \@tablet.g--background-color-principal-2 {
-    background-color: var(--color-usando-array-1-principal-2);
-  }
-  \@tablet.g--text-color-principal-2 {
-    color: var(--color-usando-array-1-principal-2);
-  }
-  \@tablet.g--border-color-principal-2 {
-    border-color: var(--color-usando-array-1-principal-2);
-  }
-  \@tablet.g--background-color-principal-3 {
-    background-color: var(--color-usando-array-1-principal-3);
-  }
-  \@tablet.g--text-color-principal-3 {
-    color: var(--color-usando-array-1-principal-3);
-  }
-  \@tablet.g--border-color-principal-3 {
-    border-color: var(--color-usando-array-1-principal-3);
-  }
-  \@tablet.g--background-color-principal-4 {
-    background-color: var(--color-usando-array-1-principal-4);
-  }
-  \@tablet.g--text-color-principal-4 {
-    color: var(--color-usando-array-1-principal-4);
-  }
-  \@tablet.g--border-color-principal-4 {
-    border-color: var(--color-usando-array-1-principal-4);
-  }
-  \@tablet.g--background-color-principal-5 {
-    background-color: var(--color-usando-array-1-principal-5);
-  }
-  \@tablet.g--text-color-principal-5 {
-    color: var(--color-usando-array-1-principal-5);
-  }
-  \@tablet.g--border-color-principal-5 {
-    border-color: var(--color-usando-array-1-principal-5);
-  }
-  \@tablet.g--background-color-principal-6 {
-    background-color: var(--color-usando-array-1-principal-6);
-  }
-  \@tablet.g--text-color-principal-6 {
-    color: var(--color-usando-array-1-principal-6);
-  }
-  \@tablet.g--border-color-principal-6 {
-    border-color: var(--color-usando-array-1-principal-6);
-  }
-  \@tablet.g--background-color-principal-7 {
-    background-color: var(--color-usando-array-1-principal-7);
-  }
-  \@tablet.g--text-color-principal-7 {
-    color: var(--color-usando-array-1-principal-7);
-  }
-  \@tablet.g--border-color-principal-7 {
-    border-color: var(--color-usando-array-1-principal-7);
-  }
-  \@tablet.g--background-color-principal-8 {
-    background-color: var(--color-usando-array-1-principal-8);
-  }
-  \@tablet.g--text-color-principal-8 {
-    color: var(--color-usando-array-1-principal-8);
-  }
-  \@tablet.g--border-color-principal-8 {
-    border-color: var(--color-usando-array-1-principal-8);
-  }
-  \@tablet.g--background-color-principal-9 {
-    background-color: var(--color-usando-array-1-principal-9);
-  }
-  \@tablet.g--text-color-principal-9 {
-    color: var(--color-usando-array-1-principal-9);
-  }
-  \@tablet.g--border-color-principal-9 {
-    border-color: var(--color-usando-array-1-principal-9);
-  }
-  \@tablet.g--background-color-alternative-1 {
-    background-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@tablet.g--text-color-alternative-1 {
-    color: var(--color-usando-array-1-alternative-1);
-  }
-  \@tablet.g--border-color-alternative-1 {
-    border-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@tablet.g--background-color-alternative-2 {
-    background-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@tablet.g--text-color-alternative-2 {
-    color: var(--color-usando-array-1-alternative-2);
-  }
-  \@tablet.g--border-color-alternative-2 {
-    border-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@tablet.g--background-color-alternative-3 {
-    background-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@tablet.g--text-color-alternative-3 {
-    color: var(--color-usando-array-1-alternative-3);
-  }
-  \@tablet.g--border-color-alternative-3 {
-    border-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@tablet.g--background-color-alternative-4 {
-    background-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@tablet.g--text-color-alternative-4 {
-    color: var(--color-usando-array-1-alternative-4);
-  }
-  \@tablet.g--border-color-alternative-4 {
-    border-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@tablet.g--background-color-alternative-5 {
-    background-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@tablet.g--text-color-alternative-5 {
-    color: var(--color-usando-array-1-alternative-5);
-  }
-  \@tablet.g--border-color-alternative-5 {
-    border-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@tablet.g--background-color-alternative-6 {
-    background-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@tablet.g--text-color-alternative-6 {
-    color: var(--color-usando-array-1-alternative-6);
-  }
-  \@tablet.g--border-color-alternative-6 {
-    border-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@tablet.g--background-color-alternative-7 {
-    background-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@tablet.g--text-color-alternative-7 {
-    color: var(--color-usando-array-1-alternative-7);
-  }
-  \@tablet.g--border-color-alternative-7 {
-    border-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@tablet.g--background-color-alternative-8 {
-    background-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@tablet.g--text-color-alternative-8 {
-    color: var(--color-usando-array-1-alternative-8);
-  }
-  \@tablet.g--border-color-alternative-8 {
-    border-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@tablet.g--background-color-alternative-9 {
-    background-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@tablet.g--text-color-alternative-9 {
-    color: var(--color-usando-array-1-alternative-9);
-  }
-  \@tablet.g--border-color-alternative-9 {
-    border-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@tablet.g--background-color-red-1 {
-    background-color: var(--color-usando-array-1-red-1);
-  }
-  \@tablet.g--text-color-red-1 {
-    color: var(--color-usando-array-1-red-1);
-  }
-  \@tablet.g--border-color-red-1 {
-    border-color: var(--color-usando-array-1-red-1);
-  }
-  \@tablet.g--background-color-red-2 {
-    background-color: var(--color-usando-array-1-red-2);
-  }
-  \@tablet.g--text-color-red-2 {
-    color: var(--color-usando-array-1-red-2);
-  }
-  \@tablet.g--border-color-red-2 {
-    border-color: var(--color-usando-array-1-red-2);
-  }
-  \@tablet.g--background-color-red-3 {
-    background-color: var(--color-usando-array-1-red-3);
-  }
-  \@tablet.g--text-color-red-3 {
-    color: var(--color-usando-array-1-red-3);
-  }
-  \@tablet.g--border-color-red-3 {
-    border-color: var(--color-usando-array-1-red-3);
-  }
-  \@tablet.g--background-color-red-4 {
-    background-color: var(--color-usando-array-1-red-4);
-  }
-  \@tablet.g--text-color-red-4 {
-    color: var(--color-usando-array-1-red-4);
-  }
-  \@tablet.g--border-color-red-4 {
-    border-color: var(--color-usando-array-1-red-4);
-  }
-  \@tablet.g--background-color-red-5 {
-    background-color: var(--color-usando-array-1-red-5);
-  }
-  \@tablet.g--text-color-red-5 {
-    color: var(--color-usando-array-1-red-5);
-  }
-  \@tablet.g--border-color-red-5 {
-    border-color: var(--color-usando-array-1-red-5);
-  }
-  \@tablet.g--background-color-red-6 {
-    background-color: var(--color-usando-array-1-red-6);
-  }
-  \@tablet.g--text-color-red-6 {
-    color: var(--color-usando-array-1-red-6);
-  }
-  \@tablet.g--border-color-red-6 {
-    border-color: var(--color-usando-array-1-red-6);
-  }
-  \@tablet.g--background-color-red-7 {
-    background-color: var(--color-usando-array-1-red-7);
-  }
-  \@tablet.g--text-color-red-7 {
-    color: var(--color-usando-array-1-red-7);
-  }
-  \@tablet.g--border-color-red-7 {
-    border-color: var(--color-usando-array-1-red-7);
-  }
-  \@tablet.g--background-color-red-8 {
-    background-color: var(--color-usando-array-1-red-8);
-  }
-  \@tablet.g--text-color-red-8 {
-    color: var(--color-usando-array-1-red-8);
-  }
-  \@tablet.g--border-color-red-8 {
-    border-color: var(--color-usando-array-1-red-8);
-  }
-  \@tablet.g--background-color-red-9 {
-    background-color: var(--color-usando-array-1-red-9);
-  }
-  \@tablet.g--text-color-red-9 {
-    color: var(--color-usando-array-1-red-9);
-  }
-  \@tablet.g--border-color-red-9 {
-    border-color: var(--color-usando-array-1-red-9);
-  }
-  \@tablet.g--background-color-blue-1 {
-    background-color: var(--color-usando-array-1-blue-1);
-  }
-  \@tablet.g--text-color-blue-1 {
-    color: var(--color-usando-array-1-blue-1);
-  }
-  \@tablet.g--border-color-blue-1 {
-    border-color: var(--color-usando-array-1-blue-1);
-  }
-  \@tablet.g--background-color-blue-2 {
-    background-color: var(--color-usando-array-1-blue-2);
-  }
-  \@tablet.g--text-color-blue-2 {
-    color: var(--color-usando-array-1-blue-2);
-  }
-  \@tablet.g--border-color-blue-2 {
-    border-color: var(--color-usando-array-1-blue-2);
-  }
-  \@tablet.g--background-color-blue-3 {
-    background-color: var(--color-usando-array-1-blue-3);
-  }
-  \@tablet.g--text-color-blue-3 {
-    color: var(--color-usando-array-1-blue-3);
-  }
-  \@tablet.g--border-color-blue-3 {
-    border-color: var(--color-usando-array-1-blue-3);
-  }
-  \@tablet.g--background-color-blue-4 {
-    background-color: var(--color-usando-array-1-blue-4);
-  }
-  \@tablet.g--text-color-blue-4 {
-    color: var(--color-usando-array-1-blue-4);
-  }
-  \@tablet.g--border-color-blue-4 {
-    border-color: var(--color-usando-array-1-blue-4);
-  }
-  \@tablet.g--background-color-blue-5 {
-    background-color: var(--color-usando-array-1-blue-5);
-  }
-  \@tablet.g--text-color-blue-5 {
-    color: var(--color-usando-array-1-blue-5);
-  }
-  \@tablet.g--border-color-blue-5 {
-    border-color: var(--color-usando-array-1-blue-5);
-  }
-  \@tablet.g--background-color-blue-6 {
-    background-color: var(--color-usando-array-1-blue-6);
-  }
-  \@tablet.g--text-color-blue-6 {
-    color: var(--color-usando-array-1-blue-6);
-  }
-  \@tablet.g--border-color-blue-6 {
-    border-color: var(--color-usando-array-1-blue-6);
-  }
-  \@tablet.g--background-color-blue-7 {
-    background-color: var(--color-usando-array-1-blue-7);
-  }
-  \@tablet.g--text-color-blue-7 {
-    color: var(--color-usando-array-1-blue-7);
-  }
-  \@tablet.g--border-color-blue-7 {
-    border-color: var(--color-usando-array-1-blue-7);
-  }
-  \@tablet.g--background-color-blue-8 {
-    background-color: var(--color-usando-array-1-blue-8);
-  }
-  \@tablet.g--text-color-blue-8 {
-    color: var(--color-usando-array-1-blue-8);
-  }
-  \@tablet.g--border-color-blue-8 {
-    border-color: var(--color-usando-array-1-blue-8);
-  }
-  \@tablet.g--background-color-blue-9 {
-    background-color: var(--color-usando-array-1-blue-9);
-  }
-  \@tablet.g--text-color-blue-9 {
-    color: var(--color-usando-array-1-blue-9);
-  }
-  \@tablet.g--border-color-blue-9 {
-    border-color: var(--color-usando-array-1-blue-9);
-  }
-  \@tablet.g--background-color-green-1 {
-    background-color: var(--color-usando-array-1-green-1);
-  }
-  \@tablet.g--text-color-green-1 {
-    color: var(--color-usando-array-1-green-1);
-  }
-  \@tablet.g--border-color-green-1 {
-    border-color: var(--color-usando-array-1-green-1);
-  }
-  \@tablet.g--background-color-green-2 {
-    background-color: var(--color-usando-array-1-green-2);
-  }
-  \@tablet.g--text-color-green-2 {
-    color: var(--color-usando-array-1-green-2);
-  }
-  \@tablet.g--border-color-green-2 {
-    border-color: var(--color-usando-array-1-green-2);
-  }
-  \@tablet.g--background-color-green-3 {
-    background-color: var(--color-usando-array-1-green-3);
-  }
-  \@tablet.g--text-color-green-3 {
-    color: var(--color-usando-array-1-green-3);
-  }
-  \@tablet.g--border-color-green-3 {
-    border-color: var(--color-usando-array-1-green-3);
-  }
-  \@tablet.g--background-color-green-4 {
-    background-color: var(--color-usando-array-1-green-4);
-  }
-  \@tablet.g--text-color-green-4 {
-    color: var(--color-usando-array-1-green-4);
-  }
-  \@tablet.g--border-color-green-4 {
-    border-color: var(--color-usando-array-1-green-4);
-  }
-  \@tablet.g--background-color-green-5 {
-    background-color: var(--color-usando-array-1-green-5);
-  }
-  \@tablet.g--text-color-green-5 {
-    color: var(--color-usando-array-1-green-5);
-  }
-  \@tablet.g--border-color-green-5 {
-    border-color: var(--color-usando-array-1-green-5);
-  }
-  \@tablet.g--background-color-green-6 {
-    background-color: var(--color-usando-array-1-green-6);
-  }
-  \@tablet.g--text-color-green-6 {
-    color: var(--color-usando-array-1-green-6);
-  }
-  \@tablet.g--border-color-green-6 {
-    border-color: var(--color-usando-array-1-green-6);
-  }
-  \@tablet.g--background-color-green-7 {
-    background-color: var(--color-usando-array-1-green-7);
-  }
-  \@tablet.g--text-color-green-7 {
-    color: var(--color-usando-array-1-green-7);
-  }
-  \@tablet.g--border-color-green-7 {
-    border-color: var(--color-usando-array-1-green-7);
-  }
-  \@tablet.g--background-color-green-8 {
-    background-color: var(--color-usando-array-1-green-8);
-  }
-  \@tablet.g--text-color-green-8 {
-    color: var(--color-usando-array-1-green-8);
-  }
-  \@tablet.g--border-color-green-8 {
-    border-color: var(--color-usando-array-1-green-8);
-  }
-  \@tablet.g--background-color-green-9 {
-    background-color: var(--color-usando-array-1-green-9);
-  }
-  \@tablet.g--text-color-green-9 {
-    color: var(--color-usando-array-1-green-9);
-  }
-  \@tablet.g--border-color-green-9 {
-    border-color: var(--color-usando-array-1-green-9);
-  }
-  \@tablet.g--background-color-yellow-1 {
-    background-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@tablet.g--text-color-yellow-1 {
-    color: var(--color-usando-array-1-yellow-1);
-  }
-  \@tablet.g--border-color-yellow-1 {
-    border-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@tablet.g--background-color-yellow-2 {
-    background-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@tablet.g--text-color-yellow-2 {
-    color: var(--color-usando-array-1-yellow-2);
-  }
-  \@tablet.g--border-color-yellow-2 {
-    border-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@tablet.g--background-color-yellow-3 {
-    background-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@tablet.g--text-color-yellow-3 {
-    color: var(--color-usando-array-1-yellow-3);
-  }
-  \@tablet.g--border-color-yellow-3 {
-    border-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@tablet.g--background-color-yellow-4 {
-    background-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@tablet.g--text-color-yellow-4 {
-    color: var(--color-usando-array-1-yellow-4);
-  }
-  \@tablet.g--border-color-yellow-4 {
-    border-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@tablet.g--background-color-yellow-5 {
-    background-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@tablet.g--text-color-yellow-5 {
-    color: var(--color-usando-array-1-yellow-5);
-  }
-  \@tablet.g--border-color-yellow-5 {
-    border-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@tablet.g--background-color-yellow-6 {
-    background-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@tablet.g--text-color-yellow-6 {
-    color: var(--color-usando-array-1-yellow-6);
-  }
-  \@tablet.g--border-color-yellow-6 {
-    border-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@tablet.g--background-color-yellow-7 {
-    background-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@tablet.g--text-color-yellow-7 {
-    color: var(--color-usando-array-1-yellow-7);
-  }
-  \@tablet.g--border-color-yellow-7 {
-    border-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@tablet.g--background-color-yellow-8 {
-    background-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@tablet.g--text-color-yellow-8 {
-    color: var(--color-usando-array-1-yellow-8);
-  }
-  \@tablet.g--border-color-yellow-8 {
-    border-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@tablet.g--background-color-yellow-9 {
-    background-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@tablet.g--text-color-yellow-9 {
-    color: var(--color-usando-array-1-yellow-9);
-  }
-  \@tablet.g--border-color-yellow-9 {
-    border-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@tablet.g--background-color-purple-1 {
-    background-color: var(--color-usando-array-1-purple-1);
-  }
-  \@tablet.g--text-color-purple-1 {
-    color: var(--color-usando-array-1-purple-1);
-  }
-  \@tablet.g--border-color-purple-1 {
-    border-color: var(--color-usando-array-1-purple-1);
-  }
-  \@tablet.g--background-color-purple-2 {
-    background-color: var(--color-usando-array-1-purple-2);
-  }
-  \@tablet.g--text-color-purple-2 {
-    color: var(--color-usando-array-1-purple-2);
-  }
-  \@tablet.g--border-color-purple-2 {
-    border-color: var(--color-usando-array-1-purple-2);
-  }
-  \@tablet.g--background-color-purple-3 {
-    background-color: var(--color-usando-array-1-purple-3);
-  }
-  \@tablet.g--text-color-purple-3 {
-    color: var(--color-usando-array-1-purple-3);
-  }
-  \@tablet.g--border-color-purple-3 {
-    border-color: var(--color-usando-array-1-purple-3);
-  }
-  \@tablet.g--background-color-purple-4 {
-    background-color: var(--color-usando-array-1-purple-4);
-  }
-  \@tablet.g--text-color-purple-4 {
-    color: var(--color-usando-array-1-purple-4);
-  }
-  \@tablet.g--border-color-purple-4 {
-    border-color: var(--color-usando-array-1-purple-4);
-  }
-  \@tablet.g--background-color-purple-5 {
-    background-color: var(--color-usando-array-1-purple-5);
-  }
-  \@tablet.g--text-color-purple-5 {
-    color: var(--color-usando-array-1-purple-5);
-  }
-  \@tablet.g--border-color-purple-5 {
-    border-color: var(--color-usando-array-1-purple-5);
-  }
-  \@tablet.g--background-color-purple-6 {
-    background-color: var(--color-usando-array-1-purple-6);
-  }
-  \@tablet.g--text-color-purple-6 {
-    color: var(--color-usando-array-1-purple-6);
-  }
-  \@tablet.g--border-color-purple-6 {
-    border-color: var(--color-usando-array-1-purple-6);
-  }
-  \@tablet.g--background-color-purple-7 {
-    background-color: var(--color-usando-array-1-purple-7);
-  }
-  \@tablet.g--text-color-purple-7 {
-    color: var(--color-usando-array-1-purple-7);
-  }
-  \@tablet.g--border-color-purple-7 {
-    border-color: var(--color-usando-array-1-purple-7);
-  }
-  \@tablet.g--background-color-purple-8 {
-    background-color: var(--color-usando-array-1-purple-8);
-  }
-  \@tablet.g--text-color-purple-8 {
-    color: var(--color-usando-array-1-purple-8);
-  }
-  \@tablet.g--border-color-purple-8 {
-    border-color: var(--color-usando-array-1-purple-8);
-  }
-  \@tablet.g--background-color-purple-9 {
-    background-color: var(--color-usando-array-1-purple-9);
-  }
-  \@tablet.g--text-color-purple-9 {
-    color: var(--color-usando-array-1-purple-9);
-  }
-  \@tablet.g--border-color-purple-9 {
-    border-color: var(--color-usando-array-1-purple-9);
-  }
-  \@tablet.g--background-color-pink-1 {
-    background-color: var(--color-usando-array-1-pink-1);
-  }
-  \@tablet.g--text-color-pink-1 {
-    color: var(--color-usando-array-1-pink-1);
-  }
-  \@tablet.g--border-color-pink-1 {
-    border-color: var(--color-usando-array-1-pink-1);
-  }
-  \@tablet.g--background-color-pink-2 {
-    background-color: var(--color-usando-array-1-pink-2);
-  }
-  \@tablet.g--text-color-pink-2 {
-    color: var(--color-usando-array-1-pink-2);
-  }
-  \@tablet.g--border-color-pink-2 {
-    border-color: var(--color-usando-array-1-pink-2);
-  }
-  \@tablet.g--background-color-pink-3 {
-    background-color: var(--color-usando-array-1-pink-3);
-  }
-  \@tablet.g--text-color-pink-3 {
-    color: var(--color-usando-array-1-pink-3);
-  }
-  \@tablet.g--border-color-pink-3 {
-    border-color: var(--color-usando-array-1-pink-3);
-  }
-  \@tablet.g--background-color-pink-4 {
-    background-color: var(--color-usando-array-1-pink-4);
-  }
-  \@tablet.g--text-color-pink-4 {
-    color: var(--color-usando-array-1-pink-4);
-  }
-  \@tablet.g--border-color-pink-4 {
-    border-color: var(--color-usando-array-1-pink-4);
-  }
-  \@tablet.g--background-color-pink-5 {
-    background-color: var(--color-usando-array-1-pink-5);
-  }
-  \@tablet.g--text-color-pink-5 {
-    color: var(--color-usando-array-1-pink-5);
-  }
-  \@tablet.g--border-color-pink-5 {
-    border-color: var(--color-usando-array-1-pink-5);
-  }
-  \@tablet.g--background-color-pink-6 {
-    background-color: var(--color-usando-array-1-pink-6);
-  }
-  \@tablet.g--text-color-pink-6 {
-    color: var(--color-usando-array-1-pink-6);
-  }
-  \@tablet.g--border-color-pink-6 {
-    border-color: var(--color-usando-array-1-pink-6);
-  }
-  \@tablet.g--background-color-pink-7 {
-    background-color: var(--color-usando-array-1-pink-7);
-  }
-  \@tablet.g--text-color-pink-7 {
-    color: var(--color-usando-array-1-pink-7);
-  }
-  \@tablet.g--border-color-pink-7 {
-    border-color: var(--color-usando-array-1-pink-7);
-  }
-  \@tablet.g--background-color-pink-8 {
-    background-color: var(--color-usando-array-1-pink-8);
-  }
-  \@tablet.g--text-color-pink-8 {
-    color: var(--color-usando-array-1-pink-8);
-  }
-  \@tablet.g--border-color-pink-8 {
-    border-color: var(--color-usando-array-1-pink-8);
-  }
-  \@tablet.g--background-color-pink-9 {
-    background-color: var(--color-usando-array-1-pink-9);
-  }
-  \@tablet.g--text-color-pink-9 {
-    color: var(--color-usando-array-1-pink-9);
-  }
-  \@tablet.g--border-color-pink-9 {
-    border-color: var(--color-usando-array-1-pink-9);
-  }
-  \@tablet.g--background-color-grey-1 {
-    background-color: var(--color-usando-array-1-grey-1);
-  }
-  \@tablet.g--text-color-grey-1 {
-    color: var(--color-usando-array-1-grey-1);
-  }
-  \@tablet.g--border-color-grey-1 {
-    border-color: var(--color-usando-array-1-grey-1);
-  }
-  \@tablet.g--background-color-grey-2 {
-    background-color: var(--color-usando-array-1-grey-2);
-  }
-  \@tablet.g--text-color-grey-2 {
-    color: var(--color-usando-array-1-grey-2);
-  }
-  \@tablet.g--border-color-grey-2 {
-    border-color: var(--color-usando-array-1-grey-2);
-  }
-  \@tablet.g--background-color-grey-3 {
-    background-color: var(--color-usando-array-1-grey-3);
-  }
-  \@tablet.g--text-color-grey-3 {
-    color: var(--color-usando-array-1-grey-3);
-  }
-  \@tablet.g--border-color-grey-3 {
-    border-color: var(--color-usando-array-1-grey-3);
-  }
-  \@tablet.g--background-color-grey-4 {
-    background-color: var(--color-usando-array-1-grey-4);
-  }
-  \@tablet.g--text-color-grey-4 {
-    color: var(--color-usando-array-1-grey-4);
-  }
-  \@tablet.g--border-color-grey-4 {
-    border-color: var(--color-usando-array-1-grey-4);
-  }
-  \@tablet.g--background-color-grey-5 {
-    background-color: var(--color-usando-array-1-grey-5);
-  }
-  \@tablet.g--text-color-grey-5 {
-    color: var(--color-usando-array-1-grey-5);
-  }
-  \@tablet.g--border-color-grey-5 {
-    border-color: var(--color-usando-array-1-grey-5);
-  }
-  \@tablet.g--background-color-grey-6 {
-    background-color: var(--color-usando-array-1-grey-6);
-  }
-  \@tablet.g--text-color-grey-6 {
-    color: var(--color-usando-array-1-grey-6);
-  }
-  \@tablet.g--border-color-grey-6 {
-    border-color: var(--color-usando-array-1-grey-6);
-  }
-  \@tablet.g--background-color-grey-7 {
-    background-color: var(--color-usando-array-1-grey-7);
-  }
-  \@tablet.g--text-color-grey-7 {
-    color: var(--color-usando-array-1-grey-7);
-  }
-  \@tablet.g--border-color-grey-7 {
-    border-color: var(--color-usando-array-1-grey-7);
-  }
-  \@tablet.g--background-color-grey-8 {
-    background-color: var(--color-usando-array-1-grey-8);
-  }
-  \@tablet.g--text-color-grey-8 {
-    color: var(--color-usando-array-1-grey-8);
-  }
-  \@tablet.g--border-color-grey-8 {
-    border-color: var(--color-usando-array-1-grey-8);
-  }
-  \@tablet.g--background-color-grey-9 {
-    background-color: var(--color-usando-array-1-grey-9);
-  }
-  \@tablet.g--text-color-grey-9 {
-    color: var(--color-usando-array-1-grey-9);
-  }
-  \@tablet.g--border-color-grey-9 {
-    border-color: var(--color-usando-array-1-grey-9);
-  }
-}
-@media (min-width: 768px) {
-  \@desktop.g--background-color-principal-1 {
-    background-color: var(--color-usando-array-1-principal-1);
-  }
-  \@desktop.g--text-color-principal-1 {
-    color: var(--color-usando-array-1-principal-1);
-  }
-  \@desktop.g--border-color-principal-1 {
-    border-color: var(--color-usando-array-1-principal-1);
-  }
-  \@desktop.g--background-color-principal-2 {
-    background-color: var(--color-usando-array-1-principal-2);
-  }
-  \@desktop.g--text-color-principal-2 {
-    color: var(--color-usando-array-1-principal-2);
-  }
-  \@desktop.g--border-color-principal-2 {
-    border-color: var(--color-usando-array-1-principal-2);
-  }
-  \@desktop.g--background-color-principal-3 {
-    background-color: var(--color-usando-array-1-principal-3);
-  }
-  \@desktop.g--text-color-principal-3 {
-    color: var(--color-usando-array-1-principal-3);
-  }
-  \@desktop.g--border-color-principal-3 {
-    border-color: var(--color-usando-array-1-principal-3);
-  }
-  \@desktop.g--background-color-principal-4 {
-    background-color: var(--color-usando-array-1-principal-4);
-  }
-  \@desktop.g--text-color-principal-4 {
-    color: var(--color-usando-array-1-principal-4);
-  }
-  \@desktop.g--border-color-principal-4 {
-    border-color: var(--color-usando-array-1-principal-4);
-  }
-  \@desktop.g--background-color-principal-5 {
-    background-color: var(--color-usando-array-1-principal-5);
-  }
-  \@desktop.g--text-color-principal-5 {
-    color: var(--color-usando-array-1-principal-5);
-  }
-  \@desktop.g--border-color-principal-5 {
-    border-color: var(--color-usando-array-1-principal-5);
-  }
-  \@desktop.g--background-color-principal-6 {
-    background-color: var(--color-usando-array-1-principal-6);
-  }
-  \@desktop.g--text-color-principal-6 {
-    color: var(--color-usando-array-1-principal-6);
-  }
-  \@desktop.g--border-color-principal-6 {
-    border-color: var(--color-usando-array-1-principal-6);
-  }
-  \@desktop.g--background-color-principal-7 {
-    background-color: var(--color-usando-array-1-principal-7);
-  }
-  \@desktop.g--text-color-principal-7 {
-    color: var(--color-usando-array-1-principal-7);
-  }
-  \@desktop.g--border-color-principal-7 {
-    border-color: var(--color-usando-array-1-principal-7);
-  }
-  \@desktop.g--background-color-principal-8 {
-    background-color: var(--color-usando-array-1-principal-8);
-  }
-  \@desktop.g--text-color-principal-8 {
-    color: var(--color-usando-array-1-principal-8);
-  }
-  \@desktop.g--border-color-principal-8 {
-    border-color: var(--color-usando-array-1-principal-8);
-  }
-  \@desktop.g--background-color-principal-9 {
-    background-color: var(--color-usando-array-1-principal-9);
-  }
-  \@desktop.g--text-color-principal-9 {
-    color: var(--color-usando-array-1-principal-9);
-  }
-  \@desktop.g--border-color-principal-9 {
-    border-color: var(--color-usando-array-1-principal-9);
-  }
-  \@desktop.g--background-color-alternative-1 {
-    background-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@desktop.g--text-color-alternative-1 {
-    color: var(--color-usando-array-1-alternative-1);
-  }
-  \@desktop.g--border-color-alternative-1 {
-    border-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@desktop.g--background-color-alternative-2 {
-    background-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@desktop.g--text-color-alternative-2 {
-    color: var(--color-usando-array-1-alternative-2);
-  }
-  \@desktop.g--border-color-alternative-2 {
-    border-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@desktop.g--background-color-alternative-3 {
-    background-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@desktop.g--text-color-alternative-3 {
-    color: var(--color-usando-array-1-alternative-3);
-  }
-  \@desktop.g--border-color-alternative-3 {
-    border-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@desktop.g--background-color-alternative-4 {
-    background-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@desktop.g--text-color-alternative-4 {
-    color: var(--color-usando-array-1-alternative-4);
-  }
-  \@desktop.g--border-color-alternative-4 {
-    border-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@desktop.g--background-color-alternative-5 {
-    background-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@desktop.g--text-color-alternative-5 {
-    color: var(--color-usando-array-1-alternative-5);
-  }
-  \@desktop.g--border-color-alternative-5 {
-    border-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@desktop.g--background-color-alternative-6 {
-    background-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@desktop.g--text-color-alternative-6 {
-    color: var(--color-usando-array-1-alternative-6);
-  }
-  \@desktop.g--border-color-alternative-6 {
-    border-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@desktop.g--background-color-alternative-7 {
-    background-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@desktop.g--text-color-alternative-7 {
-    color: var(--color-usando-array-1-alternative-7);
-  }
-  \@desktop.g--border-color-alternative-7 {
-    border-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@desktop.g--background-color-alternative-8 {
-    background-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@desktop.g--text-color-alternative-8 {
-    color: var(--color-usando-array-1-alternative-8);
-  }
-  \@desktop.g--border-color-alternative-8 {
-    border-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@desktop.g--background-color-alternative-9 {
-    background-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@desktop.g--text-color-alternative-9 {
-    color: var(--color-usando-array-1-alternative-9);
-  }
-  \@desktop.g--border-color-alternative-9 {
-    border-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@desktop.g--background-color-red-1 {
-    background-color: var(--color-usando-array-1-red-1);
-  }
-  \@desktop.g--text-color-red-1 {
-    color: var(--color-usando-array-1-red-1);
-  }
-  \@desktop.g--border-color-red-1 {
-    border-color: var(--color-usando-array-1-red-1);
-  }
-  \@desktop.g--background-color-red-2 {
-    background-color: var(--color-usando-array-1-red-2);
-  }
-  \@desktop.g--text-color-red-2 {
-    color: var(--color-usando-array-1-red-2);
-  }
-  \@desktop.g--border-color-red-2 {
-    border-color: var(--color-usando-array-1-red-2);
-  }
-  \@desktop.g--background-color-red-3 {
-    background-color: var(--color-usando-array-1-red-3);
-  }
-  \@desktop.g--text-color-red-3 {
-    color: var(--color-usando-array-1-red-3);
-  }
-  \@desktop.g--border-color-red-3 {
-    border-color: var(--color-usando-array-1-red-3);
-  }
-  \@desktop.g--background-color-red-4 {
-    background-color: var(--color-usando-array-1-red-4);
-  }
-  \@desktop.g--text-color-red-4 {
-    color: var(--color-usando-array-1-red-4);
-  }
-  \@desktop.g--border-color-red-4 {
-    border-color: var(--color-usando-array-1-red-4);
-  }
-  \@desktop.g--background-color-red-5 {
-    background-color: var(--color-usando-array-1-red-5);
-  }
-  \@desktop.g--text-color-red-5 {
-    color: var(--color-usando-array-1-red-5);
-  }
-  \@desktop.g--border-color-red-5 {
-    border-color: var(--color-usando-array-1-red-5);
-  }
-  \@desktop.g--background-color-red-6 {
-    background-color: var(--color-usando-array-1-red-6);
-  }
-  \@desktop.g--text-color-red-6 {
-    color: var(--color-usando-array-1-red-6);
-  }
-  \@desktop.g--border-color-red-6 {
-    border-color: var(--color-usando-array-1-red-6);
-  }
-  \@desktop.g--background-color-red-7 {
-    background-color: var(--color-usando-array-1-red-7);
-  }
-  \@desktop.g--text-color-red-7 {
-    color: var(--color-usando-array-1-red-7);
-  }
-  \@desktop.g--border-color-red-7 {
-    border-color: var(--color-usando-array-1-red-7);
-  }
-  \@desktop.g--background-color-red-8 {
-    background-color: var(--color-usando-array-1-red-8);
-  }
-  \@desktop.g--text-color-red-8 {
-    color: var(--color-usando-array-1-red-8);
-  }
-  \@desktop.g--border-color-red-8 {
-    border-color: var(--color-usando-array-1-red-8);
-  }
-  \@desktop.g--background-color-red-9 {
-    background-color: var(--color-usando-array-1-red-9);
-  }
-  \@desktop.g--text-color-red-9 {
-    color: var(--color-usando-array-1-red-9);
-  }
-  \@desktop.g--border-color-red-9 {
-    border-color: var(--color-usando-array-1-red-9);
-  }
-  \@desktop.g--background-color-blue-1 {
-    background-color: var(--color-usando-array-1-blue-1);
-  }
-  \@desktop.g--text-color-blue-1 {
-    color: var(--color-usando-array-1-blue-1);
-  }
-  \@desktop.g--border-color-blue-1 {
-    border-color: var(--color-usando-array-1-blue-1);
-  }
-  \@desktop.g--background-color-blue-2 {
-    background-color: var(--color-usando-array-1-blue-2);
-  }
-  \@desktop.g--text-color-blue-2 {
-    color: var(--color-usando-array-1-blue-2);
-  }
-  \@desktop.g--border-color-blue-2 {
-    border-color: var(--color-usando-array-1-blue-2);
-  }
-  \@desktop.g--background-color-blue-3 {
-    background-color: var(--color-usando-array-1-blue-3);
-  }
-  \@desktop.g--text-color-blue-3 {
-    color: var(--color-usando-array-1-blue-3);
-  }
-  \@desktop.g--border-color-blue-3 {
-    border-color: var(--color-usando-array-1-blue-3);
-  }
-  \@desktop.g--background-color-blue-4 {
-    background-color: var(--color-usando-array-1-blue-4);
-  }
-  \@desktop.g--text-color-blue-4 {
-    color: var(--color-usando-array-1-blue-4);
-  }
-  \@desktop.g--border-color-blue-4 {
-    border-color: var(--color-usando-array-1-blue-4);
-  }
-  \@desktop.g--background-color-blue-5 {
-    background-color: var(--color-usando-array-1-blue-5);
-  }
-  \@desktop.g--text-color-blue-5 {
-    color: var(--color-usando-array-1-blue-5);
-  }
-  \@desktop.g--border-color-blue-5 {
-    border-color: var(--color-usando-array-1-blue-5);
-  }
-  \@desktop.g--background-color-blue-6 {
-    background-color: var(--color-usando-array-1-blue-6);
-  }
-  \@desktop.g--text-color-blue-6 {
-    color: var(--color-usando-array-1-blue-6);
-  }
-  \@desktop.g--border-color-blue-6 {
-    border-color: var(--color-usando-array-1-blue-6);
-  }
-  \@desktop.g--background-color-blue-7 {
-    background-color: var(--color-usando-array-1-blue-7);
-  }
-  \@desktop.g--text-color-blue-7 {
-    color: var(--color-usando-array-1-blue-7);
-  }
-  \@desktop.g--border-color-blue-7 {
-    border-color: var(--color-usando-array-1-blue-7);
-  }
-  \@desktop.g--background-color-blue-8 {
-    background-color: var(--color-usando-array-1-blue-8);
-  }
-  \@desktop.g--text-color-blue-8 {
-    color: var(--color-usando-array-1-blue-8);
-  }
-  \@desktop.g--border-color-blue-8 {
-    border-color: var(--color-usando-array-1-blue-8);
-  }
-  \@desktop.g--background-color-blue-9 {
-    background-color: var(--color-usando-array-1-blue-9);
-  }
-  \@desktop.g--text-color-blue-9 {
-    color: var(--color-usando-array-1-blue-9);
-  }
-  \@desktop.g--border-color-blue-9 {
-    border-color: var(--color-usando-array-1-blue-9);
-  }
-  \@desktop.g--background-color-green-1 {
-    background-color: var(--color-usando-array-1-green-1);
-  }
-  \@desktop.g--text-color-green-1 {
-    color: var(--color-usando-array-1-green-1);
-  }
-  \@desktop.g--border-color-green-1 {
-    border-color: var(--color-usando-array-1-green-1);
-  }
-  \@desktop.g--background-color-green-2 {
-    background-color: var(--color-usando-array-1-green-2);
-  }
-  \@desktop.g--text-color-green-2 {
-    color: var(--color-usando-array-1-green-2);
-  }
-  \@desktop.g--border-color-green-2 {
-    border-color: var(--color-usando-array-1-green-2);
-  }
-  \@desktop.g--background-color-green-3 {
-    background-color: var(--color-usando-array-1-green-3);
-  }
-  \@desktop.g--text-color-green-3 {
-    color: var(--color-usando-array-1-green-3);
-  }
-  \@desktop.g--border-color-green-3 {
-    border-color: var(--color-usando-array-1-green-3);
-  }
-  \@desktop.g--background-color-green-4 {
-    background-color: var(--color-usando-array-1-green-4);
-  }
-  \@desktop.g--text-color-green-4 {
-    color: var(--color-usando-array-1-green-4);
-  }
-  \@desktop.g--border-color-green-4 {
-    border-color: var(--color-usando-array-1-green-4);
-  }
-  \@desktop.g--background-color-green-5 {
-    background-color: var(--color-usando-array-1-green-5);
-  }
-  \@desktop.g--text-color-green-5 {
-    color: var(--color-usando-array-1-green-5);
-  }
-  \@desktop.g--border-color-green-5 {
-    border-color: var(--color-usando-array-1-green-5);
-  }
-  \@desktop.g--background-color-green-6 {
-    background-color: var(--color-usando-array-1-green-6);
-  }
-  \@desktop.g--text-color-green-6 {
-    color: var(--color-usando-array-1-green-6);
-  }
-  \@desktop.g--border-color-green-6 {
-    border-color: var(--color-usando-array-1-green-6);
-  }
-  \@desktop.g--background-color-green-7 {
-    background-color: var(--color-usando-array-1-green-7);
-  }
-  \@desktop.g--text-color-green-7 {
-    color: var(--color-usando-array-1-green-7);
-  }
-  \@desktop.g--border-color-green-7 {
-    border-color: var(--color-usando-array-1-green-7);
-  }
-  \@desktop.g--background-color-green-8 {
-    background-color: var(--color-usando-array-1-green-8);
-  }
-  \@desktop.g--text-color-green-8 {
-    color: var(--color-usando-array-1-green-8);
-  }
-  \@desktop.g--border-color-green-8 {
-    border-color: var(--color-usando-array-1-green-8);
-  }
-  \@desktop.g--background-color-green-9 {
-    background-color: var(--color-usando-array-1-green-9);
-  }
-  \@desktop.g--text-color-green-9 {
-    color: var(--color-usando-array-1-green-9);
-  }
-  \@desktop.g--border-color-green-9 {
-    border-color: var(--color-usando-array-1-green-9);
-  }
-  \@desktop.g--background-color-yellow-1 {
-    background-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@desktop.g--text-color-yellow-1 {
-    color: var(--color-usando-array-1-yellow-1);
-  }
-  \@desktop.g--border-color-yellow-1 {
-    border-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@desktop.g--background-color-yellow-2 {
-    background-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@desktop.g--text-color-yellow-2 {
-    color: var(--color-usando-array-1-yellow-2);
-  }
-  \@desktop.g--border-color-yellow-2 {
-    border-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@desktop.g--background-color-yellow-3 {
-    background-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@desktop.g--text-color-yellow-3 {
-    color: var(--color-usando-array-1-yellow-3);
-  }
-  \@desktop.g--border-color-yellow-3 {
-    border-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@desktop.g--background-color-yellow-4 {
-    background-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@desktop.g--text-color-yellow-4 {
-    color: var(--color-usando-array-1-yellow-4);
-  }
-  \@desktop.g--border-color-yellow-4 {
-    border-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@desktop.g--background-color-yellow-5 {
-    background-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@desktop.g--text-color-yellow-5 {
-    color: var(--color-usando-array-1-yellow-5);
-  }
-  \@desktop.g--border-color-yellow-5 {
-    border-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@desktop.g--background-color-yellow-6 {
-    background-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@desktop.g--text-color-yellow-6 {
-    color: var(--color-usando-array-1-yellow-6);
-  }
-  \@desktop.g--border-color-yellow-6 {
-    border-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@desktop.g--background-color-yellow-7 {
-    background-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@desktop.g--text-color-yellow-7 {
-    color: var(--color-usando-array-1-yellow-7);
-  }
-  \@desktop.g--border-color-yellow-7 {
-    border-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@desktop.g--background-color-yellow-8 {
-    background-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@desktop.g--text-color-yellow-8 {
-    color: var(--color-usando-array-1-yellow-8);
-  }
-  \@desktop.g--border-color-yellow-8 {
-    border-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@desktop.g--background-color-yellow-9 {
-    background-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@desktop.g--text-color-yellow-9 {
-    color: var(--color-usando-array-1-yellow-9);
-  }
-  \@desktop.g--border-color-yellow-9 {
-    border-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@desktop.g--background-color-purple-1 {
-    background-color: var(--color-usando-array-1-purple-1);
-  }
-  \@desktop.g--text-color-purple-1 {
-    color: var(--color-usando-array-1-purple-1);
-  }
-  \@desktop.g--border-color-purple-1 {
-    border-color: var(--color-usando-array-1-purple-1);
-  }
-  \@desktop.g--background-color-purple-2 {
-    background-color: var(--color-usando-array-1-purple-2);
-  }
-  \@desktop.g--text-color-purple-2 {
-    color: var(--color-usando-array-1-purple-2);
-  }
-  \@desktop.g--border-color-purple-2 {
-    border-color: var(--color-usando-array-1-purple-2);
-  }
-  \@desktop.g--background-color-purple-3 {
-    background-color: var(--color-usando-array-1-purple-3);
-  }
-  \@desktop.g--text-color-purple-3 {
-    color: var(--color-usando-array-1-purple-3);
-  }
-  \@desktop.g--border-color-purple-3 {
-    border-color: var(--color-usando-array-1-purple-3);
-  }
-  \@desktop.g--background-color-purple-4 {
-    background-color: var(--color-usando-array-1-purple-4);
-  }
-  \@desktop.g--text-color-purple-4 {
-    color: var(--color-usando-array-1-purple-4);
-  }
-  \@desktop.g--border-color-purple-4 {
-    border-color: var(--color-usando-array-1-purple-4);
-  }
-  \@desktop.g--background-color-purple-5 {
-    background-color: var(--color-usando-array-1-purple-5);
-  }
-  \@desktop.g--text-color-purple-5 {
-    color: var(--color-usando-array-1-purple-5);
-  }
-  \@desktop.g--border-color-purple-5 {
-    border-color: var(--color-usando-array-1-purple-5);
-  }
-  \@desktop.g--background-color-purple-6 {
-    background-color: var(--color-usando-array-1-purple-6);
-  }
-  \@desktop.g--text-color-purple-6 {
-    color: var(--color-usando-array-1-purple-6);
-  }
-  \@desktop.g--border-color-purple-6 {
-    border-color: var(--color-usando-array-1-purple-6);
-  }
-  \@desktop.g--background-color-purple-7 {
-    background-color: var(--color-usando-array-1-purple-7);
-  }
-  \@desktop.g--text-color-purple-7 {
-    color: var(--color-usando-array-1-purple-7);
-  }
-  \@desktop.g--border-color-purple-7 {
-    border-color: var(--color-usando-array-1-purple-7);
-  }
-  \@desktop.g--background-color-purple-8 {
-    background-color: var(--color-usando-array-1-purple-8);
-  }
-  \@desktop.g--text-color-purple-8 {
-    color: var(--color-usando-array-1-purple-8);
-  }
-  \@desktop.g--border-color-purple-8 {
-    border-color: var(--color-usando-array-1-purple-8);
-  }
-  \@desktop.g--background-color-purple-9 {
-    background-color: var(--color-usando-array-1-purple-9);
-  }
-  \@desktop.g--text-color-purple-9 {
-    color: var(--color-usando-array-1-purple-9);
-  }
-  \@desktop.g--border-color-purple-9 {
-    border-color: var(--color-usando-array-1-purple-9);
-  }
-  \@desktop.g--background-color-pink-1 {
-    background-color: var(--color-usando-array-1-pink-1);
-  }
-  \@desktop.g--text-color-pink-1 {
-    color: var(--color-usando-array-1-pink-1);
-  }
-  \@desktop.g--border-color-pink-1 {
-    border-color: var(--color-usando-array-1-pink-1);
-  }
-  \@desktop.g--background-color-pink-2 {
-    background-color: var(--color-usando-array-1-pink-2);
-  }
-  \@desktop.g--text-color-pink-2 {
-    color: var(--color-usando-array-1-pink-2);
-  }
-  \@desktop.g--border-color-pink-2 {
-    border-color: var(--color-usando-array-1-pink-2);
-  }
-  \@desktop.g--background-color-pink-3 {
-    background-color: var(--color-usando-array-1-pink-3);
-  }
-  \@desktop.g--text-color-pink-3 {
-    color: var(--color-usando-array-1-pink-3);
-  }
-  \@desktop.g--border-color-pink-3 {
-    border-color: var(--color-usando-array-1-pink-3);
-  }
-  \@desktop.g--background-color-pink-4 {
-    background-color: var(--color-usando-array-1-pink-4);
-  }
-  \@desktop.g--text-color-pink-4 {
-    color: var(--color-usando-array-1-pink-4);
-  }
-  \@desktop.g--border-color-pink-4 {
-    border-color: var(--color-usando-array-1-pink-4);
-  }
-  \@desktop.g--background-color-pink-5 {
-    background-color: var(--color-usando-array-1-pink-5);
-  }
-  \@desktop.g--text-color-pink-5 {
-    color: var(--color-usando-array-1-pink-5);
-  }
-  \@desktop.g--border-color-pink-5 {
-    border-color: var(--color-usando-array-1-pink-5);
-  }
-  \@desktop.g--background-color-pink-6 {
-    background-color: var(--color-usando-array-1-pink-6);
-  }
-  \@desktop.g--text-color-pink-6 {
-    color: var(--color-usando-array-1-pink-6);
-  }
-  \@desktop.g--border-color-pink-6 {
-    border-color: var(--color-usando-array-1-pink-6);
-  }
-  \@desktop.g--background-color-pink-7 {
-    background-color: var(--color-usando-array-1-pink-7);
-  }
-  \@desktop.g--text-color-pink-7 {
-    color: var(--color-usando-array-1-pink-7);
-  }
-  \@desktop.g--border-color-pink-7 {
-    border-color: var(--color-usando-array-1-pink-7);
-  }
-  \@desktop.g--background-color-pink-8 {
-    background-color: var(--color-usando-array-1-pink-8);
-  }
-  \@desktop.g--text-color-pink-8 {
-    color: var(--color-usando-array-1-pink-8);
-  }
-  \@desktop.g--border-color-pink-8 {
-    border-color: var(--color-usando-array-1-pink-8);
-  }
-  \@desktop.g--background-color-pink-9 {
-    background-color: var(--color-usando-array-1-pink-9);
-  }
-  \@desktop.g--text-color-pink-9 {
-    color: var(--color-usando-array-1-pink-9);
-  }
-  \@desktop.g--border-color-pink-9 {
-    border-color: var(--color-usando-array-1-pink-9);
-  }
-  \@desktop.g--background-color-grey-1 {
-    background-color: var(--color-usando-array-1-grey-1);
-  }
-  \@desktop.g--text-color-grey-1 {
-    color: var(--color-usando-array-1-grey-1);
-  }
-  \@desktop.g--border-color-grey-1 {
-    border-color: var(--color-usando-array-1-grey-1);
-  }
-  \@desktop.g--background-color-grey-2 {
-    background-color: var(--color-usando-array-1-grey-2);
-  }
-  \@desktop.g--text-color-grey-2 {
-    color: var(--color-usando-array-1-grey-2);
-  }
-  \@desktop.g--border-color-grey-2 {
-    border-color: var(--color-usando-array-1-grey-2);
-  }
-  \@desktop.g--background-color-grey-3 {
-    background-color: var(--color-usando-array-1-grey-3);
-  }
-  \@desktop.g--text-color-grey-3 {
-    color: var(--color-usando-array-1-grey-3);
-  }
-  \@desktop.g--border-color-grey-3 {
-    border-color: var(--color-usando-array-1-grey-3);
-  }
-  \@desktop.g--background-color-grey-4 {
-    background-color: var(--color-usando-array-1-grey-4);
-  }
-  \@desktop.g--text-color-grey-4 {
-    color: var(--color-usando-array-1-grey-4);
-  }
-  \@desktop.g--border-color-grey-4 {
-    border-color: var(--color-usando-array-1-grey-4);
-  }
-  \@desktop.g--background-color-grey-5 {
-    background-color: var(--color-usando-array-1-grey-5);
-  }
-  \@desktop.g--text-color-grey-5 {
-    color: var(--color-usando-array-1-grey-5);
-  }
-  \@desktop.g--border-color-grey-5 {
-    border-color: var(--color-usando-array-1-grey-5);
-  }
-  \@desktop.g--background-color-grey-6 {
-    background-color: var(--color-usando-array-1-grey-6);
-  }
-  \@desktop.g--text-color-grey-6 {
-    color: var(--color-usando-array-1-grey-6);
-  }
-  \@desktop.g--border-color-grey-6 {
-    border-color: var(--color-usando-array-1-grey-6);
-  }
-  \@desktop.g--background-color-grey-7 {
-    background-color: var(--color-usando-array-1-grey-7);
-  }
-  \@desktop.g--text-color-grey-7 {
-    color: var(--color-usando-array-1-grey-7);
-  }
-  \@desktop.g--border-color-grey-7 {
-    border-color: var(--color-usando-array-1-grey-7);
-  }
-  \@desktop.g--background-color-grey-8 {
-    background-color: var(--color-usando-array-1-grey-8);
-  }
-  \@desktop.g--text-color-grey-8 {
-    color: var(--color-usando-array-1-grey-8);
-  }
-  \@desktop.g--border-color-grey-8 {
-    border-color: var(--color-usando-array-1-grey-8);
-  }
-  \@desktop.g--background-color-grey-9 {
-    background-color: var(--color-usando-array-1-grey-9);
-  }
-  \@desktop.g--text-color-grey-9 {
-    color: var(--color-usando-array-1-grey-9);
-  }
-  \@desktop.g--border-color-grey-9 {
-    border-color: var(--color-usando-array-1-grey-9);
-  }
-}
-@media (min-width: 992px) {
-  \@fulldesktop.g--background-color-principal-1 {
-    background-color: var(--color-usando-array-1-principal-1);
-  }
-  \@fulldesktop.g--text-color-principal-1 {
-    color: var(--color-usando-array-1-principal-1);
-  }
-  \@fulldesktop.g--border-color-principal-1 {
-    border-color: var(--color-usando-array-1-principal-1);
-  }
-  \@fulldesktop.g--background-color-principal-2 {
-    background-color: var(--color-usando-array-1-principal-2);
-  }
-  \@fulldesktop.g--text-color-principal-2 {
-    color: var(--color-usando-array-1-principal-2);
-  }
-  \@fulldesktop.g--border-color-principal-2 {
-    border-color: var(--color-usando-array-1-principal-2);
-  }
-  \@fulldesktop.g--background-color-principal-3 {
-    background-color: var(--color-usando-array-1-principal-3);
-  }
-  \@fulldesktop.g--text-color-principal-3 {
-    color: var(--color-usando-array-1-principal-3);
-  }
-  \@fulldesktop.g--border-color-principal-3 {
-    border-color: var(--color-usando-array-1-principal-3);
-  }
-  \@fulldesktop.g--background-color-principal-4 {
-    background-color: var(--color-usando-array-1-principal-4);
-  }
-  \@fulldesktop.g--text-color-principal-4 {
-    color: var(--color-usando-array-1-principal-4);
-  }
-  \@fulldesktop.g--border-color-principal-4 {
-    border-color: var(--color-usando-array-1-principal-4);
-  }
-  \@fulldesktop.g--background-color-principal-5 {
-    background-color: var(--color-usando-array-1-principal-5);
-  }
-  \@fulldesktop.g--text-color-principal-5 {
-    color: var(--color-usando-array-1-principal-5);
-  }
-  \@fulldesktop.g--border-color-principal-5 {
-    border-color: var(--color-usando-array-1-principal-5);
-  }
-  \@fulldesktop.g--background-color-principal-6 {
-    background-color: var(--color-usando-array-1-principal-6);
-  }
-  \@fulldesktop.g--text-color-principal-6 {
-    color: var(--color-usando-array-1-principal-6);
-  }
-  \@fulldesktop.g--border-color-principal-6 {
-    border-color: var(--color-usando-array-1-principal-6);
-  }
-  \@fulldesktop.g--background-color-principal-7 {
-    background-color: var(--color-usando-array-1-principal-7);
-  }
-  \@fulldesktop.g--text-color-principal-7 {
-    color: var(--color-usando-array-1-principal-7);
-  }
-  \@fulldesktop.g--border-color-principal-7 {
-    border-color: var(--color-usando-array-1-principal-7);
-  }
-  \@fulldesktop.g--background-color-principal-8 {
-    background-color: var(--color-usando-array-1-principal-8);
-  }
-  \@fulldesktop.g--text-color-principal-8 {
-    color: var(--color-usando-array-1-principal-8);
-  }
-  \@fulldesktop.g--border-color-principal-8 {
-    border-color: var(--color-usando-array-1-principal-8);
-  }
-  \@fulldesktop.g--background-color-principal-9 {
-    background-color: var(--color-usando-array-1-principal-9);
-  }
-  \@fulldesktop.g--text-color-principal-9 {
-    color: var(--color-usando-array-1-principal-9);
-  }
-  \@fulldesktop.g--border-color-principal-9 {
-    border-color: var(--color-usando-array-1-principal-9);
-  }
-  \@fulldesktop.g--background-color-alternative-1 {
-    background-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@fulldesktop.g--text-color-alternative-1 {
-    color: var(--color-usando-array-1-alternative-1);
-  }
-  \@fulldesktop.g--border-color-alternative-1 {
-    border-color: var(--color-usando-array-1-alternative-1);
-  }
-  \@fulldesktop.g--background-color-alternative-2 {
-    background-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@fulldesktop.g--text-color-alternative-2 {
-    color: var(--color-usando-array-1-alternative-2);
-  }
-  \@fulldesktop.g--border-color-alternative-2 {
-    border-color: var(--color-usando-array-1-alternative-2);
-  }
-  \@fulldesktop.g--background-color-alternative-3 {
-    background-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@fulldesktop.g--text-color-alternative-3 {
-    color: var(--color-usando-array-1-alternative-3);
-  }
-  \@fulldesktop.g--border-color-alternative-3 {
-    border-color: var(--color-usando-array-1-alternative-3);
-  }
-  \@fulldesktop.g--background-color-alternative-4 {
-    background-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@fulldesktop.g--text-color-alternative-4 {
-    color: var(--color-usando-array-1-alternative-4);
-  }
-  \@fulldesktop.g--border-color-alternative-4 {
-    border-color: var(--color-usando-array-1-alternative-4);
-  }
-  \@fulldesktop.g--background-color-alternative-5 {
-    background-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@fulldesktop.g--text-color-alternative-5 {
-    color: var(--color-usando-array-1-alternative-5);
-  }
-  \@fulldesktop.g--border-color-alternative-5 {
-    border-color: var(--color-usando-array-1-alternative-5);
-  }
-  \@fulldesktop.g--background-color-alternative-6 {
-    background-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@fulldesktop.g--text-color-alternative-6 {
-    color: var(--color-usando-array-1-alternative-6);
-  }
-  \@fulldesktop.g--border-color-alternative-6 {
-    border-color: var(--color-usando-array-1-alternative-6);
-  }
-  \@fulldesktop.g--background-color-alternative-7 {
-    background-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@fulldesktop.g--text-color-alternative-7 {
-    color: var(--color-usando-array-1-alternative-7);
-  }
-  \@fulldesktop.g--border-color-alternative-7 {
-    border-color: var(--color-usando-array-1-alternative-7);
-  }
-  \@fulldesktop.g--background-color-alternative-8 {
-    background-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@fulldesktop.g--text-color-alternative-8 {
-    color: var(--color-usando-array-1-alternative-8);
-  }
-  \@fulldesktop.g--border-color-alternative-8 {
-    border-color: var(--color-usando-array-1-alternative-8);
-  }
-  \@fulldesktop.g--background-color-alternative-9 {
-    background-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@fulldesktop.g--text-color-alternative-9 {
-    color: var(--color-usando-array-1-alternative-9);
-  }
-  \@fulldesktop.g--border-color-alternative-9 {
-    border-color: var(--color-usando-array-1-alternative-9);
-  }
-  \@fulldesktop.g--background-color-red-1 {
-    background-color: var(--color-usando-array-1-red-1);
-  }
-  \@fulldesktop.g--text-color-red-1 {
-    color: var(--color-usando-array-1-red-1);
-  }
-  \@fulldesktop.g--border-color-red-1 {
-    border-color: var(--color-usando-array-1-red-1);
-  }
-  \@fulldesktop.g--background-color-red-2 {
-    background-color: var(--color-usando-array-1-red-2);
-  }
-  \@fulldesktop.g--text-color-red-2 {
-    color: var(--color-usando-array-1-red-2);
-  }
-  \@fulldesktop.g--border-color-red-2 {
-    border-color: var(--color-usando-array-1-red-2);
-  }
-  \@fulldesktop.g--background-color-red-3 {
-    background-color: var(--color-usando-array-1-red-3);
-  }
-  \@fulldesktop.g--text-color-red-3 {
-    color: var(--color-usando-array-1-red-3);
-  }
-  \@fulldesktop.g--border-color-red-3 {
-    border-color: var(--color-usando-array-1-red-3);
-  }
-  \@fulldesktop.g--background-color-red-4 {
-    background-color: var(--color-usando-array-1-red-4);
-  }
-  \@fulldesktop.g--text-color-red-4 {
-    color: var(--color-usando-array-1-red-4);
-  }
-  \@fulldesktop.g--border-color-red-4 {
-    border-color: var(--color-usando-array-1-red-4);
-  }
-  \@fulldesktop.g--background-color-red-5 {
-    background-color: var(--color-usando-array-1-red-5);
-  }
-  \@fulldesktop.g--text-color-red-5 {
-    color: var(--color-usando-array-1-red-5);
-  }
-  \@fulldesktop.g--border-color-red-5 {
-    border-color: var(--color-usando-array-1-red-5);
-  }
-  \@fulldesktop.g--background-color-red-6 {
-    background-color: var(--color-usando-array-1-red-6);
-  }
-  \@fulldesktop.g--text-color-red-6 {
-    color: var(--color-usando-array-1-red-6);
-  }
-  \@fulldesktop.g--border-color-red-6 {
-    border-color: var(--color-usando-array-1-red-6);
-  }
-  \@fulldesktop.g--background-color-red-7 {
-    background-color: var(--color-usando-array-1-red-7);
-  }
-  \@fulldesktop.g--text-color-red-7 {
-    color: var(--color-usando-array-1-red-7);
-  }
-  \@fulldesktop.g--border-color-red-7 {
-    border-color: var(--color-usando-array-1-red-7);
-  }
-  \@fulldesktop.g--background-color-red-8 {
-    background-color: var(--color-usando-array-1-red-8);
-  }
-  \@fulldesktop.g--text-color-red-8 {
-    color: var(--color-usando-array-1-red-8);
-  }
-  \@fulldesktop.g--border-color-red-8 {
-    border-color: var(--color-usando-array-1-red-8);
-  }
-  \@fulldesktop.g--background-color-red-9 {
-    background-color: var(--color-usando-array-1-red-9);
-  }
-  \@fulldesktop.g--text-color-red-9 {
-    color: var(--color-usando-array-1-red-9);
-  }
-  \@fulldesktop.g--border-color-red-9 {
-    border-color: var(--color-usando-array-1-red-9);
-  }
-  \@fulldesktop.g--background-color-blue-1 {
-    background-color: var(--color-usando-array-1-blue-1);
-  }
-  \@fulldesktop.g--text-color-blue-1 {
-    color: var(--color-usando-array-1-blue-1);
-  }
-  \@fulldesktop.g--border-color-blue-1 {
-    border-color: var(--color-usando-array-1-blue-1);
-  }
-  \@fulldesktop.g--background-color-blue-2 {
-    background-color: var(--color-usando-array-1-blue-2);
-  }
-  \@fulldesktop.g--text-color-blue-2 {
-    color: var(--color-usando-array-1-blue-2);
-  }
-  \@fulldesktop.g--border-color-blue-2 {
-    border-color: var(--color-usando-array-1-blue-2);
-  }
-  \@fulldesktop.g--background-color-blue-3 {
-    background-color: var(--color-usando-array-1-blue-3);
-  }
-  \@fulldesktop.g--text-color-blue-3 {
-    color: var(--color-usando-array-1-blue-3);
-  }
-  \@fulldesktop.g--border-color-blue-3 {
-    border-color: var(--color-usando-array-1-blue-3);
-  }
-  \@fulldesktop.g--background-color-blue-4 {
-    background-color: var(--color-usando-array-1-blue-4);
-  }
-  \@fulldesktop.g--text-color-blue-4 {
-    color: var(--color-usando-array-1-blue-4);
-  }
-  \@fulldesktop.g--border-color-blue-4 {
-    border-color: var(--color-usando-array-1-blue-4);
-  }
-  \@fulldesktop.g--background-color-blue-5 {
-    background-color: var(--color-usando-array-1-blue-5);
-  }
-  \@fulldesktop.g--text-color-blue-5 {
-    color: var(--color-usando-array-1-blue-5);
-  }
-  \@fulldesktop.g--border-color-blue-5 {
-    border-color: var(--color-usando-array-1-blue-5);
-  }
-  \@fulldesktop.g--background-color-blue-6 {
-    background-color: var(--color-usando-array-1-blue-6);
-  }
-  \@fulldesktop.g--text-color-blue-6 {
-    color: var(--color-usando-array-1-blue-6);
-  }
-  \@fulldesktop.g--border-color-blue-6 {
-    border-color: var(--color-usando-array-1-blue-6);
-  }
-  \@fulldesktop.g--background-color-blue-7 {
-    background-color: var(--color-usando-array-1-blue-7);
-  }
-  \@fulldesktop.g--text-color-blue-7 {
-    color: var(--color-usando-array-1-blue-7);
-  }
-  \@fulldesktop.g--border-color-blue-7 {
-    border-color: var(--color-usando-array-1-blue-7);
-  }
-  \@fulldesktop.g--background-color-blue-8 {
-    background-color: var(--color-usando-array-1-blue-8);
-  }
-  \@fulldesktop.g--text-color-blue-8 {
-    color: var(--color-usando-array-1-blue-8);
-  }
-  \@fulldesktop.g--border-color-blue-8 {
-    border-color: var(--color-usando-array-1-blue-8);
-  }
-  \@fulldesktop.g--background-color-blue-9 {
-    background-color: var(--color-usando-array-1-blue-9);
-  }
-  \@fulldesktop.g--text-color-blue-9 {
-    color: var(--color-usando-array-1-blue-9);
-  }
-  \@fulldesktop.g--border-color-blue-9 {
-    border-color: var(--color-usando-array-1-blue-9);
-  }
-  \@fulldesktop.g--background-color-green-1 {
-    background-color: var(--color-usando-array-1-green-1);
-  }
-  \@fulldesktop.g--text-color-green-1 {
-    color: var(--color-usando-array-1-green-1);
-  }
-  \@fulldesktop.g--border-color-green-1 {
-    border-color: var(--color-usando-array-1-green-1);
-  }
-  \@fulldesktop.g--background-color-green-2 {
-    background-color: var(--color-usando-array-1-green-2);
-  }
-  \@fulldesktop.g--text-color-green-2 {
-    color: var(--color-usando-array-1-green-2);
-  }
-  \@fulldesktop.g--border-color-green-2 {
-    border-color: var(--color-usando-array-1-green-2);
-  }
-  \@fulldesktop.g--background-color-green-3 {
-    background-color: var(--color-usando-array-1-green-3);
-  }
-  \@fulldesktop.g--text-color-green-3 {
-    color: var(--color-usando-array-1-green-3);
-  }
-  \@fulldesktop.g--border-color-green-3 {
-    border-color: var(--color-usando-array-1-green-3);
-  }
-  \@fulldesktop.g--background-color-green-4 {
-    background-color: var(--color-usando-array-1-green-4);
-  }
-  \@fulldesktop.g--text-color-green-4 {
-    color: var(--color-usando-array-1-green-4);
-  }
-  \@fulldesktop.g--border-color-green-4 {
-    border-color: var(--color-usando-array-1-green-4);
-  }
-  \@fulldesktop.g--background-color-green-5 {
-    background-color: var(--color-usando-array-1-green-5);
-  }
-  \@fulldesktop.g--text-color-green-5 {
-    color: var(--color-usando-array-1-green-5);
-  }
-  \@fulldesktop.g--border-color-green-5 {
-    border-color: var(--color-usando-array-1-green-5);
-  }
-  \@fulldesktop.g--background-color-green-6 {
-    background-color: var(--color-usando-array-1-green-6);
-  }
-  \@fulldesktop.g--text-color-green-6 {
-    color: var(--color-usando-array-1-green-6);
-  }
-  \@fulldesktop.g--border-color-green-6 {
-    border-color: var(--color-usando-array-1-green-6);
-  }
-  \@fulldesktop.g--background-color-green-7 {
-    background-color: var(--color-usando-array-1-green-7);
-  }
-  \@fulldesktop.g--text-color-green-7 {
-    color: var(--color-usando-array-1-green-7);
-  }
-  \@fulldesktop.g--border-color-green-7 {
-    border-color: var(--color-usando-array-1-green-7);
-  }
-  \@fulldesktop.g--background-color-green-8 {
-    background-color: var(--color-usando-array-1-green-8);
-  }
-  \@fulldesktop.g--text-color-green-8 {
-    color: var(--color-usando-array-1-green-8);
-  }
-  \@fulldesktop.g--border-color-green-8 {
-    border-color: var(--color-usando-array-1-green-8);
-  }
-  \@fulldesktop.g--background-color-green-9 {
-    background-color: var(--color-usando-array-1-green-9);
-  }
-  \@fulldesktop.g--text-color-green-9 {
-    color: var(--color-usando-array-1-green-9);
-  }
-  \@fulldesktop.g--border-color-green-9 {
-    border-color: var(--color-usando-array-1-green-9);
-  }
-  \@fulldesktop.g--background-color-yellow-1 {
-    background-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@fulldesktop.g--text-color-yellow-1 {
-    color: var(--color-usando-array-1-yellow-1);
-  }
-  \@fulldesktop.g--border-color-yellow-1 {
-    border-color: var(--color-usando-array-1-yellow-1);
-  }
-  \@fulldesktop.g--background-color-yellow-2 {
-    background-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@fulldesktop.g--text-color-yellow-2 {
-    color: var(--color-usando-array-1-yellow-2);
-  }
-  \@fulldesktop.g--border-color-yellow-2 {
-    border-color: var(--color-usando-array-1-yellow-2);
-  }
-  \@fulldesktop.g--background-color-yellow-3 {
-    background-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@fulldesktop.g--text-color-yellow-3 {
-    color: var(--color-usando-array-1-yellow-3);
-  }
-  \@fulldesktop.g--border-color-yellow-3 {
-    border-color: var(--color-usando-array-1-yellow-3);
-  }
-  \@fulldesktop.g--background-color-yellow-4 {
-    background-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@fulldesktop.g--text-color-yellow-4 {
-    color: var(--color-usando-array-1-yellow-4);
-  }
-  \@fulldesktop.g--border-color-yellow-4 {
-    border-color: var(--color-usando-array-1-yellow-4);
-  }
-  \@fulldesktop.g--background-color-yellow-5 {
-    background-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@fulldesktop.g--text-color-yellow-5 {
-    color: var(--color-usando-array-1-yellow-5);
-  }
-  \@fulldesktop.g--border-color-yellow-5 {
-    border-color: var(--color-usando-array-1-yellow-5);
-  }
-  \@fulldesktop.g--background-color-yellow-6 {
-    background-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@fulldesktop.g--text-color-yellow-6 {
-    color: var(--color-usando-array-1-yellow-6);
-  }
-  \@fulldesktop.g--border-color-yellow-6 {
-    border-color: var(--color-usando-array-1-yellow-6);
-  }
-  \@fulldesktop.g--background-color-yellow-7 {
-    background-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@fulldesktop.g--text-color-yellow-7 {
-    color: var(--color-usando-array-1-yellow-7);
-  }
-  \@fulldesktop.g--border-color-yellow-7 {
-    border-color: var(--color-usando-array-1-yellow-7);
-  }
-  \@fulldesktop.g--background-color-yellow-8 {
-    background-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@fulldesktop.g--text-color-yellow-8 {
-    color: var(--color-usando-array-1-yellow-8);
-  }
-  \@fulldesktop.g--border-color-yellow-8 {
-    border-color: var(--color-usando-array-1-yellow-8);
-  }
-  \@fulldesktop.g--background-color-yellow-9 {
-    background-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@fulldesktop.g--text-color-yellow-9 {
-    color: var(--color-usando-array-1-yellow-9);
-  }
-  \@fulldesktop.g--border-color-yellow-9 {
-    border-color: var(--color-usando-array-1-yellow-9);
-  }
-  \@fulldesktop.g--background-color-purple-1 {
-    background-color: var(--color-usando-array-1-purple-1);
-  }
-  \@fulldesktop.g--text-color-purple-1 {
-    color: var(--color-usando-array-1-purple-1);
-  }
-  \@fulldesktop.g--border-color-purple-1 {
-    border-color: var(--color-usando-array-1-purple-1);
-  }
-  \@fulldesktop.g--background-color-purple-2 {
-    background-color: var(--color-usando-array-1-purple-2);
-  }
-  \@fulldesktop.g--text-color-purple-2 {
-    color: var(--color-usando-array-1-purple-2);
-  }
-  \@fulldesktop.g--border-color-purple-2 {
-    border-color: var(--color-usando-array-1-purple-2);
-  }
-  \@fulldesktop.g--background-color-purple-3 {
-    background-color: var(--color-usando-array-1-purple-3);
-  }
-  \@fulldesktop.g--text-color-purple-3 {
-    color: var(--color-usando-array-1-purple-3);
-  }
-  \@fulldesktop.g--border-color-purple-3 {
-    border-color: var(--color-usando-array-1-purple-3);
-  }
-  \@fulldesktop.g--background-color-purple-4 {
-    background-color: var(--color-usando-array-1-purple-4);
-  }
-  \@fulldesktop.g--text-color-purple-4 {
-    color: var(--color-usando-array-1-purple-4);
-  }
-  \@fulldesktop.g--border-color-purple-4 {
-    border-color: var(--color-usando-array-1-purple-4);
-  }
-  \@fulldesktop.g--background-color-purple-5 {
-    background-color: var(--color-usando-array-1-purple-5);
-  }
-  \@fulldesktop.g--text-color-purple-5 {
-    color: var(--color-usando-array-1-purple-5);
-  }
-  \@fulldesktop.g--border-color-purple-5 {
-    border-color: var(--color-usando-array-1-purple-5);
-  }
-  \@fulldesktop.g--background-color-purple-6 {
-    background-color: var(--color-usando-array-1-purple-6);
-  }
-  \@fulldesktop.g--text-color-purple-6 {
-    color: var(--color-usando-array-1-purple-6);
-  }
-  \@fulldesktop.g--border-color-purple-6 {
-    border-color: var(--color-usando-array-1-purple-6);
-  }
-  \@fulldesktop.g--background-color-purple-7 {
-    background-color: var(--color-usando-array-1-purple-7);
-  }
-  \@fulldesktop.g--text-color-purple-7 {
-    color: var(--color-usando-array-1-purple-7);
-  }
-  \@fulldesktop.g--border-color-purple-7 {
-    border-color: var(--color-usando-array-1-purple-7);
-  }
-  \@fulldesktop.g--background-color-purple-8 {
-    background-color: var(--color-usando-array-1-purple-8);
-  }
-  \@fulldesktop.g--text-color-purple-8 {
-    color: var(--color-usando-array-1-purple-8);
-  }
-  \@fulldesktop.g--border-color-purple-8 {
-    border-color: var(--color-usando-array-1-purple-8);
-  }
-  \@fulldesktop.g--background-color-purple-9 {
-    background-color: var(--color-usando-array-1-purple-9);
-  }
-  \@fulldesktop.g--text-color-purple-9 {
-    color: var(--color-usando-array-1-purple-9);
-  }
-  \@fulldesktop.g--border-color-purple-9 {
-    border-color: var(--color-usando-array-1-purple-9);
-  }
-  \@fulldesktop.g--background-color-pink-1 {
-    background-color: var(--color-usando-array-1-pink-1);
-  }
-  \@fulldesktop.g--text-color-pink-1 {
-    color: var(--color-usando-array-1-pink-1);
-  }
-  \@fulldesktop.g--border-color-pink-1 {
-    border-color: var(--color-usando-array-1-pink-1);
-  }
-  \@fulldesktop.g--background-color-pink-2 {
-    background-color: var(--color-usando-array-1-pink-2);
-  }
-  \@fulldesktop.g--text-color-pink-2 {
-    color: var(--color-usando-array-1-pink-2);
-  }
-  \@fulldesktop.g--border-color-pink-2 {
-    border-color: var(--color-usando-array-1-pink-2);
-  }
-  \@fulldesktop.g--background-color-pink-3 {
-    background-color: var(--color-usando-array-1-pink-3);
-  }
-  \@fulldesktop.g--text-color-pink-3 {
-    color: var(--color-usando-array-1-pink-3);
-  }
-  \@fulldesktop.g--border-color-pink-3 {
-    border-color: var(--color-usando-array-1-pink-3);
-  }
-  \@fulldesktop.g--background-color-pink-4 {
-    background-color: var(--color-usando-array-1-pink-4);
-  }
-  \@fulldesktop.g--text-color-pink-4 {
-    color: var(--color-usando-array-1-pink-4);
-  }
-  \@fulldesktop.g--border-color-pink-4 {
-    border-color: var(--color-usando-array-1-pink-4);
-  }
-  \@fulldesktop.g--background-color-pink-5 {
-    background-color: var(--color-usando-array-1-pink-5);
-  }
-  \@fulldesktop.g--text-color-pink-5 {
-    color: var(--color-usando-array-1-pink-5);
-  }
-  \@fulldesktop.g--border-color-pink-5 {
-    border-color: var(--color-usando-array-1-pink-5);
-  }
-  \@fulldesktop.g--background-color-pink-6 {
-    background-color: var(--color-usando-array-1-pink-6);
-  }
-  \@fulldesktop.g--text-color-pink-6 {
-    color: var(--color-usando-array-1-pink-6);
-  }
-  \@fulldesktop.g--border-color-pink-6 {
-    border-color: var(--color-usando-array-1-pink-6);
-  }
-  \@fulldesktop.g--background-color-pink-7 {
-    background-color: var(--color-usando-array-1-pink-7);
-  }
-  \@fulldesktop.g--text-color-pink-7 {
-    color: var(--color-usando-array-1-pink-7);
-  }
-  \@fulldesktop.g--border-color-pink-7 {
-    border-color: var(--color-usando-array-1-pink-7);
-  }
-  \@fulldesktop.g--background-color-pink-8 {
-    background-color: var(--color-usando-array-1-pink-8);
-  }
-  \@fulldesktop.g--text-color-pink-8 {
-    color: var(--color-usando-array-1-pink-8);
-  }
-  \@fulldesktop.g--border-color-pink-8 {
-    border-color: var(--color-usando-array-1-pink-8);
-  }
-  \@fulldesktop.g--background-color-pink-9 {
-    background-color: var(--color-usando-array-1-pink-9);
-  }
-  \@fulldesktop.g--text-color-pink-9 {
-    color: var(--color-usando-array-1-pink-9);
-  }
-  \@fulldesktop.g--border-color-pink-9 {
-    border-color: var(--color-usando-array-1-pink-9);
-  }
-  \@fulldesktop.g--background-color-grey-1 {
-    background-color: var(--color-usando-array-1-grey-1);
-  }
-  \@fulldesktop.g--text-color-grey-1 {
-    color: var(--color-usando-array-1-grey-1);
-  }
-  \@fulldesktop.g--border-color-grey-1 {
-    border-color: var(--color-usando-array-1-grey-1);
-  }
-  \@fulldesktop.g--background-color-grey-2 {
-    background-color: var(--color-usando-array-1-grey-2);
-  }
-  \@fulldesktop.g--text-color-grey-2 {
-    color: var(--color-usando-array-1-grey-2);
-  }
-  \@fulldesktop.g--border-color-grey-2 {
-    border-color: var(--color-usando-array-1-grey-2);
-  }
-  \@fulldesktop.g--background-color-grey-3 {
-    background-color: var(--color-usando-array-1-grey-3);
-  }
-  \@fulldesktop.g--text-color-grey-3 {
-    color: var(--color-usando-array-1-grey-3);
-  }
-  \@fulldesktop.g--border-color-grey-3 {
-    border-color: var(--color-usando-array-1-grey-3);
-  }
-  \@fulldesktop.g--background-color-grey-4 {
-    background-color: var(--color-usando-array-1-grey-4);
-  }
-  \@fulldesktop.g--text-color-grey-4 {
-    color: var(--color-usando-array-1-grey-4);
-  }
-  \@fulldesktop.g--border-color-grey-4 {
-    border-color: var(--color-usando-array-1-grey-4);
-  }
-  \@fulldesktop.g--background-color-grey-5 {
-    background-color: var(--color-usando-array-1-grey-5);
-  }
-  \@fulldesktop.g--text-color-grey-5 {
-    color: var(--color-usando-array-1-grey-5);
-  }
-  \@fulldesktop.g--border-color-grey-5 {
-    border-color: var(--color-usando-array-1-grey-5);
-  }
-  \@fulldesktop.g--background-color-grey-6 {
-    background-color: var(--color-usando-array-1-grey-6);
-  }
-  \@fulldesktop.g--text-color-grey-6 {
-    color: var(--color-usando-array-1-grey-6);
-  }
-  \@fulldesktop.g--border-color-grey-6 {
-    border-color: var(--color-usando-array-1-grey-6);
-  }
-  \@fulldesktop.g--background-color-grey-7 {
-    background-color: var(--color-usando-array-1-grey-7);
-  }
-  \@fulldesktop.g--text-color-grey-7 {
-    color: var(--color-usando-array-1-grey-7);
-  }
-  \@fulldesktop.g--border-color-grey-7 {
-    border-color: var(--color-usando-array-1-grey-7);
-  }
-  \@fulldesktop.g--background-color-grey-8 {
-    background-color: var(--color-usando-array-1-grey-8);
-  }
-  \@fulldesktop.g--text-color-grey-8 {
-    color: var(--color-usando-array-1-grey-8);
-  }
-  \@fulldesktop.g--border-color-grey-8 {
-    border-color: var(--color-usando-array-1-grey-8);
-  }
-  \@fulldesktop.g--background-color-grey-9 {
-    background-color: var(--color-usando-array-1-grey-9);
-  }
-  \@fulldesktop.g--text-color-grey-9 {
-    color: var(--color-usando-array-1-grey-9);
-  }
-  \@fulldesktop.g--border-color-grey-9 {
-    border-color: var(--color-usando-array-1-grey-9);
-  }
-}
-@media (min-width: 567px) {
-  .g--bg-color-principal\@tablet {
-    background-color: #7c2d12;
-  }
-  .g--bg-color-alternative\@tablet {
-    background-color: #312e81;
-  }
-  .g--bg-color-red\@tablet {
-    background-color: #811D1D;
-  }
-  .g--bg-color-blue\@tablet {
-    background-color: #1E3B8A;
-  }
-  .g--bg-color-green\@tablet {
-    background-color: #064C39;
-  }
-  .g--bg-color-yellow\@tablet {
-    background-color: #76350F;
-  }
-  .g--bg-color-purple\@tablet {
-    background-color: #4D1D95;
-  }
-  .g--bg-color-pink\@tablet {
-    background-color: #811842;
-  }
-  .g--bg-color-grey\@tablet {
-    background-color: #111827;
-  }
-}
-@media (min-width: 768px) {
-  .g--bg-color-principal\@desktop {
-    background-color: #7c2d12;
-  }
-  .g--bg-color-alternative\@desktop {
-    background-color: #312e81;
-  }
-  .g--bg-color-red\@desktop {
-    background-color: #811D1D;
-  }
-  .g--bg-color-blue\@desktop {
-    background-color: #1E3B8A;
-  }
-  .g--bg-color-green\@desktop {
-    background-color: #064C39;
-  }
-  .g--bg-color-yellow\@desktop {
-    background-color: #76350F;
-  }
-  .g--bg-color-purple\@desktop {
-    background-color: #4D1D95;
-  }
-  .g--bg-color-pink\@desktop {
-    background-color: #811842;
-  }
-  .g--bg-color-grey\@desktop {
-    background-color: #111827;
-  }
-}
-@media (min-width: 992px) {
-  .g--bg-color-principal\@fulldesktop {
-    background-color: #7c2d12;
-  }
-  .g--bg-color-alternative\@fulldesktop {
-    background-color: #312e81;
-  }
-  .g--bg-color-red\@fulldesktop {
-    background-color: #811D1D;
-  }
-  .g--bg-color-blue\@fulldesktop {
-    background-color: #1E3B8A;
-  }
-  .g--bg-color-green\@fulldesktop {
-    background-color: #064C39;
-  }
-  .g--bg-color-yellow\@fulldesktop {
-    background-color: #76350F;
-  }
-  .g--bg-color-purple\@fulldesktop {
-    background-color: #4D1D95;
-  }
-  .g--bg-color-pink\@fulldesktop {
-    background-color: #811842;
-  }
-  .g--bg-color-grey\@fulldesktop {
-    background-color: #111827;
-  }
-}
 .g--height--10 {
   height: 10px;
 }
@@ -4038,328 +1779,1799 @@ html {
   background-color: #f3f4f6;
 }
 
-.g--color-principal-10 {
+@media (min-width: 567px) {
+  .\@tablet-g--background-color-principal-10 {
+    background-color: #7c2d13;
+  }
+  .\@tablet-g--background-color-principal-20 {
+    background-color: #9a3412;
+  }
+  .\@tablet-g--background-color-principal-30 {
+    background-color: #c2410c;
+  }
+  .\@tablet-g--background-color-principal-40 {
+    background-color: #ea580c;
+  }
+  .\@tablet-g--background-color-principal-50 {
+    background-color: #f97316;
+  }
+  .\@tablet-g--background-color-principal-60 {
+    background-color: #fb923c;
+  }
+  .\@tablet-g--background-color-principal-70 {
+    background-color: #fdba74;
+  }
+  .\@tablet-g--background-color-principal-80 {
+    background-color: #fed7aa;
+  }
+  .\@tablet-g--background-color-principal-90 {
+    background-color: #ffedd5;
+  }
+  .\@tablet-g--background-color-alternative-10 {
+    background-color: #312e81;
+  }
+  .\@tablet-g--background-color-alternative-20 {
+    background-color: #3730a3;
+  }
+  .\@tablet-g--background-color-alternative-30 {
+    background-color: #4338ca;
+  }
+  .\@tablet-g--background-color-alternative-40 {
+    background-color: #4f46e5;
+  }
+  .\@tablet-g--background-color-alternative-50 {
+    background-color: #6366f1;
+  }
+  .\@tablet-g--background-color-alternative-60 {
+    background-color: #818cf8;
+  }
+  .\@tablet-g--background-color-alternative-70 {
+    background-color: #a5b4fc;
+  }
+  .\@tablet-g--background-color-alternative-80 {
+    background-color: #c7d2fe;
+  }
+  .\@tablet-g--background-color-alternative-90 {
+    background-color: #e0e7ff;
+  }
+  .\@tablet-g--background-color-red-10 {
+    background-color: #811D1D;
+  }
+  .\@tablet-g--background-color-red-20 {
+    background-color: #981B1B;
+  }
+  .\@tablet-g--background-color-red-30 {
+    background-color: #BA1C1C;
+  }
+  .\@tablet-g--background-color-red-40 {
+    background-color: #DC2828;
+  }
+  .\@tablet-g--background-color-red-50 {
+    background-color: #EF4343;
+  }
+  .\@tablet-g--background-color-red-60 {
+    background-color: #F87272;
+  }
+  .\@tablet-g--background-color-red-70 {
+    background-color: #FCA6A6;
+  }
+  .\@tablet-g--background-color-red-80 {
+    background-color: #FEC8C8;
+  }
+  .\@tablet-g--background-color-red-90 {
+    background-color: #FEE1E1;
+  }
+  .\@tablet-g--background-color-blue-10 {
+    background-color: #1E3B8A;
+  }
+  .\@tablet-g--background-color-blue-20 {
+    background-color: #1E3FAE;
+  }
+  .\@tablet-g--background-color-blue-30 {
+    background-color: #1D4FD7;
+  }
+  .\@tablet-g--background-color-blue-40 {
+    background-color: #2463EB;
+  }
+  .\@tablet-g--background-color-blue-50 {
+    background-color: #3C83F6;
+  }
+  .\@tablet-g--background-color-blue-60 {
+    background-color: #61A6FA;
+  }
+  .\@tablet-g--background-color-blue-70 {
+    background-color: #91C3FD;
+  }
+  .\@tablet-g--background-color-blue-80 {
+    background-color: #BEDBFE;
+  }
+  .\@tablet-g--background-color-blue-90 {
+    background-color: #DCEBFE;
+  }
+  .\@tablet-g--background-color-green-10 {
+    background-color: #064C39;
+  }
+  .\@tablet-g--background-color-green-20 {
+    background-color: #066046;
+  }
+  .\@tablet-g--background-color-green-30 {
+    background-color: #047756;
+  }
+  .\@tablet-g--background-color-green-40 {
+    background-color: #059467;
+  }
+  .\@tablet-g--background-color-green-50 {
+    background-color: #10B77F;
+  }
+  .\@tablet-g--background-color-green-60 {
+    background-color: #36D399;
+  }
+  .\@tablet-g--background-color-green-70 {
+    background-color: #6EE7B7;
+  }
+  .\@tablet-g--background-color-green-80 {
+    background-color: #A5F3CF;
+  }
+  .\@tablet-g--background-color-green-90 {
+    background-color: #D1FAE5;
+  }
+  .\@tablet-g--background-color-yellow-10 {
+    background-color: #76350F;
+  }
+  .\@tablet-g--background-color-yellow-20 {
+    background-color: #91400D;
+  }
+  .\@tablet-g--background-color-yellow-30 {
+    background-color: #B35309;
+  }
+  .\@tablet-g--background-color-yellow-40 {
+    background-color: #DB7706;
+  }
+  .\@tablet-g--background-color-yellow-50 {
+    background-color: #F59F0A;
+  }
+  .\@tablet-g--background-color-yellow-60 {
+    background-color: #FBBD23;
+  }
+  .\@tablet-g--background-color-yellow-70 {
+    background-color: #FCD44F;
+  }
+  .\@tablet-g--background-color-yellow-80 {
+    background-color: #FDE68B;
+  }
+  .\@tablet-g--background-color-yellow-90 {
+    background-color: #FEF3C8;
+  }
+  .\@tablet-g--background-color-purple-10 {
+    background-color: #4D1D95;
+  }
+  .\@tablet-g--background-color-purple-20 {
+    background-color: #5A21B5;
+  }
+  .\@tablet-g--background-color-purple-30 {
+    background-color: #6B26D9;
+  }
+  .\@tablet-g--background-color-purple-40 {
+    background-color: #7C3BED;
+  }
+  .\@tablet-g--background-color-purple-50 {
+    background-color: #895AF6;
+  }
+  .\@tablet-g--background-color-purple-60 {
+    background-color: #A689FA;
+  }
+  .\@tablet-g--background-color-purple-70 {
+    background-color: #C3B4FD;
+  }
+  .\@tablet-g--background-color-purple-80 {
+    background-color: #DED7FE;
+  }
+  .\@tablet-g--background-color-purple-90 {
+    background-color: #EBE7FE;
+  }
+  .\@tablet-g--background-color-pink-10 {
+    background-color: #811842;
+  }
+  .\@tablet-g--background-color-pink-20 {
+    background-color: #9B174C;
+  }
+  .\@tablet-g--background-color-pink-30 {
+    background-color: #BF185D;
+  }
+  .\@tablet-g--background-color-pink-40 {
+    background-color: #DB2979;
+  }
+  .\@tablet-g--background-color-pink-50 {
+    background-color: #EC4699;
+  }
+  .\@tablet-g--background-color-pink-60 {
+    background-color: #F471B5;
+  }
+  .\@tablet-g--background-color-pink-70 {
+    background-color: #F9A9D5;
+  }
+  .\@tablet-g--background-color-pink-80 {
+    background-color: #FBD0E8;
+  }
+  .\@tablet-g--background-color-pink-90 {
+    background-color: #FCE8F4;
+  }
+  .\@tablet-g--background-color-grey-10 {
+    background-color: #111827;
+  }
+  .\@tablet-g--background-color-grey-20 {
+    background-color: #1f2937;
+  }
+  .\@tablet-g--background-color-grey-30 {
+    background-color: #374151;
+  }
+  .\@tablet-g--background-color-grey-40 {
+    background-color: #4b5563;
+  }
+  .\@tablet-g--background-color-grey-50 {
+    background-color: #6b7280;
+  }
+  .\@tablet-g--background-color-grey-60 {
+    background-color: #9ca3af;
+  }
+  .\@tablet-g--background-color-grey-70 {
+    background-color: #d1d5db;
+  }
+  .\@tablet-g--background-color-grey-80 {
+    background-color: #e5e7eb;
+  }
+  .\@tablet-g--background-color-grey-90 {
+    background-color: #f3f4f6;
+  }
+}
+@media (min-width: 768px) {
+  .\@desktop-g--background-color-principal-10 {
+    background-color: #7c2d13;
+  }
+  .\@desktop-g--background-color-principal-20 {
+    background-color: #9a3412;
+  }
+  .\@desktop-g--background-color-principal-30 {
+    background-color: #c2410c;
+  }
+  .\@desktop-g--background-color-principal-40 {
+    background-color: #ea580c;
+  }
+  .\@desktop-g--background-color-principal-50 {
+    background-color: #f97316;
+  }
+  .\@desktop-g--background-color-principal-60 {
+    background-color: #fb923c;
+  }
+  .\@desktop-g--background-color-principal-70 {
+    background-color: #fdba74;
+  }
+  .\@desktop-g--background-color-principal-80 {
+    background-color: #fed7aa;
+  }
+  .\@desktop-g--background-color-principal-90 {
+    background-color: #ffedd5;
+  }
+  .\@desktop-g--background-color-alternative-10 {
+    background-color: #312e81;
+  }
+  .\@desktop-g--background-color-alternative-20 {
+    background-color: #3730a3;
+  }
+  .\@desktop-g--background-color-alternative-30 {
+    background-color: #4338ca;
+  }
+  .\@desktop-g--background-color-alternative-40 {
+    background-color: #4f46e5;
+  }
+  .\@desktop-g--background-color-alternative-50 {
+    background-color: #6366f1;
+  }
+  .\@desktop-g--background-color-alternative-60 {
+    background-color: #818cf8;
+  }
+  .\@desktop-g--background-color-alternative-70 {
+    background-color: #a5b4fc;
+  }
+  .\@desktop-g--background-color-alternative-80 {
+    background-color: #c7d2fe;
+  }
+  .\@desktop-g--background-color-alternative-90 {
+    background-color: #e0e7ff;
+  }
+  .\@desktop-g--background-color-red-10 {
+    background-color: #811D1D;
+  }
+  .\@desktop-g--background-color-red-20 {
+    background-color: #981B1B;
+  }
+  .\@desktop-g--background-color-red-30 {
+    background-color: #BA1C1C;
+  }
+  .\@desktop-g--background-color-red-40 {
+    background-color: #DC2828;
+  }
+  .\@desktop-g--background-color-red-50 {
+    background-color: #EF4343;
+  }
+  .\@desktop-g--background-color-red-60 {
+    background-color: #F87272;
+  }
+  .\@desktop-g--background-color-red-70 {
+    background-color: #FCA6A6;
+  }
+  .\@desktop-g--background-color-red-80 {
+    background-color: #FEC8C8;
+  }
+  .\@desktop-g--background-color-red-90 {
+    background-color: #FEE1E1;
+  }
+  .\@desktop-g--background-color-blue-10 {
+    background-color: #1E3B8A;
+  }
+  .\@desktop-g--background-color-blue-20 {
+    background-color: #1E3FAE;
+  }
+  .\@desktop-g--background-color-blue-30 {
+    background-color: #1D4FD7;
+  }
+  .\@desktop-g--background-color-blue-40 {
+    background-color: #2463EB;
+  }
+  .\@desktop-g--background-color-blue-50 {
+    background-color: #3C83F6;
+  }
+  .\@desktop-g--background-color-blue-60 {
+    background-color: #61A6FA;
+  }
+  .\@desktop-g--background-color-blue-70 {
+    background-color: #91C3FD;
+  }
+  .\@desktop-g--background-color-blue-80 {
+    background-color: #BEDBFE;
+  }
+  .\@desktop-g--background-color-blue-90 {
+    background-color: #DCEBFE;
+  }
+  .\@desktop-g--background-color-green-10 {
+    background-color: #064C39;
+  }
+  .\@desktop-g--background-color-green-20 {
+    background-color: #066046;
+  }
+  .\@desktop-g--background-color-green-30 {
+    background-color: #047756;
+  }
+  .\@desktop-g--background-color-green-40 {
+    background-color: #059467;
+  }
+  .\@desktop-g--background-color-green-50 {
+    background-color: #10B77F;
+  }
+  .\@desktop-g--background-color-green-60 {
+    background-color: #36D399;
+  }
+  .\@desktop-g--background-color-green-70 {
+    background-color: #6EE7B7;
+  }
+  .\@desktop-g--background-color-green-80 {
+    background-color: #A5F3CF;
+  }
+  .\@desktop-g--background-color-green-90 {
+    background-color: #D1FAE5;
+  }
+  .\@desktop-g--background-color-yellow-10 {
+    background-color: #76350F;
+  }
+  .\@desktop-g--background-color-yellow-20 {
+    background-color: #91400D;
+  }
+  .\@desktop-g--background-color-yellow-30 {
+    background-color: #B35309;
+  }
+  .\@desktop-g--background-color-yellow-40 {
+    background-color: #DB7706;
+  }
+  .\@desktop-g--background-color-yellow-50 {
+    background-color: #F59F0A;
+  }
+  .\@desktop-g--background-color-yellow-60 {
+    background-color: #FBBD23;
+  }
+  .\@desktop-g--background-color-yellow-70 {
+    background-color: #FCD44F;
+  }
+  .\@desktop-g--background-color-yellow-80 {
+    background-color: #FDE68B;
+  }
+  .\@desktop-g--background-color-yellow-90 {
+    background-color: #FEF3C8;
+  }
+  .\@desktop-g--background-color-purple-10 {
+    background-color: #4D1D95;
+  }
+  .\@desktop-g--background-color-purple-20 {
+    background-color: #5A21B5;
+  }
+  .\@desktop-g--background-color-purple-30 {
+    background-color: #6B26D9;
+  }
+  .\@desktop-g--background-color-purple-40 {
+    background-color: #7C3BED;
+  }
+  .\@desktop-g--background-color-purple-50 {
+    background-color: #895AF6;
+  }
+  .\@desktop-g--background-color-purple-60 {
+    background-color: #A689FA;
+  }
+  .\@desktop-g--background-color-purple-70 {
+    background-color: #C3B4FD;
+  }
+  .\@desktop-g--background-color-purple-80 {
+    background-color: #DED7FE;
+  }
+  .\@desktop-g--background-color-purple-90 {
+    background-color: #EBE7FE;
+  }
+  .\@desktop-g--background-color-pink-10 {
+    background-color: #811842;
+  }
+  .\@desktop-g--background-color-pink-20 {
+    background-color: #9B174C;
+  }
+  .\@desktop-g--background-color-pink-30 {
+    background-color: #BF185D;
+  }
+  .\@desktop-g--background-color-pink-40 {
+    background-color: #DB2979;
+  }
+  .\@desktop-g--background-color-pink-50 {
+    background-color: #EC4699;
+  }
+  .\@desktop-g--background-color-pink-60 {
+    background-color: #F471B5;
+  }
+  .\@desktop-g--background-color-pink-70 {
+    background-color: #F9A9D5;
+  }
+  .\@desktop-g--background-color-pink-80 {
+    background-color: #FBD0E8;
+  }
+  .\@desktop-g--background-color-pink-90 {
+    background-color: #FCE8F4;
+  }
+  .\@desktop-g--background-color-grey-10 {
+    background-color: #111827;
+  }
+  .\@desktop-g--background-color-grey-20 {
+    background-color: #1f2937;
+  }
+  .\@desktop-g--background-color-grey-30 {
+    background-color: #374151;
+  }
+  .\@desktop-g--background-color-grey-40 {
+    background-color: #4b5563;
+  }
+  .\@desktop-g--background-color-grey-50 {
+    background-color: #6b7280;
+  }
+  .\@desktop-g--background-color-grey-60 {
+    background-color: #9ca3af;
+  }
+  .\@desktop-g--background-color-grey-70 {
+    background-color: #d1d5db;
+  }
+  .\@desktop-g--background-color-grey-80 {
+    background-color: #e5e7eb;
+  }
+  .\@desktop-g--background-color-grey-90 {
+    background-color: #f3f4f6;
+  }
+}
+@media (min-width: 992px) {
+  .\@fulldesktop-g--background-color-principal-10 {
+    background-color: #7c2d13;
+  }
+  .\@fulldesktop-g--background-color-principal-20 {
+    background-color: #9a3412;
+  }
+  .\@fulldesktop-g--background-color-principal-30 {
+    background-color: #c2410c;
+  }
+  .\@fulldesktop-g--background-color-principal-40 {
+    background-color: #ea580c;
+  }
+  .\@fulldesktop-g--background-color-principal-50 {
+    background-color: #f97316;
+  }
+  .\@fulldesktop-g--background-color-principal-60 {
+    background-color: #fb923c;
+  }
+  .\@fulldesktop-g--background-color-principal-70 {
+    background-color: #fdba74;
+  }
+  .\@fulldesktop-g--background-color-principal-80 {
+    background-color: #fed7aa;
+  }
+  .\@fulldesktop-g--background-color-principal-90 {
+    background-color: #ffedd5;
+  }
+  .\@fulldesktop-g--background-color-alternative-10 {
+    background-color: #312e81;
+  }
+  .\@fulldesktop-g--background-color-alternative-20 {
+    background-color: #3730a3;
+  }
+  .\@fulldesktop-g--background-color-alternative-30 {
+    background-color: #4338ca;
+  }
+  .\@fulldesktop-g--background-color-alternative-40 {
+    background-color: #4f46e5;
+  }
+  .\@fulldesktop-g--background-color-alternative-50 {
+    background-color: #6366f1;
+  }
+  .\@fulldesktop-g--background-color-alternative-60 {
+    background-color: #818cf8;
+  }
+  .\@fulldesktop-g--background-color-alternative-70 {
+    background-color: #a5b4fc;
+  }
+  .\@fulldesktop-g--background-color-alternative-80 {
+    background-color: #c7d2fe;
+  }
+  .\@fulldesktop-g--background-color-alternative-90 {
+    background-color: #e0e7ff;
+  }
+  .\@fulldesktop-g--background-color-red-10 {
+    background-color: #811D1D;
+  }
+  .\@fulldesktop-g--background-color-red-20 {
+    background-color: #981B1B;
+  }
+  .\@fulldesktop-g--background-color-red-30 {
+    background-color: #BA1C1C;
+  }
+  .\@fulldesktop-g--background-color-red-40 {
+    background-color: #DC2828;
+  }
+  .\@fulldesktop-g--background-color-red-50 {
+    background-color: #EF4343;
+  }
+  .\@fulldesktop-g--background-color-red-60 {
+    background-color: #F87272;
+  }
+  .\@fulldesktop-g--background-color-red-70 {
+    background-color: #FCA6A6;
+  }
+  .\@fulldesktop-g--background-color-red-80 {
+    background-color: #FEC8C8;
+  }
+  .\@fulldesktop-g--background-color-red-90 {
+    background-color: #FEE1E1;
+  }
+  .\@fulldesktop-g--background-color-blue-10 {
+    background-color: #1E3B8A;
+  }
+  .\@fulldesktop-g--background-color-blue-20 {
+    background-color: #1E3FAE;
+  }
+  .\@fulldesktop-g--background-color-blue-30 {
+    background-color: #1D4FD7;
+  }
+  .\@fulldesktop-g--background-color-blue-40 {
+    background-color: #2463EB;
+  }
+  .\@fulldesktop-g--background-color-blue-50 {
+    background-color: #3C83F6;
+  }
+  .\@fulldesktop-g--background-color-blue-60 {
+    background-color: #61A6FA;
+  }
+  .\@fulldesktop-g--background-color-blue-70 {
+    background-color: #91C3FD;
+  }
+  .\@fulldesktop-g--background-color-blue-80 {
+    background-color: #BEDBFE;
+  }
+  .\@fulldesktop-g--background-color-blue-90 {
+    background-color: #DCEBFE;
+  }
+  .\@fulldesktop-g--background-color-green-10 {
+    background-color: #064C39;
+  }
+  .\@fulldesktop-g--background-color-green-20 {
+    background-color: #066046;
+  }
+  .\@fulldesktop-g--background-color-green-30 {
+    background-color: #047756;
+  }
+  .\@fulldesktop-g--background-color-green-40 {
+    background-color: #059467;
+  }
+  .\@fulldesktop-g--background-color-green-50 {
+    background-color: #10B77F;
+  }
+  .\@fulldesktop-g--background-color-green-60 {
+    background-color: #36D399;
+  }
+  .\@fulldesktop-g--background-color-green-70 {
+    background-color: #6EE7B7;
+  }
+  .\@fulldesktop-g--background-color-green-80 {
+    background-color: #A5F3CF;
+  }
+  .\@fulldesktop-g--background-color-green-90 {
+    background-color: #D1FAE5;
+  }
+  .\@fulldesktop-g--background-color-yellow-10 {
+    background-color: #76350F;
+  }
+  .\@fulldesktop-g--background-color-yellow-20 {
+    background-color: #91400D;
+  }
+  .\@fulldesktop-g--background-color-yellow-30 {
+    background-color: #B35309;
+  }
+  .\@fulldesktop-g--background-color-yellow-40 {
+    background-color: #DB7706;
+  }
+  .\@fulldesktop-g--background-color-yellow-50 {
+    background-color: #F59F0A;
+  }
+  .\@fulldesktop-g--background-color-yellow-60 {
+    background-color: #FBBD23;
+  }
+  .\@fulldesktop-g--background-color-yellow-70 {
+    background-color: #FCD44F;
+  }
+  .\@fulldesktop-g--background-color-yellow-80 {
+    background-color: #FDE68B;
+  }
+  .\@fulldesktop-g--background-color-yellow-90 {
+    background-color: #FEF3C8;
+  }
+  .\@fulldesktop-g--background-color-purple-10 {
+    background-color: #4D1D95;
+  }
+  .\@fulldesktop-g--background-color-purple-20 {
+    background-color: #5A21B5;
+  }
+  .\@fulldesktop-g--background-color-purple-30 {
+    background-color: #6B26D9;
+  }
+  .\@fulldesktop-g--background-color-purple-40 {
+    background-color: #7C3BED;
+  }
+  .\@fulldesktop-g--background-color-purple-50 {
+    background-color: #895AF6;
+  }
+  .\@fulldesktop-g--background-color-purple-60 {
+    background-color: #A689FA;
+  }
+  .\@fulldesktop-g--background-color-purple-70 {
+    background-color: #C3B4FD;
+  }
+  .\@fulldesktop-g--background-color-purple-80 {
+    background-color: #DED7FE;
+  }
+  .\@fulldesktop-g--background-color-purple-90 {
+    background-color: #EBE7FE;
+  }
+  .\@fulldesktop-g--background-color-pink-10 {
+    background-color: #811842;
+  }
+  .\@fulldesktop-g--background-color-pink-20 {
+    background-color: #9B174C;
+  }
+  .\@fulldesktop-g--background-color-pink-30 {
+    background-color: #BF185D;
+  }
+  .\@fulldesktop-g--background-color-pink-40 {
+    background-color: #DB2979;
+  }
+  .\@fulldesktop-g--background-color-pink-50 {
+    background-color: #EC4699;
+  }
+  .\@fulldesktop-g--background-color-pink-60 {
+    background-color: #F471B5;
+  }
+  .\@fulldesktop-g--background-color-pink-70 {
+    background-color: #F9A9D5;
+  }
+  .\@fulldesktop-g--background-color-pink-80 {
+    background-color: #FBD0E8;
+  }
+  .\@fulldesktop-g--background-color-pink-90 {
+    background-color: #FCE8F4;
+  }
+  .\@fulldesktop-g--background-color-grey-10 {
+    background-color: #111827;
+  }
+  .\@fulldesktop-g--background-color-grey-20 {
+    background-color: #1f2937;
+  }
+  .\@fulldesktop-g--background-color-grey-30 {
+    background-color: #374151;
+  }
+  .\@fulldesktop-g--background-color-grey-40 {
+    background-color: #4b5563;
+  }
+  .\@fulldesktop-g--background-color-grey-50 {
+    background-color: #6b7280;
+  }
+  .\@fulldesktop-g--background-color-grey-60 {
+    background-color: #9ca3af;
+  }
+  .\@fulldesktop-g--background-color-grey-70 {
+    background-color: #d1d5db;
+  }
+  .\@fulldesktop-g--background-color-grey-80 {
+    background-color: #e5e7eb;
+  }
+  .\@fulldesktop-g--background-color-grey-90 {
+    background-color: #f3f4f6;
+  }
+}
+--g-color-principal-10 {
   color: #7c2d13;
 }
 
-.g--color-principal-20 {
+--g-color-principal-20 {
   color: #9a3412;
 }
 
-.g--color-principal-30 {
+--g-color-principal-30 {
   color: #c2410c;
 }
 
-.g--color-principal-40 {
+--g-color-principal-40 {
   color: #ea580c;
 }
 
-.g--color-principal-50 {
+--g-color-principal-50 {
   color: #f97316;
 }
 
-.g--color-principal-60 {
+--g-color-principal-60 {
   color: #fb923c;
 }
 
-.g--color-principal-70 {
+--g-color-principal-70 {
   color: #fdba74;
 }
 
-.g--color-principal-80 {
+--g-color-principal-80 {
   color: #fed7aa;
 }
 
-.g--color-principal-90 {
+--g-color-principal-90 {
   color: #ffedd5;
 }
 
-.g--color-alternative-10 {
+--g-color-alternative-10 {
   color: #312e81;
 }
 
-.g--color-alternative-20 {
+--g-color-alternative-20 {
   color: #3730a3;
 }
 
-.g--color-alternative-30 {
+--g-color-alternative-30 {
   color: #4338ca;
 }
 
-.g--color-alternative-40 {
+--g-color-alternative-40 {
   color: #4f46e5;
 }
 
-.g--color-alternative-50 {
+--g-color-alternative-50 {
   color: #6366f1;
 }
 
-.g--color-alternative-60 {
+--g-color-alternative-60 {
   color: #818cf8;
 }
 
-.g--color-alternative-70 {
+--g-color-alternative-70 {
   color: #a5b4fc;
 }
 
-.g--color-alternative-80 {
+--g-color-alternative-80 {
   color: #c7d2fe;
 }
 
-.g--color-alternative-90 {
+--g-color-alternative-90 {
   color: #e0e7ff;
 }
 
-.g--color-red-10 {
+--g-color-red-10 {
   color: #811D1D;
 }
 
-.g--color-red-20 {
+--g-color-red-20 {
   color: #981B1B;
 }
 
-.g--color-red-30 {
+--g-color-red-30 {
   color: #BA1C1C;
 }
 
-.g--color-red-40 {
+--g-color-red-40 {
   color: #DC2828;
 }
 
-.g--color-red-50 {
+--g-color-red-50 {
   color: #EF4343;
 }
 
-.g--color-red-60 {
+--g-color-red-60 {
   color: #F87272;
 }
 
-.g--color-red-70 {
+--g-color-red-70 {
   color: #FCA6A6;
 }
 
-.g--color-red-80 {
+--g-color-red-80 {
   color: #FEC8C8;
 }
 
-.g--color-red-90 {
+--g-color-red-90 {
   color: #FEE1E1;
 }
 
-.g--color-blue-10 {
+--g-color-blue-10 {
   color: #1E3B8A;
 }
 
-.g--color-blue-20 {
+--g-color-blue-20 {
   color: #1E3FAE;
 }
 
-.g--color-blue-30 {
+--g-color-blue-30 {
   color: #1D4FD7;
 }
 
-.g--color-blue-40 {
+--g-color-blue-40 {
   color: #2463EB;
 }
 
-.g--color-blue-50 {
+--g-color-blue-50 {
   color: #3C83F6;
 }
 
-.g--color-blue-60 {
+--g-color-blue-60 {
   color: #61A6FA;
 }
 
-.g--color-blue-70 {
+--g-color-blue-70 {
   color: #91C3FD;
 }
 
-.g--color-blue-80 {
+--g-color-blue-80 {
   color: #BEDBFE;
 }
 
-.g--color-blue-90 {
+--g-color-blue-90 {
   color: #DCEBFE;
 }
 
-.g--color-green-10 {
+--g-color-green-10 {
   color: #064C39;
 }
 
-.g--color-green-20 {
+--g-color-green-20 {
   color: #066046;
 }
 
-.g--color-green-30 {
+--g-color-green-30 {
   color: #047756;
 }
 
-.g--color-green-40 {
+--g-color-green-40 {
   color: #059467;
 }
 
-.g--color-green-50 {
+--g-color-green-50 {
   color: #10B77F;
 }
 
-.g--color-green-60 {
+--g-color-green-60 {
   color: #36D399;
 }
 
-.g--color-green-70 {
+--g-color-green-70 {
   color: #6EE7B7;
 }
 
-.g--color-green-80 {
+--g-color-green-80 {
   color: #A5F3CF;
 }
 
-.g--color-green-90 {
+--g-color-green-90 {
   color: #D1FAE5;
 }
 
-.g--color-yellow-10 {
+--g-color-yellow-10 {
   color: #76350F;
 }
 
-.g--color-yellow-20 {
+--g-color-yellow-20 {
   color: #91400D;
 }
 
-.g--color-yellow-30 {
+--g-color-yellow-30 {
   color: #B35309;
 }
 
-.g--color-yellow-40 {
+--g-color-yellow-40 {
   color: #DB7706;
 }
 
-.g--color-yellow-50 {
+--g-color-yellow-50 {
   color: #F59F0A;
 }
 
-.g--color-yellow-60 {
+--g-color-yellow-60 {
   color: #FBBD23;
 }
 
-.g--color-yellow-70 {
+--g-color-yellow-70 {
   color: #FCD44F;
 }
 
-.g--color-yellow-80 {
+--g-color-yellow-80 {
   color: #FDE68B;
 }
 
-.g--color-yellow-90 {
+--g-color-yellow-90 {
   color: #FEF3C8;
 }
 
-.g--color-purple-10 {
+--g-color-purple-10 {
   color: #4D1D95;
 }
 
-.g--color-purple-20 {
+--g-color-purple-20 {
   color: #5A21B5;
 }
 
-.g--color-purple-30 {
+--g-color-purple-30 {
   color: #6B26D9;
 }
 
-.g--color-purple-40 {
+--g-color-purple-40 {
   color: #7C3BED;
 }
 
-.g--color-purple-50 {
+--g-color-purple-50 {
   color: #895AF6;
 }
 
-.g--color-purple-60 {
+--g-color-purple-60 {
   color: #A689FA;
 }
 
-.g--color-purple-70 {
+--g-color-purple-70 {
   color: #C3B4FD;
 }
 
-.g--color-purple-80 {
+--g-color-purple-80 {
   color: #DED7FE;
 }
 
-.g--color-purple-90 {
+--g-color-purple-90 {
   color: #EBE7FE;
 }
 
-.g--color-pink-10 {
+--g-color-pink-10 {
   color: #811842;
 }
 
-.g--color-pink-20 {
+--g-color-pink-20 {
   color: #9B174C;
 }
 
-.g--color-pink-30 {
+--g-color-pink-30 {
   color: #BF185D;
 }
 
-.g--color-pink-40 {
+--g-color-pink-40 {
   color: #DB2979;
 }
 
-.g--color-pink-50 {
+--g-color-pink-50 {
   color: #EC4699;
 }
 
-.g--color-pink-60 {
+--g-color-pink-60 {
   color: #F471B5;
 }
 
-.g--color-pink-70 {
+--g-color-pink-70 {
   color: #F9A9D5;
 }
 
-.g--color-pink-80 {
+--g-color-pink-80 {
   color: #FBD0E8;
 }
 
-.g--color-pink-90 {
+--g-color-pink-90 {
   color: #FCE8F4;
 }
 
-.g--color-grey-10 {
+--g-color-grey-10 {
   color: #111827;
 }
 
-.g--color-grey-20 {
+--g-color-grey-20 {
   color: #1f2937;
 }
 
-.g--color-grey-30 {
+--g-color-grey-30 {
   color: #374151;
 }
 
-.g--color-grey-40 {
+--g-color-grey-40 {
   color: #4b5563;
 }
 
-.g--color-grey-50 {
+--g-color-grey-50 {
   color: #6b7280;
 }
 
-.g--color-grey-60 {
+--g-color-grey-60 {
   color: #9ca3af;
 }
 
-.g--color-grey-70 {
+--g-color-grey-70 {
   color: #d1d5db;
 }
 
-.g--color-grey-80 {
+--g-color-grey-80 {
   color: #e5e7eb;
 }
 
-.g--color-grey-90 {
+--g-color-grey-90 {
   color: #f3f4f6;
+}
+
+@media (min-width: 567px) {
+  --g-color-principal-10\@tablet {
+    color: #7c2d13;
+  }
+  --g-color-principal-20\@tablet {
+    color: #9a3412;
+  }
+  --g-color-principal-30\@tablet {
+    color: #c2410c;
+  }
+  --g-color-principal-40\@tablet {
+    color: #ea580c;
+  }
+  --g-color-principal-50\@tablet {
+    color: #f97316;
+  }
+  --g-color-principal-60\@tablet {
+    color: #fb923c;
+  }
+  --g-color-principal-70\@tablet {
+    color: #fdba74;
+  }
+  --g-color-principal-80\@tablet {
+    color: #fed7aa;
+  }
+  --g-color-principal-90\@tablet {
+    color: #ffedd5;
+  }
+  --g-color-alternative-10\@tablet {
+    color: #312e81;
+  }
+  --g-color-alternative-20\@tablet {
+    color: #3730a3;
+  }
+  --g-color-alternative-30\@tablet {
+    color: #4338ca;
+  }
+  --g-color-alternative-40\@tablet {
+    color: #4f46e5;
+  }
+  --g-color-alternative-50\@tablet {
+    color: #6366f1;
+  }
+  --g-color-alternative-60\@tablet {
+    color: #818cf8;
+  }
+  --g-color-alternative-70\@tablet {
+    color: #a5b4fc;
+  }
+  --g-color-alternative-80\@tablet {
+    color: #c7d2fe;
+  }
+  --g-color-alternative-90\@tablet {
+    color: #e0e7ff;
+  }
+  --g-color-red-10\@tablet {
+    color: #811D1D;
+  }
+  --g-color-red-20\@tablet {
+    color: #981B1B;
+  }
+  --g-color-red-30\@tablet {
+    color: #BA1C1C;
+  }
+  --g-color-red-40\@tablet {
+    color: #DC2828;
+  }
+  --g-color-red-50\@tablet {
+    color: #EF4343;
+  }
+  --g-color-red-60\@tablet {
+    color: #F87272;
+  }
+  --g-color-red-70\@tablet {
+    color: #FCA6A6;
+  }
+  --g-color-red-80\@tablet {
+    color: #FEC8C8;
+  }
+  --g-color-red-90\@tablet {
+    color: #FEE1E1;
+  }
+  --g-color-blue-10\@tablet {
+    color: #1E3B8A;
+  }
+  --g-color-blue-20\@tablet {
+    color: #1E3FAE;
+  }
+  --g-color-blue-30\@tablet {
+    color: #1D4FD7;
+  }
+  --g-color-blue-40\@tablet {
+    color: #2463EB;
+  }
+  --g-color-blue-50\@tablet {
+    color: #3C83F6;
+  }
+  --g-color-blue-60\@tablet {
+    color: #61A6FA;
+  }
+  --g-color-blue-70\@tablet {
+    color: #91C3FD;
+  }
+  --g-color-blue-80\@tablet {
+    color: #BEDBFE;
+  }
+  --g-color-blue-90\@tablet {
+    color: #DCEBFE;
+  }
+  --g-color-green-10\@tablet {
+    color: #064C39;
+  }
+  --g-color-green-20\@tablet {
+    color: #066046;
+  }
+  --g-color-green-30\@tablet {
+    color: #047756;
+  }
+  --g-color-green-40\@tablet {
+    color: #059467;
+  }
+  --g-color-green-50\@tablet {
+    color: #10B77F;
+  }
+  --g-color-green-60\@tablet {
+    color: #36D399;
+  }
+  --g-color-green-70\@tablet {
+    color: #6EE7B7;
+  }
+  --g-color-green-80\@tablet {
+    color: #A5F3CF;
+  }
+  --g-color-green-90\@tablet {
+    color: #D1FAE5;
+  }
+  --g-color-yellow-10\@tablet {
+    color: #76350F;
+  }
+  --g-color-yellow-20\@tablet {
+    color: #91400D;
+  }
+  --g-color-yellow-30\@tablet {
+    color: #B35309;
+  }
+  --g-color-yellow-40\@tablet {
+    color: #DB7706;
+  }
+  --g-color-yellow-50\@tablet {
+    color: #F59F0A;
+  }
+  --g-color-yellow-60\@tablet {
+    color: #FBBD23;
+  }
+  --g-color-yellow-70\@tablet {
+    color: #FCD44F;
+  }
+  --g-color-yellow-80\@tablet {
+    color: #FDE68B;
+  }
+  --g-color-yellow-90\@tablet {
+    color: #FEF3C8;
+  }
+  --g-color-purple-10\@tablet {
+    color: #4D1D95;
+  }
+  --g-color-purple-20\@tablet {
+    color: #5A21B5;
+  }
+  --g-color-purple-30\@tablet {
+    color: #6B26D9;
+  }
+  --g-color-purple-40\@tablet {
+    color: #7C3BED;
+  }
+  --g-color-purple-50\@tablet {
+    color: #895AF6;
+  }
+  --g-color-purple-60\@tablet {
+    color: #A689FA;
+  }
+  --g-color-purple-70\@tablet {
+    color: #C3B4FD;
+  }
+  --g-color-purple-80\@tablet {
+    color: #DED7FE;
+  }
+  --g-color-purple-90\@tablet {
+    color: #EBE7FE;
+  }
+  --g-color-pink-10\@tablet {
+    color: #811842;
+  }
+  --g-color-pink-20\@tablet {
+    color: #9B174C;
+  }
+  --g-color-pink-30\@tablet {
+    color: #BF185D;
+  }
+  --g-color-pink-40\@tablet {
+    color: #DB2979;
+  }
+  --g-color-pink-50\@tablet {
+    color: #EC4699;
+  }
+  --g-color-pink-60\@tablet {
+    color: #F471B5;
+  }
+  --g-color-pink-70\@tablet {
+    color: #F9A9D5;
+  }
+  --g-color-pink-80\@tablet {
+    color: #FBD0E8;
+  }
+  --g-color-pink-90\@tablet {
+    color: #FCE8F4;
+  }
+  --g-color-grey-10\@tablet {
+    color: #111827;
+  }
+  --g-color-grey-20\@tablet {
+    color: #1f2937;
+  }
+  --g-color-grey-30\@tablet {
+    color: #374151;
+  }
+  --g-color-grey-40\@tablet {
+    color: #4b5563;
+  }
+  --g-color-grey-50\@tablet {
+    color: #6b7280;
+  }
+  --g-color-grey-60\@tablet {
+    color: #9ca3af;
+  }
+  --g-color-grey-70\@tablet {
+    color: #d1d5db;
+  }
+  --g-color-grey-80\@tablet {
+    color: #e5e7eb;
+  }
+  --g-color-grey-90\@tablet {
+    color: #f3f4f6;
+  }
+}
+@media (min-width: 768px) {
+  --g-color-principal-10\@desktop {
+    color: #7c2d13;
+  }
+  --g-color-principal-20\@desktop {
+    color: #9a3412;
+  }
+  --g-color-principal-30\@desktop {
+    color: #c2410c;
+  }
+  --g-color-principal-40\@desktop {
+    color: #ea580c;
+  }
+  --g-color-principal-50\@desktop {
+    color: #f97316;
+  }
+  --g-color-principal-60\@desktop {
+    color: #fb923c;
+  }
+  --g-color-principal-70\@desktop {
+    color: #fdba74;
+  }
+  --g-color-principal-80\@desktop {
+    color: #fed7aa;
+  }
+  --g-color-principal-90\@desktop {
+    color: #ffedd5;
+  }
+  --g-color-alternative-10\@desktop {
+    color: #312e81;
+  }
+  --g-color-alternative-20\@desktop {
+    color: #3730a3;
+  }
+  --g-color-alternative-30\@desktop {
+    color: #4338ca;
+  }
+  --g-color-alternative-40\@desktop {
+    color: #4f46e5;
+  }
+  --g-color-alternative-50\@desktop {
+    color: #6366f1;
+  }
+  --g-color-alternative-60\@desktop {
+    color: #818cf8;
+  }
+  --g-color-alternative-70\@desktop {
+    color: #a5b4fc;
+  }
+  --g-color-alternative-80\@desktop {
+    color: #c7d2fe;
+  }
+  --g-color-alternative-90\@desktop {
+    color: #e0e7ff;
+  }
+  --g-color-red-10\@desktop {
+    color: #811D1D;
+  }
+  --g-color-red-20\@desktop {
+    color: #981B1B;
+  }
+  --g-color-red-30\@desktop {
+    color: #BA1C1C;
+  }
+  --g-color-red-40\@desktop {
+    color: #DC2828;
+  }
+  --g-color-red-50\@desktop {
+    color: #EF4343;
+  }
+  --g-color-red-60\@desktop {
+    color: #F87272;
+  }
+  --g-color-red-70\@desktop {
+    color: #FCA6A6;
+  }
+  --g-color-red-80\@desktop {
+    color: #FEC8C8;
+  }
+  --g-color-red-90\@desktop {
+    color: #FEE1E1;
+  }
+  --g-color-blue-10\@desktop {
+    color: #1E3B8A;
+  }
+  --g-color-blue-20\@desktop {
+    color: #1E3FAE;
+  }
+  --g-color-blue-30\@desktop {
+    color: #1D4FD7;
+  }
+  --g-color-blue-40\@desktop {
+    color: #2463EB;
+  }
+  --g-color-blue-50\@desktop {
+    color: #3C83F6;
+  }
+  --g-color-blue-60\@desktop {
+    color: #61A6FA;
+  }
+  --g-color-blue-70\@desktop {
+    color: #91C3FD;
+  }
+  --g-color-blue-80\@desktop {
+    color: #BEDBFE;
+  }
+  --g-color-blue-90\@desktop {
+    color: #DCEBFE;
+  }
+  --g-color-green-10\@desktop {
+    color: #064C39;
+  }
+  --g-color-green-20\@desktop {
+    color: #066046;
+  }
+  --g-color-green-30\@desktop {
+    color: #047756;
+  }
+  --g-color-green-40\@desktop {
+    color: #059467;
+  }
+  --g-color-green-50\@desktop {
+    color: #10B77F;
+  }
+  --g-color-green-60\@desktop {
+    color: #36D399;
+  }
+  --g-color-green-70\@desktop {
+    color: #6EE7B7;
+  }
+  --g-color-green-80\@desktop {
+    color: #A5F3CF;
+  }
+  --g-color-green-90\@desktop {
+    color: #D1FAE5;
+  }
+  --g-color-yellow-10\@desktop {
+    color: #76350F;
+  }
+  --g-color-yellow-20\@desktop {
+    color: #91400D;
+  }
+  --g-color-yellow-30\@desktop {
+    color: #B35309;
+  }
+  --g-color-yellow-40\@desktop {
+    color: #DB7706;
+  }
+  --g-color-yellow-50\@desktop {
+    color: #F59F0A;
+  }
+  --g-color-yellow-60\@desktop {
+    color: #FBBD23;
+  }
+  --g-color-yellow-70\@desktop {
+    color: #FCD44F;
+  }
+  --g-color-yellow-80\@desktop {
+    color: #FDE68B;
+  }
+  --g-color-yellow-90\@desktop {
+    color: #FEF3C8;
+  }
+  --g-color-purple-10\@desktop {
+    color: #4D1D95;
+  }
+  --g-color-purple-20\@desktop {
+    color: #5A21B5;
+  }
+  --g-color-purple-30\@desktop {
+    color: #6B26D9;
+  }
+  --g-color-purple-40\@desktop {
+    color: #7C3BED;
+  }
+  --g-color-purple-50\@desktop {
+    color: #895AF6;
+  }
+  --g-color-purple-60\@desktop {
+    color: #A689FA;
+  }
+  --g-color-purple-70\@desktop {
+    color: #C3B4FD;
+  }
+  --g-color-purple-80\@desktop {
+    color: #DED7FE;
+  }
+  --g-color-purple-90\@desktop {
+    color: #EBE7FE;
+  }
+  --g-color-pink-10\@desktop {
+    color: #811842;
+  }
+  --g-color-pink-20\@desktop {
+    color: #9B174C;
+  }
+  --g-color-pink-30\@desktop {
+    color: #BF185D;
+  }
+  --g-color-pink-40\@desktop {
+    color: #DB2979;
+  }
+  --g-color-pink-50\@desktop {
+    color: #EC4699;
+  }
+  --g-color-pink-60\@desktop {
+    color: #F471B5;
+  }
+  --g-color-pink-70\@desktop {
+    color: #F9A9D5;
+  }
+  --g-color-pink-80\@desktop {
+    color: #FBD0E8;
+  }
+  --g-color-pink-90\@desktop {
+    color: #FCE8F4;
+  }
+  --g-color-grey-10\@desktop {
+    color: #111827;
+  }
+  --g-color-grey-20\@desktop {
+    color: #1f2937;
+  }
+  --g-color-grey-30\@desktop {
+    color: #374151;
+  }
+  --g-color-grey-40\@desktop {
+    color: #4b5563;
+  }
+  --g-color-grey-50\@desktop {
+    color: #6b7280;
+  }
+  --g-color-grey-60\@desktop {
+    color: #9ca3af;
+  }
+  --g-color-grey-70\@desktop {
+    color: #d1d5db;
+  }
+  --g-color-grey-80\@desktop {
+    color: #e5e7eb;
+  }
+  --g-color-grey-90\@desktop {
+    color: #f3f4f6;
+  }
+}
+@media (min-width: 992px) {
+  --g-color-principal-10\@fulldesktop {
+    color: #7c2d13;
+  }
+  --g-color-principal-20\@fulldesktop {
+    color: #9a3412;
+  }
+  --g-color-principal-30\@fulldesktop {
+    color: #c2410c;
+  }
+  --g-color-principal-40\@fulldesktop {
+    color: #ea580c;
+  }
+  --g-color-principal-50\@fulldesktop {
+    color: #f97316;
+  }
+  --g-color-principal-60\@fulldesktop {
+    color: #fb923c;
+  }
+  --g-color-principal-70\@fulldesktop {
+    color: #fdba74;
+  }
+  --g-color-principal-80\@fulldesktop {
+    color: #fed7aa;
+  }
+  --g-color-principal-90\@fulldesktop {
+    color: #ffedd5;
+  }
+  --g-color-alternative-10\@fulldesktop {
+    color: #312e81;
+  }
+  --g-color-alternative-20\@fulldesktop {
+    color: #3730a3;
+  }
+  --g-color-alternative-30\@fulldesktop {
+    color: #4338ca;
+  }
+  --g-color-alternative-40\@fulldesktop {
+    color: #4f46e5;
+  }
+  --g-color-alternative-50\@fulldesktop {
+    color: #6366f1;
+  }
+  --g-color-alternative-60\@fulldesktop {
+    color: #818cf8;
+  }
+  --g-color-alternative-70\@fulldesktop {
+    color: #a5b4fc;
+  }
+  --g-color-alternative-80\@fulldesktop {
+    color: #c7d2fe;
+  }
+  --g-color-alternative-90\@fulldesktop {
+    color: #e0e7ff;
+  }
+  --g-color-red-10\@fulldesktop {
+    color: #811D1D;
+  }
+  --g-color-red-20\@fulldesktop {
+    color: #981B1B;
+  }
+  --g-color-red-30\@fulldesktop {
+    color: #BA1C1C;
+  }
+  --g-color-red-40\@fulldesktop {
+    color: #DC2828;
+  }
+  --g-color-red-50\@fulldesktop {
+    color: #EF4343;
+  }
+  --g-color-red-60\@fulldesktop {
+    color: #F87272;
+  }
+  --g-color-red-70\@fulldesktop {
+    color: #FCA6A6;
+  }
+  --g-color-red-80\@fulldesktop {
+    color: #FEC8C8;
+  }
+  --g-color-red-90\@fulldesktop {
+    color: #FEE1E1;
+  }
+  --g-color-blue-10\@fulldesktop {
+    color: #1E3B8A;
+  }
+  --g-color-blue-20\@fulldesktop {
+    color: #1E3FAE;
+  }
+  --g-color-blue-30\@fulldesktop {
+    color: #1D4FD7;
+  }
+  --g-color-blue-40\@fulldesktop {
+    color: #2463EB;
+  }
+  --g-color-blue-50\@fulldesktop {
+    color: #3C83F6;
+  }
+  --g-color-blue-60\@fulldesktop {
+    color: #61A6FA;
+  }
+  --g-color-blue-70\@fulldesktop {
+    color: #91C3FD;
+  }
+  --g-color-blue-80\@fulldesktop {
+    color: #BEDBFE;
+  }
+  --g-color-blue-90\@fulldesktop {
+    color: #DCEBFE;
+  }
+  --g-color-green-10\@fulldesktop {
+    color: #064C39;
+  }
+  --g-color-green-20\@fulldesktop {
+    color: #066046;
+  }
+  --g-color-green-30\@fulldesktop {
+    color: #047756;
+  }
+  --g-color-green-40\@fulldesktop {
+    color: #059467;
+  }
+  --g-color-green-50\@fulldesktop {
+    color: #10B77F;
+  }
+  --g-color-green-60\@fulldesktop {
+    color: #36D399;
+  }
+  --g-color-green-70\@fulldesktop {
+    color: #6EE7B7;
+  }
+  --g-color-green-80\@fulldesktop {
+    color: #A5F3CF;
+  }
+  --g-color-green-90\@fulldesktop {
+    color: #D1FAE5;
+  }
+  --g-color-yellow-10\@fulldesktop {
+    color: #76350F;
+  }
+  --g-color-yellow-20\@fulldesktop {
+    color: #91400D;
+  }
+  --g-color-yellow-30\@fulldesktop {
+    color: #B35309;
+  }
+  --g-color-yellow-40\@fulldesktop {
+    color: #DB7706;
+  }
+  --g-color-yellow-50\@fulldesktop {
+    color: #F59F0A;
+  }
+  --g-color-yellow-60\@fulldesktop {
+    color: #FBBD23;
+  }
+  --g-color-yellow-70\@fulldesktop {
+    color: #FCD44F;
+  }
+  --g-color-yellow-80\@fulldesktop {
+    color: #FDE68B;
+  }
+  --g-color-yellow-90\@fulldesktop {
+    color: #FEF3C8;
+  }
+  --g-color-purple-10\@fulldesktop {
+    color: #4D1D95;
+  }
+  --g-color-purple-20\@fulldesktop {
+    color: #5A21B5;
+  }
+  --g-color-purple-30\@fulldesktop {
+    color: #6B26D9;
+  }
+  --g-color-purple-40\@fulldesktop {
+    color: #7C3BED;
+  }
+  --g-color-purple-50\@fulldesktop {
+    color: #895AF6;
+  }
+  --g-color-purple-60\@fulldesktop {
+    color: #A689FA;
+  }
+  --g-color-purple-70\@fulldesktop {
+    color: #C3B4FD;
+  }
+  --g-color-purple-80\@fulldesktop {
+    color: #DED7FE;
+  }
+  --g-color-purple-90\@fulldesktop {
+    color: #EBE7FE;
+  }
+  --g-color-pink-10\@fulldesktop {
+    color: #811842;
+  }
+  --g-color-pink-20\@fulldesktop {
+    color: #9B174C;
+  }
+  --g-color-pink-30\@fulldesktop {
+    color: #BF185D;
+  }
+  --g-color-pink-40\@fulldesktop {
+    color: #DB2979;
+  }
+  --g-color-pink-50\@fulldesktop {
+    color: #EC4699;
+  }
+  --g-color-pink-60\@fulldesktop {
+    color: #F471B5;
+  }
+  --g-color-pink-70\@fulldesktop {
+    color: #F9A9D5;
+  }
+  --g-color-pink-80\@fulldesktop {
+    color: #FBD0E8;
+  }
+  --g-color-pink-90\@fulldesktop {
+    color: #FCE8F4;
+  }
+  --g-color-grey-10\@fulldesktop {
+    color: #111827;
+  }
+  --g-color-grey-20\@fulldesktop {
+    color: #1f2937;
+  }
+  --g-color-grey-30\@fulldesktop {
+    color: #374151;
+  }
+  --g-color-grey-40\@fulldesktop {
+    color: #4b5563;
+  }
+  --g-color-grey-50\@fulldesktop {
+    color: #6b7280;
+  }
+  --g-color-grey-60\@fulldesktop {
+    color: #9ca3af;
+  }
+  --g-color-grey-70\@fulldesktop {
+    color: #d1d5db;
+  }
+  --g-color-grey-80\@fulldesktop {
+    color: #e5e7eb;
+  }
+  --g-color-grey-90\@fulldesktop {
+    color: #f3f4f6;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+@each $nombre_color, $variante_color in $variantes {
+  @for $i from 1 through length($claves) {
+    $variante_especifica: nth($variante_color, $i);
+    $clave_especifica: nth($claves, $i);
+
+    --g-color-#{$nombre_color}-#{$clave_especifica} {
+      color: #{$variante_especifica};
+    }
+  }
+}
+
+@each $key, $value in $mediaQueries {
+  @media (min-width: #{$value}) {
+    @each $nombre_color, $variante_color in $variantes {
+      @for $i from 1 through length($claves) {
+        $variante_especifica: nth($variante_color, $i);
+        $clave_especifica: nth($claves, $i);
+
+        --g-color-#{$nombre_color}-#{$clave_especifica}#{$separadorMediaQueries}#{$key} {
+          color: #{$variante_especifica};
+        }
+      }
+    }
+  }
+}

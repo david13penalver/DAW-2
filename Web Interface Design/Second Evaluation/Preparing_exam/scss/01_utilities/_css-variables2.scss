@@ -1,0 +1,37 @@
+:root {
+    @each $nombre_color,$valor_color in $variantes {
+        @for $i from 1 through $num-claves {
+            $valor_especifico: nth($valor_color, $i);
+            $clave_especifica: nth($claves, $i);
+
+            --color-#{$nombre_color}-#{$clave_especifica}: #{$valor_especifico};
+        }
+    }
+
+    @for $i from 1 through length($margin) {
+        $valor_especifico: nth($margin, $i);
+        $clave_especifica: $i * 10;
+
+        --margin-#{$clave_especifica}: #{$valor_especifico};
+    }
+
+    @each $key, $value in $padding {
+        --padding-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $width {
+        --witdh-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $height {
+        --height-#{$key}: #{$value};
+    }
+
+    @each $key, $value in $font-size {
+        @if ($key == "") {
+            --font-size: #{$value};
+        } @else {
+            --font-size-#{$key}: #{$value};
+        }
+    }
+}

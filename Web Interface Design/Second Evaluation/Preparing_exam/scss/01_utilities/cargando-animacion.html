@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Document</title>
+  </head>
+  <style>
+    .cuadrado {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      margin: auto;
+      margin-top: 20vh;
+      margin-bottom: 14px;
+      position: relative;
+      animation: cuadrado 2s linear infinite;
+    }
+    .sombra {
+      width: 50px;
+      height: 5px;
+      position: relative;
+      margin: auto;
+    }
+    .sombra:before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      background: #f0808050;
+      position: absolute;
+      border-radius: 50%;
+      animation: sombra 2.5s linear infinite;
+    }
+    @keyframes sombra {
+      0% {
+        transform: scale(1, 1);
+      }
+
+      50% {
+        transform: scale(1.2, 1);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+    @keyframes cuadrado {
+      15% {
+        border-bottom-right-radius: 3px;
+      }
+      25% {
+        transform: translateY(9px), rotate(20deg);
+      }
+      50% {
+        transform: translateY(18px) scale(1, 0.9) rotate(40deg);
+        border-bottom-right-radius: 30px;
+      }
+      75% {
+        transform: translateY(9px), rotate(65deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+    .circulo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: green;
+      margin: auto;
+      margin-top: 20vh;
+      margin-bottom: 17px;
+      position: relative;
+      animation: circulo 1.5s ease-in-out infinite;
+    }
+    @keyframes circulo {
+      25% {
+        transform: translateY(1px), scale(1, 1);
+      }
+      48% {
+        transform: translateY(20px), scale(1, 1);
+      }
+      50% {
+        transform: translateY(21px) scale(1.1, 0.9);
+      }
+      52% {
+        transform: translateY(20px), scale(1, 1);
+      }
+      75% {
+        transform: translateY(1px), scale(1, 1);
+      }
+    }
+    .sombraCirculo {
+      width: 40px;
+      height: 5px;
+      position: relative;
+      margin: auto;
+    }
+    .sombraCirculo:before {
+      content: "";
+      width: 40px;
+      height: 5px;
+      background: #4c694850;
+      position: absolute;
+      border-radius: 50%;
+      animation: sombraCirculo 1.5s ease-in-out infinite;
+    }
+    @keyframes sombraCirculo {
+      0% {
+        transform: scale(1, 1);
+      }
+
+      50% {
+        transform: scale(1.2, 1);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+    }
+    .cuadrados {
+      display: flex;
+      justify-content: center;
+    }
+    .cuadrado1 {
+      height: 70px;
+      width: 70px;
+      background-color: gold;
+      margin: 10px;
+      animation: movercuadrad 2s linear infinite;
+      animation-fill-mode: both;
+    }
+    .cuadrado2 {
+      height: 70px;
+      width: 70px;
+      background-color: gold;
+      margin: 10px;
+      animation: moverizq 2s linear infinite;
+    }
+    .cuadrado3 {
+      height: 70px;
+      width: 70px;
+      background-color: gold;
+      margin: 10px;
+
+      animation: moverizq 2s linear infinite;
+    }
+    @keyframes movercuadrad {
+      0% {
+        transform: translateY(0px);
+      }
+      20% {
+        transform: translateY(90px);
+      }
+      65% {
+        transform: translateY(90px) translateX(270px);
+      }
+
+      75% {
+        transform: translateX(270px) translateY(0px);
+      }
+      100% {
+        transform: translateX(180px) translateY(0px);
+      }
+    }
+    @keyframes moverizq {
+      75% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(-90px);
+      }
+    }
+
+    .difuminado {
+      display: flex;
+      justify-content: center;
+    }
+
+    .difuminado1 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminado 4s linear infinite;
+      animation-fill-mode: both;
+    }
+    .difuminado2 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminado 4s linear infinite;
+      animation-fill-mode: both;
+      animation-delay: 0.25s;
+    }
+    .difuminado3 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminado 4s linear infinite;
+      animation-fill-mode: both;
+      animation-delay: 0.5s;
+    }
+
+    .difuminadoE1 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminadoEscalado 4s linear infinite;
+      animation-fill-mode: both;
+    }
+    .difuminadoE2 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminadoEscalado 4s linear infinite;
+      animation-fill-mode: both;
+      animation-delay: 0.25s;
+    }
+    .difuminadoE3 {
+      height: 70px;
+      width: 70px;
+      background-color: blue;
+      margin: 10px;
+      animation: difuminadoEscalado 4s linear infinite;
+      animation-fill-mode: both;
+      animation-delay: 0.5s;
+    }
+    @keyframes difuminadoEscalado {
+      0% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+
+      40% {
+        opacity: 0;
+        transform: scale(0, 0);
+      }
+      60% {
+        opacity: 0;
+        transform: scale(0, 0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    @keyframes difuminado {
+      0% {
+        opacity: 1;
+      }
+
+      40% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .lineas {
+      display: flex;
+      margin-left: 50px;
+    }
+    .linea1 {
+      width: 50px;
+      height: 10px;
+      background-color: black;
+      margin-right: 20px;
+      position: relative;
+    }
+    .linea2 {
+      width: 50px;
+      height: 10px;
+      background-color: black;
+      margin-top: 30px;
+      margin-right: 20px;
+    }
+    .linea3 {
+      width: 50px;
+      height: 10px;
+      background-color: black;
+      margin-top: 60px;
+    }
+    .pelota {
+      width: 30px;
+      height: 30px;
+      background-color: blueviolet;
+      border-radius: 50%;
+      margin-left: 50px;
+      animation: caidaEscalera 6s linear infinite;
+      animation-fill-mode: both;
+    }
+    @keyframes caidaEscalera {
+      0% {
+        transform: translateY(0px) rotate(360deg);
+      }
+      25% {
+        transform: translateX(40px);
+      }
+      26% {
+        transform: translateX(43px) translateY(2px);
+      }
+      40% {
+        transform: translateX(70px) translateY(30px);
+      }
+      55% {
+        transform: translateX(110px) translateY(30px);
+      }
+      56% {
+        transform: translateX(112px) translateY(31px);
+      }
+      70% {
+        transform: translateX(140px) translateY(60px);
+      }
+      85% {
+        transform: translateX(155px) translateY(60px);
+      }
+    }
+  </style>
+  <body>
+    <div class="cuadrado"></div>
+    <div class="sombra"></div>
+    <br />
+    <p>ciruclo de botando</p>
+    <div class="circulo"></div>
+    <div class="sombraCirculo"></div>
+
+    <p>Fila de cuadrados</p>
+    <br />
+    <div class="cuadrados">
+      <div class="cuadrado1"></div>
+      <div class="cuadrado2"></div>
+      <div class="cuadrado3"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>Difuminar</p>
+    <div class="difuminado">
+      <div class="difuminado3"></div>
+      <div class="difuminado3"></div>
+      <div class="difuminado3"></div>
+    </div>
+    <div class="difuminado">
+      <div class="difuminado2"></div>
+      <div class="difuminado2"></div>
+      <div class="difuminado3"></div>
+    </div>
+    <div class="difuminado">
+      <div class="difuminado1"></div>
+      <div class="difuminado2"></div>
+      <div class="difuminado3"></div>
+    </div>
+    <br />
+    <br />
+
+    <p>Difuminar escalado</p>
+    <div class="difuminado">
+      <div class="difuminadoE3"></div>
+      <div class="difuminadoE3"></div>
+      <div class="difuminadoE3"></div>
+    </div>
+    <div class="difuminado">
+      <div class="difuminadoE2"></div>
+      <div class="difuminadoE2"></div>
+      <div class="difuminadoE3"></div>
+    </div>
+    <div class="difuminado">
+      <div class="difuminadoE1"></div>
+      <div class="difuminadoE2"></div>
+      <div class="difuminadoE3"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>Pelota escalera</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="pelota"></div>
+    <div class="lineas">
+      <div class="linea1"></div>
+      <div class="linea2"></div>
+      <div class="linea3"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</html>

@@ -13,18 +13,18 @@
     }
   }
 
-    @for $i from 1 to length($margin) {
-      $super_i: $i * 10;
-      $key: nth($margin, $i);
-      --margin-#{$super_i}: #{$key};
-    }
+  @for $i from 1 to length($margin) {
+    $super_i: $i * 10;
+    $key: nth($margin, $i);
+    --margin-#{$super_i}: #{$key};
+  }
 
   @each $key, $value in $padding {
     --padding-#{$key}: #{$value};
   }
 
 
-    @each $key, $value in $font-size {
-        --font-size-#{$key}: #{$value};
-    }
+  @each $key, $value in $font-size {
+      --font-size-#{$key}: #{$value};
+  }
 }
