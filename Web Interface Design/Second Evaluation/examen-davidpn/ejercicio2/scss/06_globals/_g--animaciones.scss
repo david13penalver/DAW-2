@@ -1,0 +1,49 @@
+.g--animation-moverse {
+  animation-name: moverse;
+}
+
+.g--animation-rotarse {
+  animation-name: rotarse;
+}
+
+@for $i from 1 through 10 {
+  .g--animation-duration-#{$i}s {
+    animation-duration: #{$i}s;
+  }
+}
+
+@for $i from 1 through length($velocidad) {
+  $velocidad_valor: nth($velocidad, $i);
+
+  .g--animation-function-#{$velocidad_valor} {
+    animation-timing-function: #{$velocidad_valor};
+  }
+}
+
+
+
+@each $key, $value in $mediaQueries {
+  @media (min-width: #{$value}) {
+    .g--animation-moverse#{$separador}#{$key} {
+      animation-name: moverse;
+    }
+
+    .g--animation-rotarse#{$separador}#{$key} {
+      animation-name: rotarse;
+    }
+
+    @for $i from 1 through 10 {
+      .g--animation-duration-#{$i}s#{$separador}#{$key} {
+        animation-duration: #{$i}s;
+      }
+    }
+
+    @for $i from 1 through length($velocidad) {
+      $velocidad_valor: nth($velocidad, $i);
+
+      .g--animation-function-#{$velocidad_valor}#{$separador}#{$key} {
+        animation-timing-function: #{$velocidad_valor};
+      }
+    }
+  }
+}

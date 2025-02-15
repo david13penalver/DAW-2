@@ -1,0 +1,37 @@
+.c-cuadrado {
+  --c-cuadrado-bg-color: var(--color-principal--50);
+  --c-cuadrado-height: var(--height-100);
+  --c-cuadrado-width: var(--width-100);
+
+  height: var(--c-cuadrado-height);
+  width: var(--c-cuadrado-width);
+  background-color: var(--c-cuadrado-bg-color);
+
+  &--rojo {
+    --c-cuadrado-bg-color: var(--color-red--50);
+  }
+
+  &--verde {
+    --c-cuadrado-bg-color: var(--color-green--60);
+  }
+
+  &--amarillo {
+    --c-cuadrado-bg-color: var(--color-yellow--80);
+  }
+
+  &--animado {
+    transition: transform var(--duracion-3s) var(--velocidad-ease-in-out) var(--duracion-1s);
+  }
+}
+
+@media (min-width: 500px) {
+  .c-cuadrado--animado {
+    transform: translateY(var(--translate-minus-50px));
+  }
+}
+
+@media (min-width: 800px) {
+  .c-cuadrado--animado {
+    transform: translateY(var(--translate-minus-100px));
+  }
+}

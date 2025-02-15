@@ -1,0 +1,407 @@
+@keyframes moverse {
+  20% {
+    transform: translateY(150px);
+  }
+  40% {
+    transform: translate(-150px, 150px);
+  }
+  60% {
+    transform: translate(150px, 150px);
+  }
+  80% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rotarse {
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+:root {
+  --height-0: 0px;
+  --height-4: 4px;
+  --height-6: 6px;
+  --height-8: 8px;
+  --height-10: 10px;
+  --height-12: 12px;
+  --height-16: 16px;
+  --height-20: 20px;
+  --height-24: 24px;
+  --height-32: 32px;
+  --height-40: 40px;
+  --height-48: 48px;
+  --height-64: 64px;
+  --height-80: 80px;
+  --height-100: 100px;
+  --height-128: 128px;
+  --height-160: 160px;
+  --height-192: 192px;
+  --height-224: 224px;
+  --height-256: 256px;
+  --height-320: 320px;
+  --height-480: 480px;
+  --height-640: 640px;
+  --width-0: 0px;
+  --width-4: 4px;
+  --width-6: 6px;
+  --width-8: 8px;
+  --width-10: 10px;
+  --width-12: 12px;
+  --width-16: 16px;
+  --width-20: 20px;
+  --width-24: 24px;
+  --width-32: 32px;
+  --width-40: 40px;
+  --width-48: 48px;
+  --width-64: 64px;
+  --width-80: 80px;
+  --width-100: 100px;
+  --width-128: 128px;
+  --width-160: 160px;
+  --width-192: 192px;
+  --width-224: 224px;
+  --width-256: 256px;
+  --width-320: 320px;
+  --width-480: 480px;
+  --width-640: 640px;
+  --velocidad-linear: linear;
+  --velocidad-ease: ease;
+  --velocidad-ease-in: ease-in;
+  --velocidad-ease-out: ease-out;
+  --velocidad-ease-in-out: ease-in-out;
+  --duracion-1s: 1s;
+  --duracion-2s: 2s;
+  --duracion-3s: 3s;
+  --duracion-4s: 4s;
+  --duracion-5s: 5s;
+  --duracion-6s: 6s;
+  --duracion-7s: 7s;
+  --duracion-8s: 8s;
+  --duracion-9s: 9s;
+  --duracion-10s: 10s;
+  --color-principal--10: #7c2d13;
+  --color-principal--20: #9a3412;
+  --color-principal--30: #c2410c;
+  --color-principal--40: #ea580c;
+  --color-principal--50: #f97316;
+  --color-principal--60: #fb923c;
+  --color-principal--70: #fdba74;
+  --color-principal--80: #fed7aa;
+  --color-principal--90: #ffedd5;
+  --color-alternative--10: #312e81;
+  --color-alternative--20: #3730a3;
+  --color-alternative--30: #4338ca;
+  --color-alternative--40: #4f46e5;
+  --color-alternative--50: #6366f1;
+  --color-alternative--60: #818cf8;
+  --color-alternative--70: #a5b4fc;
+  --color-alternative--80: #c7d2fe;
+  --color-alternative--90: #e0e7ff;
+  --color-red--10: #811D1D;
+  --color-red--20: #981B1B;
+  --color-red--30: #BA1C1C;
+  --color-red--40: #DC2828;
+  --color-red--50: #EF4343;
+  --color-red--60: #F87272;
+  --color-red--70: #FCA6A6;
+  --color-red--80: #FEC8C8;
+  --color-red--90: #FEE1E1;
+  --color-blue--10: #1E3B8A;
+  --color-blue--20: #1E3FAE;
+  --color-blue--30: #1D4FD7;
+  --color-blue--40: #2463EB;
+  --color-blue--50: #3C83F6;
+  --color-blue--60: #61A6FA;
+  --color-blue--70: #91C3FD;
+  --color-blue--80: #BEDBFE;
+  --color-blue--90: #DCEBFE;
+  --color-green--10: #064C39;
+  --color-green--20: #066046;
+  --color-green--30: #047756;
+  --color-green--40: #059467;
+  --color-green--50: #10B77F;
+  --color-green--60: #36D399;
+  --color-green--70: #6EE7B7;
+  --color-green--80: #A5F3CF;
+  --color-green--90: #D1FAE5;
+  --color-yellow--10: #76350F;
+  --color-yellow--20: #91400D;
+  --color-yellow--30: #B35309;
+  --color-yellow--40: #DB7706;
+  --color-yellow--50: #F59F0A;
+  --color-yellow--60: #FBBD23;
+  --color-yellow--70: #FCD44F;
+  --color-yellow--80: #FDE68B;
+  --color-yellow--90: #FEF3C8;
+  --color-purple--10: #4D1D95;
+  --color-purple--20: #5A21B5;
+  --color-purple--30: #6B26D9;
+  --color-purple--40: #7C3BED;
+  --color-purple--50: #895AF6;
+  --color-purple--60: #A689FA;
+  --color-purple--70: #C3B4FD;
+  --color-purple--80: #DED7FE;
+  --color-purple--90: #EBE7FE;
+  --color-pink--10: #811842;
+  --color-pink--20: #9B174C;
+  --color-pink--30: #BF185D;
+  --color-pink--40: #DB2979;
+  --color-pink--50: #EC4699;
+  --color-pink--60: #F471B5;
+  --color-pink--70: #F9A9D5;
+  --color-pink--80: #FBD0E8;
+  --color-pink--90: #FCE8F4;
+  --color-grey--10: #111827;
+  --color-grey--20: #1f2937;
+  --color-grey--30: #374151;
+  --color-grey--40: #4b5563;
+  --color-grey--50: #6b7280;
+  --color-grey--60: #9ca3af;
+  --color-grey--70: #d1d5db;
+  --color-grey--80: #e5e7eb;
+  --color-grey--90: #f3f4f6;
+}
+
+.c-cuadrado {
+  width: var(--width-100);
+  height: var(--height-100);
+  background-color: var(--color-blue--50);
+  animation-duration: var(--duracion-10s);
+  animation-timing-function: var(--velocidad-linear);
+}
+
+.g--animation-moverse {
+  animation-name: moverse;
+}
+
+.g--animation-rotarse {
+  animation-name: rotarse;
+}
+
+.g--animation-duration-1s {
+  animation-duration: 1s;
+}
+
+.g--animation-duration-2s {
+  animation-duration: 2s;
+}
+
+.g--animation-duration-3s {
+  animation-duration: 3s;
+}
+
+.g--animation-duration-4s {
+  animation-duration: 4s;
+}
+
+.g--animation-duration-5s {
+  animation-duration: 5s;
+}
+
+.g--animation-duration-6s {
+  animation-duration: 6s;
+}
+
+.g--animation-duration-7s {
+  animation-duration: 7s;
+}
+
+.g--animation-duration-8s {
+  animation-duration: 8s;
+}
+
+.g--animation-duration-9s {
+  animation-duration: 9s;
+}
+
+.g--animation-duration-10s {
+  animation-duration: 10s;
+}
+
+.g--animation-function-linear {
+  animation-timing-function: linear;
+}
+
+.g--animation-function-ease {
+  animation-timing-function: ease;
+}
+
+.g--animation-function-ease-in {
+  animation-timing-function: ease-in;
+}
+
+.g--animation-function-ease-out {
+  animation-timing-function: ease-out;
+}
+
+.g--animation-function-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+@media (min-width: 500px) {
+  .g--animation-moverse\@tablet {
+    animation-name: moverse;
+  }
+  .g--animation-rotarse\@tablet {
+    animation-name: rotarse;
+  }
+  .g--animation-duration-1s\@tablet {
+    animation-duration: 1s;
+  }
+  .g--animation-duration-2s\@tablet {
+    animation-duration: 2s;
+  }
+  .g--animation-duration-3s\@tablet {
+    animation-duration: 3s;
+  }
+  .g--animation-duration-4s\@tablet {
+    animation-duration: 4s;
+  }
+  .g--animation-duration-5s\@tablet {
+    animation-duration: 5s;
+  }
+  .g--animation-duration-6s\@tablet {
+    animation-duration: 6s;
+  }
+  .g--animation-duration-7s\@tablet {
+    animation-duration: 7s;
+  }
+  .g--animation-duration-8s\@tablet {
+    animation-duration: 8s;
+  }
+  .g--animation-duration-9s\@tablet {
+    animation-duration: 9s;
+  }
+  .g--animation-duration-10s\@tablet {
+    animation-duration: 10s;
+  }
+  .g--animation-function-linear\@tablet {
+    animation-timing-function: linear;
+  }
+  .g--animation-function-ease\@tablet {
+    animation-timing-function: ease;
+  }
+  .g--animation-function-ease-in\@tablet {
+    animation-timing-function: ease-in;
+  }
+  .g--animation-function-ease-out\@tablet {
+    animation-timing-function: ease-out;
+  }
+  .g--animation-function-ease-in-out\@tablet {
+    animation-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 800px) {
+  .g--animation-moverse\@desktop {
+    animation-name: moverse;
+  }
+  .g--animation-rotarse\@desktop {
+    animation-name: rotarse;
+  }
+  .g--animation-duration-1s\@desktop {
+    animation-duration: 1s;
+  }
+  .g--animation-duration-2s\@desktop {
+    animation-duration: 2s;
+  }
+  .g--animation-duration-3s\@desktop {
+    animation-duration: 3s;
+  }
+  .g--animation-duration-4s\@desktop {
+    animation-duration: 4s;
+  }
+  .g--animation-duration-5s\@desktop {
+    animation-duration: 5s;
+  }
+  .g--animation-duration-6s\@desktop {
+    animation-duration: 6s;
+  }
+  .g--animation-duration-7s\@desktop {
+    animation-duration: 7s;
+  }
+  .g--animation-duration-8s\@desktop {
+    animation-duration: 8s;
+  }
+  .g--animation-duration-9s\@desktop {
+    animation-duration: 9s;
+  }
+  .g--animation-duration-10s\@desktop {
+    animation-duration: 10s;
+  }
+  .g--animation-function-linear\@desktop {
+    animation-timing-function: linear;
+  }
+  .g--animation-function-ease\@desktop {
+    animation-timing-function: ease;
+  }
+  .g--animation-function-ease-in\@desktop {
+    animation-timing-function: ease-in;
+  }
+  .g--animation-function-ease-out\@desktop {
+    animation-timing-function: ease-out;
+  }
+  .g--animation-function-ease-in-out\@desktop {
+    animation-timing-function: ease-in-out;
+  }
+}
+@media (min-width: 1000px) {
+  .g--animation-moverse\@fulldesktop {
+    animation-name: moverse;
+  }
+  .g--animation-rotarse\@fulldesktop {
+    animation-name: rotarse;
+  }
+  .g--animation-duration-1s\@fulldesktop {
+    animation-duration: 1s;
+  }
+  .g--animation-duration-2s\@fulldesktop {
+    animation-duration: 2s;
+  }
+  .g--animation-duration-3s\@fulldesktop {
+    animation-duration: 3s;
+  }
+  .g--animation-duration-4s\@fulldesktop {
+    animation-duration: 4s;
+  }
+  .g--animation-duration-5s\@fulldesktop {
+    animation-duration: 5s;
+  }
+  .g--animation-duration-6s\@fulldesktop {
+    animation-duration: 6s;
+  }
+  .g--animation-duration-7s\@fulldesktop {
+    animation-duration: 7s;
+  }
+  .g--animation-duration-8s\@fulldesktop {
+    animation-duration: 8s;
+  }
+  .g--animation-duration-9s\@fulldesktop {
+    animation-duration: 9s;
+  }
+  .g--animation-duration-10s\@fulldesktop {
+    animation-duration: 10s;
+  }
+  .g--animation-function-linear\@fulldesktop {
+    animation-timing-function: linear;
+  }
+  .g--animation-function-ease\@fulldesktop {
+    animation-timing-function: ease;
+  }
+  .g--animation-function-ease-in\@fulldesktop {
+    animation-timing-function: ease-in;
+  }
+  .g--animation-function-ease-out\@fulldesktop {
+    animation-timing-function: ease-out;
+  }
+  .g--animation-function-ease-in-out\@fulldesktop {
+    animation-timing-function: ease-in-out;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

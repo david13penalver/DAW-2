@@ -1,0 +1,40 @@
+.l-flex {
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.c1, .c2, .c3 {
+  width: 100px;
+  height: 100px;
+}
+
+.c1, .c3 {
+  transition: transform 3s ease-in-out 0.3s;
+}
+
+.c1 {
+  background-color: rgb(255, 0, 0);
+}
+
+.c2 {
+  background-color: rgb(0, 255, 0);
+}
+
+.c3 {
+  background-color: rgb(255, 255, 0);
+}
+
+@media (min-width: 500px) {
+  .c1, .c3 {
+    transform: translateY(-50px);
+  }
+}
+@media (min-width: 800px) {
+  .c1, .c3 {
+    transform: translateY(-100px);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

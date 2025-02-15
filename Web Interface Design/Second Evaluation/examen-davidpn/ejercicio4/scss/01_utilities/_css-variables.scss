@@ -1,0 +1,43 @@
+:root {
+  @for $i from 1 through length($height) {
+    $value: nth($height, $i);
+    --height-#{$value}: #{$value}px;
+  }
+
+  @for $i from 1 through length($width) {
+    $value: nth($width, $i);
+    --width-#{$value}: #{$value}px;
+  }
+
+  @for $i from 1 through length($velocidad) {
+    $value: nth($velocidad, $i);
+    --velocidad-#{$value}: #{$value};
+  }
+
+  @for $i from 1 through 10 {
+    --duracion-#{$i}s: #{$i}s;
+  }
+
+  @for $i from -10 through 10 {
+    $value: $i * 10;
+    @if ($i < 0) {
+      --translate-minus#{$value}px: #{$value}px;
+    }
+    @if ($i == 0) {
+      --translate-#{$value}px: #{$value}px;
+    }
+    @if ($i > 0) {
+      --translate-plus-#{$value}px: #{$value}px;
+    }
+  }
+
+  @each $color, $valor_color in $variantes {
+    @for $i from 1 through $num-claves {
+      $color-especifico: nth($valor_color, $i);
+      $clave-especifica: nth($claves, $i);
+
+      --color-#{$color}--#{$clave-especifica}: #{$color-especifico};
+    }
+  }
+}
+
