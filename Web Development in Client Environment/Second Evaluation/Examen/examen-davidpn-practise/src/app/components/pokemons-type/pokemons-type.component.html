@@ -1,0 +1,13 @@
+<label for="pokemonType">Selecciona el tipo de Pokémon:</label>
+<select id="pokemonType" class="form-control" (change)="selectedValue($event)">
+  @for (option of optionPossibilities; track option) {
+    <option value="{{option}}">{{option.charAt(0).toUpperCase()}}{{option.slice(1)}}</option>
+  }
+</select>
+@for (pokemon of pokemonList; track pokemon.id) {
+  <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
+} @empty {
+  <div class="alert alert-danger">
+    No hay Pokémon registrados
+  </div>
+};
