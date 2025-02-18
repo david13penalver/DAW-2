@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+  <img src="./img/{{character.id}}.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{character.name}}</h5>
+    <a class="btn btn-primary" (click)="volver()">Inicio</a>
+    <a class="btn btn-primary" routerLink="/characters/{{character.id}}">Ver Detalles</a>
+  </div>
+</div>

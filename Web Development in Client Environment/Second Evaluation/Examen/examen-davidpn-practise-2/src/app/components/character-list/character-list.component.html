@@ -1,0 +1,11 @@
+<div class="row row-cols-1 row-cols-md-6 row-cols-lg-auto g-4">
+  @for (character of characters; track character.id) {
+    <app-character-item [character]="character"
+                        (volverAtras)="back($event)"></app-character-item>
+  } @empty {
+    <div class="alert alert-danger">
+      No hay personajes
+    </div>
+  }
+
+</div>

@@ -1,0 +1,5 @@
+<ul>
+  @for (character of characters; track character.id) {
+    <li>{{character.id}} - {{character.name}} <button class="btn btn-danger" routerLink="/admin/delete/{{character.id}}">Eliminar</button></li>
+  }
+</ul>

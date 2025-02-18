@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img src="./img/{{character.id}}.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{character.name}}</h5>
+    <p class="card-body">Edad: {{character.age}}</p>
+    <p class="card-footer">Profesión:{{character.occupation}}</p>
+    @if (character.age > 40) {
+      <a class="btn btn-primary" routerLink="/">Inicio</a>
+    }
+  </div>
+</div>
