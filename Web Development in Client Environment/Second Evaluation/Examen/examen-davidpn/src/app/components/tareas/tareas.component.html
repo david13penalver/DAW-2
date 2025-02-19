@@ -1,0 +1,41 @@
+<!--HTML para el componente tareas -->
+
+<br>
+<h3>Listado de Tareas</h3>
+<div style="width:75%">
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr class="filters">
+      <th>id</th>
+      <th>nombre</th>
+      <th>estado
+        <select [(ngModel)]="selectedOption" (change)="onSelectChange()">
+          <option value="Todas">Todas</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Realizada">Realizada</option>
+        </select>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    @for (tarea of tareasFiltradas; track tarea.id) {
+      <tr>
+        <td> {{tarea.id}} </td> <!--id tarea -->
+        <td> {{tarea.nombre}} </td> <!--nombre tarea -->
+        <td> {{tarea.estado}} </td> <!--estado tarea -->
+        <td>
+          @if (tarea.estado != "Realizada") {
+          <!--mostrar o no mostrar el boton Finalizar -->
+          <button class="btn btn-danger" routerLink="/tareas/fin/{{tarea.id}}">Finalizar</button>
+            }
+        </td>
+      </tr>
+    }
+    <!--mostrar en cada fila de la tabla cada tarea -->
+
+    </tbody>
+  </table>
+
+  <h4>Total Pendientes: {{tareasPendientes}}</h4> <!--mostrar total tareas Pendientes -->
+  <h4>Total Realizadas: {{tareasRealizadas}}</h4> <!--mostrar total tareas Realizadas -->
+</div>

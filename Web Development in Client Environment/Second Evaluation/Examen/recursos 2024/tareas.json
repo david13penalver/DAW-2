@@ -1,0 +1,34 @@
+{
+  "tareas": [
+    {
+      "id": "1",
+      "nombre": "Examen Cliente",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "2",
+      "nombre": "Examen Servidor",
+      "estado": "Realizada"
+    },
+    {
+      "id": "3",
+      "nombre": "Examen Interfaces",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "4",
+      "nombre": "Examen Despliegue",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "5",
+      "nombre": "Examen EEIE",
+      "estado": "Pendiente"
+    },
+    {
+      "id": "6",
+      "nombre": "Ingles",
+      "estado": "Realizada"
+    }
+  ]
+}

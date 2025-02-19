@@ -1,0 +1,15 @@
+<!-- HTML del componente panel -->
+
+<h3 class="text-center">Panel de Tareas</h3>
+<div id="contenedor" class="row row-cols-1 row-cols-md-6 g-4">
+
+  @for (tarea of tareas; track tarea.id) {
+    <app-tarea [tarea]="tarea"></app-tarea>
+  }
+  <!-- Aqui van cada una de las tareas -->
+
+</div>
+<br>
+<div class="text-center">
+  <button class="btn btn-primary" routerLink="/tareas">Tareas</button>
+</div>
