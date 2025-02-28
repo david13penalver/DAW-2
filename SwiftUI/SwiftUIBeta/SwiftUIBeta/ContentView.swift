@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// ME FALLA LA 38
+
 struct ContentView: View {
     var body: some View {
         

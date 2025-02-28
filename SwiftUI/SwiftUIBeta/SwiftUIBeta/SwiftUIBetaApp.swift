@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIBetaApp: App {
     var body: some Scene {
         WindowGroup {
-            SwiftUIView28()
+            SwiftUIView35()
         }
     }
 }
