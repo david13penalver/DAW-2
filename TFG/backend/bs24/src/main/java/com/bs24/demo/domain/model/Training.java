@@ -12,6 +12,7 @@ public class Training {
     private int trainingId;
     private String name;
     private int trainingDurationSeconds;
+    private String dateCreation;
     private User user;
     private Session session;
 }

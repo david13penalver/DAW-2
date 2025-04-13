@@ -14,5 +14,4 @@ public class Session {
     private String description;
     private String dateCreation;
     private User user;
-    // TODO: Es la tabla que se enlaza con la tabla de ejercicios en una tabla intermedia
 }
