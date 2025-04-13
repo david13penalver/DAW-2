@@ -4,16 +4,16 @@ import com.bs24.demo.common.config.PropertiesConfig;
 import com.bs24.demo.controller.common.PaginatedResponse;
 import com.bs24.demo.controller.user.webmodel.ExerciseCollection;
 import com.bs24.demo.controller.user.webmodel.ExerciseCollectionMapper;
+import com.bs24.demo.controller.user.webmodel.ExerciseDetail;
+import com.bs24.demo.controller.user.webmodel.ExerciseDetailMapper;
 import com.bs24.demo.domain.model.Exercise;
 import com.bs24.demo.domain.model.ListWithCount;
+import com.bs24.demo.domain.usecase.exercise.ExerciseFindByIdUseCase;
 import com.bs24.demo.domain.usecase.exercise.ExerciseGetAllUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,6 +24,7 @@ public class ExerciseController {
     private final String defaultPageSize = PropertiesConfig.getSetting("app.pageSize.default");
 
     private final ExerciseGetAllUseCase exerciseGetAllUseCase;
+    private final ExerciseFindByIdUseCase exerciseFindByIdUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<ExerciseCollection>> getAll(
@@ -41,5 +42,11 @@ public class ExerciseController {
                         .toList(),
                 exerciseListWithCount.getCount(), page, pageSize, baseUrl);
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ExerciseDetail> findByIsbn(@PathVariable int id) {
+        ExerciseDetail exerciseDetail = ExerciseDetailMapper.INSTANCE.toExerciseDetail(exerciseFindByIdUseCase.execute(id));
+        return new ResponseEntity<>(exerciseDetail, HttpStatus.OK);
     }
 }

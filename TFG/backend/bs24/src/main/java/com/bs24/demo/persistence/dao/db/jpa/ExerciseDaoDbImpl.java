@@ -40,8 +40,9 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
     }
 
     @Override
-    public Optional findById(long id) {
-        return Optional.empty();
+    public Optional<Exercise> findById(long id) {
+        return exerciseJPARepository.findById(id)
+                .map(ExerciseJPAMapper.INSTANCE::toExercise);
     }
 
     @Override

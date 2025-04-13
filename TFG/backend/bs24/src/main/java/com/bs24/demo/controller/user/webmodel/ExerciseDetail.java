@@ -1,6 +1,6 @@
 package com.bs24.demo.controller.user.webmodel;
 
-public record ExerciseCollection(
+public record ExerciseDetail(
         //String id,
         String name,
         String imageURL,

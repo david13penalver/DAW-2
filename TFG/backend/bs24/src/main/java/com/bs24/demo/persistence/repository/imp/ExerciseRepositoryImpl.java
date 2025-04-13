@@ -7,6 +7,8 @@ import com.bs24.demo.persistence.dao.db.ExerciseDaoDb;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 @RequiredArgsConstructor
 public class ExerciseRepositoryImpl implements ExerciseRepository {
@@ -15,5 +17,10 @@ public class ExerciseRepositoryImpl implements ExerciseRepository {
     @Override
     public ListWithCount<Exercise> getAll(int page, int pageSize) {
         return exerciseDaoDb.getAll(page, pageSize);
+    }
+
+    @Override
+    public Optional<Exercise> findById(int exerciseId) {
+        return exerciseDaoDb.findById(exerciseId);
     }
 }

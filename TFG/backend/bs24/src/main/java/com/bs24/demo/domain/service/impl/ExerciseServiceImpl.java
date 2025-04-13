@@ -7,6 +7,8 @@ import com.bs24.demo.domain.repository.ExerciseRepository;
 import com.bs24.demo.domain.service.ExerciseService;
 import lombok.RequiredArgsConstructor;
 
+import java.util.Optional;
+
 @DomainService
 @RequiredArgsConstructor
 public class ExerciseServiceImpl implements ExerciseService {
@@ -15,5 +17,10 @@ public class ExerciseServiceImpl implements ExerciseService {
     @Override
     public ListWithCount<Exercise> getAll(int page, int pageSize) {
         return exerciseRepository.getAll(page, pageSize);
+    }
+
+    @Override
+    public Optional<Exercise> findById(int exerciseId) {
+        return exerciseRepository.findById(exerciseId);
     }
 }
