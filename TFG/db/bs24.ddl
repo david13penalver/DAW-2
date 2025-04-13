@@ -66,7 +66,7 @@ type_id name
 
 CREATE TABLE exercise_subtypes (
     subtype_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) UNIQUE NOT NULL,
+    name VARCHAR(100) UNIQUE NOT NULL
 );
 /*
 subtype_id type_id name
