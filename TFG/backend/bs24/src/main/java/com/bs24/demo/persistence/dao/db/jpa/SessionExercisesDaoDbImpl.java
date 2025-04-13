@@ -1,6 +1,6 @@
 package com.bs24.demo.persistence.dao.db.jpa;
 
-import com.bs24.demo.persistence.dao.db.TrainingDaoDb;
+import com.bs24.demo.persistence.dao.db.SessionExercisesDaoDb;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class TrainingDaoDbImpl implements TrainingDaoDb {
+public class SessionExercisesDaoDbImpl implements SessionExercisesDaoDb {
     @Override
     public List getAll() {
         return List.of();

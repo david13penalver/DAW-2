@@ -1,10 +1,14 @@
 package com.bs24.demo.persistence.dao.db.jpa;
 
 import com.bs24.demo.persistence.dao.db.UserDaoDb;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
+@RequiredArgsConstructor
 public class UserDaoDbImpl implements UserDaoDb {
     @Override
     public List getAll() {
