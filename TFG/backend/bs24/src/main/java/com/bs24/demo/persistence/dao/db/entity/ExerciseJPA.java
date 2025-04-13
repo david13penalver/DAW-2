@@ -24,6 +24,10 @@ public class ExerciseJPA {
     private String videoURL;
     @Column(name = "is_global")
     private Boolean isGlobal;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "type_id")
     private ExerciseTypeJPA exerciseType;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "subtype_id")
     private ExerciseSubtypeJPA exerciseSubtype;
 }

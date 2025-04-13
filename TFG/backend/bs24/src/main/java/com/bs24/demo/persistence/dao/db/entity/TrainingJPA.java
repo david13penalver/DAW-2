@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "trainings")
 @Data
@@ -20,6 +22,10 @@ public class TrainingJPA {
     private int trainingDurationSeconds;
     @Column(name = "date_creation")
     private String dateCreation;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private UserJPA user;
-    private SessionJPA session;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "session_id")
+    private List<SessionJPA> session;
 }

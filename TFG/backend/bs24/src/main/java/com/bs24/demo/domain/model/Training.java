@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,5 +16,5 @@ public class Training {
     private int trainingDurationSeconds;
     private String dateCreation;
     private User user;
-    private Session session;
+    private List<Session> sessions;
 }

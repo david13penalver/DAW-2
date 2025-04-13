@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "sessions")
 @Data
@@ -20,6 +22,8 @@ public class SessionJPA {
     private String description;
     @Column(name = "date_creation")
     private String dateCreation;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private UserJPA user;
     // TODO: Es la tabla que se enlaza con la tabla de ejercicios en una tabla intermedia
 }
