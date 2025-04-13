@@ -1,11 +1,9 @@
-package com.bs24.demo.persistence.dao.db.entity;
+package com.bs24.demo.persistence.dao.db.jpa.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Entity
 @Table(name = "sessions")

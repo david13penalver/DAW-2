@@ -1,7 +1,7 @@
-package com.bs24.demo.persistence.dao.db.mapper;
+package com.bs24.demo.persistence.dao.db.jpa.mapper;
 
 import com.bs24.demo.domain.model.SessionExercises;
-import com.bs24.demo.persistence.dao.db.entity.SessionExercisesJPA;
+import com.bs24.demo.persistence.dao.db.jpa.entity.SessionExercisesJPA;
 import org.mapstruct.Mapper;
 
 @Mapper

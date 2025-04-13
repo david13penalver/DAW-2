@@ -1,7 +1,7 @@
-package com.bs24.demo.persistence.dao.db.mapper;
+package com.bs24.demo.persistence.dao.db.jpa.mapper;
 
 import com.bs24.demo.domain.model.Training;
-import com.bs24.demo.persistence.dao.db.entity.TrainingJPA;
+import com.bs24.demo.persistence.dao.db.jpa.entity.TrainingJPA;
 import org.mapstruct.Mapper;
 
 @Mapper

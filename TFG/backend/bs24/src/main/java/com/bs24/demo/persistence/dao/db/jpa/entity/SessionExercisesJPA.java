@@ -1,7 +1,5 @@
-package com.bs24.demo.persistence.dao.db.entity;
+package com.bs24.demo.persistence.dao.db.jpa.entity;
 
-import com.bs24.demo.domain.model.Exercise;
-import com.bs24.demo.domain.model.Session;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
