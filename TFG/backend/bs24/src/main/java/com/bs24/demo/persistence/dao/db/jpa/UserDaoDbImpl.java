@@ -1,5 +1,6 @@
 package com.bs24.demo.persistence.dao.db.jpa;
 
+import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.persistence.dao.db.UserDaoDb;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -13,6 +14,11 @@ public class UserDaoDbImpl implements UserDaoDb {
     @Override
     public List getAll() {
         return List.of();
+    }
+
+    @Override
+    public ListWithCount getAll(int page, int size) {
+        return null;
     }
 
     @Override

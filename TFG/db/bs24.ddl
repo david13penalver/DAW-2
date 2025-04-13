@@ -19,30 +19,6 @@ CREATE TABLE sessions (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
-CREATE TABLE exercises (
-    exercise_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    type_id INT NOT NULL,
-    subtype_id INT,
-    is_global BOOLEAN DEFAULT TRUE, /* Para los ejercicios de fuerza que puedan ser globales o analíticos */
-    description VARCHAR(500),
-    video_url VARCHAR(255),
-    image_url VARCHAR(255),
-    FOREIGN KEY (type_id) REFERENCES exercise_types(type_id) ON DELETE CASCADE,
-    FOREIGN KEY (subtype_id) REFERENCES exercise_subtypes(subtype_id) ON DELETE CASCADE
-);
-
-CREATE TABLE sessions_exercises (
-    sessions_exercises_id INT AUTO_INCREMENT PRIMARY KEY,
-    session_id INT NOT NULL,
-    exercise_id INT NOT NULL,
-    num_sets INT,
-    num_reps INT,
-    rest_seconds INT,
-    FOREIGN KEY (session_id) REFERENCES sessions(session_id) ON DELETE CASCADE,
-    FOREIGN KEY (exercise_id) REFERENCES exercises(exercise_id) ON DELETE CASCADE
-);
-
 CREATE TABLE trainings (
     training_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -92,3 +68,27 @@ Futuras ampliaciones:
 - Programas semanales
 - Multidioma
 */
+
+CREATE TABLE exercises (
+    exercise_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type_id INT NOT NULL,
+    subtype_id INT,
+    is_global BOOLEAN DEFAULT TRUE, /* Para los ejercicios de fuerza que puedan ser globales o analíticos */
+    description LONGTEXT,
+    video_url VARCHAR(255),
+    image_url VARCHAR(255),
+    FOREIGN KEY (type_id) REFERENCES exercise_types(type_id) ON DELETE CASCADE,
+    FOREIGN KEY (subtype_id) REFERENCES exercise_subtypes(subtype_id) ON DELETE CASCADE
+);
+
+CREATE TABLE sessions_exercises (
+    sessions_exercises_id INT AUTO_INCREMENT PRIMARY KEY,
+    session_id INT NOT NULL,
+    exercise_id INT NOT NULL,
+    num_sets INT,
+    num_reps INT,
+    rest_seconds INT,
+    FOREIGN KEY (session_id) REFERENCES sessions(session_id) ON DELETE CASCADE,
+    FOREIGN KEY (exercise_id) REFERENCES exercises(exercise_id) ON DELETE CASCADE
+);

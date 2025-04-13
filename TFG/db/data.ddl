@@ -44,15 +44,15 @@ INSERT INTO exercise_subtypes (name) VALUES ('Triceps'); -- 18
 -- EXERCISES
 INSERT INTO exercises (name, type_id, subtype_id, is_global, description, video_url, image_url) VALUES ('Squat', 1, 11, TRUE, '
 {
-  "what_is": "A squat is a fundamental strength exercise where you lower your hips from a standing position and then return to standing. It is widely used in fitness and sports training.",
-  "muscles_involved": "Squats primarily work the quadriceps, hamstrings, and glutes. They also engage the core, lower back, and calves for stability and balance.",
-  "steps": [
-    "Stand tall with your feet shoulder-width apart, toes slightly pointing outward.",
-    "Engage your core and keep your chest up while maintaining a neutral spine.",
-    "Lower your body by bending your knees and pushing your hips back, as if sitting on a chair.",
-    "Go down until your thighs are at least parallel to the ground, keeping your knees aligned with your toes.",
-    "Push back up by driving through your heels and straightening your legs.",
-    "Return to the starting position and repeat for the desired number of repetitions."
+  \"what_is\": "A squat is a fundamental strength exercise where you lower your hips from a standing position and then return to standing. It is widely used in fitness and sports training.",
+  \"muscles_involved\": "Squats primarily work the quadriceps, hamstrings, and glutes. They also engage the core, lower back, and calves for stability and balance.",
+  \"steps\": [
+    \"Stand tall with your feet shoulder-width apart, toes slightly pointing outward.\",
+    \"Engage your core and keep your chest up while maintaining a neutral spine.\",
+    \"Lower your body by bending your knees and pushing your hips back, as if sitting on a chair.\",
+    \"Go down until your thighs are at least parallel to the ground, keeping your knees aligned with your toes.\",
+    \"Push back up by driving through your heels and straightening your legs.\",
+    \"Return to the starting position and repeat for the desired number of repetitions.\"
   ]
 }', 'https://www.youtube.com/watch?v=QKKZ9AGYTi4', 'https://www.google.com'); -- 1
 INSERT INTO exercises (name, type_id, subtype_id, is_global, description, video_url, image_url) VALUES ('Dumbbell Bench Press', 1, 1, TRUE, '
