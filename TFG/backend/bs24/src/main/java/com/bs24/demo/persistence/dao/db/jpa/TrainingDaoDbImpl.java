@@ -1,6 +1,7 @@
 package com.bs24.demo.persistence.dao.db.jpa;
 
 import com.bs24.demo.domain.model.ListWithCount;
+import com.bs24.demo.domain.model.Training;
 import com.bs24.demo.persistence.dao.db.TrainingDaoDb;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -11,28 +12,29 @@ import java.util.Optional;
 @Repository
 @RequiredArgsConstructor
 public class TrainingDaoDbImpl implements TrainingDaoDb {
+
     @Override
-    public List getAll() {
+    public List<Training> getAll() {
         return List.of();
     }
 
     @Override
-    public ListWithCount getAll(int page, int size) {
+    public ListWithCount<Training> getAll(int page, int size) {
         return null;
     }
 
     @Override
-    public Optional findById(long id) {
+    public Optional<Training> findById(long id) {
         return Optional.empty();
     }
 
     @Override
-    public long insert(Object o) {
+    public long insert(Training training) {
         return 0;
     }
 
     @Override
-    public void update(Object o) {
+    public void update(Training training) {
 
     }
 
@@ -47,7 +49,7 @@ public class TrainingDaoDbImpl implements TrainingDaoDb {
     }
 
     @Override
-    public Object save(Object o) {
+    public Training save(Training training) {
         return null;
     }
 }

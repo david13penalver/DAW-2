@@ -10,6 +10,7 @@ import com.bs24.demo.domain.model.Exercise;
 import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.usecase.exercise.ExerciseFindByIdUseCase;
 import com.bs24.demo.domain.usecase.exercise.ExerciseGetAllUseCase;
+import com.bs24.demo.domain.usecase.exercise.ExerciseInsertUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,7 @@ public class ExerciseController {
 
     private final ExerciseGetAllUseCase exerciseGetAllUseCase;
     private final ExerciseFindByIdUseCase exerciseFindByIdUseCase;
+    private final ExerciseInsertUseCase exerciseInsertUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<ExerciseCollection>> getAll(
@@ -48,5 +50,11 @@ public class ExerciseController {
     public ResponseEntity<ExerciseDetail> findByIsbn(@PathVariable int id) {
         ExerciseDetail exerciseDetail = ExerciseDetailMapper.INSTANCE.toExerciseDetail(exerciseFindByIdUseCase.execute(id));
         return new ResponseEntity<>(exerciseDetail, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Void> insert(@RequestBody Exercise exercise) {
+        exerciseInsertUseCase.execute(exercise);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

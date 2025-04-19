@@ -1,6 +1,7 @@
 package com.bs24.demo.persistence.dao.db.jpa;
 
 import com.bs24.demo.domain.model.ListWithCount;
+import com.bs24.demo.domain.model.Session;
 import com.bs24.demo.persistence.dao.db.SessionDaoDb;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -11,28 +12,29 @@ import java.util.Optional;
 @Repository
 @RequiredArgsConstructor
 public class SessionDaoDbImpl implements SessionDaoDb {
+
     @Override
-    public List getAll() {
+    public List<Session> getAll() {
         return List.of();
     }
 
     @Override
-    public ListWithCount getAll(int page, int size) {
+    public ListWithCount<Session> getAll(int page, int size) {
         return null;
     }
 
     @Override
-    public Optional findById(long id) {
+    public Optional<Session> findById(long id) {
         return Optional.empty();
     }
 
     @Override
-    public long insert(Object o) {
+    public long insert(Session session) {
         return 0;
     }
 
     @Override
-    public void update(Object o) {
+    public void update(Session session) {
 
     }
 
@@ -47,7 +49,7 @@ public class SessionDaoDbImpl implements SessionDaoDb {
     }
 
     @Override
-    public Object save(Object o) {
+    public Session save(Session session) {
         return null;
     }
 }

@@ -1,4 +1,6 @@
 package com.bs24.demo.persistence.dao.db;
 
-public interface SessionDaoDb extends GenericDaoDb{
+import com.bs24.demo.domain.model.Session;
+
+public interface SessionDaoDb extends GenericDaoDb<Session> {
 }

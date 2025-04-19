@@ -22,7 +22,7 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
     private final ExerciseJPARepository exerciseJPARepository;
 
     @Override
-    public List getAll() {
+    public List<Exercise> getAll() {
         return List.of();
     }
 
@@ -46,12 +46,12 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
     }
 
     @Override
-    public long insert(Object o) {
+    public long insert(Exercise exercise) {
         return 0;
     }
 
     @Override
-    public void update(Object o) {
+    public void update(Exercise exercise) {
 
     }
 
@@ -66,7 +66,8 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
     }
 
     @Override
-    public Object save(Object o) {
-        return null;
+    public Exercise save(Exercise exercise) {
+        ExerciseJPA exerciseJPA = ExerciseJPAMapper.INSTANCE.toExerciseJPA(exercise);
+        return ExerciseJPAMapper.INSTANCE.toExercise(exerciseJPARepository.save(exerciseJPA));
     }
 }

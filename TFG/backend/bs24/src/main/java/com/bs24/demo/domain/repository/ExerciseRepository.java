@@ -9,4 +9,6 @@ public interface ExerciseRepository {
     ListWithCount<Exercise> getAll(int page, int pageSize);
 
     Optional<Exercise> findById(int exerciseId);
+
+    void save(Exercise exercise);
 }

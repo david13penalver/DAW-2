@@ -1,4 +1,6 @@
 package com.bs24.demo.persistence.dao.db;
 
-public interface ExerciseSubtypeDaoDb extends GenericDaoDb{
+import com.bs24.demo.domain.model.ExerciseSubtype;
+
+public interface ExerciseSubtypeDaoDb extends GenericDaoDb<ExerciseSubtype> {
 }

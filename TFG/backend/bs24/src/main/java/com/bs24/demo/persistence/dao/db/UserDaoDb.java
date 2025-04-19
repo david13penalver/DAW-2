@@ -1,4 +1,6 @@
 package com.bs24.demo.persistence.dao.db;
 
-public interface UserDaoDb extends GenericDaoDb{
+import com.bs24.demo.domain.model.User;
+
+public interface UserDaoDb extends GenericDaoDb<User> {
 }

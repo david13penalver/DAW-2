@@ -23,4 +23,9 @@ public class ExerciseRepositoryImpl implements ExerciseRepository {
     public Optional<Exercise> findById(int exerciseId) {
         return exerciseDaoDb.findById(exerciseId);
     }
+
+    @Override
+    public void save(Exercise exercise) {
+        exerciseDaoDb.save(exercise);
+    }
 }
