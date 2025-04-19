@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("${app.api.path}/exercises")
 public class ExerciseController {
 
-    public static final String URL = "/exercises";
+    public static final String URL = "/api/exercises";
     private final String defaultPageSize = PropertiesConfig.getSetting("app.pageSize.default");
 
     private final ExerciseGetAllUseCase exerciseGetAllUseCase;
