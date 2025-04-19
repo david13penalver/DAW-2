@@ -36,7 +36,6 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
                         .toList(),
                 exerciseJPAPage.getTotalElements()
         );
-
     }
 
     @Override
