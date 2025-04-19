@@ -47,7 +47,7 @@ public class ExerciseController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ExerciseDetail> findByIsbn(@PathVariable int id) {
+    public ResponseEntity<ExerciseDetail> findById(@PathVariable int id) {
         ExerciseDetail exerciseDetail = ExerciseDetailMapper.INSTANCE.toExerciseDetail(exerciseFindByIdUseCase.execute(id));
         return new ResponseEntity<>(exerciseDetail, HttpStatus.OK);
     }
