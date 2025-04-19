@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SessionJPA {
+public class SessionSaveJPA {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

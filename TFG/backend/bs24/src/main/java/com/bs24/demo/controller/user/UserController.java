@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("${app.api.path}/users")
 public class UserController {
 
-    public static final String URL = "/exercises";
+    public static final String URL = "/api/users";
     private final String defaultPageSize = PropertiesConfig.getSetting("app.pageSize.default");
 
     private final UserFindByIdUseCase userFindByIdUseCase;
