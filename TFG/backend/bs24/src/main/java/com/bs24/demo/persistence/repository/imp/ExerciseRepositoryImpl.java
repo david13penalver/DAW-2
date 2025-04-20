@@ -28,4 +28,9 @@ public class ExerciseRepositoryImpl implements ExerciseRepository {
     public void save(Exercise exercise) {
         exerciseDaoDb.save(exercise);
     }
+
+    @Override
+    public void delete(int id) {
+        exerciseDaoDb.delete(id);
+    }
 }

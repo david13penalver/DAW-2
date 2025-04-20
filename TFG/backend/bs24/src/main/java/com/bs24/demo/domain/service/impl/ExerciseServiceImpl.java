@@ -28,4 +28,9 @@ public class ExerciseServiceImpl implements ExerciseService {
     public void save(Exercise exercise) {
         exerciseRepository.save(exercise);
     }
+
+    @Override
+    public void delete(int id) {
+        exerciseRepository.delete(id);
+    }
 }

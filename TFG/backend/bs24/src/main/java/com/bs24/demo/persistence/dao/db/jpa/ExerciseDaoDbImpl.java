@@ -56,7 +56,7 @@ public class ExerciseDaoDbImpl implements ExerciseDaoDb {
 
     @Override
     public void delete(long id) {
-
+        exerciseJPARepository.deleteById(id);
     }
 
     @Override

@@ -8,9 +8,7 @@ import com.bs24.demo.controller.user.webmodel.ExerciseDetail;
 import com.bs24.demo.controller.user.webmodel.ExerciseDetailMapper;
 import com.bs24.demo.domain.model.Exercise;
 import com.bs24.demo.domain.model.ListWithCount;
-import com.bs24.demo.domain.usecase.exercise.ExerciseFindByIdUseCase;
-import com.bs24.demo.domain.usecase.exercise.ExerciseGetAllUseCase;
-import com.bs24.demo.domain.usecase.exercise.ExerciseInsertUseCase;
+import com.bs24.demo.domain.usecase.exercise.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +25,8 @@ public class ExerciseController {
     private final ExerciseGetAllUseCase exerciseGetAllUseCase;
     private final ExerciseFindByIdUseCase exerciseFindByIdUseCase;
     private final ExerciseInsertUseCase exerciseInsertUseCase;
+    private final ExerciseUpdateUseCase exerciseUpdateUseCase;
+    private final ExerciseDeleteUseCase exerciseDeleteUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<ExerciseCollection>> getAll(
@@ -56,5 +56,18 @@ public class ExerciseController {
     public ResponseEntity<Void> insert(@RequestBody Exercise exercise) {
         exerciseInsertUseCase.execute(exercise);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable int id, @RequestBody Exercise exercise) {
+        exercise.setExerciseId(id);
+        exerciseUpdateUseCase.execute(exercise);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        exerciseDeleteUseCase.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

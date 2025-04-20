@@ -80,4 +80,5 @@ public class SessionExercisesController {
         sessionExercisesInsertUseCase.execute(sessionExercises);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
 }

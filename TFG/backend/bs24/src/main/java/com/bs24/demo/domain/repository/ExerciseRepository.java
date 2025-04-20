@@ -11,4 +11,6 @@ public interface ExerciseRepository {
     Optional<Exercise> findById(int exerciseId);
 
     void save(Exercise exercise);
+
+    void delete(int id);
 }
