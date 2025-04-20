@@ -34,4 +34,9 @@ public class SessionExercisesServiceImpl implements SessionExercisesService {
     public ListWithCount<SessionExercises> getAllBySessionId(int sessionId, int page, int pageSize) {
         return sessionExercisesRepository.getAllBySessionId(sessionId, page, pageSize);
     }
+
+    @Override
+    public void delete(int id) {
+        sessionExercisesRepository.delete(id);
+    }
 }

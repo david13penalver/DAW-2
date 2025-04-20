@@ -29,4 +29,9 @@ public class TrainingServiceImpl implements TrainingService {
     public void save(Training training) {
         trainingRepository.save(training);
     }
+
+    @Override
+    public void delete(int id) {
+        trainingRepository.delete(id);
+    }
 }

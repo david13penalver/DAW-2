@@ -3,15 +3,14 @@ package com.bs24.demo.controller.user;
 import com.bs24.demo.common.config.PropertiesConfig;
 import com.bs24.demo.controller.common.PaginatedResponse;
 import com.bs24.demo.controller.user.webmodel.*;
+import com.bs24.demo.domain.model.Exercise;
 import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.Session;
 import com.bs24.demo.domain.model.Training;
 import com.bs24.demo.domain.usecase.session.SessionFindByIdUseCase;
 import com.bs24.demo.domain.usecase.session.SessionGetAllUseCase;
 import com.bs24.demo.domain.usecase.session.SessionInsertUseCase;
-import com.bs24.demo.domain.usecase.training.TrainingFindByIdUseCase;
-import com.bs24.demo.domain.usecase.training.TrainingGetAllUseCase;
-import com.bs24.demo.domain.usecase.training.TrainingInsertUseCase;
+import com.bs24.demo.domain.usecase.training.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +27,8 @@ public class TrainingController {
     private final TrainingGetAllUseCase trainingGetAllUseCase;
     private final TrainingFindByIdUseCase trainingFindByIdUseCase;
     private final TrainingInsertUseCase trainingInsertUseCase;
+    private final TrainingUpdateUseCase trainingUpdateUseCase;
+    private final TrainingDeleteUseCase trainingDeleteUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<TrainingCollecion>> getAll(
@@ -57,5 +58,18 @@ public class TrainingController {
     public ResponseEntity<Void> insert(@RequestBody Training training) {
         trainingInsertUseCase.execute(training);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable int id, @RequestBody Training training) {
+        training.setTrainingId(id);
+        trainingUpdateUseCase.execute(training);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        trainingDeleteUseCase.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

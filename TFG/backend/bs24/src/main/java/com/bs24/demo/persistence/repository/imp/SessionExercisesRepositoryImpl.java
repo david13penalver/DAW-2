@@ -33,4 +33,9 @@ public class SessionExercisesRepositoryImpl implements SessionExercisesRepositor
     public ListWithCount<SessionExercises> getAllBySessionId(int sessionId, int page, int pageSize) {
         return sessionExercisesDaoDb.getAllBySessionId(sessionId, page, pageSize);
     }
+
+    @Override
+    public void delete(int id) {
+        sessionExercisesDaoDb.delete(id);
+    }
 }

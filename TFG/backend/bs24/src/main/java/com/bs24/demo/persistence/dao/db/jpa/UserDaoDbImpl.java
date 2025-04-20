@@ -48,7 +48,7 @@ public class UserDaoDbImpl implements UserDaoDb {
 
     @Override
     public void delete(long id) {
-
+        userJPARepository.deleteById(id);
     }
 
     @Override

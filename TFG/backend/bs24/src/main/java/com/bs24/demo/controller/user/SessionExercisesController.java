@@ -3,16 +3,14 @@ package com.bs24.demo.controller.user;
 import com.bs24.demo.common.config.PropertiesConfig;
 import com.bs24.demo.controller.common.PaginatedResponse;
 import com.bs24.demo.controller.user.webmodel.*;
+import com.bs24.demo.domain.model.Exercise;
 import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.Session;
 import com.bs24.demo.domain.model.SessionExercises;
 import com.bs24.demo.domain.usecase.session.SessionFindByIdUseCase;
 import com.bs24.demo.domain.usecase.session.SessionGetAllUseCase;
 import com.bs24.demo.domain.usecase.session.SessionInsertUseCase;
-import com.bs24.demo.domain.usecase.sessionexercises.session.SessionExercisesFindByIdUseCase;
-import com.bs24.demo.domain.usecase.sessionexercises.session.SessionExercisesFindBySessionId;
-import com.bs24.demo.domain.usecase.sessionexercises.session.SessionExercisesGetAllUseCase;
-import com.bs24.demo.domain.usecase.sessionexercises.session.SessionExercisesInsertUseCase;
+import com.bs24.demo.domain.usecase.sessionexercises.session.*;
 import com.bs24.demo.domain.usecase.sessionexercises.session.impl.SessionExercisesGetAllUseCaseImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -31,6 +29,8 @@ public class SessionExercisesController {
     private final SessionExercisesFindByIdUseCase sessionExercisesFindByIdUseCase;
     private final SessionExercisesFindBySessionId sessionExercisesFindBySessionId;
     private final SessionExercisesInsertUseCase sessionExercisesInsertUseCase;
+    private final SessionExercisesUpdateUseCase sessionExercisesUpdateUseCase;
+    private final SessionExercisesDeleteUseCase sessionExercisesDeleteUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<SessionExercisesDetail>> getAll(
@@ -79,6 +79,19 @@ public class SessionExercisesController {
     public ResponseEntity<Void> insert(@RequestBody SessionExercises sessionExercises) {
         sessionExercisesInsertUseCase.execute(sessionExercises);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable int id, @RequestBody SessionExercises sessionExercises) {
+        sessionExercises.setSessionExercisesId(id);
+        sessionExercisesUpdateUseCase.execute(sessionExercises);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        sessionExercisesDeleteUseCase.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
 }

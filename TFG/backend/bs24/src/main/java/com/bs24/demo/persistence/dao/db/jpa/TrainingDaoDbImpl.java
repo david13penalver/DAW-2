@@ -58,7 +58,7 @@ public class TrainingDaoDbImpl implements TrainingDaoDb {
 
     @Override
     public void delete(long id) {
-
+        trainingJPARepository.deleteById(id);
     }
 
     @Override

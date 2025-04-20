@@ -29,4 +29,9 @@ public class TrainingRepositoryImpl implements TrainingRepository {
     public void save(Training training) {
         trainingDaoDb.save(training);
     }
+
+    @Override
+    public void delete(int id) {
+        trainingDaoDb.delete(id);
+    }
 }

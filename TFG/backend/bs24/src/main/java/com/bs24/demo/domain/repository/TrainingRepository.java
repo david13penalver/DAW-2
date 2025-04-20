@@ -11,4 +11,6 @@ public interface TrainingRepository {
     ListWithCount<Training> getAll(int page, int pageSize);
 
     void save(Training training);
+
+    void delete(int id);
 }

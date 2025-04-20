@@ -58,7 +58,7 @@ public class SessionExercisesDaoDbImpl implements SessionExercisesDaoDb {
 
     @Override
     public void delete(long id) {
-
+        sessionExercisesJPARepository.deleteById(id);
     }
 
     @Override

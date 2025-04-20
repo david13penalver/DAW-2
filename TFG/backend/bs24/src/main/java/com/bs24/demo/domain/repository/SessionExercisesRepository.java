@@ -13,4 +13,6 @@ public interface SessionExercisesRepository {
     void save(SessionExercises sessionExercises);
 
     ListWithCount<SessionExercises> getAllBySessionId(int sessionId, int page, int pageSize);
+
+    void delete(int id);
 }
