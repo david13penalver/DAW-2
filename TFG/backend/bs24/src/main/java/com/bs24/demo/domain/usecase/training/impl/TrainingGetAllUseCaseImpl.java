@@ -20,6 +20,6 @@ public class TrainingGetAllUseCaseImpl implements TrainingGetAllUseCase {
 
     @Override
     public ListWithCount<Training> execute(int page, int pageSize) {
-        return null;
+        return trainingService.getAll(page, pageSize);
     }
 }

@@ -20,6 +20,7 @@ public class TrainingFindByIdUseCaseImpl implements TrainingFindByIdUseCase {
 
     @Override
     public Training execute(int trainingId) {
-        return null;
+        return trainingService.findById(trainingId)
+                .orElseThrow(() -> new ResourceNotFoundException("Training not found with id: " + trainingId));
     }
 }

@@ -315,8 +315,8 @@ VALUES
 (5, 14, 1, 5, 60); -- Light jogging
 
 -- TRAININGS
-INSERT INTO trainings (user_id, session_id, date_creation, training_duration_seconds)
+INSERT INTO trainings (name, user_id, session_id, date_creation, training_duration_seconds)
 VALUES
-(1, 1, '2020-03-23 00:00:00', 3600), -- Full-body session
-(1, 2, '2020-03-24 00:00:00', 2700), -- Upper-body session
-(2, 3, '2020-04-24 00:00:00', 2700); -- Lower-body session
+('Entrenamiento 1: Full-body resistance training', 1, 1, '2020-03-23 00:00:00', 3600), -- Full-body session
+('Entrenamiento 2: Upper-body resistance training', 1, 2, '2020-03-24 00:00:00', 2700), -- Upper-body session
+('Entrenamiento 1: Lower-body resistance training', 2, 3, '2020-04-24 00:00:00', 2700); -- Lower-body session

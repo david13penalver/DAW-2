@@ -9,6 +9,9 @@ import com.bs24.demo.domain.model.Training;
 import com.bs24.demo.domain.usecase.session.SessionFindByIdUseCase;
 import com.bs24.demo.domain.usecase.session.SessionGetAllUseCase;
 import com.bs24.demo.domain.usecase.session.SessionInsertUseCase;
+import com.bs24.demo.domain.usecase.training.TrainingFindByIdUseCase;
+import com.bs24.demo.domain.usecase.training.TrainingGetAllUseCase;
+import com.bs24.demo.domain.usecase.training.TrainingInsertUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("${app.api.path}/sessions")
+@RequestMapping("${app.api.path}/trainings")
 public class TrainingController {
 
     public static final String URL = "/api/trainings";
@@ -33,7 +36,7 @@ public class TrainingController {
 
         int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
         String baseUrl = PropertiesConfig.getSetting("app.base.url") + URL;
-        ListWithCount<Session> trainingListWithCount = trainingGetAllUseCase.execute(page - 1, pageSize);
+        ListWithCount<Training> trainingListWithCount = trainingGetAllUseCase.execute(page - 1, pageSize);
         PaginatedResponse<TrainingCollecion> response = new PaginatedResponse<>(
                 trainingListWithCount
                         .getList()

@@ -19,9 +19,25 @@ import lombok.RequiredArgsConstructor;
 public class TrainingInsertUseCaseImpl implements TrainingInsertUseCase {
 
     private final TrainingService trainingService;
+    private final UserService userService;
+    private final SessionService sessionService;
 
     @Override
     public void execute(Training training) {
+        if (trainingService.findById(training.getTrainingId()).isPresent()) {
+            throw  new ResourceAlreadyExistsException("Training with ID " + training.getTrainingId() + " already exists");
+        }
 
+        training.setUser(
+                userService.findById(training.getUser().getUserId())
+                        .orElseThrow(() -> new ResourceNotFoundException("User not found"))
+        );
+
+        training.setSession(
+                sessionService.findById(training.getSession().getSessionId())
+                        .orElseThrow(() -> new ResourceNotFoundException("Session not found"))
+        );
+
+        trainingService.save(training);
     }
 }

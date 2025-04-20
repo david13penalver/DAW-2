@@ -3,7 +3,15 @@ package com.bs24.demo.persistence.dao.db.jpa;
 import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.Training;
 import com.bs24.demo.persistence.dao.db.TrainingDaoDb;
+import com.bs24.demo.persistence.dao.db.jpa.entity.ExerciseJPA;
+import com.bs24.demo.persistence.dao.db.jpa.entity.TrainingJPA;
+import com.bs24.demo.persistence.dao.db.jpa.mapper.ExerciseJPAMapper;
+import com.bs24.demo.persistence.dao.db.jpa.mapper.TrainingJPAMapper;
+import com.bs24.demo.persistence.dao.db.jpa.repository.TrainingJPARepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,6 +21,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class TrainingDaoDbImpl implements TrainingDaoDb {
 
+    private final TrainingJPARepository trainingJPARepository;
+
     @Override
     public List<Training> getAll() {
         return List.of();
@@ -20,12 +30,20 @@ public class TrainingDaoDbImpl implements TrainingDaoDb {
 
     @Override
     public ListWithCount<Training> getAll(int page, int size) {
-        return null;
+        Pageable pageable = PageRequest.of(page, size);
+        Page<TrainingJPA> trainingJPAPage = trainingJPARepository.findAll(pageable);
+        return new ListWithCount<>(
+                trainingJPAPage.stream()
+                        .map(TrainingJPAMapper.INSTANCE::toTraining)
+                        .toList(),
+                trainingJPAPage.getTotalElements()
+        );
     }
 
     @Override
     public Optional<Training> findById(long id) {
-        return Optional.empty();
+        return trainingJPARepository.findById(id)
+                .map(TrainingJPAMapper.INSTANCE::toTraining);
     }
 
     @Override
@@ -50,6 +68,7 @@ public class TrainingDaoDbImpl implements TrainingDaoDb {
 
     @Override
     public Training save(Training training) {
-        return null;
+        TrainingJPA trainingJPA = TrainingJPAMapper.INSTANCE.toTrainingJPA(training);
+        return TrainingJPAMapper.INSTANCE.toTraining(trainingJPARepository.save(trainingJPA));
     }
 }

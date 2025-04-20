@@ -16,5 +16,5 @@ public class Training {
     private int trainingDurationSeconds;
     private String dateCreation;
     private User user;
-    private List<Session> sessions;
+    private Session session;
 }

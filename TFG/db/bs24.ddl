@@ -21,6 +21,7 @@ CREATE TABLE sessions (
 
 CREATE TABLE trainings (
     training_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
     user_id INT NOT NULL,
     session_id INT NOT NULL,
     date_creation TIMESTAMP NOT NULL,

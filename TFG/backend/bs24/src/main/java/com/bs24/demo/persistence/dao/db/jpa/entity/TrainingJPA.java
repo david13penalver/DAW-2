@@ -25,7 +25,7 @@ public class TrainingJPA {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private UserJPA user;
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "session_id")
-    private List<SessionJPA> session;
+    private SessionJPA session;
 }
