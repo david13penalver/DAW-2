@@ -10,7 +10,6 @@ public interface TrainingJPAMapper {
 
     TrainingJPAMapper INSTANCE = org.mapstruct.factory.Mappers.getMapper(TrainingJPAMapper.class);
 
-    @Mapping(target = "sessions.user", ignore = true)
     Training toTraining(TrainingJPA trainingJPA);
     TrainingJPA toTrainingJPA(Training training);
 }

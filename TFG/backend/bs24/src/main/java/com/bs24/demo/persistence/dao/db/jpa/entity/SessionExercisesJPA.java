@@ -16,7 +16,7 @@ public class SessionExercisesJPA {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "session_exercises_id")
+    @Column(name = "sessions_exercises_id")
     private int sessionExercisesId;
     @Column(name = "num_sets")
     private int numSets;
@@ -24,10 +24,10 @@ public class SessionExercisesJPA {
     private int numReps;
     @Column(name = "rest_seconds")
     private int restSeconds;
-    @OneToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "session_id")
-    private List<SessionJPA> session;
-    @OneToMany(fetch = FetchType.LAZY)
+    private SessionJPA session;
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "exercise_id")
-    private List<ExerciseJPA> exercises;
+    private ExerciseJPA exercise;
 }

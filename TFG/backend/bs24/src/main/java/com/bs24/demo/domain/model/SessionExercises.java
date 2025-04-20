@@ -15,6 +15,6 @@ public class SessionExercises {
     private int numSets;
     private int numReps;
     private int restSeconds;
-    private List<Session> session;
-    private List<Exercise> exercises;
+    private Session session;
+    private Exercise exercise;
 }
