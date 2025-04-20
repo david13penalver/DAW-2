@@ -23,4 +23,9 @@ public class UserRepositoryImpl implements UserRepository {
     public void save(User user) {
         userDaoDb.save(user);
     }
+
+    @Override
+    public void delete(int id) {
+        userDaoDb.delete(id);
+    }
 }
