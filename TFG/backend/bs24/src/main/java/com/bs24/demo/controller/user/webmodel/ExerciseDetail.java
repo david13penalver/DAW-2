@@ -1,7 +1,7 @@
 package com.bs24.demo.controller.user.webmodel;
 
 public record ExerciseDetail(
-        //String id,
+        int exerciseId,
         String name,
         String description,
         String imageURL,
