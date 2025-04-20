@@ -58,7 +58,7 @@ public class SessionDaoDbImpl implements SessionDaoDb {
 
     @Override
     public void delete(long id) {
-
+        sessionJPARepository.deleteById(id);
     }
 
     @Override

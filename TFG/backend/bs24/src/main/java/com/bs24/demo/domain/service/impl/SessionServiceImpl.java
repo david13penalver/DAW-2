@@ -29,4 +29,9 @@ public class SessionServiceImpl implements SessionService {
     public void save(Session session) {
         sessionRepository.save(session);
     }
+
+    @Override
+    public void delete(int id) {
+        sessionRepository.delete(id);
+    }
 }

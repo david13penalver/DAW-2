@@ -8,9 +8,7 @@ import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.Session;
 import com.bs24.demo.domain.usecase.exercise.ExerciseFindByIdUseCase;
 import com.bs24.demo.domain.usecase.exercise.ExerciseInsertUseCase;
-import com.bs24.demo.domain.usecase.session.SessionFindByIdUseCase;
-import com.bs24.demo.domain.usecase.session.SessionGetAllUseCase;
-import com.bs24.demo.domain.usecase.session.SessionInsertUseCase;
+import com.bs24.demo.domain.usecase.session.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +25,8 @@ public class SessionController {
     private final SessionGetAllUseCase sessionGetAllUseCase;
     private final SessionFindByIdUseCase sessionFindByIdUseCase;
     private final SessionInsertUseCase sessionInsertUseCase;
+    private final SessionUpdateUseCase sessionUpdateUseCase;
+    private final SessionDeleteUseCase sessionDeleteUseCase;
 
     @GetMapping
     public ResponseEntity<PaginatedResponse<SessionCollection>> getAll(
@@ -56,5 +56,18 @@ public class SessionController {
     public ResponseEntity<Void> insert(@RequestBody Session session) {
         sessionInsertUseCase.execute(session);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable int id, @RequestBody Session session) {
+        session.setSessionId(id);
+        sessionUpdateUseCase.execute(session);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        sessionDeleteUseCase.execute(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

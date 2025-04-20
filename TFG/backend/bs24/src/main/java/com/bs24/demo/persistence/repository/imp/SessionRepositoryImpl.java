@@ -29,4 +29,9 @@ public class SessionRepositoryImpl implements SessionRepository {
     public void save(Session session) {
         sessionDaoDb.save(session);
     }
+
+    @Override
+    public void delete(int id) {
+        sessionDaoDb.delete(id);
+    }
 }

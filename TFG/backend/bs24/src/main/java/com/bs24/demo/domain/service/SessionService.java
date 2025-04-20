@@ -11,4 +11,6 @@ public interface SessionService {
     Optional<Session> findById(int sessionId);
 
     void save(Session session);
+
+    void delete(int id);
 }
