@@ -17,12 +17,6 @@ struct ContentView: View {
                 .fontWeight(.bold)
         }
         .padding()
-        
-//        #if DESA
-//        Text("DESA")
-//        #if PROD
-//        Text("PROD")
-//        #endif
     }
 }
 

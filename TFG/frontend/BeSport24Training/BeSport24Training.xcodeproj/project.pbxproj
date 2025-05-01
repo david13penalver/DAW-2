@@ -333,6 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DPROD";
 				PRODUCT_BUNDLE_IDENTIFIER = com.david13penalver.BeSport24Training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,6 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DPROD";
 				PRODUCT_BUNDLE_IDENTIFIER = com.david13penalver.BeSport24Training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +394,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "-DDESA";
-				"OTHER_SWIFT_FLAGS[arch=*]" = "";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDESA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.david13penalver.BeSport24Training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -421,6 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-DDESA";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDESA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.david13penalver.BeSport24Training;
 				PRODUCT_NAME = "$(TARGET_NAME)";
