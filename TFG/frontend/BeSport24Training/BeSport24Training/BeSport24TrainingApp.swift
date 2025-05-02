@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct BeSport24TrainingApp: App {
+    
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLoggedIn {
+                ContentView()
+            } else {
+                LoginView()
+            }
         }
     }
 }

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "name": "David Peñalver",
+      "email": "david@mail.com",
+      "password": "root1234",
+      "dateRegister": "2020-03-23 00:00:00"
+    },
+    {
+      "userId": 2,
+      "name": "Juan Pérez",
+      "email": "juan@mail.com",
+      "password": "root1234",
+      "dateRegister": "2020-04-24 00:00:00"
+    },
+    {
+      "userId": 3,
+      "name": "Cami del Castillo",
+      "email": "cami@mail.com",
+      "password": "root1234",
+      "dateRegister": "2020-05-25 00:00:00"
+    }
+  ]
+}

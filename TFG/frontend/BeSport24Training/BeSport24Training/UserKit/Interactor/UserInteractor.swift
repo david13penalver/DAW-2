@@ -5,29 +5,45 @@
 //  Created by David Peñalver Navarro on 1/5/25.
 //
 
-protocol UserInteractor {
-    func fetchUser(user: UserModel)
-    func createUser(user: UserModel)
-    func updateUser(user: UserModel)
-    func deleteUser(user: UserModel)
+protocol UserInteractorProtocol {
+    func fetchUser(user: UserModel) async throws
+    func createUser(user: UserModel) async throws
+    func updateUser(user: UserModel) async throws
+    func deleteUser(user: UserModel) async throws
 }
 
-class UserInteractorImpl: UserInteractor {
-    func fetchUser(user: UserModel) {
+
+class UserInteractorImpl: UserInteractorProtocol {
+    
+    private let api: UserAPIProtocol
+    
+    init(api: UserAPIProtocol = UserAPIImpl()) {
+        self.api = api
+    }
+}
+
+@APIActor
+extension UserInteractorImpl {
+    func fetchUser(user: UserModel) async throws {
+        let requestObject: UserDTO = UserDTO(email: user.email, password: user.password)
+        
+        try await api.fetchUser(user: requestObject)
+    }
+    
+    func createUser(user: UserModel) async throws {
         
     }
     
-    func createUser(user: UserModel) {
+    func updateUser(user: UserModel) async throws {
         
     }
     
-    func updateUser(user: UserModel) {
+    func deleteUser(user: UserModel) async throws {
         
     }
-    
-    func deleteUser(user: UserModel) {
-        
-    }
-    
-    
+}
+
+@globalActor
+actor APIActor: Sendable {
+    static let shared = APIActor()
 }
