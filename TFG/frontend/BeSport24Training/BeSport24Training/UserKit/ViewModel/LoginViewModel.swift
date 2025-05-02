@@ -21,6 +21,19 @@ final class LoginViewModel: ObservableObject {
         )
     var password: String = ""
     
+    @Validate(
+        .required("This field is required")
+        )
+    var registerEmail: String = ""
+    @Validate(
+        .required("This field is required")
+        )
+    var registerPassword: String = ""
+    @Validate(
+        .required("This field is required")
+        )
+    var registerName: String = ""
+    
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
     
@@ -57,6 +70,36 @@ final class LoginViewModel: ObservableObject {
             self.password = ""
             showAlert = true
             alertMessage = "Email or password not correct"
+            print(error.localizedDescription)
+        }
+    }
+    
+    func createUser() async {
+        guard !registerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            alertMessage = "Name is required"
+            showAlert = true
+            return
+        }
+        
+        guard !registerEmail.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            alertMessage = "Email is required"
+            showAlert = true
+            return
+        }
+        
+        guard !registerPassword.isEmpty else {
+            alertMessage = "Password is required"
+            showAlert = true
+            return
+        }
+        
+        let user = UserModel(name: registerName, email: registerEmail, password: registerPassword)
+        
+        do {
+            try await interactor.createUser(user: user)
+        } catch {
+            showAlert = true
+            alertMessage = "Error creating the user. The email already exists"
             print(error.localizedDescription)
         }
     }

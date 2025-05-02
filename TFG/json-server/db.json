@@ -5,21 +5,30 @@
       "name": "David Peñalver",
       "email": "david@mail.com",
       "password": "root1234",
-      "dateRegister": "2020-03-23 00:00:00"
+      "dateRegister": "2020-03-23 00:00:00",
+      "id": "28eb"
     },
     {
       "userId": 2,
       "name": "Juan Pérez",
       "email": "juan@mail.com",
       "password": "root1234",
-      "dateRegister": "2020-04-24 00:00:00"
+      "dateRegister": "2020-04-24 00:00:00",
+      "id": "15b9"
     },
     {
       "userId": 3,
       "name": "Cami del Castillo",
       "email": "cami@mail.com",
       "password": "root1234",
-      "dateRegister": "2020-05-25 00:00:00"
+      "dateRegister": "2020-05-25 00:00:00",
+      "id": "7def"
+    },
+    {
+      "id": "12ae",
+      "name": "a",
+      "email": "aa",
+      "password": "a"
     }
   ]
 }

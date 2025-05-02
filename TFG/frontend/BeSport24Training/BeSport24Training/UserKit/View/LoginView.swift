@@ -9,12 +9,12 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject private var vm = LoginViewModel()
-    
     // TODO: Literals
     private var recoverPasswordText = "Don't remember my password"
     private var loginButtonText = "Log in"
     private var registerButtonText = "Sign up"
+    
+    @StateObject private var vm = LoginViewModel()
     
     @Environment(\.colorScheme) var colorScheme
     
@@ -24,7 +24,6 @@ struct LoginView: View {
     
     @State private var isVisible: Bool = false
     @State private var isRegistered: Bool = false
-    @State private var isFilled: Bool = false
     @State private var isPasswordForgotten: Bool = false
     
     enum FieldToFocus {
@@ -59,8 +58,7 @@ struct LoginView: View {
                 buttonsArea
             }
             .sheet(isPresented: $isRegistered) {
-                #warning("Not done yet")
-                Text("Register opened")
+                RegisterView()
             }
         }
         .background(Color("BackgroundColor"), ignoresSafeAreaEdges: .all)
@@ -173,7 +171,7 @@ struct LoginView: View {
     private var recoverPassword: some View {
         HStack {
             Spacer()
-            Bs24(text: recoverPasswordText, type: .tertiary) {
+            Bs24Button(text: recoverPasswordText, type: .tertiary) {
                 print("Recovering password")
             }
             .offset(y: -30)
@@ -182,7 +180,7 @@ struct LoginView: View {
     
     private var buttonsArea: some View {
         VStack(spacing: 16) {
-            Bs24(text: loginButtonText, type: .primary, maxWidth: .infinity) {
+            Bs24Button(text: loginButtonText, type: .primary, maxWidth: .infinity) {
                 isTextFocused = false
                 isPasswordFocused = false
                 Task {
@@ -194,7 +192,7 @@ struct LoginView: View {
             }
             .padding(.horizontal, 24)
             
-            Bs24(text: registerButtonText, type: .secondary, maxWidth: .infinity) {
+            Bs24Button(text: registerButtonText, type: .secondary, maxWidth: .infinity) {
                 isRegistered.toggle()
             }
             .padding(.horizontal, 24)

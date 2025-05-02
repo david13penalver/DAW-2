@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Bs24: View {
+struct Bs24Button: View {
     
     enum ButtonType {
         case primary

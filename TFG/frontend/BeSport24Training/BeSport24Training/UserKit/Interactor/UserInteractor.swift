@@ -31,7 +31,9 @@ extension UserInteractorImpl {
     }
     
     func createUser(user: UserModel) async throws {
+        let requestObject: UserDTO = UserDTO(name: user.name!, email: user.email, password: user.password)
         
+        try await api.createUser(user: requestObject)
     }
     
     func updateUser(user: UserModel) async throws {
