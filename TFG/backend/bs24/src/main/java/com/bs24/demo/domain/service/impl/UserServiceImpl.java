@@ -1,6 +1,7 @@
 package com.bs24.demo.domain.service.impl;
 
 import com.bs24.demo.common.annotation.DomainService;
+import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.User;
 import com.bs24.demo.domain.repository.UserRepository;
 import com.bs24.demo.domain.service.UserService;
@@ -27,5 +28,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(int id) {
         userRepository.delete(id);
+    }
+
+    @Override
+    public ListWithCount<User> getAll(int page, int pageSize) {
+        return userRepository.getAll(page, pageSize);
     }
 }

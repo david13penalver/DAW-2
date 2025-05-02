@@ -1,17 +1,14 @@
 package com.bs24.demo.controller.user;
 
 import com.bs24.demo.common.config.PropertiesConfig;
-import com.bs24.demo.controller.user.webmodel.ExerciseDetail;
-import com.bs24.demo.controller.user.webmodel.ExerciseDetailMapper;
-import com.bs24.demo.controller.user.webmodel.UserDetail;
-import com.bs24.demo.controller.user.webmodel.UserDetailMapper;
+import com.bs24.demo.controller.common.PaginatedResponse;
+import com.bs24.demo.controller.user.webmodel.*;
 import com.bs24.demo.domain.model.Exercise;
+import com.bs24.demo.domain.model.ListWithCount;
+import com.bs24.demo.domain.model.Training;
 import com.bs24.demo.domain.model.User;
 import com.bs24.demo.domain.usecase.exercise.ExerciseFindByIdUseCase;
-import com.bs24.demo.domain.usecase.user.UserDeleteUseCase;
-import com.bs24.demo.domain.usecase.user.UserFindByIdUseCase;
-import com.bs24.demo.domain.usecase.user.UserInsertUseCase;
-import com.bs24.demo.domain.usecase.user.UserUpdateUseCase;
+import com.bs24.demo.domain.usecase.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,10 +22,29 @@ public class UserController {
     public static final String URL = "/api/users";
     private final String defaultPageSize = PropertiesConfig.getSetting("app.pageSize.default");
 
+    private final UserGetAllUseCase userGetAllUseCase;
     private final UserFindByIdUseCase userFindByIdUseCase;
     private final UserInsertUseCase userInsertUseCase;
     private final UserUpdateUseCase userUpdateUseCase;
     private final UserDeleteUseCase userDeleteUseCase;
+
+    @GetMapping
+    public ResponseEntity<PaginatedResponse<UserDetail>> getAll(
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(required = false) Integer size) {
+
+        int pageSize = (size != null) ? size : Integer.parseInt(defaultPageSize);
+        String baseUrl = PropertiesConfig.getSetting("app.base.url") + URL;
+        ListWithCount<User> userListWithCount = userGetAllUseCase.execute(page - 1, pageSize);
+        PaginatedResponse<UserDetail> response = new PaginatedResponse<>(
+                userListWithCount
+                        .getList()
+                        .stream()
+                        .map(UserDetailMapper.INSTANCE::toUserDetail)
+                        .toList(),
+                userListWithCount.getCount(), page, pageSize, baseUrl);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<UserDetail> findById(@PathVariable int id) {

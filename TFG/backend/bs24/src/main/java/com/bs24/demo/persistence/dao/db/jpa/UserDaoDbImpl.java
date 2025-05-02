@@ -4,11 +4,16 @@ import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.User;
 import com.bs24.demo.persistence.dao.db.UserDaoDb;
 import com.bs24.demo.persistence.dao.db.jpa.entity.ExerciseJPA;
+import com.bs24.demo.persistence.dao.db.jpa.entity.TrainingJPA;
 import com.bs24.demo.persistence.dao.db.jpa.entity.UserJPA;
 import com.bs24.demo.persistence.dao.db.jpa.mapper.ExerciseJPAMapper;
+import com.bs24.demo.persistence.dao.db.jpa.mapper.TrainingJPAMapper;
 import com.bs24.demo.persistence.dao.db.jpa.mapper.UserJPAMapper;
 import com.bs24.demo.persistence.dao.db.jpa.repository.UserJPARepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -27,7 +32,14 @@ public class UserDaoDbImpl implements UserDaoDb {
 
     @Override
     public ListWithCount<User> getAll(int page, int size) {
-        return null;
+        Pageable pageable = PageRequest.of(page, size);
+        Page<UserJPA> trainingJPAPage = userJPARepository.findAll(pageable);
+        return new ListWithCount<>(
+                trainingJPAPage.stream()
+                        .map(UserJPAMapper.INSTANCE::toUser)
+                        .toList(),
+                trainingJPAPage.getTotalElements()
+        );
     }
 
     @Override

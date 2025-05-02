@@ -1,5 +1,6 @@
 package com.bs24.demo.persistence.repository.imp;
 
+import com.bs24.demo.domain.model.ListWithCount;
 import com.bs24.demo.domain.model.User;
 import com.bs24.demo.domain.repository.UserRepository;
 import com.bs24.demo.persistence.dao.db.UserDaoDb;
@@ -27,5 +28,10 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void delete(int id) {
         userDaoDb.delete(id);
+    }
+
+    @Override
+    public ListWithCount<User> getAll(int page, int pageSize) {
+        return userDaoDb.getAll(page, pageSize);
     }
 }
