@@ -74,33 +74,41 @@ final class LoginViewModel: ObservableObject {
         }
     }
     
-    func createUser() async {
+    func createUser() async -> Bool {
         guard !registerName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             alertMessage = "Name is required"
             showAlert = true
-            return
+            return false
         }
         
         guard !registerEmail.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
             alertMessage = "Email is required"
             showAlert = true
-            return
+            return false
         }
         
         guard !registerPassword.isEmpty else {
             alertMessage = "Password is required"
             showAlert = true
-            return
+            return false
         }
         
         let user = UserModel(name: registerName, email: registerEmail, password: registerPassword)
         
         do {
             try await interactor.createUser(user: user)
+            registerName = ""
+            registerEmail = ""
+            registerPassword = ""
+            return true
         } catch {
             showAlert = true
             alertMessage = "Error creating the user. The email already exists"
+            registerName = ""
+            registerEmail = ""
+            registerPassword = ""
             print(error.localizedDescription)
+            return false
         }
     }
 }

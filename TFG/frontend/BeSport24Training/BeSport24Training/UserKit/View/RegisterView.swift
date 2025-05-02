@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RegisterView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @StateObject private var vm = LoginViewModel()
     
     @FocusState private var isNameFocused: Bool
@@ -27,7 +29,10 @@ struct RegisterView: View {
                 
                 Bs24Button(text: "Create user", type: .primary, maxWidth: .infinity) {
                     Task {
-                        await vm.createUser()
+                        let success = await vm.createUser()
+                        if success {
+                            dismiss()
+                        }
                     }
                 }
                 .alert(vm.alertMessage, isPresented: $vm.showAlert) {
