@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ExerciseListView: View {
+    
+    @StateObject var vm: ExerciseViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(vm.exercises) { exercise in
+            Text(exercise.name)
+        }
+        .task {
+            await vm.getAllExercises()
+        }
     }
 }
 
 #Preview {
-    ExerciseListView()
+    ExerciseListView(vm: ExerciseViewModel())
 }

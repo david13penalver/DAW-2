@@ -30,7 +30,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.trainings)
             
-            ExerciseListView()
+            ExerciseListView(vm: ExerciseViewModel())
                 .tabItem {
                     Label("Exercises", systemImage: "list.bullet")
                 }

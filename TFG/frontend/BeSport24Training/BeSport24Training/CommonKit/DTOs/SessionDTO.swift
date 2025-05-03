@@ -5,3 +5,9 @@
 //  Created by David Peñalver Navarro on 1/5/25.
 //
 
+struct SessionDTO: Codable, Sendable, Identifiable {
+    
+    var id: Int
+    
+    
+}

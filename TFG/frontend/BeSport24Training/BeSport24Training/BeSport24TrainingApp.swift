@@ -18,7 +18,7 @@ struct BeSport24TrainingApp: App {
             if isLoggedIn {
                 ContentView()
             } else {
-                LoginView()
+                ContentView()
             }
         }
     }

@@ -5,32 +5,45 @@
 //  Created by David Peñalver Navarro on 1/5/25.
 //
 
-protocol ExerciseInteractor {
-    func fetchTExercises()
-    func fetchExercise(exercise: ExerciseModel)
-    func createExercise(exercise: ExerciseModel)
-    func updateExercise(exercise: ExerciseModel)
-    func deleteExercise(exercise: ExerciseModel)
+protocol ExerciseInteractorProtocol {
+    func getAllExercises() async throws -> [ExerciseModel]
+    func findExerciseById(id: Int) async throws -> ExerciseModel
+    func createExercise(exercise: ExerciseModel) async throws
+    func updateExercise(exercise: ExerciseModel) async throws
+    func deleteExercise(id: Int) async throws
 }
 
-class ExerciseInteractorImpl: ExerciseInteractor {
-    func fetchTExercises() {
+class ExerciseInteractorImpl: ExerciseInteractorProtocol {
+    
+    private let api: ExerciseAPIProtocol
+    
+    init(api: ExerciseAPIProtocol = ExerciseAPIImpl()) {
+        self.api = api
+    }
+}
+
+@APIActor
+extension ExerciseInteractorImpl {
+    
+    func getAllExercises() async throws -> [ExerciseModel] {
+        let dtos = try await api.getAllExercises()
+        return dtos.map { ExerciseModel(from: $0) }
+    }
+    
+    func findExerciseById(id: Int) async throws -> ExerciseModel {
+        let dto = try await api.findExerciseById(id: id)
+        return ExerciseModel(from: dto)
+    }
+    
+    func createExercise(exercise: ExerciseModel) async throws {
         
     }
     
-    func fetchExercise(exercise: ExerciseModel) {
+    func updateExercise(exercise: ExerciseModel) async throws {
         
     }
     
-    func createExercise(exercise: ExerciseModel) {
-        
-    }
-    
-    func updateExercise(exercise: ExerciseModel) {
-        
-    }
-    
-    func deleteExercise(exercise: ExerciseModel) {
+    func deleteExercise(id: Int) async throws {
         
     }
     
