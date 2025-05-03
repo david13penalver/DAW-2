@@ -11,6 +11,7 @@ import SwiftUI
 struct BeSport24TrainingApp: App {
     
     @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("idUser") var id = -1
     
     var body: some Scene {
         WindowGroup {

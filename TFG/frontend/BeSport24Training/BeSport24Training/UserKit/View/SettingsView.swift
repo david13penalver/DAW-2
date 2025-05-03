@@ -9,7 +9,23 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                NavigationLink("Profile") {
+                    ProfileView()
+                }
+                Section("BeSport24") {
+                    NavigationLink("BeSport24Training") {
+                        ApplicationView()
+                    }
+                    NavigationLink("External Links") {
+                        ExternalLinksView()
+                    }
+                }
+            }
+            .navigationTitle("Settings")
+            
+        }
     }
 }
 

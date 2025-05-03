@@ -5,7 +5,7 @@
 //  Created by David Peñalver Navarro on 1/5/25.
 //
 
-struct UserDTO: Encodable, Sendable, Identifiable {
+struct UserDTO: Codable, Sendable, Identifiable {
     var id: Int?
     var name: String?
     var email: String
@@ -28,4 +28,6 @@ struct UserDTO: Encodable, Sendable, Identifiable {
         self.email = email
         self.password = password
     }
+    
+    
 }

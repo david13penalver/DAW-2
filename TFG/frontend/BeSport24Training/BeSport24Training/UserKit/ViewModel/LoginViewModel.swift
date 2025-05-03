@@ -11,6 +11,7 @@ import SwiftUI
 @MainActor
 final class LoginViewModel: ObservableObject {
     
+    // MARK: When logging
     @Validate(
         .required("This field is required")
         )
@@ -21,6 +22,7 @@ final class LoginViewModel: ObservableObject {
         )
     var password: String = ""
     
+    // MARK: When registering
     @Validate(
         .required("This field is required")
         )
@@ -38,7 +40,9 @@ final class LoginViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     
     @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("id") var id = -1
     
+    // MARK: When logged
     @State var user: UserModel?
 
     private let interactor: UserInteractorProtocol
@@ -63,13 +67,25 @@ final class LoginViewModel: ObservableObject {
         let login = UserModel(email: email, password: password)
 
         do {
-            try await interactor.fetchUser(user: login)
+            id = try await interactor.fetchUser(user: login)
             
             isLoggedIn = true
         } catch {
             self.password = ""
             showAlert = true
             alertMessage = "Email or password not correct"
+            print(error.localizedDescription)
+        }
+    }
+    
+    func findUserById() async {
+        do {
+            let data = try await interactor.findUserById(id: self.id)
+            user?.id = id
+            user?.name = data.name
+            user?.email = data.email
+            user?.password = data.password
+        } catch {
             print(error.localizedDescription)
         }
     }

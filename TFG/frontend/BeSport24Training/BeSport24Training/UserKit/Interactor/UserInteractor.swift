@@ -6,7 +6,8 @@
 //
 
 protocol UserInteractorProtocol {
-    func fetchUser(user: UserModel) async throws
+    func fetchUser(user: UserModel) async throws -> Int
+    func findUserById(id: Int) async throws -> UserModel
     func createUser(user: UserModel) async throws
     func updateUser(user: UserModel) async throws
     func deleteUser(user: UserModel) async throws
@@ -24,10 +25,20 @@ class UserInteractorImpl: UserInteractorProtocol {
 
 @APIActor
 extension UserInteractorImpl {
-    func fetchUser(user: UserModel) async throws {
+    func fetchUser(user: UserModel) async throws -> Int {
         let requestObject: UserDTO = UserDTO(email: user.email, password: user.password)
         
-        try await api.fetchUser(user: requestObject)
+        let response: Int = try await api.fetchUser(user: requestObject)
+        
+        return response
+    }
+    
+    func findUserById(id: Int) async throws -> UserModel {
+        let response = try await api.findUserById(id: id)
+        
+        let user: UserModel = UserModel(dto: response)
+        
+        return user
     }
     
     func createUser(user: UserModel) async throws {
