@@ -11,12 +11,29 @@ struct ExerciseListView: View {
     
     @StateObject var vm: ExerciseViewModel
     
-    var body: some View {
-        List(vm.exercises) { exercise in
-            Text(exercise.name)
+    @State private var searchText = ""
+    
+    var filteredExercises: [ExerciseModel] {
+        if searchText.isEmpty {
+            return vm.exercises
+        } else {
+            return vm.exercises.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
-        .task {
-            await vm.getAllExercises()
+    }
+    
+    var body: some View {
+        NavigationStack {
+            
+            List(filteredExercises) { exercise in
+                NavigationLink(destination: ExerciseDetailView(exercise: exercise, vm: ExerciseViewModel())) {
+                    Text(exercise.name)
+                }
+            }
+            .task {
+                await vm.getAllExercises()
+            }
+            .navigationTitle("Exercises")
+            .searchable(text: $searchText, prompt: "Search for name...")
         }
     }
 }
