@@ -8,15 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    enum Tab {
+      case settings, exercises, sessions, trainings
+     }
+
+    @State private var selectedTab: Tab = .trainings
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .fontWeight(.bold)
+        
+        TabView(selection: $selectedTab) {
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+                .tag(Tab.settings)
+            
+            TrainingListView()
+                .tabItem {
+                    Label("Training", systemImage: "sportscourt")
+                }
+                .tag(Tab.trainings)
+            
+            ExerciseListView()
+                .tabItem {
+                    Label("Exercises", systemImage: "list.bullet")
+                }
+                .tag(Tab.exercises)
+            
+            SessionListView()
+                .tabItem {
+                    Label("Sessions", systemImage: "calendar")
+                }
+                .tag(Tab.sessions)
         }
-        .padding()
     }
 }
 
