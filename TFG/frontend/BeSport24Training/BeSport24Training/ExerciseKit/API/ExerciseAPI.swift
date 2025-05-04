@@ -10,7 +10,7 @@ import Foundation
 protocol ExerciseAPIProtocol {
     func getAllExercises() async throws -> [ExerciseDTO]
     func findExerciseById(id: Int) async throws -> ExerciseDTO
-    func createExercise(exercise: ExerciseDTO) async throws
+    func createExercise(dto: ExerciseDTO) async throws
     func updateExercise(exercise: ExerciseDTO) async throws
     func deleteExercise(id: Int) async throws
 }
@@ -39,8 +39,15 @@ final class ExerciseAPIImpl: ExerciseAPIProtocol {
         return decodedResponse
     }
     
-    func createExercise(exercise: ExerciseDTO) async throws {
+    func createExercise(dto: ExerciseDTO) async throws {
+        guard let url = URL(string: "\(BaseURL.baseURL)exercises") else { throw URLError(.badURL) }
         
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue( "application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(dto)
+        
+        (_, _) = try await URLSession.shared.data(for: request)
     }
     
     func updateExercise(exercise: ExerciseDTO) async throws {

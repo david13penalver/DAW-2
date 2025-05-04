@@ -12,6 +12,10 @@ final class ExerciseViewModel: ObservableObject {
     
     @Published var exercise: ExerciseModel?
     @Published var exercises: [ExerciseModel] = []
+    @Published var newExercise: ExerciseModel?
+    
+    @Published var showAlert: Bool = false
+    @Published var alertMessage: String = ""
         
     private let interactor: ExerciseInteractorProtocol
     
@@ -37,25 +41,53 @@ final class ExerciseViewModel: ObservableObject {
         }
     }
     
-    func createExercise() async {
-        do {
-            try await interactor.createExercise(exercise: exercise!)
-        } catch {
-            print(error.localizedDescription)
+    func createExercise(name: String, imageURL: String, videoURL: String, isGlobal: Bool, description: String, typeName: String, subtypeName: String) async {
+        let trimmedName = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedImageURL = imageURL.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedVideoURL = videoURL.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedDescription = description.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedTypeName = typeName.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedSubtypeName = subtypeName.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if trimmedName.isEmpty {
+            alertMessage = "Name is required"
+            showAlert = true
+            return
+        } else if trimmedImageURL.isEmpty {
+            alertMessage = "Image URL is required"
+            showAlert = true
+            return
+        } else if trimmedVideoURL.isEmpty {
+            alertMessage = "Video URL is required"
+            showAlert = true
+            return
+        } else if trimmedDescription.isEmpty {
+            alertMessage = "Description is required"
+            showAlert = true
+            return
+        } else if trimmedTypeName.isEmpty {
+            alertMessage = "Type Name is required"
+            showAlert = true
+            return
+        } else if trimmedSubtypeName.isEmpty {
+            alertMessage = "Subtype Name is required"
+            showAlert = true
+            return
         }
-    }
-    
-    func updateExerciseById() async {
+        
+        let newExercise = ExerciseModel(
+            exerciseId: 0,
+            name: trimmedName,
+            imageURL: trimmedImageURL,
+            videoURL: trimmedVideoURL,
+            isGlobal: isGlobal,
+            description: trimmedDescription,
+            typeName: trimmedTypeName,
+            subtypeName: trimmedSubtypeName
+        )
+        
         do {
-            try await interactor.updateExercise(exercise: exercise!)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func deleteExercise(id: Int) async {
-        do {
-            try await interactor.deleteExercise(id: id)
+            try await interactor.createExercise(exercise: newExercise)
         } catch {
             print(error.localizedDescription)
         }

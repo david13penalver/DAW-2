@@ -50,7 +50,7 @@ struct ExerciseDetailView: View {
             }
         }
         .task {
-            await vm.findExerciseById(id: exercise.exerciseId)
+            await vm.findExerciseById(id: exercise.exerciseId!)
         }
         .padding()
         .navigationTitle(exercise.name)

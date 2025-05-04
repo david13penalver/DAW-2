@@ -6,7 +6,7 @@
 //
 
 struct ExerciseDTO: Codable, Identifiable {
-    var id: Int { exerciseId }
+    var id: Int? { exerciseId }
     let exerciseId: Int
     let name: String
     let imageURL: String
@@ -15,6 +15,17 @@ struct ExerciseDTO: Codable, Identifiable {
     let description: String?
     let exerciseType: ExerciseTypeDTO
     let exerciseSubtype: ExerciseSubtypeDTO
+    
+    init(exerciseId: Int, name: String, imageURL: String, videoURL: String?, isGlobal: Bool?, description: String?, exerciseType: ExerciseTypeDTO, exerciseSubtype: ExerciseSubtypeDTO) {
+        self.exerciseId = exerciseId
+        self.name = name
+        self.imageURL = imageURL
+        self.videoURL = videoURL
+        self.isGlobal = isGlobal
+        self.description = description
+        self.exerciseType = exerciseType
+        self.exerciseSubtype = exerciseSubtype
+    }
 }
 
 struct ExerciseTypeDTO: Codable {

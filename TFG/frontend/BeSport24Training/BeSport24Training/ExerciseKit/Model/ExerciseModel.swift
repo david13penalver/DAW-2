@@ -14,7 +14,7 @@ struct ExerciseDescription: Codable {
 }
 
 struct ExerciseModel: Encodable, Sendable, Identifiable {
-    let exerciseId: Int
+    let exerciseId: Int?
     let name: String
     let imageURL: String?
     let videoURL: String?
@@ -23,7 +23,7 @@ struct ExerciseModel: Encodable, Sendable, Identifiable {
     let typeName: String
     let subtypeName: String
     
-    var id: Int { exerciseId }
+    var id: Int? { exerciseId }
     
     var parsedDescription: ExerciseDescription? {
         guard let description, let data = description.data(using: .utf8) else { return nil }

@@ -12,6 +12,7 @@ struct ExerciseListView: View {
     @StateObject var vm: ExerciseViewModel
     
     @State private var searchText = ""
+    @State private var showingNewExerciseView = false
     
     var filteredExercises: [ExerciseModel] {
         if searchText.isEmpty {
@@ -34,6 +35,21 @@ struct ExerciseListView: View {
             }
             .navigationTitle("Exercises")
             .searchable(text: $searchText, prompt: "Search for name...")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showingNewExerciseView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .fullScreenCover(isPresented: $showingNewExerciseView) {
+                NewExerciseView(isPresented: $showingNewExerciseView, vm: vm)
+            }
+            .refreshable {
+                await vm.getAllExercises()
+            }
         }
     }
 }
