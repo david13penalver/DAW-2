@@ -24,7 +24,6 @@ final class ExerciseAPIImpl: ExerciseAPIProtocol {
         guard let url = URL(string: "\(BaseURL.baseURL)exercises") else { throw URLError(.badURL) }
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        print(String(data: data, encoding: .utf8) ?? "Invalid JSON")
         
         let decodedResponse = try JSONDecoder().decode(ExerciseListResponse.self, from: data)
         return decodedResponse.data

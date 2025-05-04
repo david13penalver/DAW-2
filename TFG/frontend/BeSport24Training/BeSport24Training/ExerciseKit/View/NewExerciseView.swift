@@ -162,7 +162,6 @@ struct NewExerciseView: View {
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(isNameFocused ? Color("FocusColor") : Color("GrayColor"), lineWidth: 1)
             )
-            .background(Color("WhiteColor"))
             .cornerRadius(8)
         }
     }
@@ -198,44 +197,73 @@ struct NewExerciseView: View {
                     .foregroundStyle(isTypeNameFocused ? Color("FocusColor") : Color("GrayColor"))
                 Picker("Exercise type?", selection: $typeName) {
                     Text("Resistance").tag("Resistance")
+                        .background(.blue)
                     Text("Cardio").tag("Cardio")
                     Text("Mobility").tag("Mobility")
                 }
                 .pickerStyle(.segmented)
-                .foregroundColor(Color("BlackColor"))
             }
             .padding(.vertical, 12)
             .padding(.horizontal)
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
-                    .stroke(isNameFocused ? Color("FocusColor") : Color("GrayColor"), lineWidth: 1)
+                    .stroke(isSubtypeNameFocused ? Color("FocusColor") : Color("GrayColor"), lineWidth: 1)
             )
-            .background(Color("WhiteColor"))
             .cornerRadius(8)
         }
     }
     
     private var subtypeNameForm: some View {
-        HStack {
-            Image(systemName: "figure")
-                .foregroundStyle(isSubtypeNameFocused ? Color("FocusColor") : Color("GrayColor"))
-            TextField("", text: $subtypeName, prompt: Text("Main musculature involved").foregroundColor(Color("GrayColor")))
-                .foregroundStyle(Color("BlackColor"))
-                .focused($isSubtypeNameFocused)
-                .autocorrectionDisabled()
-                .keyboardType(.emailAddress)
-                .textContentType(.emailAddress)
-                .autocapitalization(.none)
+        VStack {
+            Text("Main musculature involved")
+            HStack {
+                Image(systemName: "figure")
+                    .foregroundStyle(isSubtypeNameFocused ? Color("FocusColor") : Color("GrayColor"))
+                Picker("Subtype", selection: $subtypeName) {
+                    ForEach(exerciseSubtypeOptions) { option in
+                        Text(option.name).tag(option.name)
+                    }
+                }
+                .pickerStyle(.navigationLink)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 4)
+            }
+            .padding(.vertical, 12)
+            .padding(.horizontal)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(isSubtypeNameFocused ? Color("FocusColor") : Color("GrayColor"), lineWidth: 1)
+            )
+            .cornerRadius(8)
         }
-        .padding(.vertical, 12)
-        .padding(.horizontal)
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(isSubtypeNameFocused ? Color("FocusColor") : Color("GrayColor"), lineWidth: 1)
-        )
-        .background(Color("WhiteColor"))
-        .cornerRadius(8)
     }
+    
+    struct ExerciseSubtypeOption: Identifiable {
+        let id = UUID()
+        let name: String
+    }
+
+    let exerciseSubtypeOptions: [ExerciseSubtypeOption] = [
+        .init(name: "Chest"),
+        .init(name: "Back"),
+        .init(name: "Shoulders"),
+        .init(name: "HIIT"),
+        .init(name: "SIT"),
+        .init(name: "LISS"),
+        .init(name: "Static Stretching"),
+        .init(name: "Dynamic Stretching"),
+        .init(name: "Balistic Stretching"),
+        .init(name: "Passive Stretching"),
+        .init(name: "Leg"),
+        .init(name: "Core"),
+        .init(name: "Biceps"),
+        .init(name: "Glutes"),
+        .init(name: "Calves"),
+        .init(name: "Quadriceps"),
+        .init(name: "Hamstrings"),
+        .init(name: "Triceps")
+    ]
+
 }
 
 #Preview {

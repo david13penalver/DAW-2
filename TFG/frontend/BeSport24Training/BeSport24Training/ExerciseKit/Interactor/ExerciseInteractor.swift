@@ -90,9 +90,7 @@ extension ExerciseInteractorImpl {
         default:
             fatalError("Unsupported exercise subtype")
         }
-        
-        print(exercise)
-        
+                
         let dto = ExerciseDTO(exerciseId: -1, name: exercise.name, imageURL: exercise.imageURL ?? "", videoURL: exercise.videoURL, isGlobal: exercise.isGlobal, description: exercise.description, exerciseType: exerciseTypeDTO, exerciseSubtype: exerciseSubtypeDTO)
         
         try await api.createExercise(dto: dto)
