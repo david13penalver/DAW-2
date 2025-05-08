@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ExerciseDetailView: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     let exercise: ExerciseModel
     
     @StateObject var vm: ExerciseViewModel
+    @State private var showingEditExerciseView = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -47,13 +50,28 @@ struct ExerciseDetailView: View {
                         }
                     }
                 }
+                
+                Button("Edit") {
+                    showingEditExerciseView = true
+                }
+                Button("Delete") {
+                    Task {
+                        await vm.deleteExercise(id: vm.exercise!.id!)
+                        await vm.getAllExercises()
+                        dismiss()
+                    }
+                }
+                .tint(Color("RedColor"))
             }
+        }
+        .fullScreenCover(isPresented: $showingEditExerciseView) {
+            EditExerciseView(isPresented: $showingEditExerciseView, vm: vm)
         }
         .task {
             await vm.findExerciseById(id: exercise.exerciseId!)
         }
         .padding()
-        .navigationTitle(exercise.name)
+        .navigationTitle(vm.exercise?.name ?? exercise.name)
     }
 }
 
