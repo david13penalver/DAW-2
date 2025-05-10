@@ -12,7 +12,6 @@ final class ExerciseViewModel: ObservableObject {
     
     @Published var exercise: ExerciseModel?
     @Published var exercises: [ExerciseModel] = []
-    @Published var newExercise: ExerciseModel?
     
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
