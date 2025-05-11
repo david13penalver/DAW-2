@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D69ED74B-BFAD-4EB2-8596-12C9A222FE0E"
+            uuid = "855F840B-4A3E-4225-8CE2-0CBA9E21AD7B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeSport24Training/SessionKit/API/SessionAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getAllSessions()"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "findExercisesBySessionId(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

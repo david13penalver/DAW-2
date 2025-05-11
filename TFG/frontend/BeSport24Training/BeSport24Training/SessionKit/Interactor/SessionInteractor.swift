@@ -8,6 +8,7 @@
 protocol SessionInteractorProtocol {
     func getAllSessions() async throws -> [SessionModel]
     func findSessionById(id: Int) async throws -> SessionModel
+    func findExercisesBySessionId(id: Int) async throws -> [SessionExercisesModel]
     func createSession(session: SessionModel) async throws
     func updateSession(session: SessionModel) async throws
     func deleteSession(id: Int) async throws
@@ -33,6 +34,11 @@ extension SessionInteractorImpl {
     func findSessionById(id: Int) async throws -> SessionModel {
         let dto = try await api.findSessionById(id: id)
         return SessionModel(dto: dto)
+    }
+    
+    func findExercisesBySessionId(id: Int) async throws -> [SessionExercisesModel] {
+        let dtos = try await api.findExercisesBySessionId(id: id)
+        return dtos.map { SessionExercisesModel(from: $0) }
     }
     
     func createSession(session: SessionModel) async throws {

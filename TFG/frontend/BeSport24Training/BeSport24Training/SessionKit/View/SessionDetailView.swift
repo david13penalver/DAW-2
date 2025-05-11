@@ -19,12 +19,34 @@ struct SessionDetailView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             List {
-                Section("Name") {
+                Section("Session") {
                     Text(vm.session?.name ?? "No name available")
+                    Text(vm.session?.description ?? "No description available")
                 }
                 
-                Section("Description") {
-                    Text(vm.session?.description ?? "No description available")
+                Section("Exercises") {
+                    if vm.exercises.isEmpty {
+                        Text("There are not exercises in this session yet")
+                    } else {
+                        ForEach(vm.exercises) { exercise in
+                            VStack {
+                                Text(exercise.exercise.name)
+                                    .font(.headline)
+                                    .foregroundColor(Color("AccentColor"))
+                                    .padding(.bottom, 12)
+                                
+                                HStack {
+                                    Label("\(exercise.numSets)", systemImage: "list.number")
+                                    Spacer()
+                                    Label("\(exercise.numReps)", systemImage: "repeat")
+                                    Spacer()
+                                    Label("\(exercise.restSeconds) sec", systemImage: "timer")
+                                }
+                                .font(.caption)
+                                .foregroundColor(Color("GrayColor"))
+                            }
+                        }
+                    }
                 }
                 
                 Button("Edit") {
@@ -45,6 +67,7 @@ struct SessionDetailView: View {
         }
         .task {
             await vm.findSessionById(id: session.id)
+            await vm.findExercisesBySessionId(id: session.id)
         }
         .padding()
         .navigationTitle(vm.session?.name ?? "Session without name")

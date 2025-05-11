@@ -12,6 +12,7 @@ final class SessionViewModel: ObservableObject {
     
     @Published var session: SessionModel?
     @Published var sessions: [SessionModel] = []
+    @Published var exercises: [SessionExercisesModel] = []
     
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
@@ -37,6 +38,15 @@ final class SessionViewModel: ObservableObject {
             session = response
         } catch {
             print("Error loading session: \(error.localizedDescription)")
+        }
+    }
+    
+    func findExercisesBySessionId(id: Int) async {
+        do {
+            let response = try await interactor.findExercisesBySessionId(id: id)
+            exercises = response
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
