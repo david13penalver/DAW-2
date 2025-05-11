@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.settings)
             
-            TrainingListView()
+            TrainingListView(vm: TrainingViewModel())
                 .tabItem {
                     Label("Training", systemImage: "sportscourt")
                 }
