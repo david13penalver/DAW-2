@@ -36,7 +36,7 @@ struct ContentView: View {
                 }
                 .tag(Tab.exercises)
             
-            SessionListView()
+            SessionListView(vm: SessionViewModel())
                 .tabItem {
                     Label("Sessions", systemImage: "calendar")
                 }
